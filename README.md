@@ -1,3 +1,3 @@
 # CoronaTex
 
-Tracks covid-19 outbreak uses Texas health data
+Tracks the covid-19 outbreak using Texas health data
