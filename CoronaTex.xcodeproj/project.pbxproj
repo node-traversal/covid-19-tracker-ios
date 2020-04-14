@@ -110,19 +110,19 @@
 			children = (
 				49289F1F24435829007E6ED0 /* AppDelegate.swift */,
 				49289F2124435829007E6ED0 /* SceneDelegate.swift */,
-				49B3F49424449D0F00D90BF2 /* ChartTheme.swift */,
 				49289F2724435829007E6ED0 /* Main.storyboard */,
-				49289F2A2443582C007E6ED0 /* Assets.xcassets */,
 				49289F2C2443582C007E6ED0 /* LaunchScreen.storyboard */,
+				49289F2A2443582C007E6ED0 /* Assets.xcassets */,
 				49289F2F2443582C007E6ED0 /* Info.plist */,
+				49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */,
 				49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */,
 				49289F2524435829007E6ED0 /* NewCasesViewController.swift */,
-				49289F432443CB76007E6ED0 /* CountyTimelineData.swift */,
-				49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */,
-				499408BD2444998500EE80A1 /* Env.swift */,
 				49B3F4962444A48C00D90BF2 /* XYChartView.swift */,
+				499408BD2444998500EE80A1 /* Env.swift */,
+				49289F432443CB76007E6ED0 /* CountyTimelineData.swift */,
 				49B3F49D2444FCF500D90BF2 /* DateSeriesDataModel.swift */,
 				49B3F49F2445152200D90BF2 /* CountryData.swift */,
+				49B3F49424449D0F00D90BF2 /* ChartTheme.swift */,
 			);
 			path = CoronaTex;
 			sourceTree = "<group>";

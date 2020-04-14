@@ -36,7 +36,7 @@ private class DateSeriesChartFactory {
         return ChartPoint(x: createDateAxisDate(dateStr), y: ChartAxisValueInt(value))
     }
     func createDateAxisDateValue(_ date: Date) -> ChartAxisValue {
-        //let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont, rotation: 45, rotationKeep: .top)
+        //let labelSettings = ChartLabelSettings(font: ChartThemeçç.labelFont, rotation: 45, rotationKeep: .top)
         let labelSettings = ChartLabelSettings(font: ChartTheme.labelFont)
         return ChartAxisValueDate(date: date, formatter: displayFormatter, labelSettings: labelSettings)
     }

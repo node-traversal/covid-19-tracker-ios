@@ -18,3 +18,4 @@ jobs:
         gem install cocoapods
         pod install
         set -o pipefail && ./Pods/SwiftLint/swiftlint lint --strict | sed -E "s/$(pwd|sed 's/\//\\\//g')\///" | sed -E 's/^(.*):([0-9]+):([0-9]+): (warning|error|[^:]+): (.*)/::\4 file=\1,line=\2,col=\3::\5/'
+        xcodebuild -workspace CoronaTex.xcworkspace -scheme CoronaTex -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.4' test
