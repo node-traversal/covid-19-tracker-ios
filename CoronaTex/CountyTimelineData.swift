@@ -10,12 +10,11 @@ import UIKit
 import os.log
 
 class CountyTimelineData {
-    
     var countyPopulation: [String: Int] = [:]
     var dates: [String] = []
     var countyDataPoints: [String: [Int]] = [:]
     
-    private static func validateHeader(_ index: Int,  _ expected: String, _ headers: [Substring]) -> Int {
+    private static func validateHeader(_ index: Int, _ expected: String, _ headers: [Substring]) -> Int {
         let header = headers[index]
         let valid = header == expected
         if !valid {
@@ -37,7 +36,8 @@ class CountyTimelineData {
         }
 
         for (index, header) in headers.enumerated() {
-            if (index > populationIndex) {
+            // swiftlint:disable:next for_where
+            if index > populationIndex {
                 if header.range(of: #"^\d\d-\d\d$"#, options: .regularExpression) == nil {
                     print("Invalid date cell \(header) @ header index: \(index)")
                     return nil

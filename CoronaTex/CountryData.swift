@@ -8,8 +8,7 @@
 
 import UIKit
 
-class CountryData {
-    
+enum CountryData {
     static var current = CountryData.loadData()
     
     private static func loadData() -> CountyTimelineData {
@@ -19,8 +18,8 @@ class CountryData {
         }
         let text = String(data: asset.data, encoding: .iso2022JP) ?? ""
         guard let data = CountyTimelineData(text: text.replacingOccurrences(of: "\r", with: "")) else {
-             fatalError("could not process county data")
-         }
+            fatalError("could not process county data")
+        }
         print("Loaded county data from csv")
         return data
     }

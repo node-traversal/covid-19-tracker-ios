@@ -10,8 +10,7 @@ import UIKit
 import SwiftCharts
 
 class NewCasesViewController: UIViewController {
-
-    @IBOutlet weak var chartView: XYChartView!
+    @IBOutlet private weak var chartView: XYChartView!
     
     fileprivate var lastOrientation: UIInterfaceOrientation?
     
@@ -46,18 +45,15 @@ class NewCasesViewController: UIViewController {
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        coordinator.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) -> Void in
-
+        coordinator.animate(alongsideTransition: { (_ : UIViewControllerTransitionCoordinatorContext) -> Void in
             let orientation = Env.orientation
-            guard (self.lastOrientation.map{$0.rawValue != orientation.rawValue} ?? true) else {return}
+            guard (self.lastOrientation.map { $0.rawValue != orientation.rawValue } ?? true) else { return }
             self.lastOrientation = orientation
             
             print("rotated")
             self.chartView.updateChart()
-
-            }, completion: { (UIViewControllerTransitionCoordinatorContext) -> Void in
+        }, completion: { (_ : UIViewControllerTransitionCoordinatorContext) -> Void in
         })
         super.viewWillTransition(to: size, with: coordinator)
     }
 }
-

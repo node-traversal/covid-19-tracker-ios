@@ -9,13 +9,12 @@
 import UIKit
 
 class CountyStatisticsViewController: BasicTableViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+  
         loadData()
     }
-    
+
     private func loadData() {
         super.rows += toArray(CountryData.current.countyPopulation)
         super.rows.sort {
@@ -23,4 +22,3 @@ class CountyStatisticsViewController: BasicTableViewController {
         }
     }
 }
-
