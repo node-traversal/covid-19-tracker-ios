@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ChartTheme.swift
 //  CoronaTex
 //
 //  Created by Allen Parslow on 4/12/20.

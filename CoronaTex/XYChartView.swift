@@ -42,8 +42,8 @@ import SwiftCharts
     }
     
     private func initChart() {        
-        let chartFrame = ExamplesDefaults.chartFrame(self.bounds)
-        let chartSettings = ExamplesDefaults.chartSettings
+        let chartFrame = ChartTheme.chartFrame(self.bounds)
+        let chartSettings = ChartTheme.chartSettings
         let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: chartSettings, chartFrame: chartFrame, xModel: dataModel.xAxisModel, yModel: dataModel.yAxisModel)
         let (xAxisLayer, yAxisLayer, innerFrame) = (coordsSpace.xAxisLayer, coordsSpace.yAxisLayer, coordsSpace.chartInnerFrame)
 
