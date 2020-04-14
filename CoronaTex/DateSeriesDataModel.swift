@@ -37,7 +37,7 @@ fileprivate class DateSeriesChartFactory {
     }
     func createDateAxisDateValue(_ date: Date) -> ChartAxisValue {
         //let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont, rotation: 45, rotationKeep: .top)
-        let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
+        let labelSettings = ChartLabelSettings(font: ChartTheme.labelFont)
         return ChartAxisValueDate(date: date, formatter: displayFormatter, labelSettings: labelSettings)
     }
     
@@ -73,7 +73,7 @@ class DateSeriesDataModel {
     var lines: [ChartLineModel<ChartPoint>]
         
     static func example() -> DateSeriesDataModel {
-        let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
+        let labelSettings = ChartLabelSettings(font: ChartTheme.labelFont)
 
         return DateSeriesDataModel([DateSeries("Dallas", [
             ("10-01-2015", 5),

@@ -18,7 +18,7 @@ class NewCasesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
+        let labelSettings = ChartLabelSettings(font: ChartTheme.labelFont)
         print("initializing chart data")
         var series: [DateSeries] = []
         var counties = Array(CountryData.current.countyDataPoints.keys)

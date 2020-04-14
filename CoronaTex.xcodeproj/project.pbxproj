@@ -17,7 +17,7 @@
 		49289F442443CB76007E6ED0 /* CountyTimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F432443CB76007E6ED0 /* CountyTimelineData.swift */; };
 		499408BE2444998500EE80A1 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499408BD2444998500EE80A1 /* Env.swift */; };
 		49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */; };
-		49B3F49524449D0F00D90BF2 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49424449D0F00D90BF2 /* ExamplesDefaults.swift */; };
+		49B3F49524449D0F00D90BF2 /* ChartTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49424449D0F00D90BF2 /* ChartTheme.swift */; };
 		49B3F4972444A48C00D90BF2 /* XYChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F4962444A48C00D90BF2 /* XYChartView.swift */; };
 		49B3F49C2444FC4300D90BF2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49B2444FC4300D90BF2 /* Date.swift */; };
 		49B3F49E2444FCF500D90BF2 /* DateSeriesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49D2444FCF500D90BF2 /* DateSeriesDataModel.swift */; };
@@ -52,7 +52,7 @@
 		49289F432443CB76007E6ED0 /* CountyTimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyTimelineData.swift; sourceTree = "<group>"; };
 		499408BD2444998500EE80A1 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountyStatisticsViewController.swift; sourceTree = "<group>"; };
-		49B3F49424449D0F00D90BF2 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
+		49B3F49424449D0F00D90BF2 /* ChartTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTheme.swift; sourceTree = "<group>"; };
 		49B3F4962444A48C00D90BF2 /* XYChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYChartView.swift; sourceTree = "<group>"; };
 		49B3F49B2444FC4300D90BF2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		49B3F49D2444FCF500D90BF2 /* DateSeriesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeriesDataModel.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			children = (
 				49289F1F24435829007E6ED0 /* AppDelegate.swift */,
 				49289F2124435829007E6ED0 /* SceneDelegate.swift */,
-				49B3F49424449D0F00D90BF2 /* ExamplesDefaults.swift */,
+				49B3F49424449D0F00D90BF2 /* ChartTheme.swift */,
 				49289F2724435829007E6ED0 /* Main.storyboard */,
 				49289F2A2443582C007E6ED0 /* Assets.xcassets */,
 				49289F2C2443582C007E6ED0 /* LaunchScreen.storyboard */,
@@ -303,7 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B3F49524449D0F00D90BF2 /* ExamplesDefaults.swift in Sources */,
+				49B3F49524449D0F00D90BF2 /* ChartTheme.swift in Sources */,
 				49B3F49C2444FC4300D90BF2 /* Date.swift in Sources */,
 				49289F2624435829007E6ED0 /* NewCasesViewController.swift in Sources */,
 				49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */,
