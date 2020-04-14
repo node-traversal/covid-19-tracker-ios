@@ -107,3 +107,4 @@ class DateSeriesDataModel {
         self.yAxisModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: yAxisTitle, settings: labelSettings.defaultVertical()))
     }
 }
+

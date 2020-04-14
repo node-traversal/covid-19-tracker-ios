@@ -17,4 +17,4 @@ jobs:
       run: |
         gem install cocoapods
         pod install
-        ./Pods/SwiftLint/swiftlint
+        ./Pods/SwiftLint/swiftlint lint --strict

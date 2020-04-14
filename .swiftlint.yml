@@ -9,7 +9,6 @@ opt_in_rules:
  - first_where
  - modifier_order
  - toggle_bool
- - unused_private_declaration 
  - closure_spacing
  - trailing_closure
  - xct_specific_matcher
