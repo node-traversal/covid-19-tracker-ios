@@ -1,6 +1,6 @@
 //
 //  Date.swift
-//  Examples
+//  CoronaTex
 //
 //  Created by Allen Parslow on 4/13/20.
 //  Copyright © 2020 ivanschuetz. All rights reserved.
