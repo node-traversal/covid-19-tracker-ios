@@ -19,7 +19,7 @@ class DateSeries {
     }
 }
 
-fileprivate class DateSeriesChartFactory {
+private class DateSeriesChartFactory {
     let readFormatter: DateFormatter = DateFormatter()
     let displayFormatter: DateFormatter = DateFormatter()
     
@@ -100,8 +100,8 @@ class DateSeriesDataModel {
         let density: Double = 10
         let xSpan: TimeInterval = max(floor(xMin.days(to: xMax) / density), 1)
         let ySpan: Int = Int(max(floor(Double(yMax) / density), 1))
-        let yValues = stride(from: 0, through: yMax, by: ySpan).map {ChartAxisValueInt($0, labelSettings: labelSettings)}
-        let xValues = stride(from: xMin, to: xMax, by: Date.daysDurationInSeconds * xSpan).map {factory.createDateAxisDateValue($0)}
+        let yValues = stride(from: 0, through: yMax, by: ySpan).map { ChartAxisValueInt($0, labelSettings: labelSettings) }
+        let xValues = stride(from: xMin, to: xMax, by: Date.daysDurationInSeconds * xSpan).map { factory.createDateAxisDateValue($0) }
         self.lines = factory.toLines(data)
         self.xAxisModel = ChartAxisModel(axisValues: xValues)
         self.yAxisModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: yAxisTitle, settings: labelSettings.defaultVertical()))

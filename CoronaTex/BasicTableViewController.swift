@@ -9,7 +9,6 @@
 import UIKit
 
 class BasicTableViewController: UITableViewController {
-
     var rows: [[String]] = []
     let cellType = "basicCell"
     
@@ -38,7 +37,6 @@ class BasicTableViewController: UITableViewController {
         return rows.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: cellType)
 

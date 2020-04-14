@@ -2,8 +2,7 @@
 //  ChartTheme.swift
 //  CoronaTex
 //
-//  Created by Allen Parslow on 4/12/20.
-//  Copyright © 2020 node-traversal. All rights reserved.
+//  Modified by Allen Parslow on 4/12/20.
 //
 //  Derived from:
 //  ExamplesDefaults.swift
@@ -16,21 +15,12 @@
 import UIKit
 import SwiftCharts
 
-struct ChartTheme {
-    
+enum ChartTheme {
     static var chartSettings: ChartSettings {
         if Env.iPad {
             return iPadChartSettings
         } else {
             return iPhoneChartSettings
-        }
-    }
-
-    static var chartSettingsWithPanZoom: ChartSettings {
-        if Env.iPad {
-            return iPadChartSettingsWithPanZoom
-        } else {
-            return iPhoneChartSettingsWithPanZoom
         }
     }
     
@@ -63,20 +53,6 @@ struct ChartTheme {
         chartSettings.spacingBetweenAxesX = 8
         chartSettings.spacingBetweenAxesY = 8
         chartSettings.labelsSpacing = 0
-        return chartSettings
-    }
-
-    fileprivate static var iPadChartSettingsWithPanZoom: ChartSettings {
-        var chartSettings = iPadChartSettings
-        chartSettings.zoomPan.panEnabled = true
-        chartSettings.zoomPan.zoomEnabled = true
-        return chartSettings
-    }
-
-    fileprivate static var iPhoneChartSettingsWithPanZoom: ChartSettings {
-        var chartSettings = iPhoneChartSettings
-        chartSettings.zoomPan.panEnabled = true
-        chartSettings.zoomPan.zoomEnabled = true
         return chartSettings
     }
     

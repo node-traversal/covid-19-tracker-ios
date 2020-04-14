@@ -1,9 +1,8 @@
 //
-//  SecondViewController.swift
+//  Env.swift
 //  CoronaTex
 //
-//  Created by Allen Parslow on 4/12/20.
-//  Copyright © 2020 node-traversal. All rights reserved.
+//  Modified by Allen Parslow on 4/12/20.
 //
 //  Derived from:
 //  Env.swift
@@ -16,18 +15,17 @@
 import UIKit
 import os.log
 
-class Env {
-    
+enum Env {
     static var iPad: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
-    
+
     static var orientation: UIInterfaceOrientation {
         guard let ori = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
             os_log("Could not aquire orientation", log: OSLog.default, type: .error)
             return UIInterfaceOrientation.portrait
         }
-        
+
         return ori
     }
 }

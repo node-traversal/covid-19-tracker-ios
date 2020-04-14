@@ -1,5 +1,5 @@
 //
-//  Chart.swift
+//  XYChartView.swift
 //  CoronaTex
 //
 //  Created by Allen Parslow on 4/13/20.
@@ -9,8 +9,8 @@
 import UIKit
 import SwiftCharts
 
-@IBDesignable class XYChartView: UIStackView {
-
+@IBDesignable
+class XYChartView: UIStackView {
     fileprivate var chart: Chart? // arc
     var dataModel = DateSeriesDataModel.example()
     
@@ -76,7 +76,7 @@ import SwiftCharts
     }
     
     func updateChart() {
-        guard let theChart = self.chart else {return}
+        guard let theChart = self.chart else { return }
         
         for chartView in theChart.view.subviews {
             chartView.removeFromSuperview()

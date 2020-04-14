@@ -1,6 +1,6 @@
-//
 //  SecondViewController.swift
 //  CoronaTex
+//  swiftlint:disable file_header
 //
 //  Created by Allen Parslow on 4/12/20.
 //  Copyright © 2020 node-traversal. All rights reserved.
@@ -16,8 +16,7 @@
 import UIKit
 import SwiftCharts
 
-struct ChartTheme {
-    
+enum ChartTheme {
     static var chartSettings: ChartSettings {
         if Env.iPad {
             return iPadChartSettings
@@ -63,20 +62,6 @@ struct ChartTheme {
         chartSettings.spacingBetweenAxesX = 8
         chartSettings.spacingBetweenAxesY = 8
         chartSettings.labelsSpacing = 0
-        return chartSettings
-    }
-
-    fileprivate static var iPadChartSettingsWithPanZoom: ChartSettings {
-        var chartSettings = iPadChartSettings
-        chartSettings.zoomPan.panEnabled = true
-        chartSettings.zoomPan.zoomEnabled = true
-        return chartSettings
-    }
-
-    fileprivate static var iPhoneChartSettingsWithPanZoom: ChartSettings {
-        var chartSettings = iPhoneChartSettings
-        chartSettings.zoomPan.panEnabled = true
-        chartSettings.zoomPan.zoomEnabled = true
         return chartSettings
     }
     

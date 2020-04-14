@@ -3,5 +3,6 @@ use_frameworks!
 workspace 'CoronaTex.xcworkspace'
 
 target 'CoronaTex' do 
+  pod 'SwiftLint'
   pod 'SwiftCharts', '~> 0.6.5'
 end
