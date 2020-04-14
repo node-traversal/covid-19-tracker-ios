@@ -17,6 +17,7 @@
 		49289F442443CB76007E6ED0 /* CountyTimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F432443CB76007E6ED0 /* CountyTimelineData.swift */; };
 		499408BE2444998500EE80A1 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499408BD2444998500EE80A1 /* Env.swift */; };
 		49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */; };
+		49B3496424456ADB00E94FF4 /* .github in Resources */ = {isa = PBXBuildFile; fileRef = 49B3496324456ADB00E94FF4 /* .github */; };
 		49B3F49524449D0F00D90BF2 /* ChartTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49424449D0F00D90BF2 /* ChartTheme.swift */; };
 		49B3F4972444A48C00D90BF2 /* XYChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F4962444A48C00D90BF2 /* XYChartView.swift */; };
 		49B3F49C2444FC4300D90BF2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49B2444FC4300D90BF2 /* Date.swift */; };
@@ -52,6 +53,7 @@
 		49289F432443CB76007E6ED0 /* CountyTimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyTimelineData.swift; sourceTree = "<group>"; };
 		499408BD2444998500EE80A1 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountyStatisticsViewController.swift; sourceTree = "<group>"; };
+		49B3496324456ADB00E94FF4 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
 		49B3F49424449D0F00D90BF2 /* ChartTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTheme.swift; sourceTree = "<group>"; };
 		49B3F4962444A48C00D90BF2 /* XYChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYChartView.swift; sourceTree = "<group>"; };
 		49B3F49B2444FC4300D90BF2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		49289F1324435828007E6ED0 = {
 			isa = PBXGroup;
 			children = (
+				49B3496324456ADB00E94FF4 /* .github */,
 				49289F1E24435829007E6ED0 /* CoronaTex */,
 				49B3F49A2444FC2400D90BF2 /* Extensions */,
 				49289F372443582D007E6ED0 /* CoronaTexTests */,
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B3496424456ADB00E94FF4 /* .github in Resources */,
 				49289F2E2443582C007E6ED0 /* LaunchScreen.storyboard in Resources */,
 				49289F2B2443582C007E6ED0 /* Assets.xcassets in Resources */,
 				49289F2924435829007E6ED0 /* Main.storyboard in Resources */,
