@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  CountyStatisticsViewController.swift
 //  CoronaTex
 //
 //  Created by Allen Parslow on 4/12/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: BasicTableViewController {
+class CountyStatisticsViewController: BasicTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

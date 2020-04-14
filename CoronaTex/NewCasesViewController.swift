@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  NewCasesViewController.swift
 //  CoronaTex
 //
 //  Created by Allen Parslow on 4/12/20.
@@ -9,7 +9,7 @@
 import UIKit
 import SwiftCharts
 
-class SecondViewController: UIViewController {
+class NewCasesViewController: UIViewController {
 
     @IBOutlet weak var chartView: XYChartView!
     

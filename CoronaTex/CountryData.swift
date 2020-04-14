@@ -13,6 +13,7 @@ class CountryData {
     static var current = CountryData.loadData()
     
     private static func loadData() -> CountyTimelineData {
+        print("Loading county data from csv...")
         guard let asset = NSDataAsset(name: "Data") else {
             fatalError("could not load county data")
         }
@@ -20,7 +21,7 @@ class CountryData {
         guard let data = CountyTimelineData(text: text.replacingOccurrences(of: "\r", with: "")) else {
              fatalError("could not process county data")
          }
-        
+        print("Loaded county data from csv")
         return data
     }
 }

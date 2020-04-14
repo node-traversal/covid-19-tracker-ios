@@ -1,4 +1,11 @@
 //
+//  SecondViewController.swift
+//  CoronaTex
+//
+//  Created by Allen Parslow on 4/12/20.
+//  Copyright © 2020 node-traversal. All rights reserved.
+//
+//  Derived from:
 //  ExamplesDefaults.swift
 //  SwiftCharts
 //

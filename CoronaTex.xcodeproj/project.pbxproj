@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		49289F2024435829007E6ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F1F24435829007E6ED0 /* AppDelegate.swift */; };
 		49289F2224435829007E6ED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F2124435829007E6ED0 /* SceneDelegate.swift */; };
-		49289F2424435829007E6ED0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F2324435829007E6ED0 /* FirstViewController.swift */; };
-		49289F2624435829007E6ED0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F2524435829007E6ED0 /* SecondViewController.swift */; };
+		49289F2624435829007E6ED0 /* NewCasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F2524435829007E6ED0 /* NewCasesViewController.swift */; };
 		49289F2924435829007E6ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49289F2724435829007E6ED0 /* Main.storyboard */; };
 		49289F2B2443582C007E6ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49289F2A2443582C007E6ED0 /* Assets.xcassets */; };
 		49289F2E2443582C007E6ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49289F2C2443582C007E6ED0 /* LaunchScreen.storyboard */; };
 		49289F392443582D007E6ED0 /* CoronaTexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F382443582D007E6ED0 /* CoronaTexTests.swift */; };
 		49289F442443CB76007E6ED0 /* CountyTimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F432443CB76007E6ED0 /* CountyTimelineData.swift */; };
 		499408BE2444998500EE80A1 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499408BD2444998500EE80A1 /* Env.swift */; };
+		49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */; };
 		49B3F49524449D0F00D90BF2 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49424449D0F00D90BF2 /* ExamplesDefaults.swift */; };
 		49B3F4972444A48C00D90BF2 /* XYChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F4962444A48C00D90BF2 /* XYChartView.swift */; };
 		49B3F49C2444FC4300D90BF2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49B2444FC4300D90BF2 /* Date.swift */; };
@@ -41,8 +41,7 @@
 		49289F1C24435829007E6ED0 /* CoronaTex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoronaTex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49289F1F24435829007E6ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49289F2124435829007E6ED0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49289F2324435829007E6ED0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		49289F2524435829007E6ED0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		49289F2524435829007E6ED0 /* NewCasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCasesViewController.swift; sourceTree = "<group>"; };
 		49289F2824435829007E6ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49289F2A2443582C007E6ED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49289F2D2443582C007E6ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		49289F3A2443582D007E6ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49289F432443CB76007E6ED0 /* CountyTimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyTimelineData.swift; sourceTree = "<group>"; };
 		499408BD2444998500EE80A1 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountyStatisticsViewController.swift; sourceTree = "<group>"; };
 		49B3F49424449D0F00D90BF2 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
 		49B3F4962444A48C00D90BF2 /* XYChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYChartView.swift; sourceTree = "<group>"; };
 		49B3F49B2444FC4300D90BF2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -107,13 +107,13 @@
 			children = (
 				49289F1F24435829007E6ED0 /* AppDelegate.swift */,
 				49289F2124435829007E6ED0 /* SceneDelegate.swift */,
-				49289F2324435829007E6ED0 /* FirstViewController.swift */,
 				49B3F49424449D0F00D90BF2 /* ExamplesDefaults.swift */,
-				49289F2524435829007E6ED0 /* SecondViewController.swift */,
 				49289F2724435829007E6ED0 /* Main.storyboard */,
 				49289F2A2443582C007E6ED0 /* Assets.xcassets */,
 				49289F2C2443582C007E6ED0 /* LaunchScreen.storyboard */,
 				49289F2F2443582C007E6ED0 /* Info.plist */,
+				49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */,
+				49289F2524435829007E6ED0 /* NewCasesViewController.swift */,
 				49289F432443CB76007E6ED0 /* CountyTimelineData.swift */,
 				49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */,
 				499408BD2444998500EE80A1 /* Env.swift */,
@@ -305,10 +305,10 @@
 			files = (
 				49B3F49524449D0F00D90BF2 /* ExamplesDefaults.swift in Sources */,
 				49B3F49C2444FC4300D90BF2 /* Date.swift in Sources */,
-				49289F2624435829007E6ED0 /* SecondViewController.swift in Sources */,
+				49289F2624435829007E6ED0 /* NewCasesViewController.swift in Sources */,
+				49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */,
 				49B3F49E2444FCF500D90BF2 /* DateSeriesDataModel.swift in Sources */,
 				49289F442443CB76007E6ED0 /* CountyTimelineData.swift in Sources */,
-				49289F2424435829007E6ED0 /* FirstViewController.swift in Sources */,
 				49289F2024435829007E6ED0 /* AppDelegate.swift in Sources */,
 				49B3F4972444A48C00D90BF2 /* XYChartView.swift in Sources */,
 				49EF0C972443DDBD009BE1B2 /* BasicTableViewController.swift in Sources */,
