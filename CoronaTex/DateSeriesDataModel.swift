@@ -36,8 +36,7 @@ private class DateSeriesChartFactory {
         return ChartPoint(x: createDateAxisDate(dateStr), y: ChartAxisValueInt(value))
     }
     func createDateAxisDateValue(_ date: Date) -> ChartAxisValue {
-        //let labelSettings = ChartLabelSettings(font: ChartThemeçç.labelFont, rotation: 45, rotationKeep: .top)
-        let labelSettings = ChartLabelSettings(font: ChartTheme.labelFont)
+        let labelSettings = ChartTheme.labelSettings
         return ChartAxisValueDate(date: date, formatter: displayFormatter, labelSettings: labelSettings)
     }
     
@@ -48,9 +47,10 @@ private class DateSeriesChartFactory {
     func toLines(_ data: [DateSeries]) -> [ChartLineModel<ChartPoint>] {
         var lines = [ChartLineModel]()
         
-        for series in data {
+        for (index, series) in data.enumerated() {
             let points = toChartPoints(series.dataPoints)
-            lines.append(ChartLineModel(chartPoints: points, lineColor: UIColor.red, lineWidth: 2, animDuration: 1, animDelay: 0))
+            let color = ChartTheme.color(index)
+            lines.append(ChartLineModel(chartPoints: points, lineColor: color, lineWidth: 2, animDuration: 1, animDelay: 0))
         }
         
         return lines
@@ -73,8 +73,6 @@ class DateSeriesDataModel {
     var lines: [ChartLineModel<ChartPoint>]
         
     static func example() -> DateSeriesDataModel {
-        let labelSettings = ChartLabelSettings(font: ChartTheme.labelFont)
-
         return DateSeriesDataModel([DateSeries("Dallas", [
             ("10-01-2015", 5),
             ("10-04-2015", 10),
@@ -88,22 +86,28 @@ class DateSeriesDataModel {
             ("10-16-2015", 80),
             ("10-19-2015", 90),
             ("10-21-2015", 100)
-        ])], yAxisTitle: "Y-AXIS", yMax: 100, labelSettings: labelSettings)
+        ])], yAxisTitle: "Y-AXIS", yMax: 100, xCompact: false)
     }
     
-    init(_ data: [DateSeries], yAxisTitle: String, yMax: Int, labelSettings: ChartLabelSettings) {
+    init(_ data: [DateSeries], yAxisTitle: String, yMax: Int, xCompact: Bool) {
         let factory = DateSeriesChartFactory()
         
         let begin = data.first!
         let xMin = factory.toDate(begin.dataPoints.first!.date)
         let xMax = factory.toDate(begin.dataPoints.last!.date)
-        let density: Double = 10
-        let xSpan: TimeInterval = max(floor(xMin.days(to: xMax) / density), 1)
-        let ySpan: Int = Int(max(floor(Double(yMax) / density), 1))
-        let yValues = stride(from: 0, through: yMax, by: ySpan).map { ChartAxisValueInt($0, labelSettings: labelSettings) }
+        var xDensity: Double = 10
+        if xCompact {
+            print("using small density")
+            xDensity = 5
+        } else {
+            print("using large density")
+        }
+        let xSpan: TimeInterval = max(floor(xMin.days(to: xMax) / xDensity), 1)
+        let ySpan: Int = Int(max(floor(Double(yMax) / 10), 1))
+        let yValues = stride(from: 0, through: yMax, by: ySpan).map { ChartAxisValueInt($0, labelSettings: ChartTheme.labelSettings) }
         let xValues = stride(from: xMin, to: xMax, by: Date.daysDurationInSeconds * xSpan).map { factory.createDateAxisDateValue($0) }
         self.lines = factory.toLines(data)
         self.xAxisModel = ChartAxisModel(axisValues: xValues)
-        self.yAxisModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: yAxisTitle, settings: labelSettings.defaultVertical()))
+        self.yAxisModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: yAxisTitle, settings: ChartTheme.labelSettings.defaultVertical()))
     }
 }

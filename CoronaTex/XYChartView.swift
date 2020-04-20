@@ -10,13 +10,13 @@ import UIKit
 import SwiftCharts
 
 @IBDesignable
-class XYChartView: UIStackView {
-    fileprivate var chart: Chart? // arc
+class XYChartView: UIView {
+    fileprivate var chart: Chart?
     var dataModel = DateSeriesDataModel.example()
     
     private var didLayout: Bool = false
     
-    // MARK: fun
+    // MARK: init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,11 +24,10 @@ class XYChartView: UIStackView {
         layoutChart()
     }
     
-    required init(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
-        print("init NSCoder")
     }
-    
+
     override func layoutSubviews() {
         layoutChart()
     }
@@ -50,7 +49,7 @@ class XYChartView: UIStackView {
         // delayInit parameter is needed by some layers for initial zoom level to work correctly. Setting it to true allows to trigger drawing of layer manually (in this case, after the chart is initialized). This obviously needs improvement. For now it's necessary.
         let chartPointsLineLayer = ChartPointsLineLayer(xAxis: xAxisLayer.axis, yAxis: yAxisLayer.axis, lineModels: dataModel.lines, delayInit: true)
         
-        let guidelinesLayerSettings = ChartGuideLinesLayerSettings(linesColor: UIColor.black, linesWidth: 0.3)
+        let guidelinesLayerSettings = ChartGuideLinesLayerSettings(linesColor: UIColor.label, linesWidth: 0.3)
         let guidelinesLayer = ChartGuideLinesLayer(xAxisLayer: xAxisLayer, yAxisLayer: yAxisLayer, settings: guidelinesLayerSettings)
         
         let chart = Chart(

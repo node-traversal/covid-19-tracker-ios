@@ -16,6 +16,12 @@ import UIKit
 import SwiftCharts
 
 enum ChartTheme {
+    static let colors: [UIColor] = [.systemBlue, .systemPink, .systemGreen, .systemOrange, .systemPurple, .systemTeal, .systemRed, .systemYellow]
+    
+    static func color(_ index: Int) -> UIColor {
+        return ChartTheme.colors[index % ChartTheme.colors.count]
+    }
+    
     static var chartSettings: ChartSettings {
         if Env.iPad {
             return iPadChartSettings
@@ -62,7 +68,7 @@ enum ChartTheme {
     }
     
     static var labelSettings: ChartLabelSettings {
-        return ChartLabelSettings(font: ChartTheme.labelFont)
+        return ChartLabelSettings(font: ChartTheme.labelFont, fontColor: UIColor.label)
     }
     
     static var labelFont: UIFont {
@@ -74,7 +80,7 @@ enum ChartTheme {
     }
     
     static func fontWithSize(_ size: CGFloat) -> UIFont {
-        return UIFont(name: "Helvetica", size: size) ?? UIFont.systemFont(ofSize: size)
+        return UIFont.systemFont(ofSize: size)
     }
     
     static var guidelinesWidth: CGFloat {
