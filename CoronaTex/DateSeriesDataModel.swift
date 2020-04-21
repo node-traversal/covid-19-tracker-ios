@@ -23,8 +23,8 @@ private class DateSeriesChartFactory {
     let readFormatter: DateFormatter = DateFormatter()
     let displayFormatter: DateFormatter = DateFormatter()
     
-    init() {
-        readFormatter.dateFormat = "MM.dd.yyyy"
+    init(_ dateFormat: String = "MM.dd.yyyy") {
+        readFormatter.dateFormat = dateFormat
         displayFormatter.dateFormat = "MM.dd"
     }
     
@@ -35,6 +35,13 @@ private class DateSeriesChartFactory {
     private func createChartPoint(dateStr: String, value: Int) -> ChartPoint {
         return ChartPoint(x: createDateAxisDate(dateStr), y: ChartAxisValueInt(value))
     }
+    
+    func createDateAxisDateLabel(_ date: Date) -> ChartAxisValue {
+        print("D:\(date)")
+        let labelSettings = ChartTheme.labelSettings
+        return ChartAxisValueDate(date: date, formatter: displayFormatter, labelSettings: labelSettings)
+    }
+    
     func createDateAxisDateValue(_ date: Date) -> ChartAxisValue {
         let labelSettings = ChartTheme.labelSettings
         return ChartAxisValueDate(date: date, formatter: displayFormatter, labelSettings: labelSettings)
@@ -89,9 +96,8 @@ class DateSeriesDataModel {
         ])], yAxisTitle: "Y-AXIS", yMax: 100, xCompact: false)
     }
     
-    init(_ data: [DateSeries], yAxisTitle: String, yMax: Int, xCompact: Bool) {
-        let factory = DateSeriesChartFactory()
-        
+    init(_ data: [DateSeries], yAxisTitle: String, yMax: Int, xCompact: Bool, dateFormat: String = "MM.dd.yyyy") {
+        let factory: DateSeriesChartFactory = DateSeriesChartFactory(dateFormat)
         let begin = data.first!
         let xMin = factory.toDate(begin.dataPoints.first!.date)
         let xMax = factory.toDate(begin.dataPoints.last!.date)
@@ -105,9 +111,10 @@ class DateSeriesDataModel {
         let xSpan: TimeInterval = max(floor(xMin.days(to: xMax) / xDensity), 1)
         let ySpan: Int = Int(max(floor(Double(yMax) / 10), 1))
         let yValues = stride(from: 0, through: yMax, by: ySpan).map { ChartAxisValueInt($0, labelSettings: ChartTheme.labelSettings) }
-        let xValues = stride(from: xMin, to: xMax, by: Date.daysDurationInSeconds * xSpan).map { factory.createDateAxisDateValue($0) }
+        // reversing the order ensures that the last date is should with its actual value, rather than the possibly being hidden in the stride span
+        let xValues = stride(from: xMax, to: xMin, by: -Date.daysDurationInSeconds * xSpan).map { factory.createDateAxisDateLabel($0) }.reversed()
         self.lines = factory.toLines(data)
-        self.xAxisModel = ChartAxisModel(axisValues: xValues)
+        self.xAxisModel = ChartAxisModel(axisValues: Array(xValues))
         self.yAxisModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: yAxisTitle, settings: ChartTheme.labelSettings.defaultVertical()))
     }
 }

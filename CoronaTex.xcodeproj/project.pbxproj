@@ -25,6 +25,7 @@
 		49B3F49E2444FCF500D90BF2 /* DateSeriesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49D2444FCF500D90BF2 /* DateSeriesDataModel.swift */; };
 		49B3F4A02445152200D90BF2 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49F2445152200D90BF2 /* CountryData.swift */; };
 		49EF0C972443DDBD009BE1B2 /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */; };
+		49F94B6B244F27A1007C5AE9 /* ConfirmedCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F94B6A244F27A1007C5AE9 /* ConfirmedCases.swift */; };
 		FB2232E4BF9B82957F6962B0 /* Pods_CoronaTex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E14951455AF5677C6B3AB3 /* Pods_CoronaTex.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		49B3F49D2444FCF500D90BF2 /* DateSeriesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeriesDataModel.swift; sourceTree = "<group>"; };
 		49B3F49F2445152200D90BF2 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
+		49F94B6A244F27A1007C5AE9 /* ConfirmedCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmedCases.swift; sourceTree = "<group>"; };
 		C3E14951455AF5677C6B3AB3 /* Pods_CoronaTex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94906F00C7261FAC0BAB4A2 /* Pods-CoronaTex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTex.release.xcconfig"; path = "Target Support Files/Pods-CoronaTex/Pods-CoronaTex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				49B3F4962444A48C00D90BF2 /* XYChartView.swift */,
 				499408BD2444998500EE80A1 /* Env.swift */,
 				49289F432443CB76007E6ED0 /* CountyTimelineData.swift */,
+				49F94B6A244F27A1007C5AE9 /* ConfirmedCases.swift */,
 				49B3F49D2444FCF500D90BF2 /* DateSeriesDataModel.swift */,
 				49B3F49F2445152200D90BF2 /* CountryData.swift */,
 				49B3F49424449D0F00D90BF2 /* ChartTheme.swift */,
@@ -341,6 +344,7 @@
 				49289F2224435829007E6ED0 /* SceneDelegate.swift in Sources */,
 				49B3F4A02445152200D90BF2 /* CountryData.swift in Sources */,
 				499408BE2444998500EE80A1 /* Env.swift in Sources */,
+				49F94B6B244F27A1007C5AE9 /* ConfirmedCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

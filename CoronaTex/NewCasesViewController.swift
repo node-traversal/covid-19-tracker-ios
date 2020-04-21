@@ -19,6 +19,7 @@ class NewCasesViewController: UIViewController {
     var series: [DateSeries] = []
     private var yMax = 0
     private var xCompact = false
+    private let dateFormat = "yyyy-MM-dd"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,20 +29,25 @@ class NewCasesViewController: UIViewController {
         legendsView.backgroundColor = view.backgroundColor
         
         print("initializing chart data")
-        var counties = Array(CountryData.current.countyDataPoints.keys)
-        counties.sort()
+        let data = ConfirmedCases.current
+        let counties = data.series
+        let dates = data.dates
+        
         var legends = [(text: String, color: UIColor)]()
         
-        for (index, county) in counties.enumerated() {
+        for (countyIndex, countyData) in counties.enumerated() {
+            if (countyIndex) >= 5 {
+                break
+            }
             var dataPoints: [(date: String, value: Int)] = []
-            let data = CountryData.current.countyDataPoints[county]!
-            for (index, value) in data.enumerated() {
-                let date = CountryData.current.dates[index]
+            let county = countyData.county ?? "?"
+            for (index, value) in countyData.values.enumerated() {
+                let date = dates[index]
                 yMax = max(yMax, value)
                 dataPoints.append((date: date, value: value))
             }
             series.append(DateSeries(county, dataPoints))
-            legends.append((text: county, ChartTheme.color(index)))
+            legends.append((text: county, ChartTheme.color(countyIndex)))
         }
         
         createModel(chartView)
@@ -54,7 +60,7 @@ class NewCasesViewController: UIViewController {
 
     func createModel(_ chartView: XYChartView) {
         xCompact = self.traitCollection.horizontalSizeClass == .compact
-        chartView.dataModel = DateSeriesDataModel(series, yAxisTitle: "New Cases", yMax: yMax, xCompact: xCompact)
+        chartView.dataModel = DateSeriesDataModel(series, yAxisTitle: "New Cases", yMax: yMax, xCompact: xCompact, dateFormat: dateFormat)
     }
     
     override func viewDidLayoutSubviews() {
