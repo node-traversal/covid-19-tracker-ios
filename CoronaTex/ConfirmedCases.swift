@@ -23,12 +23,16 @@ enum ConfirmedCases {
     static var current = ConfirmedCases.loadData()
     
     private static func loadData() -> ConfirmedCasesData {
-        print("Loading county data from csv...")
+        print("Loading county data from json...")
         guard let asset = NSDataAsset(name: "ConfirmedUS") else {
             fatalError("could not load US data")
         }
         
         let decoder = JSONDecoder()
-        return try! decoder.decode(ConfirmedCasesData.self, from: asset.data)
+        print("Processing county data json...")
+        let cases = try! decoder.decode(ConfirmedCasesData.self, from: asset.data)
+
+        print("Loaded county data json.")
+        return cases
     }
 }

@@ -1,24 +1,28 @@
 PODS:
+  - Alamofire (5.1.0)
   - ChartLegends (0.0.6)
   - SwiftCharts (0.6.5)
   - SwiftLint (0.39.2)
 
 DEPENDENCIES:
+  - Alamofire
   - ChartLegends
   - SwiftCharts (~> 0.6.5)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - ChartLegends
     - SwiftCharts
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   ChartLegends: bd0b58d74772f35dc14fc6a3ff245cccf3204a59
   SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 851eeb59bd0bf09bfe1283569f15df43b32bcca8
+PODFILE CHECKSUM: 31295767e7214bf255d345c52928068555180d75
 
 COCOAPODS: 1.9.1

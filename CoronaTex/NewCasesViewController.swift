@@ -9,6 +9,7 @@
 import UIKit
 import SwiftCharts
 import ChartLegends
+import Alamofire
 
 class NewCasesViewController: UIViewController {
     @IBOutlet private weak var chartView: XYChartView?
@@ -29,18 +30,29 @@ class NewCasesViewController: UIViewController {
         legendsView.backgroundColor = view.backgroundColor
         
         print("initializing chart data")
-        let data = ConfirmedCases.current
+        processData(ConfirmedCases.current)
+        requestData()
+    }
+    
+    private func processData(_ data: ConfirmedCasesData) {
+        guard let chartView = chartView else { return }
+        
         let counties = data.series
         let dates = data.dates
+        let lastDate = dates.last ?? ""
+        yMax = 0
+        series = []
         
+        print("Processing chart: \(lastDate)")
         var legends = [(text: String, color: UIColor)]()
         
         for (countyIndex, countyData) in counties.enumerated() {
-            if (countyIndex) >= 5 {
+            if (countyIndex) >= 15 {
                 break
             }
             var dataPoints: [(date: String, value: Int)] = []
             let county = countyData.county ?? "?"
+            print("C:\(county)")
             for (index, value) in countyData.values.enumerated() {
                 let date = dates[index]
                 yMax = max(yMax, value)
@@ -54,8 +66,21 @@ class NewCasesViewController: UIViewController {
         
         print("Creating legend...")
         legendsView.setLegends(.circle(radius: 7.0), legends)
-        
         print("Createdlegend")
+    }
+    
+    private func requestData() {
+        AF.request("http://35.247.90.198:8080/covid-19-jhu-csse-service/time-series/us/confirmed/top-ten").validate().responseString { response in
+            if let json = response.value, let jsonData = json.data(using: .utf8) {
+                guard let chartView = self.chartView else { return }
+                
+                let decoder = JSONDecoder()
+                let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
+                self.processData(cases)
+                
+                chartView.updateChart()
+            }
+        }
     }
 
     func createModel(_ chartView: XYChartView) {
