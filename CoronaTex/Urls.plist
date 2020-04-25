@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>confirmedUSCasesUrl</key>
+	<string>http://35.247.90.198:8080/covid-19-jhu-csse-service/time-series/us/confirmed/top-ten</string>
+</dict>
+</plist>

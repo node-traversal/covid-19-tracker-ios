@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="ipad12_9rounded" orientation="portrait" layout="splitview1_3" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="CountyStatisticsViewController" customModule="CoronaTex" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P7I-rS-4G2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </tableView>
@@ -27,15 +27,35 @@
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="NewCasesViewController" customModule="CoronaTex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGV-Rr-HvF" userLabel="Chart Title Bar">
+                                <rect key="frame" x="44" y="0.0" width="808" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Chart Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRW-DI-Hgj">
+                                        <rect key="frame" x="334" y="-5" width="140" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fjP-hA-4iz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="zRW-DI-Hgj" firstAttribute="centerY" secondItem="nGV-Rr-HvF" secondAttribute="centerY" id="gLy-5x-fGz"/>
+                                    <constraint firstItem="zRW-DI-Hgj" firstAttribute="centerX" secondItem="nGV-Rr-HvF" secondAttribute="centerX" id="rH8-Uy-pOX"/>
+                                    <constraint firstAttribute="height" constant="40" id="sjR-P7-8YR"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gl-Hp-RBF" customClass="XYChartView" customModule="CoronaTex" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1251"/>
+                                <rect key="frame" x="44" y="40" width="708" height="304"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdJ-Jh-hpQ" customClass="ChartLegendsView" customModule="ChartLegends">
-                                <rect key="frame" x="20" y="1251" width="280" height="50"/>
+                                <rect key="frame" x="752" y="40" width="100" height="304"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Hu3-Zu-HHB"/>
@@ -57,17 +77,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="JdJ-Jh-hpQ" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="2Ef-Zz-m7N"/>
+                            <constraint firstItem="JdJ-Jh-hpQ" firstAttribute="top" secondItem="nGV-Rr-HvF" secondAttribute="bottom" id="D2y-VI-H9E"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="JdJ-Jh-hpQ" secondAttribute="trailing" id="Gkx-f8-8BY"/>
-                            <constraint firstItem="5gl-Hp-RBF" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="K4D-Cn-Li7"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="nGV-Rr-HvF" secondAttribute="trailing" id="JG8-yh-Gph"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="JdJ-Jh-hpQ" secondAttribute="bottom" id="M4x-1H-BKe"/>
                             <constraint firstItem="JdJ-Jh-hpQ" firstAttribute="top" secondItem="5gl-Hp-RBF" secondAttribute="bottom" id="MpL-rd-lNv"/>
+                            <constraint firstItem="5gl-Hp-RBF" firstAttribute="top" secondItem="nGV-Rr-HvF" secondAttribute="bottom" id="XH1-jg-cNr"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="5gl-Hp-RBF" secondAttribute="trailing" id="XwZ-3M-rZI"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="5gl-Hp-RBF" secondAttribute="bottom" id="dYt-xA-xnZ"/>
+                            <constraint firstItem="nGV-Rr-HvF" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="kwD-H0-qeb"/>
                             <constraint firstItem="JdJ-Jh-hpQ" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" constant="-20" id="mj3-eV-Ra7"/>
                             <constraint firstItem="5gl-Hp-RBF" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="nNp-d7-Wbb"/>
                             <constraint firstItem="JdJ-Jh-hpQ" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="qLs-px-9Zs"/>
                             <constraint firstItem="JdJ-Jh-hpQ" firstAttribute="leading" secondItem="5gl-Hp-RBF" secondAttribute="trailing" id="zbh-tl-NYp"/>
+                            <constraint firstItem="nGV-Rr-HvF" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="zcv-bv-6IQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                         <variation key="default">
@@ -82,7 +105,7 @@
                                 <exclude reference="Gkx-f8-8BY"/>
                                 <include reference="XwZ-3M-rZI"/>
                                 <exclude reference="dYt-xA-xnZ"/>
-                                <exclude reference="2Ef-Zz-m7N"/>
+                                <exclude reference="D2y-VI-H9E"/>
                                 <include reference="MpL-rd-lNv"/>
                                 <include reference="mj3-eV-Ra7"/>
                                 <include reference="qLs-px-9Zs"/>
@@ -94,7 +117,7 @@
                                 <include reference="Gkx-f8-8BY"/>
                                 <exclude reference="XwZ-3M-rZI"/>
                                 <include reference="dYt-xA-xnZ"/>
-                                <include reference="2Ef-Zz-m7N"/>
+                                <include reference="D2y-VI-H9E"/>
                                 <exclude reference="MpL-rd-lNv"/>
                                 <exclude reference="mj3-eV-Ra7"/>
                                 <exclude reference="qLs-px-9Zs"/>
@@ -104,13 +127,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="New Cases" image="person.3.fill" catalog="system" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="chartTitle" destination="zRW-DI-Hgj" id="Z5T-08-N36"/>
                         <outlet property="chartView" destination="5gl-Hp-RBF" id="Wy1-vw-11Y"/>
                         <outlet property="legendsView" destination="JdJ-Jh-hpQ" id="V4Q-ql-vdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745.98214285714278" y="356.52173913043481"/>
+            <point key="canvasLocation" x="895.6521739130435" y="367.63392857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

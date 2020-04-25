@@ -14,6 +14,7 @@ import Alamofire
 class NewCasesViewController: UIViewController {
     @IBOutlet private weak var chartView: XYChartView?
     @IBOutlet private weak var legendsView: ChartLegendsView!
+    @IBOutlet private weak var chartTitle: UILabel!
     
     fileprivate var lastOrientation: UIInterfaceOrientation?
     
@@ -28,6 +29,7 @@ class NewCasesViewController: UIViewController {
         guard let chartView = chartView else { return }
         chartView.backgroundColor = view.backgroundColor
         legendsView.backgroundColor = view.backgroundColor
+        chartTitle.text = "US New Cases - Top Ten Counties"
         
         print("initializing chart data")
         processData(ConfirmedCases.current)
@@ -70,15 +72,17 @@ class NewCasesViewController: UIViewController {
     }
     
     private func requestData() {
-        AF.request("http://35.247.90.198:8080/covid-19-jhu-csse-service/time-series/us/confirmed/top-ten").validate().responseString { response in
-            if let json = response.value, let jsonData = json.data(using: .utf8) {
-                guard let chartView = self.chartView else { return }
-                
-                let decoder = JSONDecoder()
-                let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
-                self.processData(cases)
-                
-                chartView.updateChart()
+        if let url = Environments.current.confirmedUSCasesUrl {
+            AF.request(url).validate().responseString { response in
+                if let json = response.value, let jsonData = json.data(using: .utf8) {
+                    guard let chartView = self.chartView else { return }
+                    
+                    let decoder = JSONDecoder()
+                    let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
+                    self.processData(cases)
+                    
+                    chartView.updateChart()
+                }
             }
         }
     }
