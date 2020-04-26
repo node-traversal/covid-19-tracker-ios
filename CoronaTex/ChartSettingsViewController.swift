@@ -12,12 +12,14 @@ class ChartSettingsViewController: UIViewController {
     @IBOutlet private weak var saveButton: UIBarButtonItem!
     @IBOutlet private weak var perCapita: UISwitch!
     @IBOutlet private weak var lastUpdated: UILabel!
+    @IBOutlet private weak var newCases: UISwitch!
     
     var settings: CasesChartSettings = CasesChartSettings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        newCases.isOn = settings.newCases
         perCapita.isOn = settings.perCapita
         lastUpdated.text = settings.lastUpdated
     }
@@ -30,6 +32,7 @@ class ChartSettingsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         settings.perCapita = perCapita.isOn
+        settings.newCases = newCases.isOn
         
         print("done")
     }

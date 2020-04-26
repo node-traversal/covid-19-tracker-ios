@@ -11,7 +11,5 @@ import Foundation
 struct CasesChartSettings {
     var lastUpdated: String = ""
     var perCapita: Bool = false
-    
-    init() {
-    }
+    var newCases: Bool = true
 }

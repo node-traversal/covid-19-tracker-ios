@@ -20,7 +20,7 @@ class CoronaTexTests: XCTestCase {
 
     func testValidTimeline() throws {
         let text = "County Name,Population,03-04,03-05\nDallas,2639966,42,7\nDenton,20123,0,1"
-        let data = CountyTimelineData.init(text: text)
+        let data = CountyCensusData.init(text: text)
         XCTAssertNotNil(data)
         XCTAssertEqual(data?.dates, ["03-04-2020", "03-05-2020"])
         XCTAssertEqual(data?.countyPopulation, ["Dallas": 2639966, "Denton": 20123])
@@ -29,16 +29,16 @@ class CoronaTexTests: XCTestCase {
 
     func testTimelineWrongCountyHeader() throws {
         let text = "County,Population,03-04,03-05\nDallas,2639966,42,7\nDenton,20123,0,1"
-        XCTAssertNil(CountyTimelineData.init(text: text))
+        XCTAssertNil(CountyCensusData.init(text: text))
     }
 
     func testTimelineWrongPopulationHeader() throws {
         let text = "County Name,Pop,03-04,03-05\nDallas,2639966,42,7\nDenton,20123,0,1"
-        XCTAssertNil(CountyTimelineData.init(text: text))
+        XCTAssertNil(CountyCensusData.init(text: text))
     }
 
     func testTimelineWrongDateHeader() throws {
         let text = "County Name,Population,XX-04,03-05\nDallas,2639966,42,7\nDenton,20123,0,1"
-        XCTAssertNil(CountyTimelineData.init(text: text))
+        XCTAssertNil(CountyCensusData.init(text: text))
     }
 }

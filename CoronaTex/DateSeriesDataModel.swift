@@ -105,6 +105,6 @@ class DateSeriesDataModel {
             yAxisLabels.append(ChartAxisLabel(text: yAxisTitle, settings: ChartTheme.labelSettings.defaultVertical()))
         }
  
-        self.yAxisModel = ChartAxisModel(axisValues: yValues, axisTitleLabels: yAxisLabels)
+        self.yAxisModel = ChartAxisModel(axisValues: yValues, axisTitleLabels: yAxisLabels, trailingPadding: .label)
     }
 }
