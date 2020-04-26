@@ -13,7 +13,7 @@ enum CountryData {
     
     private static func loadData() -> CountyTimelineData {
         print("Loading county data from csv...")
-        guard let asset = NSDataAsset(name: "Data") else {
+        guard let asset = NSDataAsset(name: "USCensusData") else {
             fatalError("could not load county data")
         }
         let text = String(data: asset.data, encoding: .iso2022JP) ?? ""

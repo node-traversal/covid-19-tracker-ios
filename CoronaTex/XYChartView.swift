@@ -12,7 +12,7 @@ import SwiftCharts
 @IBDesignable
 class XYChartView: UIView {
     fileprivate var chart: Chart?
-    var dataModel = DateSeriesDataModel.example()
+    var dataModel: DateSeriesDataModel?
     
     private var didLayout: Bool = false
     
@@ -33,14 +33,22 @@ class XYChartView: UIView {
     }
     
     func layoutChart() {
+        guard dataModel != nil else {
+            print("No chart data yet ...")
+            return
+        }
+        
         if !self.didLayout {
-            print("layoutSubviews: \(frame.width)x\(frame.height)")
+            print("layout chart: \(frame.width)x\(frame.height)")
             self.didLayout = true
             self.initChart()
         }
     }
     
-    private func initChart() {        
+    private func initChart() {
+        print("Initializing chart: ")
+        guard let dataModel = self.dataModel else { return }
+        
         let chartFrame = ChartTheme.chartFrame(self.bounds)
         let chartSettings = ChartTheme.chartSettings
         let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: chartSettings, chartFrame: chartFrame, xModel: dataModel.xAxisModel, yModel: dataModel.yAxisModel)
@@ -68,9 +76,7 @@ class XYChartView: UIView {
         chartPointsLineLayer.initScreenLines(chart)
         
         self.addSubview(chart.view)
-        // DEBUG layout:
-        //chart.view.layer.borderWidth = 2
-        //chart.view.layer.borderColor = UIColor.red.cgColor
+
         self.chart = chart
     }
     
