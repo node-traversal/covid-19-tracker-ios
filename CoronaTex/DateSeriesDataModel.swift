@@ -51,12 +51,13 @@ private class DateSeriesChartFactory {
         ChartAxisValueDate(date: readFormatter.date(from: dateStr)!, formatter: displayFormatter, labelSettings: ChartTheme.labelSettings)
     }
     
-    func toLines(_ data: [DateSeries]) -> [ChartLineModel<ChartPoint>] {
+    func toLines(_ data: [DateSeries]) -> [ChartLineModel<ChartPoqint>] {
         var lines = [ChartLineModel]()
         
         for (index, series) in data.enumerated() {
             let points = toChartPoints(series.dataPoints)
             let color = ChartTheme.color(index)
+            print("    \(series.name) LINE COLOR: \(index)")
             lines.append(ChartLineModel(chartPoints: points, lineColor: color, lineWidth: 2, animDuration: 1, animDelay: 0))
         }
         

@@ -12,6 +12,7 @@ struct CountyCaseData: Codable {
     var county: String?
     var provinceState: String?
     var values: [Int]
+    var lastValue: Int?
 }
 
 struct ConfirmedCasesData: Codable {
