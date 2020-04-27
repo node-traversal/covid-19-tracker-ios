@@ -14,7 +14,12 @@
 		49289F2B2443582C007E6ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49289F2A2443582C007E6ED0 /* Assets.xcassets */; };
 		49289F2E2443582C007E6ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49289F2C2443582C007E6ED0 /* LaunchScreen.storyboard */; };
 		49289F392443582D007E6ED0 /* CoronaTexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F382443582D007E6ED0 /* CoronaTexTests.swift */; };
-		49289F442443CB76007E6ED0 /* CountyTimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F432443CB76007E6ED0 /* CountyTimelineData.swift */; };
+		49289F442443CB76007E6ED0 /* CountyCensusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F432443CB76007E6ED0 /* CountyCensusData.swift */; };
+		49518C872455B285002759F8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49518C862455B285002759F8 /* LaunchScreenViewController.swift */; };
+		49518C892455C807002759F8 /* NewCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49518C882455C807002759F8 /* NewCases.swift */; };
+		49641712245487880099C258 /* ChartSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49641711245487880099C258 /* ChartSettingsViewController.swift */; };
+		4964171424548D8E0099C258 /* CasesChartSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964171324548D8E0099C258 /* CasesChartSettings.swift */; };
+		4967F1942457280C00EBF369 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4967F1932457280C00EBF369 /* .swiftlint.yml */; };
 		499408BE2444998500EE80A1 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499408BD2444998500EE80A1 /* Env.swift */; };
 		49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */; };
 		49B3496424456ADB00E94FF4 /* .github in Resources */ = {isa = PBXBuildFile; fileRef = 49B3496324456ADB00E94FF4 /* .github */; };
@@ -24,7 +29,10 @@
 		49B3F49C2444FC4300D90BF2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49B2444FC4300D90BF2 /* Date.swift */; };
 		49B3F49E2444FCF500D90BF2 /* DateSeriesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49D2444FCF500D90BF2 /* DateSeriesDataModel.swift */; };
 		49B3F4A02445152200D90BF2 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49F2445152200D90BF2 /* CountryData.swift */; };
+		49B665AC2453210D00EBA472 /* Urls.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49B665AB2453210D00EBA472 /* Urls.plist */; };
+		49B665AE2453217600EBA472 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B665AD2453217600EBA472 /* Environments.swift */; };
 		49EF0C972443DDBD009BE1B2 /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */; };
+		49F94B6B244F27A1007C5AE9 /* ConfirmedCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F94B6A244F27A1007C5AE9 /* ConfirmedCases.swift */; };
 		FB2232E4BF9B82957F6962B0 /* Pods_CoronaTex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E14951455AF5677C6B3AB3 /* Pods_CoronaTex.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +59,12 @@
 		49289F342443582D007E6ED0 /* CoronaTexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoronaTexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49289F382443582D007E6ED0 /* CoronaTexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaTexTests.swift; sourceTree = "<group>"; };
 		49289F3A2443582D007E6ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49289F432443CB76007E6ED0 /* CountyTimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyTimelineData.swift; sourceTree = "<group>"; };
+		49289F432443CB76007E6ED0 /* CountyCensusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyCensusData.swift; sourceTree = "<group>"; };
+		49518C862455B285002759F8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		49518C882455C807002759F8 /* NewCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCases.swift; sourceTree = "<group>"; };
+		49641711245487880099C258 /* ChartSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSettingsViewController.swift; sourceTree = "<group>"; };
+		4964171324548D8E0099C258 /* CasesChartSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesChartSettings.swift; sourceTree = "<group>"; };
+		4967F1932457280C00EBF369 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		499408BD2444998500EE80A1 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountyStatisticsViewController.swift; sourceTree = "<group>"; };
 		49B3496324456ADB00E94FF4 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
@@ -61,7 +74,10 @@
 		49B3F49B2444FC4300D90BF2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		49B3F49D2444FCF500D90BF2 /* DateSeriesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeriesDataModel.swift; sourceTree = "<group>"; };
 		49B3F49F2445152200D90BF2 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		49B665AB2453210D00EBA472 /* Urls.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Urls.plist; sourceTree = "<group>"; };
+		49B665AD2453217600EBA472 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
+		49F94B6A244F27A1007C5AE9 /* ConfirmedCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmedCases.swift; sourceTree = "<group>"; };
 		C3E14951455AF5677C6B3AB3 /* Pods_CoronaTex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94906F00C7261FAC0BAB4A2 /* Pods-CoronaTex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTex.release.xcconfig"; path = "Target Support Files/Pods-CoronaTex/Pods-CoronaTex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +104,7 @@
 		49289F1324435828007E6ED0 = {
 			isa = PBXGroup;
 			children = (
+				4967F1932457280C00EBF369 /* .swiftlint.yml */,
 				49B349652445FE6300E94FF4 /* Podfile */,
 				49B3496324456ADB00E94FF4 /* .github */,
 				49289F1E24435829007E6ED0 /* CoronaTex */,
@@ -117,15 +134,22 @@
 				49289F2C2443582C007E6ED0 /* LaunchScreen.storyboard */,
 				49289F2A2443582C007E6ED0 /* Assets.xcassets */,
 				49289F2F2443582C007E6ED0 /* Info.plist */,
+				49518C862455B285002759F8 /* LaunchScreenViewController.swift */,
 				49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */,
 				49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */,
+				49641711245487880099C258 /* ChartSettingsViewController.swift */,
 				49289F2524435829007E6ED0 /* NewCasesViewController.swift */,
 				49B3F4962444A48C00D90BF2 /* XYChartView.swift */,
 				499408BD2444998500EE80A1 /* Env.swift */,
-				49289F432443CB76007E6ED0 /* CountyTimelineData.swift */,
+				49518C882455C807002759F8 /* NewCases.swift */,
+				49289F432443CB76007E6ED0 /* CountyCensusData.swift */,
+				49F94B6A244F27A1007C5AE9 /* ConfirmedCases.swift */,
+				4964171324548D8E0099C258 /* CasesChartSettings.swift */,
 				49B3F49D2444FCF500D90BF2 /* DateSeriesDataModel.swift */,
 				49B3F49F2445152200D90BF2 /* CountryData.swift */,
 				49B3F49424449D0F00D90BF2 /* ChartTheme.swift */,
+				49B665AB2453210D00EBA472 /* Urls.plist */,
+				49B665AD2453217600EBA472 /* Environments.swift */,
 			);
 			path = CoronaTex;
 			sourceTree = "<group>";
@@ -250,6 +274,8 @@
 			files = (
 				49B349662445FE6300E94FF4 /* Podfile in Resources */,
 				49B3496424456ADB00E94FF4 /* .github in Resources */,
+				49B665AC2453210D00EBA472 /* Urls.plist in Resources */,
+				4967F1942457280C00EBF369 /* .swiftlint.yml in Resources */,
 				49289F2E2443582C007E6ED0 /* LaunchScreen.storyboard in Resources */,
 				49289F2B2443582C007E6ED0 /* Assets.xcassets in Resources */,
 				49289F2924435829007E6ED0 /* Main.storyboard in Resources */,
@@ -331,16 +357,22 @@
 			files = (
 				49B3F49524449D0F00D90BF2 /* ChartTheme.swift in Sources */,
 				49B3F49C2444FC4300D90BF2 /* Date.swift in Sources */,
+				49518C892455C807002759F8 /* NewCases.swift in Sources */,
 				49289F2624435829007E6ED0 /* NewCasesViewController.swift in Sources */,
+				49B665AE2453217600EBA472 /* Environments.swift in Sources */,
+				49518C872455B285002759F8 /* LaunchScreenViewController.swift in Sources */,
 				49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */,
+				4964171424548D8E0099C258 /* CasesChartSettings.swift in Sources */,
 				49B3F49E2444FCF500D90BF2 /* DateSeriesDataModel.swift in Sources */,
-				49289F442443CB76007E6ED0 /* CountyTimelineData.swift in Sources */,
+				49289F442443CB76007E6ED0 /* CountyCensusData.swift in Sources */,
 				49289F2024435829007E6ED0 /* AppDelegate.swift in Sources */,
 				49B3F4972444A48C00D90BF2 /* XYChartView.swift in Sources */,
+				49641712245487880099C258 /* ChartSettingsViewController.swift in Sources */,
 				49EF0C972443DDBD009BE1B2 /* BasicTableViewController.swift in Sources */,
 				49289F2224435829007E6ED0 /* SceneDelegate.swift in Sources */,
 				49B3F4A02445152200D90BF2 /* CountryData.swift in Sources */,
 				499408BE2444998500EE80A1 /* Env.swift in Sources */,
+				49F94B6B244F27A1007C5AE9 /* ConfirmedCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,24 +1,32 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.4.2)
+  - Alamofire (5.1.0)
   - ChartLegends (0.0.6)
   - SwiftCharts (0.6.5)
   - SwiftLint (0.39.2)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - Alamofire
   - ChartLegends
   - SwiftCharts (~> 0.6.5)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - ActionSheetPicker-3.0
+    - Alamofire
     - ChartLegends
     - SwiftCharts
     - SwiftLint
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 5b62e07b00bd970509cf5ece99cb7447eae5dd0d
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   ChartLegends: bd0b58d74772f35dc14fc6a3ff245cccf3204a59
   SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 851eeb59bd0bf09bfe1283569f15df43b32bcca8
+PODFILE CHECKSUM: 7a1eb6f69b52e0ad206db8899267c7f30363b965
 
 COCOAPODS: 1.9.1
