@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>confirmedUSCasesUrl</key>
-	<string>http://35.247.90.198:8080/covid-19-jhu-csse-service/time-series/us/confirmed/top-ten</string>
+	<string>http://35.247.90.198:8080/covid-19-jhu-csse-service/time-series/us/confirmed</string>
 </dict>
 </plist>

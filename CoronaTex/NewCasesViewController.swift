@@ -23,9 +23,7 @@ class IntReader: NumbericReader {
     func read(_ key: String, _ values: [Int], _ dates: [String], _ newCases: Bool) -> [(date: String, value: Any)] {
         var dataPoints: [(date: String, value: Int)] = []
         var lastValue = 0
-        
-        print("  K:\(key)")
-        
+               
         for (index, rawValue) in values.enumerated() {
             var value: Int = rawValue
             if newCases {
@@ -99,6 +97,7 @@ class NewCasesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadSettings()
         
         guard let chartView = chartView else { return }
         
@@ -121,7 +120,10 @@ class NewCasesViewController: UIViewController {
             return
         }
         
-        let counties = data.series
+        var counties = Array(data.series)
+        counties.sort {
+            $0.lastValue! > $1.lastValue!
+        }
         let dates = data.dates
         let model = NewCases()
         let stateFilter = chartSettings.selectedState
@@ -135,34 +137,36 @@ class NewCasesViewController: UIViewController {
         
         var legends = [(text: String, color: UIColor)]()
 
-        let reader: NumbericReader = chartSettings.perCapita ? DoubleReader() : IntReader()
+        let reader: NumbericReader = chartSettings.isPerCapita ? DoubleReader() : IntReader()
         
         var size = 0
-        for (countyIndex, countyData) in counties.enumerated() {
-            let county = countyData.county ?? "?"
+        for countyData in counties {
+            let county = countyData.county ?? ""
             let state = countyData.provinceState ?? "?"
             let key = "\(state), \(county)"
-            if !stateFilter.isEmpty && state != stateFilter {
-                print("skipping \(key) - excluded key")
+            
+            if county.isEmpty || (!stateFilter.isEmpty && state != stateFilter) {
+                //print("skipping \(key) - excluded key")
                 continue
             }
                  
-            let dataPoints = reader.read(key, countyData.values, dates, chartSettings.newCases)
+            let dataPoints = reader.read(key, countyData.values, dates, chartSettings.isNewCases)
             if dataPoints.isEmpty {
                 continue
             }
             
+            print("  K:\(key) COLOR: \(size)")
             model.series.append(DateSeries(county, dataPoints))
             //  model.series.append(DateSeries(county, [dataPoints]))
-            legends.append((text: county, ChartTheme.color(countyIndex)))
+            legends.append((text: county, ChartTheme.color(size)))
             size += 1
-            if size >= 15 {
+            if size >= 4 {
                 break
             }
         }
         
         model.yMax = reader.getYMax()
-        model.doubleFormatter = chartSettings.newCases ? NewCases.percentFormat(3) : NewCases.percentFormat(1)
+        model.doubleFormatter = chartSettings.isNewCases ? NewCases.percentFormat(3) : NewCases.percentFormat(1)
         
         if model.series.isEmpty {
             print("No data!")
@@ -182,8 +186,8 @@ class NewCasesViewController: UIViewController {
     
     private func setChartTitle() {
         let prefix = chartSettings.selectedState.isEmpty ? "US" : chartSettings.selectedState
-        let chartTypeLabel = chartSettings.newCases ? "New Cases" : "Cases"
-        let suffix = chartSettings.perCapita ? " Per Capita" : ""
+        let chartTypeLabel = chartSettings.isNewCases ? "New Cases" : "Cases"
+        let suffix = chartSettings.isPerCapita ? " Per Capita" : ""
         chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top Ten"
     }
     
@@ -286,8 +290,8 @@ class NewCasesViewController: UIViewController {
     @IBAction private func unwindForSettings(sender: UIStoryboardSegue) {
         if let sourceController = sender.source as? ChartSettingsViewController {
             chartSettings = sourceController.settings
-            print("received settings \(chartSettings.perCapita)")
-            
+            saveSettings()
+            print("received settings \(chartSettings.isPerCapita)")
             if let rawData = self.rawData {
                 guard let chartView = self.chartView else { return }
                 
@@ -297,5 +301,18 @@ class NewCasesViewController: UIViewController {
                 chartView.updateChart()
             }
         }
+    }
+    
+    private func saveSettings() {
+        let success = NSKeyedArchiver.archiveRootObject(chartSettings, toFile: CasesChartSettings.ArchiveUrl.path)
+        if success {
+            print("Saved settings")
+        } else {
+            print("FAILED to save settings!!")
+        }
+    }
+    
+    private func loadSettings() {
+        chartSettings = NSKeyedUnarchiver.unarchiveObject(withFile: CasesChartSettings.ArchiveUrl.path) as? CasesChartSettings ?? CasesChartSettings()
     }
 }
