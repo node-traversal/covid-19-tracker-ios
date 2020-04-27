@@ -11,6 +11,7 @@ import os.log
 
 class CountyCensusData {
     var population: [String: Int] = [:]
+    var states: [String]
     
     private static func validateHeader(_ index: Int, _ expected: String, _ headers: [Substring]) -> Int {
         let header = headers[index]
@@ -30,6 +31,7 @@ class CountyCensusData {
         let countyIndex = CountyCensusData.validateHeader(1, "COUNTY", headers)
         let populationIndex = CountyCensusData.validateHeader(3, "POPESTIMATE2019", headers)
         let expectedMinHeaderCount = max(countyIndex, populationIndex)
+        var statesMap = [String: Bool]()
         
         guard (countyIndex >= 0) && (populationIndex >= 0) else {
             os_log("Invalid data headers", log: OSLog.default, type: .error)
@@ -46,7 +48,9 @@ class CountyCensusData {
                 let populationValue = Int(String(cells[populationIndex])) ?? 0
 
                 population[key] = populationValue
+                statesMap[state] = true
             }
         }
+        states = Array(statesMap.keys.sorted())
     }
 }

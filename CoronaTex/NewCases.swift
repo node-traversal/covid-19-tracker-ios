@@ -10,7 +10,17 @@ import Foundation
 
 class NewCases {
     var series: [DateSeries] = []
-    var yMax = 0
+    var yMax: Any = 0
     var xCompact = false
     let dateFormat = "yyyy-MM-dd"
+    var doubleFormatter: NumberFormatter = NewCases.percentFormat(2)
+        
+    static func percentFormat(_ digits: Int) -> NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        formatter.minimumFractionDigits = digits
+        formatter.maximumFractionDigits = digits
+        
+        return formatter
+    }
 }

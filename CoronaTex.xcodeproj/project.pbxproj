@@ -19,6 +19,7 @@
 		49518C892455C807002759F8 /* NewCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49518C882455C807002759F8 /* NewCases.swift */; };
 		49641712245487880099C258 /* ChartSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49641711245487880099C258 /* ChartSettingsViewController.swift */; };
 		4964171424548D8E0099C258 /* CasesChartSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964171324548D8E0099C258 /* CasesChartSettings.swift */; };
+		4967F1942457280C00EBF369 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4967F1932457280C00EBF369 /* .swiftlint.yml */; };
 		499408BE2444998500EE80A1 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499408BD2444998500EE80A1 /* Env.swift */; };
 		49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */; };
 		49B3496424456ADB00E94FF4 /* .github in Resources */ = {isa = PBXBuildFile; fileRef = 49B3496324456ADB00E94FF4 /* .github */; };
@@ -63,6 +64,7 @@
 		49518C882455C807002759F8 /* NewCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCases.swift; sourceTree = "<group>"; };
 		49641711245487880099C258 /* ChartSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSettingsViewController.swift; sourceTree = "<group>"; };
 		4964171324548D8E0099C258 /* CasesChartSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesChartSettings.swift; sourceTree = "<group>"; };
+		4967F1932457280C00EBF369 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		499408BD2444998500EE80A1 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountyStatisticsViewController.swift; sourceTree = "<group>"; };
 		49B3496324456ADB00E94FF4 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		49289F1324435828007E6ED0 = {
 			isa = PBXGroup;
 			children = (
+				4967F1932457280C00EBF369 /* .swiftlint.yml */,
 				49B349652445FE6300E94FF4 /* Podfile */,
 				49B3496324456ADB00E94FF4 /* .github */,
 				49289F1E24435829007E6ED0 /* CoronaTex */,
@@ -272,6 +275,7 @@
 				49B349662445FE6300E94FF4 /* Podfile in Resources */,
 				49B3496424456ADB00E94FF4 /* .github in Resources */,
 				49B665AC2453210D00EBA472 /* Urls.plist in Resources */,
+				4967F1942457280C00EBF369 /* .swiftlint.yml in Resources */,
 				49289F2E2443582C007E6ED0 /* LaunchScreen.storyboard in Resources */,
 				49289F2B2443582C007E6ED0 /* Assets.xcassets in Resources */,
 				49289F2924435829007E6ED0 /* Main.storyboard in Resources */,

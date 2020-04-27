@@ -11,12 +11,85 @@ import SwiftCharts
 import ChartLegends
 import Alamofire
 
+protocol NumbericReader {
+    func read(_ key: String, _ values: [Int], _ dates: [String], _ newCases: Bool) -> [(date: String, value: Any)]
+    
+    func getYMax() -> Any
+}
+
+class IntReader: NumbericReader {
+    private var yMax: Int = 0
+    
+    func read(_ key: String, _ values: [Int], _ dates: [String], _ newCases: Bool) -> [(date: String, value: Any)] {
+        var dataPoints: [(date: String, value: Int)] = []
+        var lastValue = 0
+        
+        print("  K:\(key)")
+        
+        for (index, rawValue) in values.enumerated() {
+            var value: Int = rawValue
+            if newCases {
+                value = rawValue - lastValue
+            }
+
+            let date = dates[index]
+            self.yMax = max(self.yMax, value)
+            dataPoints.append((date: date, value: value))
+            lastValue = rawValue
+        }
+        
+        return dataPoints
+    }
+    
+    func getYMax() -> Any {
+        return yMax
+    }
+}
+
+class DoubleReader: NumbericReader {
+    private let population = CountryData.current.population
+    private var yMax: Double = 0
+        
+    func read(_ key: String, _ values: [Int], _ dates: [String], _ newCases: Bool) -> [(date: String, value: Any)] {
+        var dataPoints: [(date: String, value: Double)] = []
+        
+        let populationFactor = Double(population[key] ?? 0)
+
+        if populationFactor == 0 {
+            print("skipping \(key) - no population!")
+            return []
+        }
+        print("  K:\(key) \(populationFactor)")
+
+        var lastValue: Double = 0
+        
+        for (index, rawValue) in values.enumerated() {
+            let rawDoubleValue = Double(rawValue) / populationFactor
+            
+            var value: Double = rawDoubleValue
+            if newCases {
+                value = rawDoubleValue - lastValue
+            }
+
+            let date = dates[index]
+            self.yMax = max(self.yMax, value)
+            dataPoints.append((date: date, value: value))
+            lastValue = rawDoubleValue
+        }
+        
+        return dataPoints
+    }
+    
+    func getYMax() -> Any {
+        return yMax
+    }
+}
+
 class NewCasesViewController: UIViewController {
     @IBOutlet private weak var chartView: XYChartView?
     @IBOutlet private weak var legendsView: ChartLegendsView!
     @IBOutlet private weak var chartTitle: UILabel!
     @IBOutlet private weak var settingsButton: UIButton!
-    @IBOutlet private weak var chartType: UISegmentedControl!
     
     fileprivate var lastOrientation: UIInterfaceOrientation?
     
@@ -28,18 +101,19 @@ class NewCasesViewController: UIViewController {
         super.viewDidLoad()
         
         guard let chartView = chartView else { return }
-        settingsButton.tintColor = .label
+        
+        //settingsButton.tintColor = .label
         chartView.backgroundColor = view.backgroundColor
         legendsView.backgroundColor = view.backgroundColor
         chartTitle.text = "Loading New Cases ..."
         
         settingsButton.isEnabled = false
-        chartType.isEnabled = false
         
         print("initializing chart data")
         requestData()
     }
     
+    // swiftlint:disable:next function_body_length
     private func processData(_ data: ConfirmedCasesData) {
         guard let chartView = chartView else { return }
         guard !data.dates.isEmpty else {
@@ -50,7 +124,8 @@ class NewCasesViewController: UIViewController {
         let counties = data.series
         let dates = data.dates
         let model = NewCases()
-        model.yMax = 0
+        let stateFilter = chartSettings.selectedState
+        
         model.series = []
         model.xCompact = self.traitCollection.horizontalSizeClass == .compact
         
@@ -59,53 +134,35 @@ class NewCasesViewController: UIViewController {
         chartSettings.lastUpdated = dates.last ?? ""
         
         var legends = [(text: String, color: UIColor)]()
-        let population = CountryData.current.population
+
+        let reader: NumbericReader = chartSettings.perCapita ? DoubleReader() : IntReader()
         
         var size = 0
-        
-        let stateFilter = "New York"
-        
         for (countyIndex, countyData) in counties.enumerated() {
-            var dataPoints: [(date: String, value: Int)] = []
             let county = countyData.county ?? "?"
             let state = countyData.provinceState ?? "?"
-            if state != stateFilter {
-                continue
-            }
             let key = "\(state), \(county)"
-            let populationFactor = Double(population[key] ?? 0)
-            var lastValue = 0
-            
-            if populationFactor == 0 {
-                print("skipping \(key) - no population!")
+            if !stateFilter.isEmpty && state != stateFilter {
+                print("skipping \(key) - excluded key")
+                continue
+            }
+                 
+            let dataPoints = reader.read(key, countyData.values, dates, chartSettings.newCases)
+            if dataPoints.isEmpty {
                 continue
             }
             
-            print("  K:\(key) \(populationFactor)")
-
-            for (index, rawValue) in countyData.values.enumerated() {
-                let percentPop: Double = Double(rawValue) / populationFactor * 100.0
-                if percentPop > 1 {
-                    let amount = String(format: "%.3f", percentPop)
-                    print("duh \(amount)")
-                }
-                var value = rawValue
-                if chartSettings.newCases {
-                    value = rawValue - lastValue
-                }
-
-                let date = dates[index]
-                model.yMax = max(model.yMax, value)
-                dataPoints.append((date: date, value: value))
-                lastValue = rawValue
-            }
             model.series.append(DateSeries(county, dataPoints))
+            //  model.series.append(DateSeries(county, [dataPoints]))
             legends.append((text: county, ChartTheme.color(countyIndex)))
             size += 1
             if size >= 15 {
                 break
             }
         }
+        
+        model.yMax = reader.getYMax()
+        model.doubleFormatter = chartSettings.newCases ? NewCases.percentFormat(3) : NewCases.percentFormat(1)
         
         if model.series.isEmpty {
             print("No data!")
@@ -115,15 +172,19 @@ class NewCasesViewController: UIViewController {
         self.model = model
         createModel(chartView)
         
-        print("Creating legend...")
         legendsView.setLegends(.circle(radius: 7.0), legends)
-        print("Created legend")
         
-        let chartTypeLabel = chartSettings.newCases ? "New Cases" : "Cases"
-        chartTitle.text = "US \(chartTypeLabel) - Top Ten Counties"
+        setChartTitle()
         settingsButton.isEnabled = true
         
         rawData = data
+    }
+    
+    private func setChartTitle() {
+        let prefix = chartSettings.selectedState.isEmpty ? "US" : chartSettings.selectedState
+        let chartTypeLabel = chartSettings.newCases ? "New Cases" : "Cases"
+        let suffix = chartSettings.perCapita ? " Per Capita" : ""
+        chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top Ten"
     }
     
     private func requestData() {
@@ -147,7 +208,15 @@ class NewCasesViewController: UIViewController {
         
         print("Creating chart model: ")
         model.xCompact = self.traitCollection.horizontalSizeClass == .compact
-        chartView.dataModel = DateSeriesDataModel(model.series, yMax: model.yMax, xCompact: model.xCompact, dateFormat: model.dateFormat)
+        
+        chartView.dataModel = DateSeriesDataModel(
+            model.series,
+            yAxisTitle: "",
+            yMax: model.yMax,
+            xCompact: model.xCompact,
+            dateFormat: model.dateFormat,
+            doubleFormatter: model.doubleFormatter
+        )
     }
     
     override func viewDidLayoutSubviews() {
@@ -224,6 +293,7 @@ class NewCasesViewController: UIViewController {
                 
                 processData(rawData)
                 
+                setChartTitle()
                 chartView.updateChart()
             }
         }

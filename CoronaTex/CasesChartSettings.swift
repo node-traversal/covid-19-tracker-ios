@@ -9,6 +9,7 @@
 import Foundation
 
 struct CasesChartSettings {
+    var selectedState: String = ""
     var lastUpdated: String = ""
     var perCapita: Bool = false
     var newCases: Bool = true
