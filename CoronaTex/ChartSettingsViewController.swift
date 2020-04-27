@@ -26,8 +26,8 @@ class ChartSettingsViewController: UIViewController {
         states = [allStates]
         states.append(contentsOf: CountryData.current.states)
         setState(settings.selectedState)
-        newCases.isOn = settings.newCases
-        perCapita.isOn = settings.perCapita
+        newCases.isOn = settings.isNewCases
+        perCapita.isOn = settings.isPerCapita
         lastUpdated.text = settings.lastUpdated
     }
     
@@ -43,8 +43,8 @@ class ChartSettingsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        settings.perCapita = perCapita.isOn
-        settings.newCases = newCases.isOn
+        settings.isPerCapita = perCapita.isOn
+        settings.isNewCases = newCases.isOn
         
         print("done")
     }
