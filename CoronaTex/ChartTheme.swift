@@ -16,7 +16,7 @@ import UIKit
 import SwiftCharts
 
 enum ChartTheme {
-    static let colors: [UIColor] = [.systemBlue, .systemPink, .systemGreen, .systemOrange, .systemPurple, .systemTeal, .systemRed, .systemYellow]
+    static let colors: [UIColor] = [.systemBlue, .systemPink, .systemGreen, .systemOrange, .systemPurple, .systemTeal, .systemRed, .systemYellow, .systemIndigo, .systemGray, .systemPink]
     
     static func color(_ index: Int) -> UIColor {
         return ChartTheme.colors[index % ChartTheme.colors.count]

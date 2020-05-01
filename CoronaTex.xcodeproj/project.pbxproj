@@ -33,7 +33,7 @@
 		49B665AE2453217600EBA472 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B665AD2453217600EBA472 /* Environments.swift */; };
 		49EF0C972443DDBD009BE1B2 /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */; };
 		49F94B6B244F27A1007C5AE9 /* ConfirmedCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F94B6A244F27A1007C5AE9 /* ConfirmedCases.swift */; };
-		FB2232E4BF9B82957F6962B0 /* Pods_CoronaTex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E14951455AF5677C6B3AB3 /* Pods_CoronaTex.framework */; };
+		ABA75ACFFAEA4B7B82BBCBAE /* Pods_CoronaTex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1376DB74B80A67FCB5C06C /* Pods_CoronaTex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,7 @@
 		49B665AD2453217600EBA472 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
 		49F94B6A244F27A1007C5AE9 /* ConfirmedCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmedCases.swift; sourceTree = "<group>"; };
-		C3E14951455AF5677C6B3AB3 /* Pods_CoronaTex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1376DB74B80A67FCB5C06C /* Pods_CoronaTex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94906F00C7261FAC0BAB4A2 /* Pods-CoronaTex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTex.release.xcconfig"; path = "Target Support Files/Pods-CoronaTex/Pods-CoronaTex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB2232E4BF9B82957F6962B0 /* Pods_CoronaTex.framework in Frameworks */,
+				ABA75ACFFAEA4B7B82BBCBAE /* Pods_CoronaTex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +174,7 @@
 		B66DC5E32ADE00976AF03972 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C3E14951455AF5677C6B3AB3 /* Pods_CoronaTex.framework */,
+				9D1376DB74B80A67FCB5C06C /* Pods_CoronaTex.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,8 +199,8 @@
 				49289F1824435829007E6ED0 /* Sources */,
 				49289F1924435829007E6ED0 /* Frameworks */,
 				49289F1A24435829007E6ED0 /* Resources */,
-				B24E40411B3ABF101FC787D6 /* [CP] Embed Pods Frameworks */,
 				49B3496224454AE900E94FF4 /* ShellScript */,
+				946412BD8AFED318FDE8812D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +309,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		B24E40411B3ABF101FC787D6 /* [CP] Embed Pods Frameworks */ = {
+		946412BD8AFED318FDE8812D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -534,12 +534,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAMT4CDD2F;
 				INFOPLIST_FILE = CoronaTex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.nodetraversal.CoronaTex;
+				PRODUCT_BUNDLE_IDENTIFIER = io.nodetraversal.CoronaTrackerDEV21;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -552,12 +554,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAMT4CDD2F;
 				INFOPLIST_FILE = CoronaTex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.nodetraversal.CoronaTex;
+				PRODUCT_BUNDLE_IDENTIFIER = io.nodetraversal.CoronaTrackerDEV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

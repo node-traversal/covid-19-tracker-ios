@@ -22,17 +22,21 @@ class IntReader: NumbericReader {
     
     func read(_ key: String, _ values: [Int], _ dates: [String], _ newCases: Bool) -> [(date: String, value: Any)] {
         var dataPoints: [(date: String, value: Int)] = []
-        var lastValue = 0
+        var lastValue: Int?
                
         for (index, rawValue) in values.enumerated() {
             var value: Int = rawValue
+
             if newCases {
-                value = rawValue - lastValue
+                value = rawValue - (lastValue ?? rawValue)
             }
 
             let date = dates[index]
             self.yMax = max(self.yMax, value)
-            dataPoints.append((date: date, value: value))
+            
+            if !newCases || lastValue != nil {
+                dataPoints.append((date: date, value: value))
+            }
             lastValue = rawValue
         }
         
@@ -59,19 +63,23 @@ class DoubleReader: NumbericReader {
         }
         print("  K:\(key) \(populationFactor)")
 
-        var lastValue: Double = 0
+        var lastValue: Double?
         
         for (index, rawValue) in values.enumerated() {
             let rawDoubleValue = Double(rawValue) / populationFactor
             
             var value: Double = rawDoubleValue
             if newCases {
-                value = rawDoubleValue - lastValue
+                value = rawDoubleValue - (lastValue ?? rawDoubleValue)
             }
 
             let date = dates[index]
             self.yMax = max(self.yMax, value)
-            dataPoints.append((date: date, value: value))
+            
+            if !newCases || lastValue != nil {
+                dataPoints.append((date: date, value: value))
+            }
+            
             lastValue = rawDoubleValue
         }
         
@@ -149,8 +157,27 @@ class NewCasesViewController: UIViewController {
                 //print("skipping \(key) - excluded key")
                 continue
             }
-                 
-            let dataPoints = reader.read(key, countyData.values, dates, chartSettings.isNewCases)
+            
+            let settings = self.chartSettings
+            var minPoint = 0
+            var maxPoint = dates.count - 1
+            if settings.limitDays != 0 {
+                minPoint = settings.lastDays
+                maxPoint = settings.lastDays + chartSettings.limitDays
+            } else if settings.lastDays > 0 {
+                minPoint = max(dates.count - chartSettings.lastDays, 0)
+            }
+            
+            guard dates.count == countyData.values.count else {
+                fatalError("\(key) found value count: \(countyData.values.count), expected \(dates.count)")
+            }
+            
+            let dataPoints = reader.read(
+                key,
+                Array(countyData.values[minPoint...maxPoint]),
+                Array(dates[minPoint...maxPoint]),
+                chartSettings.isNewCases
+            )
             if dataPoints.isEmpty {
                 continue
             }
@@ -160,7 +187,7 @@ class NewCasesViewController: UIViewController {
             //  model.series.append(DateSeries(county, [dataPoints]))
             legends.append((text: county, ChartTheme.color(size)))
             size += 1
-            if size >= 4 {
+            if size >= chartSettings.top {
                 break
             }
         }
@@ -188,7 +215,8 @@ class NewCasesViewController: UIViewController {
         let prefix = chartSettings.selectedState.isEmpty ? "US" : chartSettings.selectedState
         let chartTypeLabel = chartSettings.isNewCases ? "New Cases" : "Cases"
         let suffix = chartSettings.isPerCapita ? " Per Capita" : ""
-        chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top Ten"
+        
+        chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top \(chartSettings.top)"
     }
     
     private func requestData() {
@@ -304,15 +332,28 @@ class NewCasesViewController: UIViewController {
     }
     
     private func saveSettings() {
-        let success = NSKeyedArchiver.archiveRootObject(chartSettings, toFile: CasesChartSettings.ArchiveUrl.path)
-        if success {
-            print("Saved settings")
-        } else {
-            print("FAILED to save settings!!")
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: chartSettings, requiringSecureCoding: false)
+            try data.write(to: CasesChartSettings.ArchiveUrl)
+            print("Setting saved.")
+        } catch {
+            print("Failed to save settings...")
         }
     }
     
     private func loadSettings() {
-        chartSettings = NSKeyedUnarchiver.unarchiveObject(withFile: CasesChartSettings.ArchiveUrl.path) as? CasesChartSettings ?? CasesChartSettings()
+        chartSettings = CasesChartSettings()
+        
+        if let nsData = NSData(contentsOf: CasesChartSettings.ArchiveUrl) {
+            do {
+                let data = Data(referencing: nsData)
+
+                if let loadedData = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? CasesChartSettings {
+                    chartSettings = loadedData
+                }
+            } catch {
+                print("Couldn't read settings.")
+            }
+        }
     }
 }

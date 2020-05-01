@@ -1,0 +1,3137 @@
+STATE,COUNTY,POPESTIMATE2019,METRO_NAME,PERCENT_METRO_POPULATION,METRO_POPULATION
+Alabama,Autauga,"55,869",Montgomery,15.37%,"363,564"
+Alabama,Baldwin,"223,234",Mobile,35.08%,"636,444"
+Alabama,Barbour,"24,686",Rural,,
+Alabama,Bibb,"22,394",Rural,,
+Alabama,Blount,"57,826",Birmingham,5.65%,"1,023,613"
+Alabama,Bullock,"10,101",Rural,,
+Alabama,Butler,"19,448",Rural,,
+Alabama,Calhoun,"113,605",Anniston,100.00%,"113,605"
+Alabama,Chambers,"33,254",Rural,,
+Alabama,Cherokee,"26,196",Rural,,
+Alabama,Chilton,"44,428",Rural,,
+Alabama,Choctaw,"12,589",Rural,,
+Alabama,Clarke,"23,622",Rural,,
+Alabama,Clay,"13,235",Rural,,
+Alabama,Cleburne,"14,910",Rural,,
+Alabama,Coffee,"52,342",Rural,,
+Alabama,Colbert,"55,241",Rural,,
+Alabama,Conecuh,"12,067",Rural,,
+Alabama,Coosa,"10,663",Rural,,
+Alabama,Covington,"37,049",Rural,,
+Alabama,Crenshaw,"13,772",Rural,,
+Alabama,Cullman,"83,768",Rural,,
+Alabama,Dale,"49,172",Rural,,
+Alabama,Dallas,"37,196",Rural,,
+Alabama,DeKalb,"71,513",Rural,,
+Alabama,Elmore,"81,209",Montgomery,22.34%,"363,564"
+Alabama,Escambia,"36,633",Rural,,
+Alabama,Etowah,"102,268",Gadsden,100.00%,"102,268"
+Alabama,Fayette,"16,302",Rural,,
+Alabama,Franklin,"31,362",Rural,,
+Alabama,Geneva,"26,271",Rural,,
+Alabama,Greene,"8,111",Rural,,
+Alabama,Hale,"14,651",Rural,,
+Alabama,Henry,"17,205",Rural,,
+Alabama,Houston,"105,882",Dothan,100.00%,"105,882"
+Alabama,Jackson,"51,626",Rural,,
+Alabama,Jefferson,"658,573",Birmingham,64.34%,"1,023,613"
+Alabama,Lamar,"13,805",Rural,,
+Alabama,Lauderdale,"92,729",Rural,,
+Alabama,Lawrence,"32,924",Rural,,
+Alabama,Lee,"164,542",Auburn-Opelika,100.00%,"164,542"
+Alabama,Limestone,"98,915",Huntsville,20.96%,"471,824"
+Alabama,Lowndes,"9,726",Rural,,
+Alabama,Macon,"18,068",Rural,,
+Alabama,Madison,"372,909",Huntsville,79.04%,"471,824"
+Alabama,Marengo,"18,863",Rural,,
+Alabama,Marion,"29,709",Rural,,
+Alabama,Marshall,"96,774",Rural,,
+Alabama,Mobile,"413,210",Mobile,64.92%,"636,444"
+Alabama,Monroe,"20,733",Rural,,
+Alabama,Montgomery,"226,486",Montgomery,62.30%,"363,564"
+Alabama,Morgan,"119,679",Rural,,
+Alabama,Perry,"8,923",Rural,,
+Alabama,Pickens,"19,930",Rural,,
+Alabama,Pike,"33,114",Rural,,
+Alabama,Randolph,"22,722",Rural,,
+Alabama,Russell,"57,961",Columbus/GA,22.84%,"253,730"
+Alabama,Shelby,"217,702",Birmingham,21.27%,"1,023,613"
+Alabama,St. Clair,"89,512",Birmingham,8.74%,"1,023,613"
+Alabama,Sumter,"12,427",Rural,,
+Alabama,Talladega,"79,978",Rural,,
+Alabama,Tallapoosa,"40,367",Rural,,
+Alabama,Tuscaloosa,"209,355",Tuscaloosa,100.00%,"209,355"
+Alabama,Walker,"63,521",Rural,,
+Alabama,Washington,"16,326",Rural,,
+Alabama,Wilcox,"10,373",Rural,,
+Alabama,Winston,"23,629",Rural,,
+Alaska,Aleutians East Borough,"3,337",Rural,,
+Alaska,Aleutians West Census Area,"5,634",Rural,,
+Alaska,Anchorage,"288,000",Anchorage,100.00%,"288,000"
+Alaska,Bethel Census Area,"18,386",Rural,,
+Alaska,Bristol Bay Borough,836,Rural,,
+Alaska,Denali Borough,"2,097",Rural,,
+Alaska,Dillingham Census Area,"4,916",Rural,,
+Alaska,Fairbanks North Star Borough,"96,849",Rural,,
+Alaska,Haines Borough,"2,530",Rural,,
+Alaska,Hoonah-Angoon Census Area,"2,148",Rural,,
+Alaska,Juneau City and Borough,"31,974",Rural,,
+Alaska,Kenai Peninsula Borough,"58,708",Rural,,
+Alaska,Ketchikan Gateway Borough,"13,901",Rural,,
+Alaska,Kodiak Island Borough,"12,998",Rural,,
+Alaska,Kusilvak Census Area,"8,314",Rural,,
+Alaska,Lake and Peninsula Borough,"1,592",Rural,,
+Alaska,Matanuska-Susitna Borough,"108,317",Rural,,
+Alaska,Nome Census Area,"10,004",Rural,,
+Alaska,North Slope Borough,"9,832",Rural,,
+Alaska,Northwest Arctic Borough,"7,621",Rural,,
+Alaska,Petersburg Borough,"3,266",Rural,,
+Alaska,Prince of Wales-Hyder Census Area,"6,203",Rural,,
+Alaska,Sitka City and Borough,"8,493",Rural,,
+Alaska,Skagway Municipality,"1,183",Rural,,
+Alaska,Southeast Fairbanks Census Area,"6,893",Rural,,
+Alaska,Valdez-Cordova Census Area,"9,202",Rural,,
+Alaska,Wrangell City and Borough,"2,502",Rural,,
+Alaska,Yakutat City and Borough,579,Rural,,
+Alaska,Yukon-Koyukuk Census Area,"5,230",Rural,,
+Arizona,Apache,"71,887",Rural,,
+Arizona,Cochise,"125,922",Rural,,
+Arizona,Coconino,"143,476",Flagstaff,100.00%,"143,476"
+Arizona,Gila,"54,018",Rural,,
+Arizona,Graham,"38,837",Rural,,
+Arizona,Greenlee,"9,498",Rural,,
+Arizona,La Paz,"21,108",Rural,,
+Arizona,Maricopa,"4,485,414",Phoenix-Mesa,86.54%,"5,183,302"
+Arizona,Mohave,"212,181",Las Vegas,8.56%,"2,478,896"
+Arizona,Navajo,"110,924",Rural,,
+Arizona,Pima,"1,047,279",Tucson,100.00%,"1,047,279"
+Arizona,Pinal,"462,789",Phoenix-Mesa,8.93%,"5,183,302"
+Arizona,Santa Cruz,"46,498",Rural,,
+Arizona,Yavapai,"235,099",Phoenix-Mesa,4.54%,"5,183,302"
+Arizona,Yuma,"213,787",Yuma,100.00%,"213,787"
+Arkansas,Ashley,"19,657",Rural,,
+Arkansas,Baxter,"41,932",Rural,,
+Arkansas,Benton,"279,141",Fayetteville-Springdale,53.85%,"518,328"
+Arkansas,Boone,"37,432",Rural,,
+Arkansas,Bradley,"10,763",Rural,,
+Arkansas,Calhoun,"5,189",Rural,,
+Arkansas,Carroll,"28,380",Rural,,
+Arkansas,Chicot,"10,118",Rural,,
+Arkansas,Clark,"22,320",Rural,,
+Arkansas,Clay,"14,551",Rural,,
+Arkansas,Cleburne,"24,919",Rural,,
+Arkansas,Cleveland,"7,956",Rural,,
+Arkansas,Columbia,"23,457",Rural,,
+Arkansas,Conway,"20,846",Rural,,
+Arkansas,Craighead,"110,332",Jonesboro,100.00%,"110,332"
+Arkansas,Crawford,"63,257",Fort Smith,33.10%,"191,084"
+Arkansas,Crittenden,"47,955",Rural,,
+Arkansas,Cross,"16,419",Rural,,
+Arkansas,Dallas,"7,009",Rural,,
+Arkansas,Desha,"11,361",Rural,,
+Arkansas,Drew,"18,219",Rural,,
+Arkansas,Faulkner,"126,007",Little Rock-North Little Rock,19.68%,"640,355"
+Arkansas,Franklin,"17,715",Rural,,
+Arkansas,Fulton,"12,477",Rural,,
+Arkansas,Garland,"99,386",Rural,,
+Arkansas,Grant,"18,265",Rural,,
+Arkansas,Greene,"45,325",Rural,,
+Arkansas,Hempstead,"21,532",Rural,,
+Arkansas,Hot Spring,"33,771",Rural,,
+Arkansas,Howard,"13,202",Rural,,
+Arkansas,Independence,"37,825",Rural,,
+Arkansas,Izard,"13,629",Rural,,
+Arkansas,Jackson,"16,719",Rural,,
+Arkansas,Jefferson,"66,824",Pine Bluff,100.00%,"66,824"
+Arkansas,Johnson,"26,578",Rural,,
+Arkansas,Lafayette,"6,624",Rural,,
+Arkansas,Lawrence,"16,406",Rural,,
+Arkansas,Lee,"8,857",Rural,,
+Arkansas,Lincoln,"13,024",Rural,,
+Arkansas,Little River,"12,259",Rural,,
+Arkansas,Logan,"21,466",Rural,,
+Arkansas,Lonoke,"73,309",Rural,,
+Arkansas,Madison,"16,576",Rural,,
+Arkansas,Marion,"16,694",Rural,,
+Arkansas,Miller,"43,257",Rural,,
+Arkansas,Mississippi,"40,651",Rural,,
+Arkansas,Monroe,"6,701",Rural,,
+Arkansas,Montgomery,"8,986",Rural,,
+Arkansas,Nevada,"8,252",Rural,,
+Arkansas,Newton,"7,753",Rural,,
+Arkansas,Ouachita,"23,382",Rural,,
+Arkansas,Perry,"10,455",Rural,,
+Arkansas,Phillips,"17,782",Rural,,
+Arkansas,Pike,"10,718",Rural,,
+Arkansas,Poinsett,"23,528",Rural,,
+Arkansas,Polk,"19,964",Rural,,
+Arkansas,Pope,"64,072",Rural,,
+Arkansas,Prairie,"8,062",Rural,,
+Arkansas,Pulaski,"391,911",Little Rock-North Little Rock,61.20%,"640,355"
+Arkansas,Randolph,"17,958",Rural,,
+Arkansas,Saline,"122,437",Little Rock-North Little Rock,19.12%,"640,355"
+Arkansas,Scott,"10,281",Rural,,
+Arkansas,Searcy,"7,881",Rural,,
+Arkansas,Sebastian,"127,827",Fort Smith,66.90%,"191,084"
+Arkansas,Sevier,"17,007",Rural,,
+Arkansas,Sharp,"17,442",Rural,,
+Arkansas,St. Francis,"24,994",Rural,,
+Arkansas,Stone,"12,506",Rural,,
+Arkansas,Union,"38,682",Rural,,
+Arkansas,Van Buren,"16,545",Rural,,
+Arkansas,Washington,"239,187",Fayetteville-Springdale,46.15%,"518,328"
+Arkansas,White,"78,753",Rural,,
+Arkansas,Woodruff,"6,320",Rural,,
+Arkansas,Yell,"21,341",Rural,,
+California,Alameda,"1,671,329",Oakland,59.17%,"2,824,855"
+California,Alpine,"1,129",Rural,,
+California,Amador,"39,752",Rural,,
+California,Butte,"219,186",Chico,100.00%,"219,186"
+California,Calaveras,"45,905",Rural,,
+California,Colusa,"21,547",Rural,,
+California,Contra Costa,"1,153,526",Oakland,40.83%,"2,824,855"
+California,Del Norte,"27,812",Rural,,
+California,El Dorado,"192,843",Sacramento,9.00%,"2,143,230"
+California,Fresno,"999,101",Fresno,86.40%,"1,156,428"
+California,Glenn,"28,393",Rural,,
+California,Humboldt,"135,558",Rural,,
+California,Imperial,"181,215",Rural,,
+California,Inyo,"18,039",Rural,,
+California,Kern,"900,202",Bakersfield,100.00%,"900,202"
+California,Kings,"152,940",Rural,,
+California,Lake,"64,386",Rural,,
+California,Lassen,"30,573",Rural,,
+California,Los Angeles,"10,039,107",Los Angeles,100.00%,"10,039,107"
+California,Madera,"157,327",Fresno,13.60%,"1,156,428"
+California,Marin,"258,826",San Francisco,13.57%,"1,906,948"
+California,Mariposa,"17,203",Rural,,
+California,Mendocino,"86,749",Rural,,
+California,Merced,"277,680",Merced,100.00%,"277,680"
+California,Modoc,"8,841",Rural,,
+California,Mono,"14,444",Rural,,
+California,Monterey,"434,061",Salinas-Sea Side-Monterey,100.00%,"434,061"
+California,Napa,"137,744",Vallejo-Fairfield-Napa,23.53%,"585,387"
+California,Nevada,"99,755",Rural,,
+California,Orange,"3,175,692",Orange County,100.00%,"3,175,692"
+California,Placer,"398,329",Sacramento,18.59%,"2,143,230"
+California,Plumas,"18,807",Rural,,
+California,Riverside,"2,470,546",Riverside-San Bernadino,53.12%,"4,650,631"
+California,Sacramento,"1,552,058",Sacramento,72.42%,"2,143,230"
+California,San Benito,"62,808",Rural,,
+California,San Bernardino,"2,180,085",Riverside-San Bernadino,46.88%,"4,650,631"
+California,San Diego,"3,338,330",San Diego,100.00%,"3,338,330"
+California,San Francisco,"881,549",San Francisco,46.23%,"1,906,948"
+California,San Joaquin,"762,148",Stockton,100.00%,"762,148"
+California,San Luis Obispo,"283,111",San Luis Obispo-Atascadero-Paso Robles,100.00%,"283,111"
+California,San Mateo,"766,573",San Francisco,40.20%,"1,906,948"
+California,Santa Barbara,"446,499",Santa Barbara-San Maria-Lompac,100.00%,"446,499"
+California,Santa Clara,"1,927,852",San Jose,100.00%,"1,927,852"
+California,Santa Cruz,"273,213",Santa Cruz,100.00%,"273,213"
+California,Shasta,"180,080",Redding,100.00%,"180,080"
+California,Sierra,"3,005",Rural,,
+California,Siskiyou,"43,539",Rural,,
+California,Solano,"447,643",Vallejo-Fairfield-Napa,76.47%,"585,387"
+California,Sonoma,"494,336",Santa Rosa-Petaluma,100.00%,"494,336"
+California,Stanislaus,"550,660",Modesto,100.00%,"550,660"
+California,Sutter,"96,971",Yuba City,55.21%,"175,639"
+California,Tehama,"65,084",Rural,,
+California,Trinity,"12,285",Rural,,
+California,Tulare,"466,195",Visalia-Tulare-Porterville,100.00%,"466,195"
+California,Tuolumne,"54,478",Rural,,
+California,Ventura,"846,006",Ventura-Oxnard,100.00%,"846,006"
+California,Yolo,"220,500",Yolo,100.00%,"220,500"
+California,Yuba,"78,668",Yuba City,44.79%,"175,639"
+Colorado,Adams,"517,421",Denver,18.25%,"2,835,257"
+Colorado,Alamosa,"16,233",Rural,,
+Colorado,Arapahoe,"656,590",Denver,23.16%,"2,835,257"
+Colorado,Archuleta,"14,029",Rural,,
+Colorado,Baca,"3,581",Rural,,
+Colorado,Bent,"5,577",Rural,,
+Colorado,Boulder,"326,196",Boulder-Longmont,100.00%,"326,196"
+Colorado,Broomfield,"70,465",Rural,,
+Colorado,Chaffee,"20,356",Rural,,
+Colorado,Cheyenne,"1,831",Rural,,
+Colorado,Clear Creek,"9,700",Rural,,
+Colorado,Conejos,"8,205",Rural,,
+Colorado,Costilla,"3,887",Rural,,
+Colorado,Crowley,"6,061",Rural,,
+Colorado,Custer,"5,068",Rural,,
+Colorado,Delta,"31,162",Rural,,
+Colorado,Denver,"727,211",Denver,25.65%,"2,835,257"
+Colorado,Dolores,"2,055",Rural,,
+Colorado,Douglas,"351,154",Denver,12.39%,"2,835,257"
+Colorado,Eagle,"55,127",Rural,,
+Colorado,El Paso,"720,403",Colorado Springs,100.00%,"720,403"
+Colorado,Elbert,"26,729",Rural,,
+Colorado,Fremont,"47,839",Rural,,
+Colorado,Garfield,"60,061",Rural,,
+Colorado,Gilpin,"6,243",Rural,,
+Colorado,Grand,"15,734",Rural,,
+Colorado,Gunnison,"17,462",Rural,,
+Colorado,Hinsdale,820,Rural,,
+Colorado,Huerfano,"6,897",Rural,,
+Colorado,Jackson,"1,392",Rural,,
+Colorado,Jefferson,"582,881",Denver,20.56%,"2,835,257"
+Colorado,Kiowa,"1,406",Rural,,
+Colorado,Kit Carson,"7,097",Rural,,
+Colorado,La Plata,"56,221",Rural,,
+Colorado,Lake,"8,127",Rural,,
+Colorado,Larimer,"356,899",Fort Collin-Loveland,100.00%,"356,899"
+Colorado,Las Animas,"14,506",Rural,,
+Colorado,Lincoln,"5,701",Rural,,
+Colorado,Logan,"22,409",Rural,,
+Colorado,Mesa,"154,210",Grand Junction,100.00%,"154,210"
+Colorado,Mineral,769,Rural,,
+Colorado,Moffat,"13,283",Rural,,
+Colorado,Montezuma,"26,183",Rural,,
+Colorado,Montrose,"42,758",Rural,,
+Colorado,Morgan,"29,068",Rural,,
+Colorado,Otero,"18,278",Rural,,
+Colorado,Ouray,"4,952",Rural,,
+Colorado,Park,"18,845",Rural,,
+Colorado,Phillips,"4,265",Rural,,
+Colorado,Pitkin,"17,767",Rural,,
+Colorado,Prowers,"12,172",Rural,,
+Colorado,Pueblo,"168,424",Pueblo,100.00%,"168,424"
+Colorado,Rio Blanco,"6,324",Rural,,
+Colorado,Rio Grande,"11,267",Rural,,
+Colorado,Routt,"25,638",Rural,,
+Colorado,Saguache,"6,824",Rural,,
+Colorado,San Juan,728,Rural,,
+Colorado,San Miguel,"8,179",Rural,,
+Colorado,Sedgwick,"2,248",Rural,,
+Colorado,Summit,"31,011",Rural,,
+Colorado,Teller,"25,388",Rural,,
+Colorado,Washington,"4,908",Rural,,
+Colorado,Weld,"324,492",Greeley,100.00%,"324,492"
+Colorado,Yuma,"10,019",Rural,,
+Connecticut,Fairfield,"943,332",Bridgeport-Danbury-Stamford,100.00%,"943,332"
+Connecticut,Hartford,"891,720",Hartford,64.37%,"1,385,210"
+Connecticut,Litchfield,"180,333",Hartford,13.02%,"1,385,210"
+Connecticut,Middlesex,"162,436",Hartford,11.73%,"1,385,210"
+Connecticut,New Haven,"854,757",New Haven-Meriden,100.00%,"854,757"
+Connecticut,New London,"265,206",New London-Norwich,100.00%,"265,206"
+Connecticut,Tolland,"150,721",Hartford,10.88%,"1,385,210"
+Connecticut,Windham,"116,782",Worcester,8.26%,"1,413,776"
+Delaware,Kent,"180,786",Dover,100.00%,"180,786"
+Delaware,New Castle,"558,753",Wilmington,84.45%,"661,608"
+Delaware,Sussex,"234,225",Georgetown,100.00%,"234,225"
+Florida,Alachua,"269,043",Gainesville,100.00%,"269,043"
+Florida,Baker,"29,210",Rural,,
+Florida,Bay,"174,705",Panama City,100.00%,"174,705"
+Florida,Bradford,"28,201",Rural,,
+Florida,Brevard,"601,942",Melbourn-Titusville,100.00%,"601,942"
+Florida,Broward,"1,952,778",Fort Lauderdale-Hollywood-Pompano Beach,100.00%,"1,952,778"
+Florida,Calhoun,"14,105",Rural,,
+Florida,Charlotte,"188,910",Punta Gorda,100.00%,"188,910"
+Florida,Citrus,"149,657",Rural,,
+Florida,Clay,"219,252",Jacksonville,14.33%,"1,530,304"
+Florida,Collier,"384,902",Naples,100.00%,"384,902"
+Florida,Columbia,"71,686",Rural,,
+Florida,DeSoto,"38,001",Rural,,
+Florida,Dixie,"16,826",Rural,,
+Florida,Duval,"957,755",Jacksonville,62.59%,"1,530,304"
+Florida,Escambia,"318,316",Pensacola,63.33%,"502,629"
+Florida,Flagler,"115,081",Daytona Beach,17.22%,"668,365"
+Florida,Franklin,"12,125",Rural,,
+Florida,Gadsden,"45,660",Rural,,
+Florida,Gilchrist,"18,582",Rural,,
+Florida,Glades,"13,811",Rural,,
+Florida,Gulf,"13,639",Rural,,
+Florida,Hamilton,"14,428",Rural,,
+Florida,Hardee,"26,937",Rural,,
+Florida,Hendry,"42,022",Rural,,
+Florida,Hernando,"193,920",Tampa-St. Petersburg-Clearwater,6.07%,"3,194,831"
+Florida,Highlands,"106,221",Rural,,
+Florida,Hillsborough,"1,471,968",Tampa-St. Petersburg-Clearwater,46.07%,"3,194,831"
+Florida,Holmes,"19,617",Rural,,
+Florida,Indian River,"159,923",Rural,,
+Florida,Jackson,"46,414",Rural,,
+Florida,Jefferson,"14,246",Rural,,
+Florida,Lafayette,"8,422",Rural,,
+Florida,Lake,"367,118",Orlando,14.08%,"2,608,147"
+Florida,Lee,"770,577",Fort Myers,100.00%,"770,577"
+Florida,Leon,"293,582",Tallahassee,100.00%,"293,582"
+Florida,Levy,"41,503",Rural,,
+Florida,Liberty,"8,354",Rural,,
+Florida,Madison,"18,493",Rural,,
+Florida,Manatee,"403,253",Sarasota,48.18%,"836,995"
+Florida,Marion,"365,579",Ocala,100.00%,"365,579"
+Florida,Martin,"161,000",Fort Piece,32.90%,"489,297"
+Florida,Miami-Dade,"2,716,940",Miami,100.00%,"2,716,940"
+Florida,Monroe,"74,228",Rural,,
+Florida,Nassau,"88,625",Jacksonville,5.79%,"1,530,304"
+Florida,Okaloosa,"210,738",Fort Walton Beach,100.00%,"210,738"
+Florida,Okeechobee,"42,168",Rural,,
+Florida,Orange,"1,393,452",Orlando,53.43%,"2,608,147"
+Florida,Osceola,"375,751",Orlando,14.41%,"2,608,147"
+Florida,Palm Beach,"1,496,770",West Palm Beach-Boca Raton,100.00%,"1,496,770"
+Florida,Pasco,"553,947",Tampa-St. Petersburg-Clearwater,17.34%,"3,194,831"
+Florida,Pinellas,"974,996",Tampa-St. Petersburg-Clearwater,30.52%,"3,194,831"
+Florida,Polk,"724,777",Lakeland-Winter Haven,100.00%,"724,777"
+Florida,Putnam,"74,521",Rural,,
+Florida,Santa Rosa,"184,313",Pensacola,36.67%,"502,629"
+Florida,Sarasota,"433,742",Sarasota,51.82%,"836,995"
+Florida,Seminole,"471,826",Orlando,18.09%,"2,608,147"
+Florida,St. Johns,"264,672",Jacksonville,17.30%,"1,530,304"
+Florida,St. Lucie,"328,297",Fort Piece,67.10%,"489,297"
+Florida,Sumter,"132,420",Rural,,
+Florida,Suwannee,"44,417",Rural,,
+Florida,Taylor,"21,569",Rural,,
+Florida,Union,"15,237",Rural,,
+Florida,Volusia,"553,284",Daytona Beach,82.78%,"668,365"
+Florida,Wakulla,"33,739",Rural,,
+Florida,Walton,"74,071",Rural,,
+Florida,Washington,"25,473",Rural,,
+Georgia,Appling,"18,386",Rural,,
+Georgia,Atkinson,"8,165",Rural,,
+Georgia,Bacon,"11,164",Rural,,
+Georgia,Baker,"3,038",Rural,,
+Georgia,Baldwin,"44,890",Rural,,
+Georgia,Banks,"19,234",Rural,,
+Georgia,Barrow,"83,240",Rural,,
+Georgia,Bartow,"107,738",Rural,,
+Georgia,Ben Hill,"16,700",Rural,,
+Georgia,Berrien,"19,397",Rural,,
+Georgia,Bibb,"153,159",Macon,49.24%,"311,022"
+Georgia,Bleckley,"12,873",Rural,,
+Georgia,Brantley,"19,109",Rural,,
+Georgia,Brooks,"15,457",Rural,,
+Georgia,Bryan,"39,627",Rural,,
+Georgia,Bulloch,"79,608",Rural,,
+Georgia,Burke,"22,383",Rural,,
+Georgia,Butts,"24,936",Rural,,
+Georgia,Calhoun,"6,189",Rural,,
+Georgia,Camden,"54,666",Rural,,
+Georgia,Candler,"10,803",Rural,,
+Georgia,Carroll,"119,992",Rural,,
+Georgia,Catoosa,"67,580",Chattanooga,13.38%,"505,145"
+Georgia,Charlton,"13,392",Rural,,
+Georgia,Chatham,"289,430",Savannah,81.82%,"353,726"
+Georgia,Chattahoochee,"10,907",Rural,,
+Georgia,Chattooga,"24,789",Rural,,
+Georgia,Cherokee,"258,773",Atlanta,5.48%,"4,718,134"
+Georgia,Clarke,"128,331",Athens,100.00%,"128,331"
+Georgia,Clay,"2,834",Rural,,
+Georgia,Clayton,"292,256",Atlanta,6.19%,"4,718,134"
+Georgia,Clinch,"6,618",Rural,,
+Georgia,Cobb,"760,141",Atlanta,16.11%,"4,718,134"
+Georgia,Coffee,"43,273",Rural,,
+Georgia,Colquitt,"45,600",Rural,,
+Georgia,Columbia,"156,714",Augusta-Aiken,29.56%,"530,104"
+Georgia,Cook,"17,270",Rural,,
+Georgia,Coweta,"148,509",Rural,,
+Georgia,Crawford,"12,404",Rural,,
+Georgia,Crisp,"22,372",Rural,,
+Georgia,Dade,"16,116",Rural,,
+Georgia,Dawson,"26,108",Rural,,
+Georgia,Decatur,"26,404",Rural,,
+Georgia,DeKalb,"759,297",Atlanta,16.09%,"4,718,134"
+Georgia,Dodge,"20,605",Rural,,
+Georgia,Dooly,"13,390",Rural,,
+Georgia,Dougherty,"87,956",Albany,100.00%,"87,956"
+Georgia,Douglas,"146,343",Rural,,
+Georgia,Early,"10,190",Rural,,
+Georgia,Echols,"4,006",Rural,,
+Georgia,Effingham,"64,296",Savannah,18.18%,"353,726"
+Georgia,Elbert,"19,194",Rural,,
+Georgia,Emanuel,"22,646",Rural,,
+Georgia,Evans,"10,654",Rural,,
+Georgia,Fannin,"26,188",Rural,,
+Georgia,Fayette,"114,421",Rural,,
+Georgia,Floyd,"98,498",Rural,,
+Georgia,Forsyth,"244,252",Atlanta,5.18%,"4,718,134"
+Georgia,Franklin,"23,349",Rural,,
+Georgia,Fulton,"1,063,937",Atlanta,22.55%,"4,718,134"
+Georgia,Gilmer,"31,369",Rural,,
+Georgia,Glascock,"2,971",Rural,,
+Georgia,Glynn,"85,292",Rural,,
+Georgia,Gordon,"57,963",Rural,,
+Georgia,Grady,"24,633",Rural,,
+Georgia,Greene,"18,324",Rural,,
+Georgia,Gwinnett,"936,250",Atlanta,19.84%,"4,718,134"
+Georgia,Habersham,"45,328",Rural,,
+Georgia,Hall,"204,441",Rural,,
+Georgia,Hancock,"8,457",Rural,,
+Georgia,Haralson,"29,792",Rural,,
+Georgia,Harris,"35,236",Rural,,
+Georgia,Hart,"26,205",Rural,,
+Georgia,Heard,"11,923",Rural,,
+Georgia,Henry,"234,561",Atlanta,4.97%,"4,718,134"
+Georgia,Houston,"157,863",Macon,50.76%,"311,022"
+Georgia,Irwin,"9,416",Rural,,
+Georgia,Jackson,"72,977",Rural,,
+Georgia,Jasper,"14,219",Rural,,
+Georgia,Jeff Davis,"15,115",Rural,,
+Georgia,Jefferson,"15,362",Rural,,
+Georgia,Jenkins,"8,676",Rural,,
+Georgia,Johnson,"9,643",Rural,,
+Georgia,Jones,"28,735",Rural,,
+Georgia,Lamar,"19,077",Rural,,
+Georgia,Lanier,"10,423",Rural,,
+Georgia,Laurens,"47,546",Rural,,
+Georgia,Lee,"29,992",Rural,,
+Georgia,Liberty,"61,435",Rural,,
+Georgia,Lincoln,"7,921",Rural,,
+Georgia,Long,"19,559",Rural,,
+Georgia,Lowndes,"117,406",Rural,,
+Georgia,Lumpkin,"33,610",Rural,,
+Georgia,Macon,"12,947",Rural,,
+Georgia,Madison,"29,880",Rural,,
+Georgia,Marion,"8,359",Rural,,
+Georgia,McDuffie,"21,312",Rural,,
+Georgia,McIntosh,"14,378",Rural,,
+Georgia,Meriwether,"21,167",Rural,,
+Georgia,Miller,"5,718",Rural,,
+Georgia,Mitchell,"21,863",Rural,,
+Georgia,Monroe,"27,578",Rural,,
+Georgia,Montgomery,"9,172",Rural,,
+Georgia,Morgan,"19,276",Rural,,
+Georgia,Murray,"40,096",Rural,,
+Georgia,Muscogee,"195,769",Columbus/GA,77.16%,"253,730"
+Georgia,Newton,"111,744",Rural,,
+Georgia,Oconee,"40,280",Rural,,
+Georgia,Oglethorpe,"15,259",Rural,,
+Georgia,Paulding,"168,667",Atlanta,3.57%,"4,718,134"
+Georgia,Peach,"27,546",Rural,,
+Georgia,Pickens,"32,591",Rural,,
+Georgia,Pierce,"19,465",Rural,,
+Georgia,Pike,"18,962",Rural,,
+Georgia,Polk,"42,613",Rural,,
+Georgia,Pulaski,"11,137",Rural,,
+Georgia,Putnam,"22,119",Rural,,
+Georgia,Quitman,"2,299",Rural,,
+Georgia,Rabun,"17,137",Rural,,
+Georgia,Randolph,"6,778",Rural,,
+Georgia,Richmond,"202,518",Augusta-Aiken,38.20%,"530,104"
+Georgia,Rockdale,"90,896",Rural,,
+Georgia,Schley,"5,257",Rural,,
+Georgia,Screven,"13,966",Rural,,
+Georgia,Seminole,"8,090",Rural,,
+Georgia,Spalding,"66,703",Rural,,
+Georgia,Stephens,"25,925",Rural,,
+Georgia,Stewart,"6,621",Rural,,
+Georgia,Sumter,"29,524",Rural,,
+Georgia,Talbot,"6,195",Rural,,
+Georgia,Taliaferro,"1,537",Rural,,
+Georgia,Tattnall,"25,286",Rural,,
+Georgia,Taylor,"8,020",Rural,,
+Georgia,Telfair,"15,860",Rural,,
+Georgia,Terrell,"8,531",Rural,,
+Georgia,Thomas,"44,451",Rural,,
+Georgia,Tift,"40,644",Rural,,
+Georgia,Toombs,"26,830",Rural,,
+Georgia,Towns,"12,037",Rural,,
+Georgia,Treutlen,"6,901",Rural,,
+Georgia,Troup,"69,922",Rural,,
+Georgia,Turner,"7,985",Rural,,
+Georgia,Twiggs,"8,120",Rural,,
+Georgia,Union,"24,511",Rural,,
+Georgia,Upson,"26,320",Rural,,
+Georgia,Walker,"69,761",Chattanooga,13.81%,"505,145"
+Georgia,Walton,"94,593",Rural,,
+Georgia,Ware,"35,734",Rural,,
+Georgia,Warren,"5,254",Rural,,
+Georgia,Washington,"20,374",Rural,,
+Georgia,Wayne,"29,927",Rural,,
+Georgia,Webster,"2,607",Rural,,
+Georgia,Wheeler,"7,855",Rural,,
+Georgia,White,"30,798",Rural,,
+Georgia,Whitfield,"104,628",Rural,,
+Georgia,Wilcox,"8,635",Rural,,
+Georgia,Wilkes,"9,777",Rural,,
+Georgia,Wilkinson,"8,954",Rural,,
+Georgia,Worth,"20,247",Rural,,
+Hawaii,Honolulu,"974,563",Honolulu,100.00%,"974,563"
+Hawaii,Kalawao,86,Rural,,
+Hawaii,Kauai,"72,293",Rural,,
+Hawaii,Maui,"167,417",Rural,,
+Idaho,Ada,"481,587",Boise City,67.69%,"711,436"
+Idaho,Adams,"4,294",Rural,,
+Idaho,Bannock,"87,808",Pocatello,100.00%,"87,808"
+Idaho,Bear Lake,"6,125",Rural,,
+Idaho,Benewah,"9,298",Rural,,
+Idaho,Bingham,"46,811",Rural,,
+Idaho,Blaine,"23,021",Rural,,
+Idaho,Boise,"7,831",Rural,,
+Idaho,Bonner,"45,739",Rural,,
+Idaho,Bonneville,"119,062",Rural,,
+Idaho,Boundary,"12,245",Rural,,
+Idaho,Butte,"2,597",Rural,,
+Idaho,Camas,"1,106",Rural,,
+Idaho,Canyon,"229,849",Boise City,32.31%,"711,436"
+Idaho,Caribou,"7,155",Rural,,
+Idaho,Cassia,"24,030",Rural,,
+Idaho,Clark,845,Rural,,
+Idaho,Clearwater,"8,756",Rural,,
+Idaho,Custer,"4,315",Rural,,
+Idaho,Elmore,"27,511",Rural,,
+Idaho,Franklin,"13,876",Rural,,
+Idaho,Fremont,"13,099",Rural,,
+Idaho,Gem,"18,112",Rural,,
+Idaho,Gooding,"15,179",Rural,,
+Idaho,Jefferson,"29,871",Rural,,
+Idaho,Jerome,"24,412",Rural,,
+Idaho,Kootenai,"165,697",Rural,,
+Idaho,Latah,"40,108",Rural,,
+Idaho,Lemhi,"8,027",Rural,,
+Idaho,Lewis,"3,838",Rural,,
+Idaho,Lincoln,"5,366",Rural,,
+Idaho,Madison,"39,907",Rural,,
+Idaho,Minidoka,"21,039",Rural,,
+Idaho,Nez Perce,"40,408",Rural,,
+Idaho,Oneida,"4,531",Rural,,
+Idaho,Owyhee,"11,823",Rural,,
+Idaho,Payette,"23,951",Rural,,
+Idaho,Power,"7,681",Rural,,
+Idaho,Shoshone,"12,882",Rural,,
+Idaho,Teton,"12,142",Rural,,
+Idaho,Twin Falls,"86,878",Rural,,
+Idaho,Valley,"11,392",Rural,,
+Idaho,Washington,"10,194",Rural,,
+Illinois,Adams,"65,435",Rural,,
+Illinois,Alexander,"5,761",Rural,,
+Illinois,Bond,"16,426",Rural,,
+Illinois,Boone,"53,544",Rockford,13.84%,"386,759"
+Illinois,Brown,"6,578",Rural,,
+Illinois,Bureau,"32,628",Rural,,
+Illinois,Calhoun,"4,739",Rural,,
+Illinois,Carroll,"14,305",Rural,,
+Illinois,Cass,"12,147",Rural,,
+Illinois,Champaign,"209,689",Champaign-Urbana-Rantoul,100.00%,"209,689"
+Illinois,Christian,"32,304",Rural,,
+Illinois,Clark,"15,441",Rural,,
+Illinois,Clay,"13,184",Rural,,
+Illinois,Clinton,"37,562",Rural,,
+Illinois,Coles,"50,621",Rural,,
+Illinois,Cook,"5,150,233",Chicago,62.05%,"8,300,609"
+Illinois,Crawford,"18,667",Rural,,
+Illinois,Cumberland,"10,766",Rural,,
+Illinois,De Witt,"15,638",Rural,,
+Illinois,DeKalb,"104,897",Rural,,
+Illinois,Douglas,"19,465",Rural,,
+Illinois,DuPage,"922,921",Chicago,11.12%,"8,300,609"
+Illinois,Edgar,"17,161",Rural,,
+Illinois,Edwards,"6,395",Rural,,
+Illinois,Effingham,"34,008",Rural,,
+Illinois,Fayette,"21,336",Rural,,
+Illinois,Ford,"12,961",Rural,,
+Illinois,Franklin,"38,469",Rural,,
+Illinois,Fulton,"34,340",Rural,,
+Illinois,Gallatin,"4,828",Rural,,
+Illinois,Greene,"12,969",Rural,,
+Illinois,Grundy,"51,054",Rural,,
+Illinois,Hamilton,"8,116",Rural,,
+Illinois,Hancock,"17,708",Rural,,
+Illinois,Hardin,"3,821",Rural,,
+Illinois,Henderson,"6,646",Rural,,
+Illinois,Henry,"48,913",Rural,,
+Illinois,Iroquois,"27,114",Rural,,
+Illinois,Jackson,"56,750",Rural,,
+Illinois,Jasper,"9,610",Rural,,
+Illinois,Jefferson,"37,684",Rural,,
+Illinois,Jersey,"21,773",Rural,,
+Illinois,Jo Daviess,"21,235",Rural,,
+Illinois,Johnson,"12,417",Rural,,
+Illinois,Kane,"532,403",Chicago,6.41%,"8,300,609"
+Illinois,Kankakee,"109,862",Kankakee,100.00%,"109,862"
+Illinois,Kendall,"128,990",Rural,,
+Illinois,Knox,"49,699",Rural,,
+Illinois,Lake,"696,535",Chicago,8.39%,"8,300,609"
+Illinois,LaSalle,"108,669",Rural,,
+Illinois,Lawrence,"15,678",Rural,,
+Illinois,Lee,"34,096",Rural,,
+Illinois,Livingston,"35,648",Rural,,
+Illinois,Logan,"28,618",Rural,,
+Illinois,Macon,"104,009",Rural,,
+Illinois,Macoupin,"44,926",Rural,,
+Illinois,Madison,"262,966",St. Louis,11.70%,"2,247,927"
+Illinois,Marion,"37,205",Rural,,
+Illinois,Marshall,"11,438",Rural,,
+Illinois,Mason,"13,359",Rural,,
+Illinois,Massac,"13,772",Rural,,
+Illinois,McDonough,"29,682",Rural,,
+Illinois,McHenry,"307,774",Chicago,3.71%,"8,300,609"
+Illinois,McLean,"171,517",Bloomington-Normal,100.00%,"171,517"
+Illinois,Menard,"12,196",Rural,,
+Illinois,Mercer,"15,437",Rural,,
+Illinois,Monroe,"34,637",Rural,,
+Illinois,Montgomery,"28,414",Rural,,
+Illinois,Morgan,"33,658",Rural,,
+Illinois,Moultrie,"14,501",Rural,,
+Illinois,Ogle,"50,643",Rockford,13.09%,"386,759"
+Illinois,Peoria,"179,179",Peoria,57.62%,"310,982"
+Illinois,Perry,"20,916",Rural,,
+Illinois,Piatt,"16,344",Rural,,
+Illinois,Pike,"15,561",Rural,,
+Illinois,Pope,"4,177",Rural,,
+Illinois,Pulaski,"5,335",Rural,,
+Illinois,Putnam,"5,739",Rural,,
+Illinois,Randolph,"31,782",Rural,,
+Illinois,Richland,"15,513",Rural,,
+Illinois,Rock Island,"141,879",Davenport-Moline-Rock Island,45.07%,"314,822"
+Illinois,Saline,"23,491",Rural,,
+Illinois,Sangamon,"194,672",Springfield/IL,100.00%,"194,672"
+Illinois,Schuyler,"6,768",Rural,,
+Illinois,Scott,"4,951",Rural,,
+Illinois,Shelby,"21,634",Rural,,
+Illinois,St. Clair,"259,686",St. Louis,11.55%,"2,247,927"
+Illinois,Stark,"5,342",Rural,,
+Illinois,Stephenson,"44,498",Rural,,
+Illinois,Tazewell,"131,803",Peoria,42.38%,"310,982"
+Illinois,Union,"16,653",Rural,,
+Illinois,Vermilion,"75,758",Rural,,
+Illinois,Wabash,"11,520",Rural,,
+Illinois,Warren,"16,844",Rural,,
+Illinois,Washington,"13,887",Rural,,
+Illinois,Wayne,"16,215",Rural,,
+Illinois,White,"13,537",Rural,,
+Illinois,Whiteside,"55,175",Rural,,
+Illinois,Will,"690,743",Chicago,8.32%,"8,300,609"
+Illinois,Williamson,"66,597",Rural,,
+Illinois,Winnebago,"282,572",Rockford,73.06%,"386,759"
+Illinois,Woodford,"38,459",Rural,,
+Indiana,Adams,"35,777",Rural,,
+Indiana,Allen,"379,299",Fort Wayne,100.00%,"379,299"
+Indiana,Bartholomew,"83,779",Rural,,
+Indiana,Benton,"8,748",Rural,,
+Indiana,Blackford,"11,758",Rural,,
+Indiana,Boone,"67,843",Indianapolis,3.43%,"1,977,140"
+Indiana,Brown,"15,092",Rural,,
+Indiana,Carroll,"20,257",Rural,,
+Indiana,Cass,"37,689",Rural,,
+Indiana,Clark,"118,302",Louisville,10.64%,"1,112,056"
+Indiana,Clay,"26,225",Rural,,
+Indiana,Clinton,"32,399",Rural,,
+Indiana,Crawford,"10,577",Rural,,
+Indiana,Daviess,"33,351",Rural,,
+Indiana,Dearborn,"49,458",Rural,,
+Indiana,Decatur,"26,559",Rural,,
+Indiana,DeKalb,"43,475",Rural,,
+Indiana,Delaware,"114,135",Muncie,100.00%,"114,135"
+Indiana,Dubois,"42,736",Rural,,
+Indiana,Elkhart,"206,341",Elkhart-Goshen,100.00%,"206,341"
+Indiana,Fayette,"23,102",Rural,,
+Indiana,Floyd,"78,522",Louisville,7.06%,"1,112,056"
+Indiana,Fountain,"16,346",Rural,,
+Indiana,Franklin,"22,758",Rural,,
+Indiana,Fulton,"19,974",Rural,,
+Indiana,Gibson,"33,659",Rural,,
+Indiana,Grant,"65,769",Rural,,
+Indiana,Greene,"31,922",Rural,,
+Indiana,Hamilton,"338,011",Indianapolis,17.10%,"1,977,140"
+Indiana,Hancock,"78,168",Indianapolis,3.95%,"1,977,140"
+Indiana,Harrison,"40,515",Rural,,
+Indiana,Hendricks,"170,311",Indianapolis,8.61%,"1,977,140"
+Indiana,Henry,"47,972",Rural,,
+Indiana,Howard,"82,544",Kokomo,100.00%,"82,544"
+Indiana,Huntington,"36,520",Rural,,
+Indiana,Jackson,"44,231",Rural,,
+Indiana,Jasper,"33,562",Rural,,
+Indiana,Jay,"20,436",Rural,,
+Indiana,Jefferson,"32,308",Rural,,
+Indiana,Jennings,"27,735",Rural,,
+Indiana,Johnson,"158,167",Indianapolis,8.00%,"1,977,140"
+Indiana,Knox,"36,594",Rural,,
+Indiana,Kosciusko,"79,456",Rural,,
+Indiana,LaGrange,"39,614",Rural,,
+Indiana,Lake,"485,493",Gary-Hammond,74.02%,"655,882"
+Indiana,LaPorte,"109,888",Rural,,
+Indiana,Lawrence,"45,370",Rural,,
+Indiana,Madison,"129,569",Indianapolis,6.55%,"1,977,140"
+Indiana,Marion,"964,582",Indianapolis,48.79%,"1,977,140"
+Indiana,Marshall,"46,258",Rural,,
+Indiana,Martin,"10,255",Rural,,
+Indiana,Miami,"35,516",Rural,,
+Indiana,Monroe,"148,431",Bloomington,100.00%,"148,431"
+Indiana,Montgomery,"38,338",Rural,,
+Indiana,Morgan,"70,489",Indianapolis,3.57%,"1,977,140"
+Indiana,Newton,"13,984",Rural,,
+Indiana,Noble,"47,744",Rural,,
+Indiana,Ohio,"5,875",Rural,,
+Indiana,Orange,"19,646",Rural,,
+Indiana,Owen,"20,799",Rural,,
+Indiana,Parke,"16,937",Rural,,
+Indiana,Perry,"19,169",Rural,,
+Indiana,Pike,"12,389",Rural,,
+Indiana,Porter,"170,389",Gary-Hammond,25.98%,"655,882"
+Indiana,Posey,"25,427",Rural,,
+Indiana,Pulaski,"12,353",Rural,,
+Indiana,Putnam,"37,576",Rural,,
+Indiana,Randolph,"24,665",Rural,,
+Indiana,Ripley,"28,324",Rural,,
+Indiana,Rush,"16,581",Rural,,
+Indiana,Scott,"23,873",Rural,,
+Indiana,Shelby,"44,729",Rural,,
+Indiana,Spencer,"20,277",Rural,,
+Indiana,St. Joseph,"271,826",South Bend,100.00%,"271,826"
+Indiana,Starke,"22,995",Rural,,
+Indiana,Steuben,"34,594",Rural,,
+Indiana,Sullivan,"20,669",Rural,,
+Indiana,Switzerland,"10,751",Rural,,
+Indiana,Tippecanoe,"195,732",Rural,,
+Indiana,Tipton,"15,148",Rural,,
+Indiana,Union,"7,054",Rural,,
+Indiana,Vanderburgh,"181,451",Evansville,74.23%,"244,449"
+Indiana,Vermillion,"15,498",Rural,,
+Indiana,Vigo,"107,038",Terre Haute,100.00%,"107,038"
+Indiana,Wabash,"30,996",Rural,,
+Indiana,Warren,"8,265",Rural,,
+Indiana,Warrick,"62,998",Evansville,25.77%,"244,449"
+Indiana,Washington,"28,036",Rural,,
+Indiana,Wayne,"65,884",Rural,,
+Indiana,Wells,"28,296",Rural,,
+Indiana,White,"24,102",Rural,,
+Indiana,Whitley,"33,964",Rural,,
+Iowa,Adair,"7,152",Rural,,
+Iowa,Adams,"3,602",Rural,,
+Iowa,Allamakee,"13,687",Rural,,
+Iowa,Appanoose,"12,426",Rural,,
+Iowa,Audubon,"5,496",Rural,,
+Iowa,Benton,"25,645",Rural,,
+Iowa,Black Hawk,"131,228",Rural,,
+Iowa,Boone,"26,234",Rural,,
+Iowa,Bremer,"25,062",Rural,,
+Iowa,Buchanan,"21,175",Rural,,
+Iowa,Buena Vista,"19,620",Rural,,
+Iowa,Butler,"14,439",Rural,,
+Iowa,Calhoun,"9,668",Rural,,
+Iowa,Carroll,"20,165",Rural,,
+Iowa,Cass,"12,836",Rural,,
+Iowa,Cedar,"18,627",Rural,,
+Iowa,Cerro Gordo,"42,450",Rural,,
+Iowa,Cherokee,"11,235",Rural,,
+Iowa,Chickasaw,"11,933",Rural,,
+Iowa,Clarke,"9,395",Rural,,
+Iowa,Clay,"16,016",Rural,,
+Iowa,Clayton,"17,549",Rural,,
+Iowa,Clinton,"46,429",Rural,,
+Iowa,Crawford,"16,820",Rural,,
+Iowa,Dallas,"93,453",Des Moines,14.72%,"635,080"
+Iowa,Davis,"9,000",Rural,,
+Iowa,Decatur,"7,870",Rural,,
+Iowa,Delaware,"17,011",Rural,,
+Iowa,Des Moines,"38,967",Rural,,
+Iowa,Dickinson,"17,258",Rural,,
+Iowa,Dubuque,"97,311",Dubuque,100.00%,"97,311"
+Iowa,Emmet,"9,208",Rural,,
+Iowa,Fayette,"19,650",Rural,,
+Iowa,Floyd,"15,642",Rural,,
+Iowa,Franklin,"10,070",Rural,,
+Iowa,Fremont,"6,960",Rural,,
+Iowa,Greene,"8,888",Rural,,
+Iowa,Grundy,"12,232",Rural,,
+Iowa,Guthrie,"10,689",Rural,,
+Iowa,Hamilton,"14,773",Rural,,
+Iowa,Hancock,"10,630",Rural,,
+Iowa,Hardin,"16,846",Rural,,
+Iowa,Harrison,"14,049",Rural,,
+Iowa,Henry,"19,954",Rural,,
+Iowa,Howard,"9,158",Rural,,
+Iowa,Humboldt,"9,558",Rural,,
+Iowa,Ida,"6,860",Rural,,
+Iowa,Jackson,"19,439",Rural,,
+Iowa,Jasper,"37,185",Rural,,
+Iowa,Jefferson,"18,295",Rural,,
+Iowa,Johnson,"151,140",Iowa City,100.00%,"151,140"
+Iowa,Jones,"20,681",Rural,,
+Iowa,Keokuk,"10,246",Rural,,
+Iowa,Kossuth,"14,813",Rural,,
+Iowa,Lee,"33,657",Rural,,
+Iowa,Linn,"226,706",Cedar Rapids,100.00%,"226,706"
+Iowa,Louisa,"11,035",Rural,,
+Iowa,Lucas,"8,600",Rural,,
+Iowa,Lyon,"11,755",Rural,,
+Iowa,Madison,"16,338",Rural,,
+Iowa,Mahaska,"22,095",Rural,,
+Iowa,Marion,"33,253",Rural,,
+Iowa,Marshall,"39,369",Rural,,
+Iowa,Mills,"15,109",Rural,,
+Iowa,Mitchell,"10,586",Rural,,
+Iowa,Monona,"8,615",Rural,,
+Iowa,Monroe,"7,707",Rural,,
+Iowa,Montgomery,"9,917",Rural,,
+Iowa,Muscatine,"42,664",Rural,,
+Iowa,O'Brien,"13,753",Rural,,
+Iowa,Osceola,"5,958",Rural,,
+Iowa,Page,"15,107",Rural,,
+Iowa,Palo Alto,"8,886",Rural,,
+Iowa,Plymouth,"25,177",Rural,,
+Iowa,Pocahontas,"6,619",Rural,,
+Iowa,Polk,"490,161",Des Moines,77.18%,"635,080"
+Iowa,Pottawattamie,"93,206",Omaha,10.94%,"851,729"
+Iowa,Poweshiek,"18,504",Rural,,
+Iowa,Ringgold,"4,894",Rural,,
+Iowa,Sac,"9,721",Rural,,
+Iowa,Scott,"172,943",Davenport-Moline-Rock Island,54.93%,"314,822"
+Iowa,Shelby,"11,454",Rural,,
+Iowa,Sioux,"34,855",Rural,,
+Iowa,Story,"97,117",Rural,,
+Iowa,Tama,"16,854",Rural,,
+Iowa,Taylor,"6,121",Rural,,
+Iowa,Union,"12,241",Rural,,
+Iowa,Van Buren,"7,044",Rural,,
+Iowa,Wapello,"34,969",Rural,,
+Iowa,Warren,"51,466",Des Moines,8.10%,"635,080"
+Iowa,Washington,"21,965",Rural,,
+Iowa,Wayne,"6,441",Rural,,
+Iowa,Webster,"35,904",Rural,,
+Iowa,Winnebago,"10,354",Rural,,
+Iowa,Winneshiek,"19,991",Rural,,
+Iowa,Woodbury,"103,107",Sioux City,100.00%,"103,107"
+Iowa,Worth,"7,381",Rural,,
+Iowa,Wright,"12,562",Rural,,
+Kansas,Allen,"12,369",Rural,,
+Kansas,Anderson,"7,858",Rural,,
+Kansas,Atchison,"16,073",Rural,,
+Kansas,Barber,"4,427",Rural,,
+Kansas,Barton,"25,779",Rural,,
+Kansas,Bourbon,"14,534",Rural,,
+Kansas,Brown,"9,564",Rural,,
+Kansas,Butler,"66,911",Wichita,11.48%,"582,953"
+Kansas,Chase,"2,648",Rural,,
+Kansas,Chautauqua,"3,250",Rural,,
+Kansas,Cherokee,"19,939",Rural,,
+Kansas,Cheyenne,"2,657",Rural,,
+Kansas,Clark,"1,994",Rural,,
+Kansas,Clay,"8,002",Rural,,
+Kansas,Cloud,"8,786",Rural,,
+Kansas,Coffey,"8,179",Rural,,
+Kansas,Comanche,"1,700",Rural,,
+Kansas,Cowley,"34,908",Rural,,
+Kansas,Crawford,"38,818",Rural,,
+Kansas,Decatur,"2,827",Rural,,
+Kansas,Dickinson,"18,466",Rural,,
+Kansas,Doniphan,"7,600",Rural,,
+Kansas,Douglas,"122,259",Lawrence,100.00%,"122,259"
+Kansas,Edwards,"2,798",Rural,,
+Kansas,Elk,"2,530",Rural,,
+Kansas,Ellis,"28,553",Rural,,
+Kansas,Ellsworth,"6,102",Rural,,
+Kansas,Finney,"36,467",Rural,,
+Kansas,Ford,"33,619",Rural,,
+Kansas,Franklin,"25,544",Rural,,
+Kansas,Geary,"31,670",Rural,,
+Kansas,Gove,"2,636",Rural,,
+Kansas,Graham,"2,482",Rural,,
+Kansas,Grant,"7,150",Rural,,
+Kansas,Gray,"5,988",Rural,,
+Kansas,Greeley,"1,232",Rural,,
+Kansas,Greenwood,"5,982",Rural,,
+Kansas,Hamilton,"2,539",Rural,,
+Kansas,Harper,"5,436",Rural,,
+Kansas,Harvey,"34,429",Rural,,
+Kansas,Haskell,"3,968",Rural,,
+Kansas,Hodgeman,"1,794",Rural,,
+Kansas,Jackson,"13,171",Rural,,
+Kansas,Jefferson,"19,043",Rural,,
+Kansas,Jewell,"2,879",Rural,,
+Kansas,Johnson,"602,401",Kansas City,29.93%,"2,012,745"
+Kansas,Kearny,"3,838",Rural,,
+Kansas,Kingman,"7,152",Rural,,
+Kansas,Kiowa,"2,475",Rural,,
+Kansas,Labette,"19,618",Rural,,
+Kansas,Lane,"1,535",Rural,,
+Kansas,Leavenworth,"81,758",Kansas City,4.06%,"2,012,745"
+Kansas,Lincoln,"2,962",Rural,,
+Kansas,Linn,"9,703",Rural,,
+Kansas,Logan,"2,794",Rural,,
+Kansas,Lyon,"33,195",Rural,,
+Kansas,Marion,"11,884",Rural,,
+Kansas,Marshall,"9,707",Rural,,
+Kansas,McPherson,"28,542",Rural,,
+Kansas,Meade,"4,033",Rural,,
+Kansas,Miami,"34,237",Rural,,
+Kansas,Mitchell,"5,979",Rural,,
+Kansas,Montgomery,"31,829",Rural,,
+Kansas,Morris,"5,620",Rural,,
+Kansas,Morton,"2,587",Rural,,
+Kansas,Nemaha,"10,231",Rural,,
+Kansas,Neosho,"16,007",Rural,,
+Kansas,Ness,"2,750",Rural,,
+Kansas,Norton,"5,361",Rural,,
+Kansas,Osage,"15,949",Rural,,
+Kansas,Osborne,"3,421",Rural,,
+Kansas,Ottawa,"5,704",Rural,,
+Kansas,Pawnee,"6,414",Rural,,
+Kansas,Phillips,"5,234",Rural,,
+Kansas,Pottawatomie,"24,383",Rural,,
+Kansas,Pratt,"9,164",Rural,,
+Kansas,Rawlins,"2,530",Rural,,
+Kansas,Reno,"61,998",Rural,,
+Kansas,Republic,"4,636",Rural,,
+Kansas,Rice,"9,537",Rural,,
+Kansas,Riley,"74,232",Rural,,
+Kansas,Rooks,"4,920",Rural,,
+Kansas,Rush,"3,036",Rural,,
+Kansas,Russell,"6,856",Rural,,
+Kansas,Saline,"54,224",Rural,,
+Kansas,Scott,"4,823",Rural,,
+Kansas,Sedgwick,"516,042",Wichita,88.52%,"582,953"
+Kansas,Seward,"21,428",Rural,,
+Kansas,Shawnee,"176,875",Topeka,100.00%,"176,875"
+Kansas,Sheridan,"2,521",Rural,,
+Kansas,Sherman,"5,917",Rural,,
+Kansas,Smith,"3,583",Rural,,
+Kansas,Stafford,"4,156",Rural,,
+Kansas,Stanton,"2,006",Rural,,
+Kansas,Stevens,"5,485",Rural,,
+Kansas,Sumner,"22,836",Rural,,
+Kansas,Thomas,"7,777",Rural,,
+Kansas,Trego,"2,803",Rural,,
+Kansas,Wabaunsee,"6,931",Rural,,
+Kansas,Wallace,"1,518",Rural,,
+Kansas,Washington,"5,406",Rural,,
+Kansas,Wichita,"2,119",Rural,,
+Kansas,Wilson,"8,525",Rural,,
+Kansas,Woodson,"3,138",Rural,,
+Kansas,Wyandotte,"165,429",Kansas City,8.22%,"2,012,745"
+Kentucky,Adair,"19,202",Rural,,
+Kentucky,Allen,"21,315",Rural,,
+Kentucky,Anderson,"22,747",Rural,,
+Kentucky,Ballard,"7,888",Rural,,
+Kentucky,Barren,"44,249",Rural,,
+Kentucky,Bath,"12,500",Rural,,
+Kentucky,Bell,"26,032",Rural,,
+Kentucky,Boone,"133,581",Cincinatti-Hamilton,8.08%,"1,652,666"
+Kentucky,Bourbon,"19,788",Rural,,
+Kentucky,Boyd,"46,718",Rural,,
+Kentucky,Boyle,"30,060",Rural,,
+Kentucky,Bracken,"8,303",Rural,,
+Kentucky,Breathitt,"12,630",Rural,,
+Kentucky,Breckinridge,"20,477",Rural,,
+Kentucky,Bullitt,"81,676",Louisville,7.34%,"1,112,056"
+Kentucky,Butler,"12,879",Rural,,
+Kentucky,Caldwell,"12,747",Rural,,
+Kentucky,Calloway,"39,001",Rural,,
+Kentucky,Campbell,"93,584",Cincinatti-Hamilton,5.66%,"1,652,666"
+Kentucky,Carlisle,"4,760",Rural,,
+Kentucky,Carroll,"10,631",Rural,,
+Kentucky,Carter,"26,797",Rural,,
+Kentucky,Casey,"16,159",Rural,,
+Kentucky,Christian,"70,461",Clarksville-Hopkinsville,25.21%,"279,454"
+Kentucky,Clark,"36,263",Rural,,
+Kentucky,Clay,"19,901",Rural,,
+Kentucky,Clinton,"10,218",Rural,,
+Kentucky,Crittenden,"8,806",Rural,,
+Kentucky,Cumberland,"6,614",Rural,,
+Kentucky,Daviess,"101,511",Owensboro,100.00%,"101,511"
+Kentucky,Edmonson,"12,150",Rural,,
+Kentucky,Elliott,"7,517",Rural,,
+Kentucky,Estill,"14,106",Rural,,
+Kentucky,Fayette,"323,152",Lexington-Fayette,68.30%,"473,143"
+Kentucky,Fleming,"14,581",Rural,,
+Kentucky,Floyd,"35,589",Rural,,
+Kentucky,Franklin,"50,991",Rural,,
+Kentucky,Fulton,"5,969",Rural,,
+Kentucky,Gallatin,"8,869",Rural,,
+Kentucky,Garrard,"17,666",Rural,,
+Kentucky,Grant,"25,069",Rural,,
+Kentucky,Graves,"37,266",Rural,,
+Kentucky,Grayson,"26,427",Rural,,
+Kentucky,Green,"10,941",Rural,,
+Kentucky,Greenup,"35,098",Rural,,
+Kentucky,Hancock,"8,722",Rural,,
+Kentucky,Hardin,"110,958",Rural,,
+Kentucky,Harlan,"26,010",Rural,,
+Kentucky,Harrison,"18,886",Rural,,
+Kentucky,Hart,"19,035",Rural,,
+Kentucky,Henderson,"45,210",Rural,,
+Kentucky,Henry,"16,126",Rural,,
+Kentucky,Hickman,"4,380",Rural,,
+Kentucky,Hopkins,"44,686",Rural,,
+Kentucky,Jackson,"13,329",Rural,,
+Kentucky,Jefferson,"766,757",Louisville,68.95%,"1,112,056"
+Kentucky,Jessamine,"54,115",Rural,,
+Kentucky,Johnson,"22,188",Rural,,
+Kentucky,Kenton,"166,998",Cincinatti-Hamilton,10.10%,"1,652,666"
+Kentucky,Knott,"14,806",Rural,,
+Kentucky,Knox,"31,145",Rural,,
+Kentucky,Larue,"14,398",Rural,,
+Kentucky,Laurel,"60,813",Rural,,
+Kentucky,Lawrence,"15,317",Rural,,
+Kentucky,Lee,"7,403",Rural,,
+Kentucky,Leslie,"9,877",Rural,,
+Kentucky,Letcher,"21,553",Rural,,
+Kentucky,Lewis,"13,275",Rural,,
+Kentucky,Lincoln,"24,549",Rural,,
+Kentucky,Livingston,"9,194",Rural,,
+Kentucky,Logan,"27,102",Rural,,
+Kentucky,Lyon,"8,210",Rural,,
+Kentucky,Madison,"92,987",Lexington-Fayette,19.65%,"473,143"
+Kentucky,Magoffin,"12,161",Rural,,
+Kentucky,Marion,"19,273",Rural,,
+Kentucky,Marshall,"31,100",Rural,,
+Kentucky,Martin,"11,195",Rural,,
+Kentucky,Mason,"17,070",Rural,,
+Kentucky,McCracken,"65,418",Rural,,
+Kentucky,McCreary,"17,231",Rural,,
+Kentucky,McLean,"9,207",Rural,,
+Kentucky,Meade,"28,572",Rural,,
+Kentucky,Menifee,"6,489",Rural,,
+Kentucky,Mercer,"21,933",Rural,,
+Kentucky,Metcalfe,"10,071",Rural,,
+Kentucky,Monroe,"10,650",Rural,,
+Kentucky,Montgomery,"28,157",Rural,,
+Kentucky,Morgan,"13,309",Rural,,
+Kentucky,Muhlenberg,"30,622",Rural,,
+Kentucky,Nelson,"46,233",Rural,,
+Kentucky,Nicholas,"7,269",Rural,,
+Kentucky,Ohio,"23,994",Rural,,
+Kentucky,Oldham,"66,799",Louisville,6.01%,"1,112,056"
+Kentucky,Owen,"10,901",Rural,,
+Kentucky,Owsley,"4,415",Rural,,
+Kentucky,Pendleton,"14,590",Rural,,
+Kentucky,Perry,"25,758",Rural,,
+Kentucky,Pike,"57,876",Rural,,
+Kentucky,Powell,"12,359",Rural,,
+Kentucky,Pulaski,"64,979",Rural,,
+Kentucky,Robertson,"2,108",Rural,,
+Kentucky,Rockcastle,"16,695",Rural,,
+Kentucky,Rowan,"24,460",Rural,,
+Kentucky,Russell,"17,923",Rural,,
+Kentucky,Scott,"57,004",Lexington-Fayette,12.05%,"473,143"
+Kentucky,Shelby,"49,024",Rural,,
+Kentucky,Simpson,"18,572",Rural,,
+Kentucky,Spencer,"19,351",Rural,,
+Kentucky,Taylor,"25,769",Rural,,
+Kentucky,Todd,"12,294",Rural,,
+Kentucky,Trigg,"14,651",Rural,,
+Kentucky,Trimble,"8,471",Rural,,
+Kentucky,Union,"14,381",Rural,,
+Kentucky,Warren,"132,896",Rural,,
+Kentucky,Washington,"12,095",Rural,,
+Kentucky,Wayne,"20,333",Rural,,
+Kentucky,Webster,"12,942",Rural,,
+Kentucky,Whitley,"36,264",Rural,,
+Kentucky,Wolfe,"7,157",Rural,,
+Kentucky,Woodford,"26,734",Rural,,
+Louisiana,Acadia,"62,045",Rural,,
+Louisiana,Allen,"25,627",Rural,,
+Louisiana,Ascension,"126,604",Baton Rouge,17.90%,"707,452"
+Louisiana,Assumption,"21,891",Rural,,
+Louisiana,Avoyelles,"40,144",Rural,,
+Louisiana,Beauregard,"37,497",Rural,,
+Louisiana,Bienville,"13,241",Rural,,
+Louisiana,Bossier,"127,039",Shreveport,34.59%,"367,243"
+Louisiana,Caddo,"240,204",Shreveport,65.41%,"367,243"
+Louisiana,Calcasieu,"203,436",Lake Charles,100.00%,"203,436"
+Louisiana,Caldwell,"9,918",Rural,,
+Louisiana,Cameron,"6,973",Rural,,
+Louisiana,Catahoula,"9,494",Rural,,
+Louisiana,Claiborne,"15,670",Rural,,
+Louisiana,Concordia,"19,259",Rural,,
+Louisiana,De Soto,"27,463",Rural,,
+Louisiana,East Baton Rouge,"440,059",Baton Rouge,62.20%,"707,452"
+Louisiana,East Carroll,"6,861",Rural,,
+Louisiana,East Feliciana,"19,135",Rural,,
+Louisiana,Evangeline,"33,395",Rural,,
+Louisiana,Franklin,"20,015",Rural,,
+Louisiana,Grant,"22,389",Rural,,
+Louisiana,Iberia,"69,830",Rural,,
+Louisiana,Iberville,"32,511",Rural,,
+Louisiana,Jackson,"15,744",Rural,,
+Louisiana,Jefferson,"432,493",New Orleans,39.93%,"1,083,056"
+Louisiana,Jefferson Davis,"31,368",Rural,,
+Louisiana,Lafayette,"244,390",Lafayette,100.00%,"244,390"
+Louisiana,Lafourche,"97,614",Houma,46.91%,"208,075"
+Louisiana,LaSalle,"14,892",Rural,,
+Louisiana,Lincoln,"46,742",Rural,,
+Louisiana,Livingston,"140,789",Baton Rouge,19.90%,"707,452"
+Louisiana,Madison,"10,951",Rural,,
+Louisiana,Morehouse,"24,874",Rural,,
+Louisiana,Natchitoches,"38,158",Rural,,
+Louisiana,Orleans,"390,144",New Orleans,36.02%,"1,083,056"
+Louisiana,Ouachita,"153,279",Monroe,100.00%,"153,279"
+Louisiana,Plaquemines,"23,197",Rural,,
+Louisiana,Pointe Coupee,"21,730",Rural,,
+Louisiana,Rapides,"129,648",Alexandria,100.00%,"129,648"
+Louisiana,Red River,"8,442",Rural,,
+Louisiana,Richland,"20,122",Rural,,
+Louisiana,Sabine,"23,884",Rural,,
+Louisiana,St. Bernard,"47,244",Rural,,
+Louisiana,St. Charles,"53,100",Rural,,
+Louisiana,St. Helena,"10,132",Rural,,
+Louisiana,St. James,"21,096",Rural,,
+Louisiana,St. John the Baptist,"42,837",Rural,,
+Louisiana,St. Landry,"82,124",Rural,,
+Louisiana,St. Martin,"53,431",Rural,,
+Louisiana,St. Mary,"49,348",Rural,,
+Louisiana,St. Tammany,"260,419",New Orleans,24.04%,"1,083,056"
+Louisiana,Tangipahoa,"134,758",Rural,,
+Louisiana,Tensas,"4,334",Rural,,
+Louisiana,Terrebonne,"110,461",Houma,53.09%,"208,075"
+Louisiana,Union,"22,108",Rural,,
+Louisiana,Vermilion,"59,511",Rural,,
+Louisiana,Vernon,"47,429",Rural,,
+Louisiana,Washington,"46,194",Rural,,
+Louisiana,Webster,"38,340",Rural,,
+Louisiana,West Baton Rouge,"26,465",Rural,,
+Louisiana,West Carroll,"10,830",Rural,,
+Louisiana,West Feliciana,"15,568",Rural,,
+Louisiana,Winn,"13,904",Rural,,
+Maine,Androscoggin,"108,277",Lewiston-Auburgn,100.00%,"108,277"
+Maine,Aroostook,"67,055",Rural,,
+Maine,Cumberland,"295,003",Portland,100.00%,"295,003"
+Maine,Franklin,"30,199",Rural,,
+Maine,Hancock,"54,987",Rural,,
+Maine,Kennebec,"122,302",Rural,,
+Maine,Knox,"39,772",Rural,,
+Maine,Lincoln,"34,634",Rural,,
+Maine,Oxford,"57,975",Rural,,
+Maine,Penobscot,"152,148",Bangor,100.00%,"152,148"
+Maine,Piscataquis,"16,785",Rural,,
+Maine,Sagadahoc,"35,856",Rural,,
+Maine,Somerset,"50,484",Rural,,
+Maine,Waldo,"39,715",Rural,,
+Maine,Washington,"31,379",Rural,,
+Maine,York,"207,641",Portsmouth-Dover-Rochester,61.38%,"338,274"
+Maryland,Allegany,"70,416",Cumberland,100.00%,"70,416"
+Maryland,Anne Arundel,"579,234",Baltimore,21.07%,"2,749,672"
+Maryland,Baltimore,"827,370",Baltimore,30.09%,"2,749,672"
+Maryland,Baltimore city,"593,490",Baltimore,21.58%,"2,749,672"
+Maryland,Calvert,"92,525",Rural,,
+Maryland,Caroline,"33,406",Rural,,
+Maryland,Carroll,"168,447",Baltimore,6.13%,"2,749,672"
+Maryland,Cecil,"102,855",Wilmington,15.55%,"661,608"
+Maryland,Charles,"163,257",Washington DC,4.66%,"3,503,534"
+Maryland,Dorchester,"31,929",Rural,,
+Maryland,Frederick,"259,547",Washington DC,7.41%,"3,503,534"
+Maryland,Garrett,"29,014",Rural,,
+Maryland,Harford,"255,441",Baltimore,9.29%,"2,749,672"
+Maryland,Howard,"325,690",Baltimore,11.84%,"2,749,672"
+Maryland,Kent,"19,422",Rural,,
+Maryland,Montgomery,"1,050,688",Washington DC,29.99%,"3,503,534"
+Maryland,Prince George's,"909,327",Washington DC,25.95%,"3,503,534"
+Maryland,Queen Anne's,"50,381",Rural,,
+Maryland,Somerset,"25,616",Rural,,
+Maryland,St. Mary's,"113,510",Rural,,
+Maryland,Talbot,"37,181",Rural,,
+Maryland,Washington,"151,049",Hagerstown,100.00%,"151,049"
+Maryland,Wicomico,"103,609",Rural,,
+Maryland,Worcester,"52,276",Rural,,
+Massachusetts,Barnstable,"212,990",Barnstable-Yarmouth,100.00%,"212,990"
+Massachusetts,Berkshire,"124,944",Pittsfield,100.00%,"124,944"
+Massachusetts,Bristol,"565,217",New Bedford,100.00%,"565,217"
+Massachusetts,Dukes,"17,332",Rural,,
+Massachusetts,Essex,"789,034",Boston,17.80%,"4,432,617"
+Massachusetts,Franklin,"70,180",Springfield-Holyoke,30.38%,"231,010"
+Massachusetts,Hampden,"466,372",Worcester,32.99%,"1,413,776"
+Massachusetts,Hampshire,"160,830",Springfield-Holyoke,69.62%,"231,010"
+Massachusetts,Middlesex,"1,611,699",Boston,36.36%,"4,432,617"
+Massachusetts,Nantucket,"11,399",Rural,,
+Massachusetts,Norfolk,"706,775",Boston,15.94%,"4,432,617"
+Massachusetts,Plymouth,"521,202",Boston,11.76%,"4,432,617"
+Massachusetts,Suffolk,"803,907",Boston,18.14%,"4,432,617"
+Massachusetts,Worcester,"830,622",Worcester,58.75%,"1,413,776"
+Michigan,Alcona,"10,405",Rural,,
+Michigan,Alger,"9,108",Rural,,
+Michigan,Allegan,"118,081",Grand Rapids,9.52%,"1,240,432"
+Michigan,Alpena,"28,405",Rural,,
+Michigan,Antrim,"23,324",Rural,,
+Michigan,Arenac,"14,883",Rural,,
+Michigan,Baraga,"8,209",Rural,,
+Michigan,Barry,"61,550",Rural,,
+Michigan,Bay,"103,126",Saginaw-Bay City-Midland,27.37%,"376,821"
+Michigan,Benzie,"17,766",Rural,,
+Michigan,Berrien,"153,401",Benton Harbor,100.00%,"153,401"
+Michigan,Branch,"43,517",Rural,,
+Michigan,Calhoun,"134,159",Kalamazoo,28.25%,"474,902"
+Michigan,Cass,"51,787",Rural,,
+Michigan,Charlevoix,"26,143",Rural,,
+Michigan,Cheboygan,"25,276",Rural,,
+Michigan,Chippewa,"37,349",Rural,,
+Michigan,Clare,"30,950",Rural,,
+Michigan,Clinton,"79,595",Lansing-East Lansing,16.50%,"482,269"
+Michigan,Crawford,"14,029",Rural,,
+Michigan,Delta,"35,784",Rural,,
+Michigan,Dickinson,"25,239",Rural,,
+Michigan,Eaton,"110,268",Lansing-East Lansing,22.86%,"482,269"
+Michigan,Emmet,"33,415",Rural,,
+Michigan,Genesee,"405,813",Flint,100.00%,"405,813"
+Michigan,Gladwin,"25,449",Rural,,
+Michigan,Gogebic,"13,975",Rural,,
+Michigan,Grand Traverse,"93,088",Rural,,
+Michigan,Gratiot,"40,711",Rural,,
+Michigan,Hillsdale,"45,605",Rural,,
+Michigan,Houghton,"35,684",Rural,,
+Michigan,Huron,"30,981",Rural,,
+Michigan,Ingham,"292,406",Lansing-East Lansing,60.63%,"482,269"
+Michigan,Ionia,"64,697",Rural,,
+Michigan,Iosco,"25,127",Rural,,
+Michigan,Iron,"11,066",Rural,,
+Michigan,Isabella,"69,872",Rural,,
+Michigan,Jackson,"158,510",Rural,,
+Michigan,Kalamazoo,"265,066",Kalamazoo,55.81%,"474,902"
+Michigan,Kalkaska,"18,038",Rural,,
+Michigan,Kent,"656,955",Grand Rapids,52.96%,"1,240,432"
+Michigan,Keweenaw,"2,116",Rural,,
+Michigan,Lake,"11,853",Rural,,
+Michigan,Lapeer,"87,607",Rural,,
+Michigan,Leelanau,"21,761",Rural,,
+Michigan,Lenawee,"98,451",Ann Arbor,14.96%,"658,047"
+Michigan,Livingston,"191,995",Ann Arbor,29.18%,"658,047"
+Michigan,Luce,"6,229",Rural,,
+Michigan,Mackinac,"10,799",Rural,,
+Michigan,Macomb,"873,972",Detroit,20.86%,"4,190,527"
+Michigan,Manistee,"24,558",Rural,,
+Michigan,Marquette,"66,699",Rural,,
+Michigan,Mason,"29,144",Rural,,
+Michigan,Mecosta,"43,453",Rural,,
+Michigan,Menominee,"22,780",Rural,,
+Michigan,Midland,"83,156",Saginaw-Bay City-Midland,22.07%,"376,821"
+Michigan,Missaukee,"15,118",Rural,,
+Michigan,Monroe,"150,500",Detroit,3.59%,"4,190,527"
+Michigan,Montcalm,"63,888",Rural,,
+Michigan,Montmorency,"9,328",Rural,,
+Michigan,Muskegon,"173,566",Grand Rapids,13.99%,"1,240,432"
+Michigan,Newaygo,"48,980",Rural,,
+Michigan,Oakland,"1,257,584",Detroit,30.01%,"4,190,527"
+Michigan,Oceana,"26,467",Rural,,
+Michigan,Ogemaw,"20,997",Rural,,
+Michigan,Ontonagon,"5,720",Rural,,
+Michigan,Osceola,"23,460",Rural,,
+Michigan,Oscoda,"8,241",Rural,,
+Michigan,Otsego,"24,668",Rural,,
+Michigan,Ottawa,"291,830",Grand Rapids,23.53%,"1,240,432"
+Michigan,Presque Isle,"12,592",Rural,,
+Michigan,Roscommon,"24,019",Rural,,
+Michigan,Saginaw,"190,539",Saginaw-Bay City-Midland,50.56%,"376,821"
+Michigan,Sanilac,"41,170",Rural,,
+Michigan,Schoolcraft,"8,094",Rural,,
+Michigan,Shiawassee,"68,122",Rural,,
+Michigan,St. Clair,"159,128",Detroit,3.80%,"4,190,527"
+Michigan,St. Joseph,"60,964",Rural,,
+Michigan,Tuscola,"52,245",Rural,,
+Michigan,Van Buren,"75,677",Kalamazoo,15.94%,"474,902"
+Michigan,Washtenaw,"367,601",Ann Arbor,55.86%,"658,047"
+Michigan,Wayne,"1,749,343",Detroit,41.75%,"4,190,527"
+Michigan,Wexford,"33,631",Rural,,
+Minnesota,Aitkin,"15,886",Rural,,
+Minnesota,Anoka,"356,921",Minneapolis-St. Paul,10.64%,"3,354,263"
+Minnesota,Becker,"34,423",Rural,,
+Minnesota,Beltrami,"47,188",Rural,,
+Minnesota,Benton,"40,889",Rural,,
+Minnesota,Big Stone,"4,991",Rural,,
+Minnesota,Blue Earth,"67,653",Rural,,
+Minnesota,Brown,"25,008",Rural,,
+Minnesota,Carlton,"35,871",Rural,,
+Minnesota,Carver,"105,089",Minneapolis-St. Paul,3.13%,"3,354,263"
+Minnesota,Cass,"29,779",Rural,,
+Minnesota,Chippewa,"11,800",Rural,,
+Minnesota,Chisago,"56,579",Rural,,
+Minnesota,Clay,"64,222",Fargo-Moorhead,26.09%,"246,145"
+Minnesota,Clearwater,"8,818",Rural,,
+Minnesota,Cook,"5,463",Rural,,
+Minnesota,Cottonwood,"11,196",Rural,,
+Minnesota,Crow Wing,"65,055",Rural,,
+Minnesota,Dakota,"429,021",Minneapolis-St. Paul,12.79%,"3,354,263"
+Minnesota,Dodge,"20,934",Rural,,
+Minnesota,Douglas,"38,141",Rural,,
+Minnesota,Faribault,"13,653",Rural,,
+Minnesota,Fillmore,"21,067",Rural,,
+Minnesota,Freeborn,"30,281",Rural,,
+Minnesota,Goodhue,"46,340",Rural,,
+Minnesota,Grant,"5,972",Rural,,
+Minnesota,Hennepin,"1,265,843",Minneapolis-St. Paul,37.74%,"3,354,263"
+Minnesota,Houston,"18,600",Rural,,
+Minnesota,Hubbard,"21,491",Rural,,
+Minnesota,Isanti,"40,596",Rural,,
+Minnesota,Itasca,"45,130",Rural,,
+Minnesota,Jackson,"9,846",Rural,,
+Minnesota,Kanabec,"16,337",Rural,,
+Minnesota,Kandiyohi,"43,199",Rural,,
+Minnesota,Kittson,"4,298",Rural,,
+Minnesota,Koochiching,"12,229",Rural,,
+Minnesota,Lac qui Parle,"6,623",Rural,,
+Minnesota,Lake,"10,641",Rural,,
+Minnesota,Lake of the Woods,"3,740",Rural,,
+Minnesota,Le Sueur,"28,887",Rural,,
+Minnesota,Lincoln,"5,639",Rural,,
+Minnesota,Lyon,"25,474",Rural,,
+Minnesota,Mahnomen,"5,527",Rural,,
+Minnesota,Marshall,"9,336",Rural,,
+Minnesota,Martin,"19,683",Rural,,
+Minnesota,McLeod,"35,893",Rural,,
+Minnesota,Meeker,"23,222",Rural,,
+Minnesota,Mille Lacs,"26,277",Rural,,
+Minnesota,Morrison,"33,386",Rural,,
+Minnesota,Mower,"40,062",Rural,,
+Minnesota,Murray,"8,194",Rural,,
+Minnesota,Nicollet,"34,274",Rural,,
+Minnesota,Nobles,"21,629",Rural,,
+Minnesota,Norman,"6,375",Rural,,
+Minnesota,Olmsted,"158,293",Rural,,
+Minnesota,Otter Tail,"58,746",Rural,,
+Minnesota,Pennington,"14,119",Rural,,
+Minnesota,Pine,"29,579",Rural,,
+Minnesota,Pipestone,"9,126",Rural,,
+Minnesota,Polk,"31,364",Rural,,
+Minnesota,Pope,"11,249",Rural,,
+Minnesota,Ramsey,"550,321",Minneapolis-St. Paul,16.41%,"3,354,263"
+Minnesota,Red Lake,"4,055",Rural,,
+Minnesota,Redwood,"15,170",Rural,,
+Minnesota,Renville,"14,548",Rural,,
+Minnesota,Rice,"66,972",Rural,,
+Minnesota,Rock,"9,315",Rural,,
+Minnesota,Roseau,"15,165",Rural,,
+Minnesota,Scott,"149,013",Minneapolis-St. Paul,4.44%,"3,354,263"
+Minnesota,Sherburne,"97,238",Minneapolis-St. Paul,2.90%,"3,354,263"
+Minnesota,Sibley,"14,865",Rural,,
+Minnesota,St. Louis,"199,070",Duluth-Superior,100.00%,"199,070"
+Minnesota,Stearns,"161,075",St. Cloud,100.00%,"161,075"
+Minnesota,Steele,"36,649",Rural,,
+Minnesota,Stevens,"9,805",Rural,,
+Minnesota,Swift,"9,266",Rural,,
+Minnesota,Todd,"24,664",Rural,,
+Minnesota,Traverse,"3,259",Rural,,
+Minnesota,Wabasha,"21,627",Rural,,
+Minnesota,Wadena,"13,682",Rural,,
+Minnesota,Waseca,"18,612",Rural,,
+Minnesota,Washington,"262,440",Minneapolis-St. Paul,7.82%,"3,354,263"
+Minnesota,Watonwan,"10,897",Rural,,
+Minnesota,Wilkin,"6,207",Rural,,
+Minnesota,Winona,"50,484",Rural,,
+Minnesota,Wright,"138,377",Minneapolis-St. Paul,4.13%,"3,354,263"
+Minnesota,Yellow Medicine,"9,709",Rural,,
+Mississippi,Adams,"30,693",Rural,,
+Mississippi,Alcorn,"36,953",Rural,,
+Mississippi,Amite,"12,297",Rural,,
+Mississippi,Attala,"18,174",Rural,,
+Mississippi,Benton,"8,259",Rural,,
+Mississippi,Bolivar,"30,628",Rural,,
+Mississippi,Calhoun,"14,361",Rural,,
+Mississippi,Carroll,"9,947",Rural,,
+Mississippi,Chickasaw,"17,103",Rural,,
+Mississippi,Choctaw,"8,210",Rural,,
+Mississippi,Claiborne,"8,988",Rural,,
+Mississippi,Clarke,"15,541",Rural,,
+Mississippi,Clay,"19,316",Rural,,
+Mississippi,Coahoma,"22,124",Rural,,
+Mississippi,Copiah,"28,065",Rural,,
+Mississippi,Covington,"18,636",Rural,,
+Mississippi,DeSoto,"184,945",Rural,,
+Mississippi,Forrest,"74,897",Hattiesburg,54.18%,"138,240"
+Mississippi,Franklin,"7,713",Rural,,
+Mississippi,George,"24,500",Rural,,
+Mississippi,Greene,"13,586",Rural,,
+Mississippi,Grenada,"20,758",Rural,,
+Mississippi,Hancock,"47,632",Rural,,
+Mississippi,Harrison,"208,080",Biloxi-Gulport,59.16%,"351,697"
+Mississippi,Hinds,"231,840",Jackson,46.99%,"493,383"
+Mississippi,Holmes,"17,010",Rural,,
+Mississippi,Humphreys,"8,064",Rural,,
+Mississippi,Issaquena,"1,327",Rural,,
+Mississippi,Itawamba,"23,390",Rural,,
+Mississippi,Jackson,"143,617",Biloxi-Gulport,40.84%,"351,697"
+Mississippi,Jasper,"16,383",Rural,,
+Mississippi,Jefferson,"6,990",Rural,,
+Mississippi,Jefferson Davis,"11,128",Rural,,
+Mississippi,Jones,"68,098",Rural,,
+Mississippi,Kemper,"9,742",Rural,,
+Mississippi,Lafayette,"54,019",Rural,,
+Mississippi,Lamar,"63,343",Hattiesburg,45.82%,"138,240"
+Mississippi,Lauderdale,"74,125",Rural,,
+Mississippi,Lawrence,"12,586",Rural,,
+Mississippi,Leake,"22,786",Rural,,
+Mississippi,Lee,"85,436",Rural,,
+Mississippi,Leflore,"28,183",Rural,,
+Mississippi,Lincoln,"34,153",Rural,,
+Mississippi,Lowndes,"58,595",Rural,,
+Mississippi,Madison,"106,272",Jackson,21.54%,"493,383"
+Mississippi,Marion,"24,573",Rural,,
+Mississippi,Marshall,"35,294",Rural,,
+Mississippi,Monroe,"35,252",Rural,,
+Mississippi,Montgomery,"9,775",Rural,,
+Mississippi,Neshoba,"29,118",Rural,,
+Mississippi,Newton,"21,018",Rural,,
+Mississippi,Noxubee,"10,417",Rural,,
+Mississippi,Oktibbeha,"49,587",Rural,,
+Mississippi,Panola,"34,192",Rural,,
+Mississippi,Pearl River,"55,535",Rural,,
+Mississippi,Perry,"11,973",Rural,,
+Mississippi,Pike,"39,288",Rural,,
+Mississippi,Pontotoc,"32,174",Rural,,
+Mississippi,Prentiss,"25,126",Rural,,
+Mississippi,Quitman,"6,792",Rural,,
+Mississippi,Rankin,"155,271",Jackson,31.47%,"493,383"
+Mississippi,Scott,"28,124",Rural,,
+Mississippi,Sharkey,"4,321",Rural,,
+Mississippi,Simpson,"26,658",Rural,,
+Mississippi,Smith,"15,916",Rural,,
+Mississippi,Stone,"18,336",Rural,,
+Mississippi,Sunflower,"25,110",Rural,,
+Mississippi,Tallahatchie,"13,809",Rural,,
+Mississippi,Tate,"28,321",Rural,,
+Mississippi,Tippah,"22,015",Rural,,
+Mississippi,Tishomingo,"19,383",Rural,,
+Mississippi,Tunica,"9,632",Rural,,
+Mississippi,Union,"28,815",Rural,,
+Mississippi,Walthall,"14,286",Rural,,
+Mississippi,Warren,"45,381",Rural,,
+Mississippi,Washington,"43,909",Rural,,
+Mississippi,Wayne,"20,183",Rural,,
+Mississippi,Webster,"9,689",Rural,,
+Mississippi,Wilkinson,"8,630",Rural,,
+Mississippi,Winston,"17,955",Rural,,
+Mississippi,Yalobusha,"12,108",Rural,,
+Mississippi,Yazoo,"29,690",Rural,,
+Missouri,Adair,"25,343",Rural,,
+Missouri,Andrew,"17,712",Rural,,
+Missouri,Atchison,"5,143",Rural,,
+Missouri,Audrain,"25,388",Rural,,
+Missouri,Barry,"35,789",Rural,,
+Missouri,Barton,"11,754",Rural,,
+Missouri,Bates,"16,172",Rural,,
+Missouri,Benton,"19,443",Rural,,
+Missouri,Bollinger,"12,133",Rural,,
+Missouri,Boone,"180,463",Columbia/MO,100.00%,"180,463"
+Missouri,Buchanan,"87,364",St. Joseph,100.00%,"87,364"
+Missouri,Butler,"42,478",Rural,,
+Missouri,Caldwell,"9,020",Rural,,
+Missouri,Callaway,"44,743",Rural,,
+Missouri,Camden,"46,305",Rural,,
+Missouri,Cape Girardeau,"78,871",Rural,,
+Missouri,Carroll,"8,679",Rural,,
+Missouri,Carter,"5,982",Rural,,
+Missouri,Cass,"105,780",Kansas City,5.26%,"2,012,745"
+Missouri,Cedar,"14,349",Rural,,
+Missouri,Chariton,"7,426",Rural,,
+Missouri,Christian,"88,595",Springfield/MO,23.21%,"381,681"
+Missouri,Clark,"6,797",Rural,,
+Missouri,Clay,"249,948",Kansas City,12.42%,"2,012,745"
+Missouri,Clinton,"20,387",Rural,,
+Missouri,Cole,"76,745",Rural,,
+Missouri,Cooper,"17,709",Rural,,
+Missouri,Crawford,"23,920",Rural,,
+Missouri,Dade,"7,561",Rural,,
+Missouri,Dallas,"16,878",Rural,,
+Missouri,Daviess,"8,278",Rural,,
+Missouri,DeKalb,"12,547",Rural,,
+Missouri,Dent,"15,573",Rural,,
+Missouri,Douglas,"13,185",Rural,,
+Missouri,Dunklin,"29,131",Rural,,
+Missouri,Franklin,"103,967",St. Louis,4.63%,"2,247,927"
+Missouri,Gasconade,"14,706",Rural,,
+Missouri,Gentry,"6,571",Rural,,
+Missouri,Greene,"293,086",Springfield/MO,76.79%,"381,681"
+Missouri,Grundy,"9,850",Rural,,
+Missouri,Harrison,"8,352",Rural,,
+Missouri,Henry,"21,824",Rural,,
+Missouri,Hickory,"9,544",Rural,,
+Missouri,Holt,"4,403",Rural,,
+Missouri,Howard,"10,001",Rural,,
+Missouri,Howell,"40,117",Rural,,
+Missouri,Iron,"10,125",Rural,,
+Missouri,Jackson,"703,011",Kansas City,34.93%,"2,012,745"
+Missouri,Jasper,"121,328",Joplin,67.57%,"179,564"
+Missouri,Jefferson,"225,081",St. Louis,10.01%,"2,247,927"
+Missouri,Johnson,"54,062",Rural,,
+Missouri,Knox,"3,959",Rural,,
+Missouri,Laclede,"35,723",Rural,,
+Missouri,Lafayette,"32,708",Rural,,
+Missouri,Lawrence,"38,355",Rural,,
+Missouri,Lewis,"9,776",Rural,,
+Missouri,Lincoln,"59,013",Rural,,
+Missouri,Linn,"11,920",Rural,,
+Missouri,Livingston,"15,227",Rural,,
+Missouri,Macon,"15,117",Rural,,
+Missouri,Madison,"12,088",Rural,,
+Missouri,Maries,"8,697",Rural,,
+Missouri,Marion,"28,530",Rural,,
+Missouri,McDonald,"22,837",Rural,,
+Missouri,Mercer,"3,617",Rural,,
+Missouri,Miller,"25,619",Rural,,
+Missouri,Mississippi,"13,180",Rural,,
+Missouri,Moniteau,"16,132",Rural,,
+Missouri,Monroe,"8,644",Rural,,
+Missouri,Montgomery,"11,551",Rural,,
+Missouri,Morgan,"20,627",Rural,,
+Missouri,New Madrid,"17,076",Rural,,
+Missouri,Newton,"58,236",Joplin,32.43%,"179,564"
+Missouri,Nodaway,"22,092",Rural,,
+Missouri,Oregon,"10,529",Rural,,
+Missouri,Osage,"13,615",Rural,,
+Missouri,Ozark,"9,174",Rural,,
+Missouri,Pemiscot,"15,805",Rural,,
+Missouri,Perry,"19,136",Rural,,
+Missouri,Pettis,"42,339",Rural,,
+Missouri,Phelps,"44,573",Rural,,
+Missouri,Pike,"18,302",Rural,,
+Missouri,Platte,"104,418",Kansas City,5.19%,"2,012,745"
+Missouri,Polk,"32,149",Rural,,
+Missouri,Pulaski,"52,607",Rural,,
+Missouri,Putnam,"4,696",Rural,,
+Missouri,Ralls,"10,309",Rural,,
+Missouri,Randolph,"24,748",Rural,,
+Missouri,Ray,"23,018",Rural,,
+Missouri,Reynolds,"6,270",Rural,,
+Missouri,Ripley,"13,288",Rural,,
+Missouri,Saline,"22,761",Rural,,
+Missouri,Schuyler,"4,660",Rural,,
+Missouri,Scotland,"4,902",Rural,,
+Missouri,Scott,"38,280",Rural,,
+Missouri,Shannon,"8,166",Rural,,
+Missouri,Shelby,"5,930",Rural,,
+Missouri,St. Charles,"402,022",St. Louis,17.88%,"2,247,927"
+Missouri,St. Clair,"9,397",Rural,,
+Missouri,St. Francois,"67,215",Rural,,
+Missouri,St. Louis,"994,205",St. Louis,44.23%,"2,247,927"
+Missouri,Ste. Genevieve,"17,894",Rural,,
+Missouri,Stoddard,"29,025",Rural,,
+Missouri,Stone,"31,952",Rural,,
+Missouri,Sullivan,"6,089",Rural,,
+Missouri,Taney,"55,928",Rural,,
+Missouri,Texas,"25,398",Rural,,
+Missouri,Vernon,"20,563",Rural,,
+Missouri,Warren,"35,649",Rural,,
+Missouri,Washington,"24,730",Rural,,
+Missouri,Wayne,"12,873",Rural,,
+Missouri,Webster,"39,592",Rural,,
+Missouri,Worth,"2,013",Rural,,
+Missouri,Wright,"18,289",Rural,,
+Montana,Beaverhead,"9,453",Rural,,
+Montana,Big Horn,"13,319",Rural,,
+Montana,Blaine,"6,681",Rural,,
+Montana,Broadwater,"6,237",Rural,,
+Montana,Carbon,"10,725",Rural,,
+Montana,Carter,"1,252",Rural,,
+Montana,Cascade,"81,366",Great Falls,100.00%,"81,366"
+Montana,Chouteau,"5,635",Rural,,
+Montana,Custer,"11,402",Rural,,
+Montana,Daniels,"1,690",Rural,,
+Montana,Dawson,"8,613",Rural,,
+Montana,Deer Lodge,"9,140",Rural,,
+Montana,Fallon,"2,846",Rural,,
+Montana,Fergus,"11,050",Rural,,
+Montana,Flathead,"103,806",Rural,,
+Montana,Gallatin,"114,434",Rural,,
+Montana,Garfield,"1,258",Rural,,
+Montana,Glacier,"13,753",Rural,,
+Montana,Golden Valley,821,Rural,,
+Montana,Granite,"3,379",Rural,,
+Montana,Hill,"16,484",Rural,,
+Montana,Jefferson,"12,221",Rural,,
+Montana,Judith Basin,"2,007",Rural,,
+Montana,Lake,"30,458",Rural,,
+Montana,Lewis and Clark,"69,432",Rural,,
+Montana,Liberty,"2,337",Rural,,
+Montana,Lincoln,"19,980",Rural,,
+Montana,Madison,"8,600",Rural,,
+Montana,McCone,"1,664",Rural,,
+Montana,Meagher,"1,862",Rural,,
+Montana,Mineral,"4,397",Rural,,
+Montana,Missoula,"119,600",Missoula,100.00%,"119,600"
+Montana,Musselshell,"4,633",Rural,,
+Montana,Park,"16,606",Rural,,
+Montana,Petroleum,487,Rural,,
+Montana,Phillips,"3,954",Rural,,
+Montana,Pondera,"5,911",Rural,,
+Montana,Powder River,"1,682",Rural,,
+Montana,Powell,"6,890",Rural,,
+Montana,Prairie,"1,077",Rural,,
+Montana,Ravalli,"43,806",Rural,,
+Montana,Richland,"10,803",Rural,,
+Montana,Roosevelt,"11,004",Rural,,
+Montana,Rosebud,"8,937",Rural,,
+Montana,Sanders,"12,113",Rural,,
+Montana,Sheridan,"3,309",Rural,,
+Montana,Silver Bow,"34,915",Rural,,
+Montana,Stillwater,"9,642",Rural,,
+Montana,Sweet Grass,"3,737",Rural,,
+Montana,Teton,"6,147",Rural,,
+Montana,Toole,"4,736",Rural,,
+Montana,Treasure,696,Rural,,
+Montana,Valley,"7,396",Rural,,
+Montana,Wheatland,"2,126",Rural,,
+Montana,Wibaux,969,Rural,,
+Montana,Yellowstone,"161,300",Billings,100.00%,"161,300"
+Nebraska,Adams,"31,363",Rural,,
+Nebraska,Antelope,"6,298",Rural,,
+Nebraska,Arthur,463,Rural,,
+Nebraska,Banner,745,Rural,,
+Nebraska,Blaine,465,Rural,,
+Nebraska,Boone,"5,192",Rural,,
+Nebraska,Box Butte,"10,783",Rural,,
+Nebraska,Boyd,"1,919",Rural,,
+Nebraska,Brown,"2,955",Rural,,
+Nebraska,Buffalo,"49,659",Rural,,
+Nebraska,Burt,"6,459",Rural,,
+Nebraska,Butler,"8,016",Rural,,
+Nebraska,Cass,"26,248",Rural,,
+Nebraska,Cedar,"8,402",Rural,,
+Nebraska,Chase,"3,924",Rural,,
+Nebraska,Cherry,"5,689",Rural,,
+Nebraska,Cheyenne,"8,910",Rural,,
+Nebraska,Clay,"6,203",Rural,,
+Nebraska,Colfax,"10,709",Rural,,
+Nebraska,Cuming,"8,846",Rural,,
+Nebraska,Custer,"10,777",Rural,,
+Nebraska,Dakota,"20,026",Rural,,
+Nebraska,Dawes,"8,589",Rural,,
+Nebraska,Dawson,"23,595",Rural,,
+Nebraska,Deuel,"1,794",Rural,,
+Nebraska,Dixon,"5,636",Rural,,
+Nebraska,Dodge,"36,565",Rural,,
+Nebraska,Douglas,"571,327",Omaha,67.08%,"851,729"
+Nebraska,Dundy,"1,693",Rural,,
+Nebraska,Fillmore,"5,462",Rural,,
+Nebraska,Franklin,"2,979",Rural,,
+Nebraska,Frontier,"2,627",Rural,,
+Nebraska,Furnas,"4,676",Rural,,
+Nebraska,Gage,"21,513",Rural,,
+Nebraska,Garden,"1,837",Rural,,
+Nebraska,Garfield,"1,969",Rural,,
+Nebraska,Gosper,"1,990",Rural,,
+Nebraska,Grant,623,Rural,,
+Nebraska,Greeley,"2,356",Rural,,
+Nebraska,Hall,"61,353",Rural,,
+Nebraska,Hamilton,"9,324",Rural,,
+Nebraska,Harlan,"3,380",Rural,,
+Nebraska,Hayes,922,Rural,,
+Nebraska,Hitchcock,"2,762",Rural,,
+Nebraska,Holt,"10,067",Rural,,
+Nebraska,Hooker,682,Rural,,
+Nebraska,Howard,"6,445",Rural,,
+Nebraska,Jefferson,"7,046",Rural,,
+Nebraska,Johnson,"5,071",Rural,,
+Nebraska,Kearney,"6,495",Rural,,
+Nebraska,Keith,"8,034",Rural,,
+Nebraska,Keya Paha,806,Rural,,
+Nebraska,Kimball,"3,632",Rural,,
+Nebraska,Knox,"8,332",Rural,,
+Nebraska,Lancaster,"319,090",Lincoln,100.00%,"319,090"
+Nebraska,Lincoln,"34,914",Rural,,
+Nebraska,Logan,748,Rural,,
+Nebraska,Loup,664,Rural,,
+Nebraska,Madison,"35,099",Rural,,
+Nebraska,McPherson,494,Rural,,
+Nebraska,Merrick,"7,755",Rural,,
+Nebraska,Morrill,"4,642",Rural,,
+Nebraska,Nance,"3,519",Rural,,
+Nebraska,Nemaha,"6,972",Rural,,
+Nebraska,Nuckolls,"4,148",Rural,,
+Nebraska,Otoe,"16,012",Rural,,
+Nebraska,Pawnee,"2,613",Rural,,
+Nebraska,Perkins,"2,891",Rural,,
+Nebraska,Phelps,"9,034",Rural,,
+Nebraska,Pierce,"7,148",Rural,,
+Nebraska,Platte,"33,470",Rural,,
+Nebraska,Polk,"5,213",Rural,,
+Nebraska,Red Willow,"10,724",Rural,,
+Nebraska,Richardson,"7,865",Rural,,
+Nebraska,Rock,"1,357",Rural,,
+Nebraska,Saline,"14,224",Rural,,
+Nebraska,Sarpy,"187,196",Omaha,21.98%,"851,729"
+Nebraska,Saunders,"21,578",Rural,,
+Nebraska,Scotts Bluff,"35,618",Rural,,
+Nebraska,Seward,"17,284",Rural,,
+Nebraska,Sheridan,"5,246",Rural,,
+Nebraska,Sherman,"3,001",Rural,,
+Nebraska,Sioux,"1,166",Rural,,
+Nebraska,Stanton,"5,920",Rural,,
+Nebraska,Thayer,"5,003",Rural,,
+Nebraska,Thomas,722,Rural,,
+Nebraska,Thurston,"7,224",Rural,,
+Nebraska,Valley,"4,158",Rural,,
+Nebraska,Washington,"20,729",Rural,,
+Nebraska,Wayne,"9,385",Rural,,
+Nebraska,Webster,"3,487",Rural,,
+Nebraska,Wheeler,783,Rural,,
+Nebraska,York,"13,679",Rural,,
+Nevada,Carson City,"55,916",Rural,,
+Nevada,Churchill,"24,909",Rural,,
+Nevada,Clark,"2,266,715",Las Vegas,91.44%,"2,478,896"
+Nevada,Douglas,"48,905",Rural,,
+Nevada,Elko,"52,778",Rural,,
+Nevada,Esmeralda,873,Rural,,
+Nevada,Eureka,"2,029",Rural,,
+Nevada,Humboldt,"16,831",Rural,,
+Nevada,Lander,"5,532",Rural,,
+Nevada,Lincoln,"5,183",Rural,,
+Nevada,Lyon,"57,510",Rural,,
+Nevada,Mineral,"4,505",Rural,,
+Nevada,Nye,"46,523",Rural,,
+Nevada,Pershing,"6,725",Rural,,
+Nevada,Storey,"4,123",Rural,,
+Nevada,Washoe,"471,519",Reno,100.00%,"471,519"
+Nevada,White Pine,"9,580",Rural,,
+New Hampshire,Belknap,"61,303",Rural,,
+New Hampshire,Carroll,"48,910",Rural,,
+New Hampshire,Cheshire,"76,085",Rural,,
+New Hampshire,Coos,"31,563",Rural,,
+New Hampshire,Grafton,"89,886",Rural,,
+New Hampshire,Hillsborough,"417,025",Nashua,100.00%,"417,025"
+New Hampshire,Merrimack,"151,391",Manchester,32.83%,"461,160"
+New Hampshire,Rockingham,"309,769",Manchester,67.17%,"461,160"
+New Hampshire,Strafford,"130,633",Portsmouth-Dover-Rochester,38.62%,"338,274"
+New Hampshire,Sullivan,"43,146",Rural,,
+New Jersey,Atlantic,"263,670",Atlantic City,74.13%,"355,709"
+New Jersey,Bergen,"932,202",Bergen-Passaic/Paterson-Clifton,65.01%,"1,434,028"
+New Jersey,Burlington,"445,349",Philadelphia,8.28%,"5,378,441"
+New Jersey,Camden,"506,471",Philadelphia,9.42%,"5,378,441"
+New Jersey,Cape May,"92,039",Atlantic City,25.87%,"355,709"
+New Jersey,Cumberland,"149,527",Vineland-Millville-Bridgetown,100.00%,"149,527"
+New Jersey,Essex,"798,975",Newark,38.18%,"2,092,916"
+New Jersey,Gloucester,"291,636",Philadelphia,5.42%,"5,378,441"
+New Jersey,Hudson,"672,391",Jersey City,100.00%,"672,391"
+New Jersey,Hunterdon,"124,371",Middlesex-Somerset-Hunt,9.73%,"1,278,367"
+New Jersey,Mercer,"367,430",Trenton,100.00%,"367,430"
+New Jersey,Middlesex,"825,062",Middlesex-Somerset-Hunt,64.54%,"1,278,367"
+New Jersey,Monmouth,"618,795",Monmouth-Ocean,50.47%,"1,225,981"
+New Jersey,Morris,"491,845",Newark,23.50%,"2,092,916"
+New Jersey,Ocean,"607,186",Monmouth-Ocean,49.53%,"1,225,981"
+New Jersey,Passaic,"501,826",Bergen-Passaic/Paterson-Clifton,34.99%,"1,434,028"
+New Jersey,Salem,"62,385",Rural,,
+New Jersey,Somerset,"328,934",Middlesex-Somerset-Hunt,25.73%,"1,278,367"
+New Jersey,Sussex,"140,488",Newark,6.71%,"2,092,916"
+New Jersey,Union,"556,341",Newark,26.58%,"2,092,916"
+New Jersey,Warren,"105,267",Newark,5.03%,"2,092,916"
+New Mexico,Bernalillo,"679,121",Albuquerque,75.24%,"902,557"
+New Mexico,Catron,"3,527",Rural,,
+New Mexico,Chaves,"64,615",Rural,,
+New Mexico,Cibola,"26,675",Rural,,
+New Mexico,Colfax,"11,941",Rural,,
+New Mexico,Curry,"48,954",Rural,,
+New Mexico,De Baca,"1,748",Rural,,
+New Mexico,Dona Ana,"218,195",Las Cruces,100.00%,"218,195"
+New Mexico,Eddy,"58,460",Rural,,
+New Mexico,Grant,"26,998",Rural,,
+New Mexico,Guadalupe,"4,300",Rural,,
+New Mexico,Harding,625,Rural,,
+New Mexico,Hidalgo,"4,198",Rural,,
+New Mexico,Lea,"71,070",Rural,,
+New Mexico,Lincoln,"19,572",Rural,,
+New Mexico,Los Alamos,"19,369",Rural,,
+New Mexico,Luna,"23,709",Rural,,
+New Mexico,McKinley,"71,367",Rural,,
+New Mexico,Mora,"4,521",Rural,,
+New Mexico,Otero,"67,490",Rural,,
+New Mexico,Quay,"8,253",Rural,,
+New Mexico,Rio Arriba,"38,921",Rural,,
+New Mexico,Roosevelt,"18,500",Rural,,
+New Mexico,San Juan,"123,958",Rural,,
+New Mexico,San Miguel,"27,277",Rural,,
+New Mexico,Sandoval,"146,748",Albuquerque,16.26%,"902,557"
+New Mexico,Santa Fe,"150,358",Santa Fe,100.00%,"150,358"
+New Mexico,Sierra,"10,791",Rural,,
+New Mexico,Socorro,"16,637",Rural,,
+New Mexico,Taos,"32,723",Rural,,
+New Mexico,Torrance,"15,461",Rural,,
+New Mexico,Union,"4,059",Rural,,
+New Mexico,Valencia,"76,688",Albuquerque,8.50%,"902,557"
+New York,Albany,"305,506",Albany-Schenectady-Troy,35.97%,"849,382"
+New York,Allegany,"46,091",Rural,,
+New York,Bronx,"1,418,207",New York,14.73%,"9,630,112"
+New York,Broome,"190,488",Binghamton,100.00%,"190,488"
+New York,Cattaraugus,"76,117",Rural,,
+New York,Cayuga,"76,576",Syracuse,10.56%,"725,169"
+New York,Chautauqua,"126,903",Jamestown-Dunkirk,100.00%,"126,903"
+New York,Chemung,"83,456",Elmira,100.00%,"83,456"
+New York,Chenango,"47,207",Rural,,
+New York,Clinton,"80,485",Rural,,
+New York,Columbia,"59,461",Rural,,
+New York,Cortland,"47,581",Rural,,
+New York,Delaware,"44,135",Rural,,
+New York,Dutchess,"294,218",Dutchess County,100.00%,"294,218"
+New York,Erie,"918,702",Buffalo,81.45%,"1,127,983"
+New York,Essex,"36,885",Rural,,
+New York,Franklin,"50,022",Rural,,
+New York,Fulton,"53,383",Rural,,
+New York,Genesee,"57,280",Rural,,
+New York,Greene,"47,188",Rural,,
+New York,Hamilton,"4,416",Rural,,
+New York,Herkimer,"61,319",Utica-Rome,21.15%,"289,990"
+New York,Jefferson,"109,834",Rural,,
+New York,Kings,"2,559,903",New York,26.58%,"9,630,112"
+New York,Lewis,"26,296",Rural,,
+New York,Livingston,"62,914",Rochester,6.26%,"1,004,379"
+New York,Madison,"70,941",Syracuse,9.78%,"725,169"
+New York,Monroe,"741,770",Rochester,73.85%,"1,004,379"
+New York,Montgomery,"49,221",Rural,,
+New York,Nassau,"1,356,924",Nassau-Suffolk,47.89%,"2,833,525"
+New York,New York,"1,628,706",New York,16.91%,"9,630,112"
+New York,Niagara,"209,281",Buffalo,18.55%,"1,127,983"
+New York,Oneida,"228,671",Utica-Rome,78.85%,"289,990"
+New York,Onondaga,"460,528",Syracuse,63.51%,"725,169"
+New York,Ontario,"109,777",Rochester,10.93%,"1,004,379"
+New York,Orange,"384,940",Newburgh,87.34%,"440,749"
+New York,Orleans,"40,352",Rural,,
+New York,Oswego,"117,124",Syracuse,16.15%,"725,169"
+New York,Otsego,"59,493",Rural,,
+New York,Putnam,"98,320",Rural,,
+New York,Queens,"2,253,858",New York,23.40%,"9,630,112"
+New York,Rensselaer,"158,714",Albany-Schenectady-Troy,18.69%,"849,382"
+New York,Richmond,"476,143",New York,4.94%,"9,630,112"
+New York,Rockland,"325,789",New York,3.38%,"9,630,112"
+New York,Saratoga,"229,863",Albany-Schenectady-Troy,27.06%,"849,382"
+New York,Schenectady,"155,299",Albany-Schenectady-Troy,18.28%,"849,382"
+New York,Schoharie,"30,999",Rural,,
+New York,Schuyler,"17,807",Rural,,
+New York,Seneca,"34,016",Rural,,
+New York,St. Lawrence,"107,740",Rural,,
+New York,Steuben,"95,379",Rural,,
+New York,Suffolk,"1,476,601",Nassau-Suffolk,52.11%,"2,833,525"
+New York,Sullivan,"75,432",Rural,,
+New York,Tioga,"48,203",Rural,,
+New York,Tompkins,"102,180",Rural,,
+New York,Ulster,"177,573",Rural,,
+New York,Warren,"63,944",Glens Falls,51.09%,"125,148"
+New York,Washington,"61,204",Glens Falls,48.91%,"125,148"
+New York,Wayne,"89,918",Rochester,8.95%,"1,004,379"
+New York,Westchester,"967,506",New York,10.05%,"9,630,112"
+New York,Wyoming,"39,859",Rural,,
+New York,Yates,"24,913",Rural,,
+North Carolina,Alamance,"169,509",Greensboro-Winston-Salem-Highpoint,12.11%,"1,400,254"
+North Carolina,Alexander,"37,497",Rural,,
+North Carolina,Alleghany,"11,137",Rural,,
+North Carolina,Anson,"24,446",Rural,,
+North Carolina,Ashe,"27,203",Rural,,
+North Carolina,Avery,"17,557",Rural,,
+North Carolina,Beaufort,"46,994",Rural,,
+North Carolina,Bertie,"18,947",Rural,,
+North Carolina,Bladen,"32,722",Rural,,
+North Carolina,Brunswick,"142,820",Wilmington/NC,37.85%,"377,293"
+North Carolina,Buncombe,"261,191",Asheville,100.00%,"261,191"
+North Carolina,Burke,"90,485",Hickory-Morgantown,27.24%,"332,214"
+North Carolina,Cabarrus,"216,453",Charlotte-Gaston-Rock Hill,9.41%,"2,300,375"
+North Carolina,Caldwell,"82,178",Hickory-Morgantown,24.74%,"332,214"
+North Carolina,Camden,"10,867",Rural,,
+North Carolina,Carteret,"69,473",Rural,,
+North Carolina,Caswell,"22,604",Rural,,
+North Carolina,Catawba,"159,551",Hickory-Morgantown,48.03%,"332,214"
+North Carolina,Chatham,"74,470",Raleigh-Durham,3.85%,"1,935,219"
+North Carolina,Cherokee,"28,612",Rural,,
+North Carolina,Chowan,"13,943",Rural,,
+North Carolina,Clay,"11,231",Rural,,
+North Carolina,Cleveland,"97,947",Rural,,
+North Carolina,Columbus,"55,508",Rural,,
+North Carolina,Craven,"102,139",Rural,,
+North Carolina,Cumberland,"335,509",Fayetteville,100.00%,"335,509"
+North Carolina,Currituck,"27,763",Rural,,
+North Carolina,Dare,"37,009",Rural,,
+North Carolina,Davidson,"167,609",Greensboro-Winston-Salem-Highpoint,11.97%,"1,400,254"
+North Carolina,Davie,"42,846",Rural,,
+North Carolina,Duplin,"58,741",Rural,,
+North Carolina,Durham,"321,488",Raleigh-Durham,16.61%,"1,935,219"
+North Carolina,Edgecombe,"51,472",Rocky Mount,35.31%,"145,770"
+North Carolina,Forsyth,"382,295",Greensboro-Winston-Salem-Highpoint,27.30%,"1,400,254"
+North Carolina,Franklin,"69,685",Raleigh-Durham,3.60%,"1,935,219"
+North Carolina,Gaston,"224,529",Charlotte-Gaston-Rock Hill,9.76%,"2,300,375"
+North Carolina,Gates,"11,562",Rural,,
+North Carolina,Graham,"8,441",Rural,,
+North Carolina,Granville,"60,443",Rural,,
+North Carolina,Greene,"21,069",Rural,,
+North Carolina,Guilford,"537,174",Greensboro-Winston-Salem-Highpoint,38.36%,"1,400,254"
+North Carolina,Halifax,"50,010",Rural,,
+North Carolina,Harnett,"135,976",Rural,,
+North Carolina,Haywood,"62,317",Rural,,
+North Carolina,Henderson,"117,417",Rural,,
+North Carolina,Hertford,"23,677",Rural,,
+North Carolina,Hoke,"55,234",Rural,,
+North Carolina,Hyde,"4,937",Rural,,
+North Carolina,Iredell,"181,806",Rural,,
+North Carolina,Jackson,"43,938",Rural,,
+North Carolina,Johnston,"209,339",Raleigh-Durham,10.82%,"1,935,219"
+North Carolina,Jones,"9,419",Rural,,
+North Carolina,Lee,"61,779",Rural,,
+North Carolina,Lenoir,"55,949",Rural,,
+North Carolina,Lincoln,"86,111",Charlotte-Gaston-Rock Hill,3.74%,"2,300,375"
+North Carolina,Macon,"35,858",Rural,,
+North Carolina,Madison,"21,755",Rural,,
+North Carolina,Martin,"22,440",Rural,,
+North Carolina,McDowell,"45,756",Rural,,
+North Carolina,Mecklenburg,"1,110,356",Charlotte-Gaston-Rock Hill,48.27%,"2,300,375"
+North Carolina,Mitchell,"14,964",Rural,,
+North Carolina,Montgomery,"27,173",Rural,,
+North Carolina,Moore,"100,880",Rural,,
+North Carolina,Nash,"94,298",Rocky Mount,64.69%,"145,770"
+North Carolina,New Hanover,"234,473",Wilmington/NC,62.15%,"377,293"
+North Carolina,Northampton,"19,483",Rural,,
+North Carolina,Onslow,"197,938",Jacksonville/NC,100.00%,"197,938"
+North Carolina,Orange,"148,476",Raleigh-Durham,7.67%,"1,935,219"
+North Carolina,Pamlico,"12,726",Rural,,
+North Carolina,Pasquotank,"39,824",Rural,,
+North Carolina,Pender,"63,060",Rural,,
+North Carolina,Perquimans,"13,463",Rural,,
+North Carolina,Person,"39,490",Rural,,
+North Carolina,Pitt,"180,742",Greenville,100.00%,"180,742"
+North Carolina,Polk,"20,724",Rural,,
+North Carolina,Randolph,"143,667",Greensboro-Winston-Salem-Highpoint,10.26%,"1,400,254"
+North Carolina,Richmond,"44,829",Rural,,
+North Carolina,Robeson,"130,625",Rural,,
+North Carolina,Rockingham,"91,010",Rural,,
+North Carolina,Rowan,"142,088",Charlotte-Gaston-Rock Hill,6.18%,"2,300,375"
+North Carolina,Rutherford,"67,029",Rural,,
+North Carolina,Sampson,"63,531",Rural,,
+North Carolina,Scotland,"34,823",Rural,,
+North Carolina,Stanly,"62,806",Rural,,
+North Carolina,Stokes,"45,591",Rural,,
+North Carolina,Surry,"71,783",Rural,,
+North Carolina,Swain,"14,271",Rural,,
+North Carolina,Transylvania,"34,385",Rural,,
+North Carolina,Tyrrell,"4,016",Rural,,
+North Carolina,Union,"239,859",Charlotte-Gaston-Rock Hill,10.43%,"2,300,375"
+North Carolina,Vance,"44,535",Rural,,
+North Carolina,Wake,"1,111,761",Raleigh-Durham,57.45%,"1,935,219"
+North Carolina,Warren,"19,731",Rural,,
+North Carolina,Washington,"11,580",Rural,,
+North Carolina,Watauga,"56,177",Rural,,
+North Carolina,Wayne,"123,131",Goldsboro,100.00%,"123,131"
+North Carolina,Wilkes,"68,412",Rural,,
+North Carolina,Wilson,"81,801",Rural,,
+North Carolina,Yadkin,"37,667",Rural,,
+North Carolina,Yancey,"18,069",Rural,,
+North Dakota,Adams,"2,216",Rural,,
+North Dakota,Barnes,"10,415",Rural,,
+North Dakota,Benson,"6,832",Rural,,
+North Dakota,Billings,928,Rural,,
+North Dakota,Bottineau,"6,282",Rural,,
+North Dakota,Bowman,"3,024",Rural,,
+North Dakota,Burke,"2,115",Rural,,
+North Dakota,Burleigh,"95,626",Bismark,100.00%,"95,626"
+North Dakota,Cass,"181,923",Fargo-Moorhead,73.91%,"246,145"
+North Dakota,Cavalier,"3,762",Rural,,
+North Dakota,Dickey,"4,872",Rural,,
+North Dakota,Divide,"2,264",Rural,,
+North Dakota,Dunn,"4,424",Rural,,
+North Dakota,Eddy,"2,287",Rural,,
+North Dakota,Emmons,"3,241",Rural,,
+North Dakota,Foster,"3,210",Rural,,
+North Dakota,Golden Valley,"1,761",Rural,,
+North Dakota,Grand Forks,"69,451",Grand Forks,100.00%,"69,451"
+North Dakota,Grant,"2,274",Rural,,
+North Dakota,Griggs,"2,231",Rural,,
+North Dakota,Hettinger,"2,499",Rural,,
+North Dakota,Kidder,"2,480",Rural,,
+North Dakota,LaMoure,"4,046",Rural,,
+North Dakota,Logan,"1,850",Rural,,
+North Dakota,McHenry,"5,745",Rural,,
+North Dakota,McIntosh,"2,497",Rural,,
+North Dakota,McKenzie,"15,024",Rural,,
+North Dakota,McLean,"9,450",Rural,,
+North Dakota,Mercer,"8,187",Rural,,
+North Dakota,Morton,"31,364",Rural,,
+North Dakota,Mountrail,"10,545",Rural,,
+North Dakota,Nelson,"2,879",Rural,,
+North Dakota,Oliver,"1,959",Rural,,
+North Dakota,Pembina,"6,801",Rural,,
+North Dakota,Pierce,"3,975",Rural,,
+North Dakota,Ramsey,"11,519",Rural,,
+North Dakota,Ransom,"5,218",Rural,,
+North Dakota,Renville,"2,327",Rural,,
+North Dakota,Richland,"16,177",Rural,,
+North Dakota,Rolette,"14,176",Rural,,
+North Dakota,Sargent,"3,898",Rural,,
+North Dakota,Sheridan,"1,315",Rural,,
+North Dakota,Sioux,"4,230",Rural,,
+North Dakota,Slope,750,Rural,,
+North Dakota,Stark,"31,489",Rural,,
+North Dakota,Steele,"1,890",Rural,,
+North Dakota,Stutsman,"20,704",Rural,,
+North Dakota,Towner,"2,189",Rural,,
+North Dakota,Traill,"8,036",Rural,,
+North Dakota,Walsh,"10,641",Rural,,
+North Dakota,Ward,"67,641",Rural,,
+North Dakota,Wells,"3,834",Rural,,
+North Dakota,Williams,"37,589",Rural,,
+Ohio,Adams,"27,698",Rural,,
+Ohio,Allen,"102,351",Lima,100.00%,"102,351"
+Ohio,Ashland,"53,484",Rural,,
+Ohio,Ashtabula,"97,241",Cleveland,4.53%,"2,145,690"
+Ohio,Athens,"65,327",Rural,,
+Ohio,Auglaize,"45,656",Rural,,
+Ohio,Belmont,"67,006",Wheeling,100.00%,"67,006"
+Ohio,Brown,"43,432",Rural,,
+Ohio,Butler,"383,134",Hamilton-Middletown,100.00%,"383,134"
+Ohio,Carroll,"26,914",Rural,,
+Ohio,Champaign,"38,885",Rural,,
+Ohio,Clark,"134,083",Dayton-Sprinfield,14.24%,"941,694"
+Ohio,Clermont,"206,428",Cincinatti-Hamilton,12.49%,"1,652,666"
+Ohio,Clinton,"41,968",Rural,,
+Ohio,Columbiana,"101,883",Youngstown-Warren,19.28%,"528,540"
+Ohio,Coshocton,"36,600",Rural,,
+Ohio,Crawford,"41,494",Rural,,
+Ohio,Cuyahoga,"1,235,072",Cleveland,57.56%,"2,145,690"
+Ohio,Darke,"51,113",Rural,,
+Ohio,Defiance,"38,087",Rural,,
+Ohio,Delaware,"209,177",Columbus,11.24%,"1,860,369"
+Ohio,Erie,"74,266",Rural,,
+Ohio,Fairfield,"157,574",Columbus,8.47%,"1,860,369"
+Ohio,Fayette,"28,525",Rural,,
+Ohio,Franklin,"1,316,756",Columbus,70.78%,"1,860,369"
+Ohio,Fulton,"42,126",Rural,,
+Ohio,Gallia,"29,898",Rural,,
+Ohio,Geauga,"93,649",Cleveland,4.36%,"2,145,690"
+Ohio,Greene,"168,937",Dayton-Sprinfield,17.94%,"941,694"
+Ohio,Guernsey,"38,875",Rural,,
+Ohio,Hamilton,"817,473",Cincinatti-Hamilton,49.46%,"1,652,666"
+Ohio,Hancock,"75,783",Rural,,
+Ohio,Hardin,"31,365",Rural,,
+Ohio,Harrison,"15,040",Rural,,
+Ohio,Henry,"27,006",Rural,,
+Ohio,Highland,"43,161",Rural,,
+Ohio,Hocking,"28,264",Rural,,
+Ohio,Holmes,"43,960",Rural,,
+Ohio,Huron,"58,266",Rural,,
+Ohio,Jackson,"32,413",Rural,,
+Ohio,Jefferson,"65,325",Steubenville-Weirton,100.00%,"65,325"
+Ohio,Knox,"62,322",Rural,,
+Ohio,Lake,"230,149",Cleveland,10.73%,"2,145,690"
+Ohio,Lawrence,"59,463",Huntington-Ashland,39.27%,"151,408"
+Ohio,Licking,"176,862",Columbus,9.51%,"1,860,369"
+Ohio,Logan,"45,672",Rural,,
+Ohio,Lorain,"309,833",Cleveland,14.44%,"2,145,690"
+Ohio,Lucas,"428,348",Toledo,76.60%,"559,165"
+Ohio,Madison,"44,731",Rural,,
+Ohio,Mahoning,"228,683",Youngstown-Warren,43.27%,"528,540"
+Ohio,Marion,"65,093",Rural,,
+Ohio,Medina,"179,746",Cleveland,8.38%,"2,145,690"
+Ohio,Meigs,"22,907",Rural,,
+Ohio,Mercer,"41,172",Rural,,
+Ohio,Miami,"106,987",Dayton-Sprinfield,11.36%,"941,694"
+Ohio,Monroe,"13,654",Rural,,
+Ohio,Montgomery,"531,687",Dayton-Sprinfield,56.46%,"941,694"
+Ohio,Morgan,"14,508",Rural,,
+Ohio,Morrow,"35,328",Rural,,
+Ohio,Muskingum,"86,215",Rural,,
+Ohio,Noble,"14,424",Rural,,
+Ohio,Ottawa,"40,525",Rural,,
+Ohio,Paulding,"18,672",Rural,,
+Ohio,Perry,"36,134",Rural,,
+Ohio,Pickaway,"58,457",Rural,,
+Ohio,Pike,"27,772",Rural,,
+Ohio,Portage,"162,466",Akron,23.09%,"703,479"
+Ohio,Preble,"40,882",Rural,,
+Ohio,Putnam,"33,861",Rural,,
+Ohio,Richland,"121,154",Mansfield,100.00%,"121,154"
+Ohio,Ross,"76,666",Rural,,
+Ohio,Sandusky,"58,518",Rural,,
+Ohio,Scioto,"75,314",Rural,,
+Ohio,Seneca,"55,178",Rural,,
+Ohio,Shelby,"48,590",Rural,,
+Ohio,Stark,"370,606",Canton,100.00%,"370,606"
+Ohio,Summit,"541,013",Akron,76.91%,"703,479"
+Ohio,Trumbull,"197,974",Youngstown-Warren,37.46%,"528,540"
+Ohio,Tuscarawas,"91,987",Rural,,
+Ohio,Union,"58,988",Rural,,
+Ohio,Van Wert,"28,275",Rural,,
+Ohio,Vinton,"13,085",Rural,,
+Ohio,Warren,"234,602",Cincinatti-Hamilton,14.20%,"1,652,666"
+Ohio,Washington,"59,911",Parkersburg-Marietta,41.77%,"143,429"
+Ohio,Wayne,"115,710",Rural,,
+Ohio,Williams,"36,692",Rural,,
+Ohio,Wood,"130,817",Toledo,23.40%,"559,165"
+Ohio,Wyandot,"21,772",Rural,,
+Oklahoma,Adair,"22,194",Rural,,
+Oklahoma,Alfalfa,"5,702",Rural,,
+Oklahoma,Atoka,"13,758",Rural,,
+Oklahoma,Beaver,"5,311",Rural,,
+Oklahoma,Beckham,"21,859",Rural,,
+Oklahoma,Blaine,"9,429",Rural,,
+Oklahoma,Bryan,"47,995",Rural,,
+Oklahoma,Caddo,"28,762",Rural,,
+Oklahoma,Canadian,"148,306",Oklahoma City,11.39%,"1,302,346"
+Oklahoma,Carter,"48,111",Rural,,
+Oklahoma,Cherokee,"48,657",Rural,,
+Oklahoma,Choctaw,"14,672",Rural,,
+Oklahoma,Cimarron,"2,137",Rural,,
+Oklahoma,Cleveland,"284,014",Oklahoma City,21.81%,"1,302,346"
+Oklahoma,Coal,"5,495",Rural,,
+Oklahoma,Comanche,"120,749",Lawton,100.00%,"120,749"
+Oklahoma,Cotton,"5,666",Rural,,
+Oklahoma,Craig,"14,142",Rural,,
+Oklahoma,Creek,"71,522",Tulsa,7.98%,"896,822"
+Oklahoma,Custer,"29,003",Rural,,
+Oklahoma,Delaware,"43,009",Rural,,
+Oklahoma,Dewey,"4,891",Rural,,
+Oklahoma,Ellis,"3,859",Rural,,
+Oklahoma,Garfield,"61,056",Enid,100.00%,"61,056"
+Oklahoma,Garvin,"27,711",Rural,,
+Oklahoma,Grady,"55,834",Rural,,
+Oklahoma,Grant,"4,333",Rural,,
+Oklahoma,Greer,"5,712",Rural,,
+Oklahoma,Harmon,"2,653",Rural,,
+Oklahoma,Harper,"3,688",Rural,,
+Oklahoma,Haskell,"12,627",Rural,,
+Oklahoma,Hughes,"13,279",Rural,,
+Oklahoma,Jackson,"24,530",Rural,,
+Oklahoma,Jefferson,"6,002",Rural,,
+Oklahoma,Johnston,"11,085",Rural,,
+Oklahoma,Kay,"43,538",Rural,,
+Oklahoma,Kingfisher,"15,765",Rural,,
+Oklahoma,Kiowa,"8,708",Rural,,
+Oklahoma,Latimer,"10,073",Rural,,
+Oklahoma,Le Flore,"49,853",Rural,,
+Oklahoma,Lincoln,"34,877",Rural,,
+Oklahoma,Logan,"48,011",Rural,,
+Oklahoma,Love,"10,253",Rural,,
+Oklahoma,Major,"7,629",Rural,,
+Oklahoma,Marshall,"16,931",Rural,,
+Oklahoma,Mayes,"41,100",Rural,,
+Oklahoma,McClain,"40,474",Rural,,
+Oklahoma,McCurtain,"32,832",Rural,,
+Oklahoma,McIntosh,"19,596",Rural,,
+Oklahoma,Murray,"14,073",Rural,,
+Oklahoma,Muskogee,"67,997",Rural,,
+Oklahoma,Noble,"11,131",Rural,,
+Oklahoma,Nowata,"10,076",Rural,,
+Oklahoma,Okfuskee,"11,993",Rural,,
+Oklahoma,Oklahoma,"797,434",Oklahoma City,61.23%,"1,302,346"
+Oklahoma,Okmulgee,"38,465",Rural,,
+Oklahoma,Osage,"46,963",Rural,,
+Oklahoma,Ottawa,"31,127",Rural,,
+Oklahoma,Pawnee,"16,376",Rural,,
+Oklahoma,Payne,"81,784",Rural,,
+Oklahoma,Pittsburg,"43,654",Rural,,
+Oklahoma,Pontotoc,"38,284",Rural,,
+Oklahoma,Pottawatomie,"72,592",Oklahoma City,5.57%,"1,302,346"
+Oklahoma,Pushmataha,"11,096",Rural,,
+Oklahoma,Roger Mills,"3,583",Rural,,
+Oklahoma,Rogers,"92,459",Tulsa,10.31%,"896,822"
+Oklahoma,Seminole,"24,258",Rural,,
+Oklahoma,Sequoyah,"41,569",Rural,,
+Oklahoma,Stephens,"43,143",Rural,,
+Oklahoma,Texas,"19,983",Rural,,
+Oklahoma,Tillman,"7,250",Rural,,
+Oklahoma,Tulsa,"651,552",Tulsa,72.65%,"896,822"
+Oklahoma,Wagoner,"81,289",Tulsa,9.06%,"896,822"
+Oklahoma,Washington,"51,527",Rural,,
+Oklahoma,Washita,"10,916",Rural,,
+Oklahoma,Woods,"8,793",Rural,,
+Oklahoma,Woodward,"20,211",Rural,,
+Oregon,Baker,"16,124",Rural,,
+Oregon,Benton,"93,053",Corvallis,100.00%,"93,053"
+Oregon,Clackamas,"418,187",Portland-Vancouver,17.22%,"2,427,975"
+Oregon,Clatsop,"40,224",Rural,,
+Oregon,Columbia,"52,354",Rural,,
+Oregon,Coos,"64,487",Rural,,
+Oregon,Crook,"24,404",Rural,,
+Oregon,Curry,"22,925",Rural,,
+Oregon,Deschutes,"197,692",Rural,,
+Oregon,Douglas,"110,980",Rural,,
+Oregon,Gilliam,"1,912",Rural,,
+Oregon,Grant,"7,199",Rural,,
+Oregon,Harney,"7,393",Rural,,
+Oregon,Hood River,"23,382",Rural,,
+Oregon,Jackson,"220,944",Medford-Ashland,100.00%,"220,944"
+Oregon,Jefferson,"24,658",Rural,,
+Oregon,Josephine,"87,487",Rural,,
+Oregon,Klamath,"68,238",Rural,,
+Oregon,Lake,"7,869",Rural,,
+Oregon,Lane,"382,067",Eugene-Sprinfield,100.00%,"382,067"
+Oregon,Lincoln,"49,962",Rural,,
+Oregon,Linn,"129,749",Rural,,
+Oregon,Malheur,"30,571",Rural,,
+Oregon,Marion,"347,818",Salem,80.16%,"433,903"
+Oregon,Morrow,"11,603",Rural,,
+Oregon,Multnomah,"812,855",Portland-Vancouver,33.48%,"2,427,975"
+Oregon,Polk,"86,085",Salem,19.84%,"433,903"
+Oregon,Sherman,"1,780",Rural,,
+Oregon,Tillamook,"27,036",Rural,,
+Oregon,Umatilla,"77,950",Rural,,
+Oregon,Union,"26,835",Rural,,
+Oregon,Wallowa,"7,208",Rural,,
+Oregon,Wasco,"26,682",Rural,,
+Oregon,Washington,"601,592",Portland-Vancouver,24.78%,"2,427,975"
+Oregon,Wheeler,"1,332",Rural,,
+Oregon,Yamhill,"107,100",Portland-Vancouver,4.41%,"2,427,975"
+Pennsylvania,Adams,"103,009",Rural,,
+Pennsylvania,Allegheny,"1,216,045",Pittsburgh,53.98%,"2,252,865"
+Pennsylvania,Armstrong,"64,735",Rural,,
+Pennsylvania,Beaver,"163,929",Pittsburgh,7.28%,"2,252,865"
+Pennsylvania,Bedford,"47,888",Rural,,
+Pennsylvania,Berks,"421,164",Reading,100.00%,"421,164"
+Pennsylvania,Blair,"121,829",Altoona,100.00%,"121,829"
+Pennsylvania,Bradford,"60,323",Rural,,
+Pennsylvania,Bucks,"628,270",Philadelphia,11.68%,"5,378,441"
+Pennsylvania,Butler,"187,853",Pittsburgh,8.34%,"2,252,865"
+Pennsylvania,Cambria,"130,192",Johnstown,63.93%,"203,639"
+Pennsylvania,Cameron,"4,447",Rural,,
+Pennsylvania,Carbon,"64,182",Allentown-Bethlehem-Easton,8.69%,"738,785"
+Pennsylvania,Centre,"162,385",State College,100.00%,"162,385"
+Pennsylvania,Chester,"524,989",Philadelphia,9.76%,"5,378,441"
+Pennsylvania,Clarion,"38,438",Rural,,
+Pennsylvania,Clearfield,"79,255",Rural,,
+Pennsylvania,Clinton,"38,632",Rural,,
+Pennsylvania,Columbia,"64,964",Scranton-Wilkes-Barre-Hazleton,10.97%,"592,055"
+Pennsylvania,Crawford,"84,629",Rural,,
+Pennsylvania,Cumberland,"253,370",Harrisburg-Leban-Carlisle,37.62%,"673,462"
+Pennsylvania,Dauphin,"278,299",Harrisburg-Leban-Carlisle,41.32%,"673,462"
+Pennsylvania,Delaware,"566,747",Philadelphia,10.54%,"5,378,441"
+Pennsylvania,Elk,"29,910",Rural,,
+Pennsylvania,Erie,"269,728",Erie,100.00%,"269,728"
+Pennsylvania,Fayette,"129,274",Pittsburgh,5.74%,"2,252,865"
+Pennsylvania,Forest,"7,247",Rural,,
+Pennsylvania,Franklin,"155,027",Rural,,
+Pennsylvania,Fulton,"14,530",Rural,,
+Pennsylvania,Greene,"36,233",Rural,,
+Pennsylvania,Huntingdon,"45,144",Rural,,
+Pennsylvania,Indiana,"84,073",Rural,,
+Pennsylvania,Jefferson,"43,425",Rural,,
+Pennsylvania,Juniata,"24,763",Rural,,
+Pennsylvania,Lackawanna,"209,674",Scranton-Wilkes-Barre-Hazleton,35.41%,"592,055"
+Pennsylvania,Lancaster,"545,724",Lancaster,100.00%,"545,724"
+Pennsylvania,Lawrence,"85,512",Rural,,
+Pennsylvania,Lebanon,"141,793",Harrisburg-Leban-Carlisle,21.05%,"673,462"
+Pennsylvania,Lehigh,"369,318",Allentown-Bethlehem-Easton,49.99%,"738,785"
+Pennsylvania,Luzerne,"317,417",Scranton-Wilkes-Barre-Hazleton,53.61%,"592,055"
+Pennsylvania,Lycoming,"113,299",Williamsport,100.00%,"113,299"
+Pennsylvania,McKean,"40,625",Rural,,
+Pennsylvania,Mercer,"109,424",Sharon,100.00%,"109,424"
+Pennsylvania,Mifflin,"46,138",Rural,,
+Pennsylvania,Monroe,"170,271",Rural,,
+Pennsylvania,Montgomery,"830,915",Philadelphia,15.45%,"5,378,441"
+Pennsylvania,Montour,"18,230",Rural,,
+Pennsylvania,Northampton,"305,285",Allentown-Bethlehem-Easton,41.32%,"738,785"
+Pennsylvania,Northumberland,"90,843",Rural,,
+Pennsylvania,Perry,"46,272",Rural,,
+Pennsylvania,Philadelphia,"1,584,064",Philadelphia,29.45%,"5,378,441"
+Pennsylvania,Pike,"55,809",Newburgh,12.66%,"440,749"
+Pennsylvania,Potter,"16,526",Rural,,
+Pennsylvania,Schuylkill,"141,359",Rural,,
+Pennsylvania,Snyder,"40,372",Rural,,
+Pennsylvania,Somerset,"73,447",Johnstown,36.07%,"203,639"
+Pennsylvania,Sullivan,"6,066",Rural,,
+Pennsylvania,Susquehanna,"40,328",Rural,,
+Pennsylvania,Tioga,"40,591",Rural,,
+Pennsylvania,Union,"44,923",Rural,,
+Pennsylvania,Venango,"50,668",Rural,,
+Pennsylvania,Warren,"39,191",Rural,,
+Pennsylvania,Washington,"206,865",Pittsburgh,9.18%,"2,252,865"
+Pennsylvania,Wayne,"51,361",Rural,,
+Pennsylvania,Westmoreland,"348,899",Pittsburgh,15.49%,"2,252,865"
+Pennsylvania,Wyoming,"26,794",Rural,,
+Pennsylvania,York,"449,058",York,100.00%,"449,058"
+Rhode Island,Bristol,"48,479",Rural,,
+Rhode Island,Kent,"164,292",Providence,16.25%,"1,010,882"
+Rhode Island,Newport,"82,082",Providence,8.12%,"1,010,882"
+Rhode Island,Providence,"638,931",Providence,63.21%,"1,010,882"
+Rhode Island,Washington,"125,577",Providence,12.42%,"1,010,882"
+South Carolina,Abbeville,"24,527",Rural,,
+South Carolina,Aiken,"170,872",Augusta-Aiken,32.23%,"530,104"
+South Carolina,Allendale,"8,688",Rural,,
+South Carolina,Anderson,"202,558",Greenville-Spartanburg-Anderson,17.27%,"1,172,769"
+South Carolina,Bamberg,"14,066",Rural,,
+South Carolina,Barnwell,"20,866",Rural,,
+South Carolina,Beaufort,"192,122",Rural,,
+South Carolina,Berkeley,"227,907",Charleston,28.41%,"802,122"
+South Carolina,Calhoun,"14,553",Rural,,
+South Carolina,Charleston,"411,406",Charleston,51.29%,"802,122"
+South Carolina,Cherokee,"57,300",Rural,,
+South Carolina,Chester,"32,244",Rural,,
+South Carolina,Chesterfield,"45,650",Rural,,
+South Carolina,Clarendon,"33,745",Rural,,
+South Carolina,Colleton,"37,677",Rural,,
+South Carolina,Darlington,"66,618",Rural,,
+South Carolina,Dillon,"30,479",Rural,,
+South Carolina,Dorchester,"162,809",Charleston,20.30%,"802,122"
+South Carolina,Edgefield,"27,260",Rural,,
+South Carolina,Fairfield,"22,347",Rural,,
+South Carolina,Florence,"138,293",Rural,,
+South Carolina,Georgetown,"62,680",Rural,,
+South Carolina,Greenville,"523,542",Greenville-Spartanburg-Anderson,44.64%,"1,172,769"
+South Carolina,Greenwood,"70,811",Rural,,
+South Carolina,Hampton,"19,222",Rural,,
+South Carolina,Horry,"354,081",Myrtle Beach,100.00%,"354,081"
+South Carolina,Jasper,"30,073",Rural,,
+South Carolina,Kershaw,"66,551",Rural,,
+South Carolina,Lancaster,"98,012",Rural,,
+South Carolina,Laurens,"67,493",Rural,,
+South Carolina,Lee,"16,828",Rural,,
+South Carolina,Lexington,"298,750",Columbia,41.81%,"714,509"
+South Carolina,Marion,"30,657",Rural,,
+South Carolina,Marlboro,"26,118",Rural,,
+South Carolina,McCormick,"9,463",Rural,,
+South Carolina,Newberry,"38,440",Rural,,
+South Carolina,Oconee,"79,546",Rural,,
+South Carolina,Orangeburg,"86,175",Rural,,
+South Carolina,Pickens,"126,884",Greenville-Spartanburg-Anderson,10.82%,"1,172,769"
+South Carolina,Richland,"415,759",Columbia,58.19%,"714,509"
+South Carolina,Saluda,"20,473",Rural,,
+South Carolina,Spartanburg,"319,785",Greenville-Spartanburg-Anderson,27.27%,"1,172,769"
+South Carolina,Sumter,"106,721",Sumter,100.00%,"106,721"
+South Carolina,Union,"27,316",Rural,,
+South Carolina,Williamsburg,"30,368",Rural,,
+South Carolina,York,"280,979",Charlotte-Gaston-Rock Hill,12.21%,"2,300,375"
+South Dakota,Aurora,"2,751",Rural,,
+South Dakota,Beadle,"18,453",Rural,,
+South Dakota,Bennett,"3,365",Rural,,
+South Dakota,Bon Homme,"6,901",Rural,,
+South Dakota,Brookings,"35,077",Rural,,
+South Dakota,Brown,"38,839",Rural,,
+South Dakota,Brule,"5,297",Rural,,
+South Dakota,Buffalo,"1,962",Rural,,
+South Dakota,Butte,"10,429",Rural,,
+South Dakota,Campbell,"1,376",Rural,,
+South Dakota,Charles Mix,"9,292",Rural,,
+South Dakota,Clark,"3,736",Rural,,
+South Dakota,Clay,"14,070",Rural,,
+South Dakota,Codington,"28,009",Rural,,
+South Dakota,Corson,"4,086",Rural,,
+South Dakota,Custer,"8,972",Rural,,
+South Dakota,Davison,"19,775",Rural,,
+South Dakota,Day,"5,424",Rural,,
+South Dakota,Deuel,"4,351",Rural,,
+South Dakota,Dewey,"5,892",Rural,,
+South Dakota,Douglas,"2,921",Rural,,
+South Dakota,Edmunds,"3,829",Rural,,
+South Dakota,Fall River,"6,713",Rural,,
+South Dakota,Faulk,"2,299",Rural,,
+South Dakota,Grant,"7,052",Rural,,
+South Dakota,Gregory,"4,185",Rural,,
+South Dakota,Haakon,"1,899",Rural,,
+South Dakota,Hamlin,"6,164",Rural,,
+South Dakota,Hand,"3,191",Rural,,
+South Dakota,Hanson,"3,453",Rural,,
+South Dakota,Harding,"1,298",Rural,,
+South Dakota,Hughes,"17,526",Rural,,
+South Dakota,Hutchinson,"7,291",Rural,,
+South Dakota,Hyde,"1,301",Rural,,
+South Dakota,Jackson,"3,344",Rural,,
+South Dakota,Jerauld,"2,013",Rural,,
+South Dakota,Jones,903,Rural,,
+South Dakota,Kingsbury,"4,939",Rural,,
+South Dakota,Lake,"12,797",Rural,,
+South Dakota,Lawrence,"25,844",Rural,,
+South Dakota,Lincoln,"61,128",Sioux Falls,24.04%,"254,262"
+South Dakota,Lyman,"3,781",Rural,,
+South Dakota,Marshall,"4,935",Rural,,
+South Dakota,McCook,"5,586",Rural,,
+South Dakota,McPherson,"2,379",Rural,,
+South Dakota,Meade,"28,332",Rural,,
+South Dakota,Mellette,"2,061",Rural,,
+South Dakota,Miner,"2,216",Rural,,
+South Dakota,Minnehaha,"193,134",Sioux Falls,75.96%,"254,262"
+South Dakota,Moody,"6,576",Rural,,
+South Dakota,Oglala Lakota,"14,177",Rural,,
+South Dakota,Pennington,"113,775",Rapid City,100.00%,"113,775"
+South Dakota,Perkins,"2,865",Rural,,
+South Dakota,Potter,"2,153",Rural,,
+South Dakota,Roberts,"10,394",Rural,,
+South Dakota,Sanborn,"2,344",Rural,,
+South Dakota,Spink,"6,376",Rural,,
+South Dakota,Stanley,"3,098",Rural,,
+South Dakota,Sully,"1,391",Rural,,
+South Dakota,Todd,"10,177",Rural,,
+South Dakota,Tripp,"5,441",Rural,,
+South Dakota,Turner,"8,384",Rural,,
+South Dakota,Union,"15,932",Rural,,
+South Dakota,Walworth,"5,435",Rural,,
+South Dakota,Yankton,"22,814",Rural,,
+South Dakota,Ziebach,"2,756",Rural,,
+Tennessee,Anderson,"76,978",Knoxville,9.89%,"778,629"
+Tennessee,Bedford,"49,713",Rural,,
+Tennessee,Benton,"16,160",Rural,,
+Tennessee,Bledsoe,"15,064",Rural,,
+Tennessee,Blount,"133,088",Knoxville,17.09%,"778,629"
+Tennessee,Bradley,"108,110",Rural,,
+Tennessee,Campbell,"39,842",Rural,,
+Tennessee,Cannon,"14,678",Rural,,
+Tennessee,Carroll,"27,767",Rural,,
+Tennessee,Carter,"56,391",Johnson-Kinsport-Bristol,12.40%,"454,640"
+Tennessee,Cheatham,"40,667",Rural,,
+Tennessee,Chester,"17,297",Rural,,
+Tennessee,Claiborne,"31,959",Rural,,
+Tennessee,Clay,"7,615",Rural,,
+Tennessee,Cocke,"36,004",Rural,,
+Tennessee,Coffee,"56,520",Rural,,
+Tennessee,Crockett,"14,230",Rural,,
+Tennessee,Cumberland,"60,520",Rural,,
+Tennessee,Davidson,"694,144",Nashville,41.50%,"1,672,594"
+Tennessee,Decatur,"11,663",Rural,,
+Tennessee,DeKalb,"20,490",Rural,,
+Tennessee,Dickson,"53,948",Rural,,
+Tennessee,Dyer,"37,159",Rural,,
+Tennessee,Fayette,"41,133",Rural,,
+Tennessee,Fentress,"18,523",Rural,,
+Tennessee,Franklin,"42,208",Rural,,
+Tennessee,Gibson,"49,133",Rural,,
+Tennessee,Giles,"29,464",Rural,,
+Tennessee,Grainger,"23,320",Rural,,
+Tennessee,Greene,"69,069",Rural,,
+Tennessee,Grundy,"13,427",Rural,,
+Tennessee,Hamblen,"64,934",Rural,,
+Tennessee,Hamilton,"367,804",Chattanooga,72.81%,"505,145"
+Tennessee,Hancock,"6,620",Rural,,
+Tennessee,Hardeman,"25,050",Rural,,
+Tennessee,Hardin,"25,652",Rural,,
+Tennessee,Hawkins,"56,786",Johnson-Kinsport-Bristol,12.49%,"454,640"
+Tennessee,Haywood,"17,304",Rural,,
+Tennessee,Henderson,"28,117",Rural,,
+Tennessee,Henry,"32,345",Rural,,
+Tennessee,Hickman,"25,178",Rural,,
+Tennessee,Houston,"8,201",Rural,,
+Tennessee,Humphreys,"18,582",Rural,,
+Tennessee,Jackson,"11,786",Rural,,
+Tennessee,Jefferson,"54,495",Rural,,
+Tennessee,Johnson,"17,788",Rural,,
+Tennessee,Knox,"470,313",Knoxville,60.40%,"778,629"
+Tennessee,Lake,"7,016",Rural,,
+Tennessee,Lauderdale,"25,633",Rural,,
+Tennessee,Lawrence,"44,142",Rural,,
+Tennessee,Lewis,"12,268",Rural,,
+Tennessee,Lincoln,"34,366",Rural,,
+Tennessee,Loudon,"54,068",Rural,,
+Tennessee,Macon,"24,602",Rural,,
+Tennessee,Madison,"97,984",Rural,,
+Tennessee,Marion,"28,907",Rural,,
+Tennessee,Marshall,"34,375",Rural,,
+Tennessee,Maury,"96,387",Rural,,
+Tennessee,McMinn,"53,794",Rural,,
+Tennessee,McNairy,"25,694",Rural,,
+Tennessee,Meigs,"12,422",Rural,,
+Tennessee,Monroe,"46,545",Rural,,
+Tennessee,Montgomery,"208,993",Clarksville-Hopkinsville,74.79%,"279,454"
+Tennessee,Moore,"6,488",Rural,,
+Tennessee,Morgan,"21,403",Rural,,
+Tennessee,Obion,"30,069",Rural,,
+Tennessee,Overton,"22,241",Rural,,
+Tennessee,Perry,"8,076",Rural,,
+Tennessee,Pickett,"5,048",Rural,,
+Tennessee,Polk,"16,832",Rural,,
+Tennessee,Putnam,"80,245",Rural,,
+Tennessee,Rhea,"33,167",Rural,,
+Tennessee,Roane,"53,382",Rural,,
+Tennessee,Robertson,"71,813",Nashville,4.29%,"1,672,594"
+Tennessee,Rutherford,"332,285",Nashville,19.87%,"1,672,594"
+Tennessee,Scott,"22,068",Rural,,
+Tennessee,Sequatchie,"15,026",Rural,,
+Tennessee,Sevier,"98,250",Knoxville,12.62%,"778,629"
+Tennessee,Shelby,"937,166",Memphis,93.83%,"998,765"
+Tennessee,Smith,"20,157",Rural,,
+Tennessee,Stewart,"13,715",Rural,,
+Tennessee,Sullivan,"158,348",Johnson-Kinsport-Bristol,34.83%,"454,640"
+Tennessee,Sumner,"191,283",Nashville,11.44%,"1,672,594"
+Tennessee,Tipton,"61,599",Memphis,6.17%,"998,765"
+Tennessee,Trousdale,"11,284",Rural,,
+Tennessee,Unicoi,"17,883",Rural,,
+Tennessee,Union,"19,972",Rural,,
+Tennessee,Van Buren,"5,872",Rural,,
+Tennessee,Warren,"41,277",Rural,,
+Tennessee,Washington,"129,375",Johnson-Kinsport-Bristol,28.46%,"454,640"
+Tennessee,Wayne,"16,673",Rural,,
+Tennessee,Weakley,"33,328",Rural,,
+Tennessee,White,"27,345",Rural,,
+Tennessee,Williamson,"238,412",Nashville,14.25%,"1,672,594"
+Tennessee,Wilson,"144,657",Nashville,8.65%,"1,672,594"
+Texas,Anderson,"57,735",Rural,,
+Texas,Andrews,"18,705",Rural,,
+Texas,Angelina,"86,715",Rural,,
+Texas,Aransas,"23,510",Rural,,
+Texas,Archer,"8,553",Rural,,
+Texas,Armstrong,"1,887",Rural,,
+Texas,Atascosa,"51,153",Rural,,
+Texas,Austin,"30,032",Rural,,
+Texas,Bailey,"7,000",Rural,,
+Texas,Bandera,"23,112",Rural,,
+Texas,Bastrop,"88,723",Austin,4.06%,"2,183,419"
+Texas,Baylor,"3,509",Rural,,
+Texas,Bee,"32,565",Rural,,
+Texas,Bell,"362,924",Kileen-Temple,82.69%,"438,875"
+Texas,Bexar,"2,003,554",San Antonio,86.11%,"2,326,610"
+Texas,Blanco,"11,931",Rural,,
+Texas,Borden,654,Rural,,
+Texas,Bosque,"18,685",Rural,,
+Texas,Bowie,"93,245",Texarkana,100.00%,"93,245"
+Texas,Brazoria,"374,264",Brazoria,100.00%,"374,264"
+Texas,Brazos,"229,211",College Station,100.00%,"229,211"
+Texas,Brewster,"9,203",Rural,,
+Texas,Briscoe,"1,546",Rural,,
+Texas,Brooks,"7,093",Rural,,
+Texas,Brown,"37,864",Rural,,
+Texas,Burleson,"18,443",Rural,,
+Texas,Burnet,"48,155",Rural,,
+Texas,Caldwell,"43,664",Rural,,
+Texas,Calhoun,"21,290",Rural,,
+Texas,Callahan,"13,943",Rural,,
+Texas,Cameron,"423,163",Brownsville-Harlingen,100.00%,"423,163"
+Texas,Camp,"13,094",Rural,,
+Texas,Carson,"5,926",Rural,,
+Texas,Cass,"30,026",Rural,,
+Texas,Castro,"7,530",Rural,,
+Texas,Chambers,"43,837",Rural,,
+Texas,Cherokee,"52,646",Rural,,
+Texas,Childress,"7,306",Rural,,
+Texas,Clay,"10,471",Rural,,
+Texas,Cochran,"2,853",Rural,,
+Texas,Coke,"3,387",Rural,,
+Texas,Coleman,"8,175",Rural,,
+Texas,Collin,"1,034,730",Dallas,21.82%,"4,742,279"
+Texas,Collingsworth,"2,920",Rural,,
+Texas,Colorado,"21,493",Rural,,
+Texas,Comal,"156,209",San Antonio,6.71%,"2,326,610"
+Texas,Comanche,"13,635",Rural,,
+Texas,Concho,"2,726",Rural,,
+Texas,Cooke,"41,257",Rural,,
+Texas,Coryell,"75,951",Kileen-Temple,17.31%,"438,875"
+Texas,Cottle,"1,398",Rural,,
+Texas,Crane,"4,797",Rural,,
+Texas,Crockett,"3,464",Rural,,
+Texas,Crosby,"5,737",Rural,,
+Texas,Culberson,"2,171",Rural,,
+Texas,Dallam,"7,287",Rural,,
+Texas,Dallas,"2,635,516",Dallas,55.57%,"4,742,279"
+Texas,Dawson,"12,728",Rural,,
+Texas,Deaf Smith,"18,546",Rural,,
+Texas,Delta,"5,331",Rural,,
+Texas,Denton,"887,207",Dallas,18.71%,"4,742,279"
+Texas,DeWitt,"20,160",Rural,,
+Texas,Dickens,"2,211",Rural,,
+Texas,Dimmit,"10,124",Rural,,
+Texas,Donley,"3,278",Rural,,
+Texas,Duval,"11,157",Rural,,
+Texas,Eastland,"18,360",Rural,,
+Texas,Ector,"166,223",Odessa,48.45%,"343,055"
+Texas,Edwards,"1,932",Rural,,
+Texas,El Paso,"839,238",El Paso,100.00%,"839,238"
+Texas,Ellis,"184,826",Dallas,3.90%,"4,742,279"
+Texas,Erath,"42,698",Rural,,
+Texas,Falls,"17,297",Rural,,
+Texas,Fannin,"35,514",Rural,,
+Texas,Fayette,"25,346",Rural,,
+Texas,Fisher,"3,830",Rural,,
+Texas,Floyd,"5,712",Rural,,
+Texas,Foard,"1,155",Rural,,
+Texas,Fort Bend,"811,688",Houston,13.24%,"6,132,404"
+Texas,Franklin,"10,725",Rural,,
+Texas,Freestone,"19,717",Rural,,
+Texas,Frio,"20,306",Rural,,
+Texas,Gaines,"21,492",Rural,,
+Texas,Galveston,"342,139",Galveston-Texas City,100.00%,"342,139"
+Texas,Garza,"6,229",Rural,,
+Texas,Gillespie,"26,988",Rural,,
+Texas,Glasscock,"1,409",Rural,,
+Texas,Goliad,"7,658",Rural,,
+Texas,Gonzales,"20,837",Rural,,
+Texas,Gray,"21,886",Rural,,
+Texas,Grayson,"136,212",Sherman-Denison,100.00%,"136,212"
+Texas,Gregg,"123,945",Longview-Marshall,65.06%,"190,498"
+Texas,Grimes,"28,880",Rural,,
+Texas,Guadalupe,"166,847",San Antonio,7.17%,"2,326,610"
+Texas,Hale,"33,406",Rural,,
+Texas,Hall,"2,964",Rural,,
+Texas,Hamilton,"8,461",Rural,,
+Texas,Hansford,"5,399",Rural,,
+Texas,Hardeman,"3,933",Rural,,
+Texas,Hardin,"57,602",Beaumont-Port Arthur-Orange,14.67%,"392,563"
+Texas,Harris,"4,713,325",Houston,76.86%,"6,132,404"
+Texas,Harrison,"66,553",Longview-Marshall,34.94%,"190,498"
+Texas,Hartley,"5,576",Rural,,
+Texas,Haskell,"5,658",Rural,,
+Texas,Hays,"230,191",Austin,10.54%,"2,183,419"
+Texas,Hemphill,"3,819",Rural,,
+Texas,Henderson,"82,737",Rural,,
+Texas,Hidalgo,"868,707",McAllen-Edinburg-Mission,100.00%,"868,707"
+Texas,Hill,"36,649",Rural,,
+Texas,Hockley,"23,021",Rural,,
+Texas,Hood,"61,643",Rural,,
+Texas,Hopkins,"37,084",Rural,,
+Texas,Houston,"22,968",Rural,,
+Texas,Howard,"36,664",Rural,,
+Texas,Hudspeth,"4,886",Rural,,
+Texas,Hunt,"98,594",Rural,,
+Texas,Hutchinson,"20,938",Rural,,
+Texas,Irion,"1,536",Rural,,
+Texas,Jack,"8,935",Rural,,
+Texas,Jackson,"14,760",Rural,,
+Texas,Jasper,"35,529",Rural,,
+Texas,Jeff Davis,"2,274",Rural,,
+Texas,Jefferson,"251,565",Beaumont-Port Arthur-Orange,64.08%,"392,563"
+Texas,Jim Hogg,"5,200",Rural,,
+Texas,Jim Wells,"40,482",Rural,,
+Texas,Johnson,"175,817",Fort Worth-Arlington,7.26%,"2,421,210"
+Texas,Jones,"20,083",Rural,,
+Texas,Karnes,"15,601",Rural,,
+Texas,Kaufman,"136,154",Rural,,
+Texas,Kendall,"47,431",Rural,,
+Texas,Kenedy,404,Rural,,
+Texas,Kent,762,Rural,,
+Texas,Kerr,"52,600",Rural,,
+Texas,Kimble,"4,337",Rural,,
+Texas,King,272,Rural,,
+Texas,Kinney,"3,667",Rural,,
+Texas,Kleberg,"30,680",Rural,,
+Texas,Knox,"3,664",Rural,,
+Texas,La Salle,"7,520",Rural,,
+Texas,Lamar,"49,859",Rural,,
+Texas,Lamb,"12,893",Rural,,
+Texas,Lampasas,"21,428",Rural,,
+Texas,Lavaca,"20,154",Rural,,
+Texas,Lee,"17,239",Rural,,
+Texas,Leon,"17,404",Rural,,
+Texas,Liberty,"88,219",Rural,,
+Texas,Limestone,"23,437",Rural,,
+Texas,Lipscomb,"3,233",Rural,,
+Texas,Live Oak,"12,207",Rural,,
+Texas,Llano,"21,795",Rural,,
+Texas,Loving,169,Rural,,
+Texas,Lubbock,"310,569",Lubbock,100.00%,"310,569"
+Texas,Lynn,"5,951",Rural,,
+Texas,Madison,"14,284",Rural,,
+Texas,Marion,"9,854",Rural,,
+Texas,Martin,"5,771",Rural,,
+Texas,Mason,"4,274",Rural,,
+Texas,Matagorda,"36,643",Rural,,
+Texas,Maverick,"58,722",Rural,,
+Texas,McCulloch,"7,984",Rural,,
+Texas,McLennan,"256,623",Waco,100.00%,"256,623"
+Texas,McMullen,743,Rural,,
+Texas,Medina,"51,584",Rural,,
+Texas,Menard,"2,138",Rural,,
+Texas,Midland,"176,832",Odessa,51.55%,"343,055"
+Texas,Milam,"24,823",Rural,,
+Texas,Mills,"4,873",Rural,,
+Texas,Mitchell,"8,545",Rural,,
+Texas,Montague,"19,818",Rural,,
+Texas,Montgomery,"607,391",Houston,9.90%,"6,132,404"
+Texas,Moore,"20,940",Rural,,
+Texas,Morris,"12,388",Rural,,
+Texas,Motley,"1,200",Rural,,
+Texas,Nacogdoches,"65,204",Rural,,
+Texas,Navarro,"50,113",Rural,,
+Texas,Newton,"13,595",Rural,,
+Texas,Nolan,"14,714",Rural,,
+Texas,Nueces,"362,294",Corpus Christi,84.45%,"429,024"
+Texas,Ochiltree,"9,836",Rural,,
+Texas,Oldham,"2,112",Rural,,
+Texas,Orange,"83,396",Beaumont-Port Arthur-Orange,21.24%,"392,563"
+Texas,Palo Pinto,"29,189",Rural,,
+Texas,Panola,"23,194",Rural,,
+Texas,Parker,"142,878",Fort Worth-Arlington,5.90%,"2,421,210"
+Texas,Parmer,"9,605",Rural,,
+Texas,Pecos,"15,823",Rural,,
+Texas,Polk,"51,353",Rural,,
+Texas,Potter,"117,415",Amarillo,46.02%,"255,128"
+Texas,Presidio,"6,704",Rural,,
+Texas,Rains,"12,514",Rural,,
+Texas,Randall,"137,713",Amarillo,53.98%,"255,128"
+Texas,Reagan,"3,849",Rural,,
+Texas,Real,"3,452",Rural,,
+Texas,Red River,"12,023",Rural,,
+Texas,Reeves,"15,976",Rural,,
+Texas,Refugio,"6,948",Rural,,
+Texas,Roberts,854,Rural,,
+Texas,Robertson,"17,074",Rural,,
+Texas,Rockwall,"104,915",Rural,,
+Texas,Runnels,"10,264",Rural,,
+Texas,Rusk,"54,406",Rural,,
+Texas,Sabine,"10,542",Rural,,
+Texas,San Augustine,"8,237",Rural,,
+Texas,San Jacinto,"28,859",Rural,,
+Texas,San Patricio,"66,730",Corpus Christi,15.55%,"429,024"
+Texas,San Saba,"6,055",Rural,,
+Texas,Schleicher,"2,793",Rural,,
+Texas,Scurry,"16,703",Rural,,
+Texas,Shackelford,"3,265",Rural,,
+Texas,Shelby,"25,274",Rural,,
+Texas,Sherman,"3,022",Rural,,
+Texas,Smith,"232,751",Tyler,100.00%,"232,751"
+Texas,Somervell,"9,128",Rural,,
+Texas,Starr,"64,633",Rural,,
+Texas,Stephens,"9,366",Rural,,
+Texas,Sterling,"1,291",Rural,,
+Texas,Stonewall,"1,350",Rural,,
+Texas,Sutton,"3,776",Rural,,
+Texas,Swisher,"7,397",Rural,,
+Texas,Tarrant,"2,102,515",Fort Worth-Arlington,86.84%,"2,421,210"
+Texas,Taylor,"138,034",Abilene,100.00%,"138,034"
+Texas,Terrell,776,Rural,,
+Texas,Terry,"12,337",Rural,,
+Texas,Throckmorton,"1,501",Rural,,
+Texas,Titus,"32,750",Rural,,
+Texas,Tom Green,"119,200",San Angelo,100.00%,"119,200"
+Texas,Travis,"1,273,954",Austin,58.35%,"2,183,419"
+Texas,Trinity,"14,651",Rural,,
+Texas,Tyler,"21,672",Rural,,
+Texas,Upshur,"41,753",Rural,,
+Texas,Upton,"3,657",Rural,,
+Texas,Uvalde,"26,741",Rural,,
+Texas,Val Verde,"49,025",Rural,,
+Texas,Van Zandt,"56,590",Rural,,
+Texas,Victoria,"92,084",Victoria,100.00%,"92,084"
+Texas,Walker,"72,971",Rural,,
+Texas,Waller,"55,246",Rural,,
+Texas,Ward,"11,998",Rural,,
+Texas,Washington,"35,882",Rural,,
+Texas,Webb,"276,652",Laredo,100.00%,"276,652"
+Texas,Wharton,"41,556",Rural,,
+Texas,Wheeler,"5,056",Rural,,
+Texas,Wichita,"132,230",Wichita Falls,100.00%,"132,230"
+Texas,Wilbarger,"12,769",Rural,,
+Texas,Willacy,"21,358",Rural,,
+Texas,Williamson,"590,551",Austin,27.05%,"2,183,419"
+Texas,Wilson,"51,070",Rural,,
+Texas,Winkler,"8,010",Rural,,
+Texas,Wise,"69,984",Rural,,
+Texas,Wood,"45,539",Rural,,
+Texas,Yoakum,"8,713",Rural,,
+Texas,Young,"18,010",Rural,,
+Texas,Zapata,"14,179",Rural,,
+Texas,Zavala,"11,840",Rural,,
+Utah,Beaver,"6,710",Rural,,
+Utah,Box Elder,"56,046",Rural,,
+Utah,Cache,"128,289",Rural,,
+Utah,Carbon,"20,463",Rural,,
+Utah,Daggett,950,Rural,,
+Utah,Davis,"355,481",Salt Lake City-Ogden,20.01%,"1,776,131"
+Utah,Duchesne,"19,938",Rural,,
+Utah,Emery,"10,012",Rural,,
+Utah,Garfield,"5,051",Rural,,
+Utah,Grand,"9,754",Rural,,
+Utah,Iron,"54,839",Rural,,
+Utah,Juab,"12,017",Rural,,
+Utah,Kane,"7,886",Rural,,
+Utah,Millard,"13,188",Rural,,
+Utah,Morgan,"12,124",Rural,,
+Utah,Piute,"1,479",Rural,,
+Utah,Rich,"2,483",Rural,,
+Utah,Salt Lake,"1,160,437",Salt Lake City-Ogden,65.34%,"1,776,131"
+Utah,San Juan,"15,308",Rural,,
+Utah,Sanpete,"30,939",Rural,,
+Utah,Sevier,"21,620",Rural,,
+Utah,Summit,"42,145",Rural,,
+Utah,Tooele,"72,259",Rural,,
+Utah,Uintah,"35,734",Rural,,
+Utah,Utah,"636,235",Provo-Orem,100.00%,"636,235"
+Utah,Wasatch,"34,091",Rural,,
+Utah,Washington,"177,556",Rural,,
+Utah,Wayne,"2,711",Rural,,
+Utah,Weber,"260,213",Salt Lake City-Ogden,14.65%,"1,776,131"
+Vermont,Addison,"36,777",Rural,,
+Vermont,Bennington,"35,470",Rural,,
+Vermont,Caledonia,"29,993",Rural,,
+Vermont,Chittenden,"163,774",Burlington,100.00%,"163,774"
+Vermont,Essex,"6,163",Rural,,
+Vermont,Franklin,"49,402",Rural,,
+Vermont,Grand Isle,"7,235",Rural,,
+Vermont,Lamoille,"25,362",Rural,,
+Vermont,Orange,"28,892",Rural,,
+Vermont,Orleans,"27,037",Rural,,
+Vermont,Rutland,"58,191",Rural,,
+Vermont,Washington,"58,409",Rural,,
+Vermont,Windham,"42,222",Rural,,
+Vermont,Windsor,"55,062",Rural,,
+Virginia,Accomack,"32,316",Rural,,
+Virginia,Albemarle,"109,330",Charlottesville,100.00%,"109,330"
+Virginia,Alexandria city,"159,428",Rural,,
+Virginia,Alleghany,"14,860",Rural,,
+Virginia,Amelia,"13,145",Rural,,
+Virginia,Amherst,"31,605",Rural,,
+Virginia,Appomattox,"15,911",Rural,,
+Virginia,Arlington,"236,842",Washington DC,6.76%,"3,503,534"
+Virginia,Augusta,"75,558",Rural,,
+Virginia,Bath,"4,147",Rural,,
+Virginia,Bedford,"78,997",Lynchburg,36.56%,"216,050"
+Virginia,Bland,"6,280",Rural,,
+Virginia,Botetourt,"33,419",Rural,,
+Virginia,Bristol city,"16,762",Rural,,
+Virginia,Brunswick,"16,231",Rural,,
+Virginia,Buchanan,"21,004",Rural,,
+Virginia,Buckingham,"17,148",Rural,,
+Virginia,Buena Vista city,"6,478",Rural,,
+Virginia,Campbell,"54,885",Lynchburg,25.40%,"216,050"
+Virginia,Caroline,"30,725",Rural,,
+Virginia,Carroll,"29,791",Rural,,
+Virginia,Charles City,"6,963",Rural,,
+Virginia,Charlotte,"11,880",Rural,,
+Virginia,Charlottesville city,"47,266",Rural,,
+Virginia,Chesapeake city,"244,835",Norfolk-Virginia Beach-Newport News,19.30%,"1,268,860"
+Virginia,Chesterfield,"352,802",Richmond-Petersburg,34.53%,"1,021,822"
+Virginia,Clarke,"14,619",Rural,,
+Virginia,Colonial Heights city,"17,370",Rural,,
+Virginia,Covington city,"5,538",Rural,,
+Virginia,Craig,"5,131",Rural,,
+Virginia,Culpeper,"52,605",Rural,,
+Virginia,Cumberland,"9,932",Rural,,
+Virginia,Danville city,"40,044",Rural,,
+Virginia,Dickenson,"14,318",Rural,,
+Virginia,Dinwiddie,"28,544",Rural,,
+Virginia,Emporia city,"5,346",Rural,,
+Virginia,Essex,"10,953",Rural,,
+Virginia,Fairfax,"1,147,532",Fairfax,100.00%,"1,147,532"
+Virginia,Fairfax city,"24,019",Rural,,
+Virginia,Falls Church city,"14,617",Rural,,
+Virginia,Fauquier,"71,222",Rural,,
+Virginia,Floyd,"15,749",Rural,,
+Virginia,Fluvanna,"27,270",Rural,,
+Virginia,Franklin,"56,042",Rural,,
+Virginia,Franklin city,"7,967",Rural,,
+Virginia,Frederick,"89,313",Rural,,
+Virginia,Fredericksburg city,"29,036",Rural,,
+Virginia,Galax city,"6,347",Rural,,
+Virginia,Giles,"16,720",Rural,,
+Virginia,Gloucester,"37,348",Rural,,
+Virginia,Goochland,"23,753",Rural,,
+Virginia,Grayson,"15,550",Rural,,
+Virginia,Greene,"19,819",Rural,,
+Virginia,Greensville,"11,336",Rural,,
+Virginia,Halifax,"33,911",Rural,,
+Virginia,Hampton city,"134,510",Newport News-Hampton,42.87%,"313,735"
+Virginia,Hanover,"107,766",Richmond-Petersburg,10.55%,"1,021,822"
+Virginia,Harrisonburg city,"53,016",Rural,,
+Virginia,Henrico,"330,818",Richmond-Petersburg,32.38%,"1,021,822"
+Virginia,Henry,"50,557",Rural,,
+Virginia,Highland,"2,190",Rural,,
+Virginia,Hopewell city,"22,529",Rural,,
+Virginia,Isle of Wight,"37,109",Rural,,
+Virginia,James City,"76,523",Norfolk-Virginia Beach-Newport News,6.03%,"1,268,860"
+Virginia,King and Queen,"7,025",Rural,,
+Virginia,King George,"26,836",Rural,,
+Virginia,King William,"17,148",Rural,,
+Virginia,Lancaster,"10,603",Rural,,
+Virginia,Lee,"23,423",Rural,,
+Virginia,Lexington city,"7,446",Rural,,
+Virginia,Loudoun,"413,538",Washington DC,11.80%,"3,503,534"
+Virginia,Louisa,"37,591",Rural,,
+Virginia,Lunenburg,"12,196",Rural,,
+Virginia,Lynchburg city,"82,168",Lynchburg,38.03%,"216,050"
+Virginia,Madison,"13,261",Rural,,
+Virginia,Manassas city,"41,085",Rural,,
+Virginia,Manassas Park city,"17,478",Rural,,
+Virginia,Martinsville city,"12,554",Rural,,
+Virginia,Mathews,"8,834",Rural,,
+Virginia,Mecklenburg,"30,587",Rural,,
+Virginia,Middlesex,"10,582",Rural,,
+Virginia,Montgomery,"98,535",Rural,,
+Virginia,Nelson,"14,930",Rural,,
+Virginia,New Kent,"23,091",Rural,,
+Virginia,Newport News city,"179,225",Newport News-Hampton,57.13%,"313,735"
+Virginia,Norfolk city,"242,742",Norfolk-Virginia Beach-Newport News,19.13%,"1,268,860"
+Virginia,Northampton,"11,710",Rural,,
+Virginia,Northumberland,"12,095",Rural,,
+Virginia,Norton city,"3,981",Rural,,
+Virginia,Nottoway,"15,232",Rural,,
+Virginia,Orange,"37,051",Rural,,
+Virginia,Page,"23,902",Rural,,
+Virginia,Patrick,"17,608",Rural,,
+Virginia,Petersburg city,"31,346",Rural,,
+Virginia,Pittsylvania,"60,354",Danville,100.00%,"60,354"
+Virginia,Poquoson city,"12,271",Rural,,
+Virginia,Portsmouth city,"94,398",Norfolk-Virginia Beach-Newport News,7.44%,"1,268,860"
+Virginia,Powhatan,"29,652",Rural,,
+Virginia,Prince Edward,"22,802",Rural,,
+Virginia,Prince George,"38,353",Rural,,
+Virginia,Prince William,"470,335",Washington DC,13.42%,"3,503,534"
+Virginia,Pulaski,"34,027",Rural,,
+Virginia,Radford city,"18,249",Rural,,
+Virginia,Rappahannock,"7,370",Rural,,
+Virginia,Richmond,"9,023",Rural,,
+Virginia,Richmond city,"230,436",Richmond-Petersburg,22.55%,"1,021,822"
+Virginia,Roanoke,"94,186",Roanoke,100.00%,"94,186"
+Virginia,Roanoke city,"99,143",Rural,,
+Virginia,Rockbridge,"22,573",Rural,,
+Virginia,Rockingham,"81,948",Rural,,
+Virginia,Russell,"26,586",Rural,,
+Virginia,Salem city,"25,301",Rural,,
+Virginia,Scott,"21,566",Rural,,
+Virginia,Shenandoah,"43,616",Rural,,
+Virginia,Smyth,"30,104",Rural,,
+Virginia,Southampton,"17,631",Rural,,
+Virginia,Spotsylvania,"136,215",Rural,,
+Virginia,Stafford,"152,882",Rural,,
+Virginia,Staunton city,"24,932",Rural,,
+Virginia,Suffolk city,"92,108",Norfolk-Virginia Beach-Newport News,7.26%,"1,268,860"
+Virginia,Surry,"6,422",Rural,,
+Virginia,Sussex,"11,159",Rural,,
+Virginia,Tazewell,"40,595",Rural,,
+Virginia,Virginia Beach city,"449,974",Norfolk-Virginia Beach-Newport News,35.46%,"1,268,860"
+Virginia,Warren,"40,164",Rural,,
+Virginia,Washington,"53,740",Johnson-Kinsport-Bristol,11.82%,"454,640"
+Virginia,Waynesboro city,"22,630",Rural,,
+Virginia,Westmoreland,"18,015",Rural,,
+Virginia,Williamsburg city,"14,954",Rural,,
+Virginia,Winchester city,"28,078",Rural,,
+Virginia,Wise,"37,383",Rural,,
+Virginia,Wythe,"28,684",Rural,,
+Virginia,York,"68,280",Norfolk-Virginia Beach-Newport News,5.38%,"1,268,860"
+Washington,Adams,"19,983",Rural,,
+Washington,Asotin,"22,582",Rural,,
+Washington,Benton,"204,390",Richland-Kennewick-Pasco,68.22%,"299,612"
+Washington,Chelan,"77,200",Rural,,
+Washington,Clallam,"77,331",Rural,,
+Washington,Clark,"488,241",Portland-Vancouver,20.11%,"2,427,975"
+Washington,Columbia,"3,985",Rural,,
+Washington,Cowlitz,"110,593",Rural,,
+Washington,Douglas,"43,429",Rural,,
+Washington,Ferry,"7,627",Rural,,
+Washington,Franklin,"95,222",Richland-Kennewick-Pasco,31.78%,"299,612"
+Washington,Garfield,"2,225",Rural,,
+Washington,Grant,"97,733",Rural,,
+Washington,Grays Harbor,"75,061",Rural,,
+Washington,Island,"85,141",Rural,,
+Washington,Jefferson,"32,221",Rural,,
+Washington,King,"2,252,782",Seattle-Everett,73.26%,"3,074,865"
+Washington,Kitsap,"271,473",Bremerton,100.00%,"271,473"
+Washington,Kittitas,"47,935",Rural,,
+Washington,Klickitat,"22,425",Rural,,
+Washington,Lewis,"80,707",Rural,,
+Washington,Lincoln,"10,939",Rural,,
+Washington,Mason,"66,768",Rural,,
+Washington,Okanogan,"42,243",Rural,,
+Washington,Pacific,"22,471",Rural,,
+Washington,Pend Oreille,"13,724",Rural,,
+Washington,Pierce,"904,980",Tacoma,100.00%,"904,980"
+Washington,San Juan,"17,582",Rural,,
+Washington,Skagit,"129,205",Rural,,
+Washington,Skamania,"12,083",Rural,,
+Washington,Snohomish,"822,083",Seattle-Everett,26.74%,"3,074,865"
+Washington,Spokane,"522,798",Spokane,100.00%,"522,798"
+Washington,Stevens,"45,723",Rural,,
+Washington,Thurston,"290,536",Olympia,100.00%,"290,536"
+Washington,Wahkiakum,"4,488",Rural,,
+Washington,Walla Walla,"60,760",Rural,,
+Washington,Whatcom,"229,247",Bellingham,100.00%,"229,247"
+Washington,Whitman,"50,104",Rural,,
+Washington,Yakima,"250,873",Yakima,100.00%,"250,873"
+West Virginia,Barbour,"16,441",Rural,,
+West Virginia,Berkeley,"119,171",Rural,,
+West Virginia,Boone,"21,457",Rural,,
+West Virginia,Braxton,"13,957",Rural,,
+West Virginia,Brooke,"21,939",Rural,,
+West Virginia,Cabell,"91,945",Huntington-Ashland,60.73%,"151,408"
+West Virginia,Calhoun,"7,109",Rural,,
+West Virginia,Clay,"8,508",Rural,,
+West Virginia,Doddridge,"8,448",Rural,,
+West Virginia,Fayette,"42,406",Rural,,
+West Virginia,Gilmer,"7,823",Rural,,
+West Virginia,Grant,"11,568",Rural,,
+West Virginia,Greenbrier,"34,662",Rural,,
+West Virginia,Hampshire,"23,175",Rural,,
+West Virginia,Hancock,"28,810",Rural,,
+West Virginia,Hardy,"13,776",Rural,,
+West Virginia,Harrison,"67,256",Rural,,
+West Virginia,Jackson,"28,576",Rural,,
+West Virginia,Jefferson,"57,146",Rural,,
+West Virginia,Kanawha,"178,124",Charleston/WV,75.94%,"234,574"
+West Virginia,Lewis,"15,907",Rural,,
+West Virginia,Lincoln,"20,409",Rural,,
+West Virginia,Logan,"32,019",Rural,,
+West Virginia,Marion,"56,072",Rural,,
+West Virginia,Marshall,"30,531",Rural,,
+West Virginia,Mason,"26,516",Rural,,
+West Virginia,McDowell,"17,624",Rural,,
+West Virginia,Mercer,"58,758",Rural,,
+West Virginia,Mineral,"26,868",Rural,,
+West Virginia,Mingo,"23,424",Rural,,
+West Virginia,Monongalia,"105,612",Rural,,
+West Virginia,Monroe,"13,275",Rural,,
+West Virginia,Morgan,"17,884",Rural,,
+West Virginia,Nicholas,"24,496",Rural,,
+West Virginia,Ohio,"41,411",Rural,,
+West Virginia,Pendleton,"6,969",Rural,,
+West Virginia,Pleasants,"7,460",Rural,,
+West Virginia,Pocahontas,"8,247",Rural,,
+West Virginia,Preston,"33,432",Rural,,
+West Virginia,Putnam,"56,450",Charleston/WV,24.06%,"234,574"
+West Virginia,Raleigh,"73,361",Rural,,
+West Virginia,Randolph,"28,695",Rural,,
+West Virginia,Ritchie,"9,554",Rural,,
+West Virginia,Roane,"13,688",Rural,,
+West Virginia,Summers,"12,573",Rural,,
+West Virginia,Taylor,"16,695",Rural,,
+West Virginia,Tucker,"6,839",Rural,,
+West Virginia,Tyler,"8,591",Rural,,
+West Virginia,Upshur,"24,176",Rural,,
+West Virginia,Wayne,"39,402",Rural,,
+West Virginia,Webster,"8,114",Rural,,
+West Virginia,Wetzel,"15,065",Rural,,
+West Virginia,Wirt,"5,821",Rural,,
+West Virginia,Wood,"83,518",Parkersburg-Marietta,58.23%,"143,429"
+West Virginia,Wyoming,"20,394",Rural,,
+Wisconsin,Adams,"20,220",Rural,,
+Wisconsin,Ashland,"15,562",Rural,,
+Wisconsin,Barron,"45,244",Rural,,
+Wisconsin,Bayfield,"15,036",Rural,,
+Wisconsin,Brown,"264,542",Green Bay,100.00%,"264,542"
+Wisconsin,Buffalo,"13,031",Rural,,
+Wisconsin,Burnett,"15,414",Rural,,
+Wisconsin,Calumet,"50,089",Appleton-Oshkosh-Neenah,12.22%,"409,881"
+Wisconsin,Chippewa,"64,658",Eau Claire,38.19%,"169,304"
+Wisconsin,Clark,"34,774",Rural,,
+Wisconsin,Columbia,"57,532",Rural,,
+Wisconsin,Crawford,"16,131",Rural,,
+Wisconsin,Dane,"546,695",Madison,100.00%,"546,695"
+Wisconsin,Dodge,"87,839",Rural,,
+Wisconsin,Door,"27,668",Rural,,
+Wisconsin,Douglas,"43,150",Rural,,
+Wisconsin,Dunn,"45,368",Rural,,
+Wisconsin,Eau Claire,"104,646",Eau Claire,61.81%,"169,304"
+Wisconsin,Florence,"4,295",Rural,,
+Wisconsin,Fond du Lac,"103,403",Rural,,
+Wisconsin,Forest,"9,004",Rural,,
+Wisconsin,Grant,"51,439",Rural,,
+Wisconsin,Green,"36,960",Rural,,
+Wisconsin,Green Lake,"18,913",Rural,,
+Wisconsin,Iowa,"23,678",Rural,,
+Wisconsin,Iron,"5,687",Rural,,
+Wisconsin,Jackson,"20,643",Rural,,
+Wisconsin,Jefferson,"84,769",Rural,,
+Wisconsin,Juneau,"26,687",Rural,,
+Wisconsin,Kenosha,"169,561",Kenosha,100.00%,"169,561"
+Wisconsin,Kewaunee,"20,434",Rural,,
+Wisconsin,La Crosse,"118,016",La Crosse,100.00%,"118,016"
+Wisconsin,Lafayette,"16,665",Rural,,
+Wisconsin,Langlade,"19,189",Rural,,
+Wisconsin,Lincoln,"27,593",Rural,,
+Wisconsin,Manitowoc,"78,981",Rural,,
+Wisconsin,Marathon,"135,692",Wausau,100.00%,"135,692"
+Wisconsin,Marinette,"40,350",Rural,,
+Wisconsin,Marquette,"15,574",Rural,,
+Wisconsin,Menominee,"4,556",Rural,,
+Wisconsin,Milwaukee,"945,726",Milwaukee-Waukesha,60.04%,"1,575,179"
+Wisconsin,Monroe,"46,253",Rural,,
+Wisconsin,Oconto,"37,930",Rural,,
+Wisconsin,Oneida,"35,595",Rural,,
+Wisconsin,Outagamie,"187,885",Appleton-Oshkosh-Neenah,45.84%,"409,881"
+Wisconsin,Ozaukee,"89,221",Milwaukee-Waukesha,5.66%,"1,575,179"
+Wisconsin,Pepin,"7,287",Rural,,
+Wisconsin,Pierce,"42,754",Rural,,
+Wisconsin,Polk,"43,783",Rural,,
+Wisconsin,Portage,"70,772",Rural,,
+Wisconsin,Price,"13,351",Rural,,
+Wisconsin,Racine,"196,311",Racine,100.00%,"196,311"
+Wisconsin,Richland,"17,252",Rural,,
+Wisconsin,Rock,"163,354",Janesville-Beloit,100.00%,"163,354"
+Wisconsin,Rusk,"14,178",Rural,,
+Wisconsin,Sauk,"64,442",Rural,,
+Wisconsin,Sawyer,"16,558",Rural,,
+Wisconsin,Shawano,"40,899",Rural,,
+Wisconsin,Sheboygan,"115,340",Sheboygan,100.00%,"115,340"
+Wisconsin,St. Croix,"90,687",Rural,,
+Wisconsin,Taylor,"20,343",Rural,,
+Wisconsin,Trempealeau,"29,649",Rural,,
+Wisconsin,Vernon,"30,822",Rural,,
+Wisconsin,Vilas,"22,195",Rural,,
+Wisconsin,Walworth,"103,868",Rural,,
+Wisconsin,Washburn,"15,720",Rural,,
+Wisconsin,Washington,"136,034",Milwaukee-Waukesha,8.64%,"1,575,179"
+Wisconsin,Waukesha,"404,198",Milwaukee-Waukesha,25.66%,"1,575,179"
+Wisconsin,Waupaca,"50,990",Rural,,
+Wisconsin,Waushara,"24,443",Rural,,
+Wisconsin,Winnebago,"171,907",Appleton-Oshkosh-Neenah,41.94%,"409,881"
+Wisconsin,Wood,"72,999",Rural,,
+Wyoming,Albany,"38,880",Rural,,
+Wyoming,Big Horn,"11,790",Rural,,
+Wyoming,Campbell,"46,341",Rural,,
+Wyoming,Carbon,"14,800",Rural,,
+Wyoming,Converse,"13,822",Rural,,
+Wyoming,Crook,"7,584",Rural,,
+Wyoming,Fremont,"39,261",Rural,,
+Wyoming,Goshen,"13,211",Rural,,
+Wyoming,Hot Springs,"4,413",Rural,,
+Wyoming,Johnson,"8,445",Rural,,
+Wyoming,Laramie,"99,500",Cheyenne,100.00%,"99,500"
+Wyoming,Lincoln,"19,830",Rural,,
+Wyoming,Natrona,"79,858",Casper,100.00%,"79,858"
+Wyoming,Niobrara,"2,356",Rural,,
+Wyoming,Park,"29,194",Rural,,
+Wyoming,Platte,"8,393",Rural,,
+Wyoming,Sheridan,"30,485",Rural,,
+Wyoming,Sublette,"9,831",Rural,,
+Wyoming,Sweetwater,"42,343",Rural,,
+Wyoming,Teton,"23,464",Rural,,
+Wyoming,Uinta,"20,226",Rural,,
+Wyoming,Washakie,"7,805",Rural,,
+Wyoming,Weston,"6,927",Rural,,

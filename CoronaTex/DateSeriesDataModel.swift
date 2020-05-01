@@ -51,7 +51,7 @@ private class DateSeriesChartFactory {
         ChartAxisValueDate(date: readFormatter.date(from: dateStr)!, formatter: displayFormatter, labelSettings: ChartTheme.labelSettings)
     }
     
-    func toLines(_ data: [DateSeries]) -> [ChartLineModel<ChartPoqint>] {
+    func toLines(_ data: [DateSeries]) -> [ChartLineModel<ChartPoint>] {
         var lines = [ChartLineModel]()
         
         for (index, series) in data.enumerated() {
@@ -83,7 +83,7 @@ private class DateSeriesChartFactory {
             fatalError("Axis was empty")
         }
         
-        if axis.count > maxPoints + 1 {
+        if axis.count > maxPoints * 3 {
             fatalError("Axis has too many datapoints, expected: \(maxPoints), found: \(axis.count)")
         }
         
