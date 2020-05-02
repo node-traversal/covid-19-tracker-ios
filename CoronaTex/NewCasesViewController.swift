@@ -49,8 +49,7 @@ class NewCasesViewController: UIViewController {
         print("Processing chart data:")
         let model = DateSeriesModelBuilder.convert(
             data,
-            chartSettings,
-            populationByCounty: CountryData.current.population
+            chartSettings
         )
             
         model.xCompact = self.traitCollection.horizontalSizeClass == .compact

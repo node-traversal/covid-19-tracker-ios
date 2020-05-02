@@ -64,8 +64,8 @@ class CasesChartSettings: NSObject, NSCoding {
         let isPerCapita = coder.decodeBool(forKey: PropertyKey.isPerCapita)
         let isNewCases = coder.decodeBool(forKey: PropertyKey.isNewCases)
         let isMetroGrouped = coder.decodeBool(forKey: PropertyKey.isMetroGrouped)
-        let top = coder.decodeObject(forKey: PropertyKey.top) as? Int ?? 5
-        let lastDays = coder.decodeObject(forKey: PropertyKey.lastDays) as? Int ?? 0
+        let top = coder.decodeInteger(forKey: PropertyKey.top)
+        let lastDays = coder.decodeInteger(forKey: PropertyKey.lastDays)
         
         self.init(
             lastUpdated: lastUpdated,
@@ -95,8 +95,12 @@ class CasesChartSettings: NSObject, NSCoding {
         return isNewCases ? CasesChartSettings.percentFormat(3) : CasesChartSettings.percentFormat(1)
     }
     
+    func isValid(_ key: String) -> Bool {
+        return CountryData.current.population(key) != nil
+    }
+    
     func isFiltered(key: String, state: String, county: String) -> Bool {
-        return county.isEmpty || (!selectedState.isEmpty && state != selectedState)
+        return !selectedState.isEmpty && state != selectedState
     }
        
     func save() {

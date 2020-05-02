@@ -16,7 +16,7 @@ class CountyStatisticsViewController: BasicTableViewController {
     }
 
     private func loadData() {
-        super.rows += toArray(CountryData.current.population)
+        super.rows += toArray([:])
         super.rows.sort {
             $0[0] < $1[0]
         }

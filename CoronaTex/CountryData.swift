@@ -13,12 +13,34 @@ struct Metros {
 }
 
 class CountyCensusData {
-    var population: [String: Int] = [:]
+    private var populationByCounty: [String: Int] = [:]
     var states: [String]
     private var countyToMetro: [String: String] = [:]
     
-    func metroName(_ key: String) -> String {
-        return countyToMetro[key] ?? "Rural"
+    private func isOtherCategoryKey(_ key: String) -> Bool {
+        return key.contains("Unassigned") || key.contains("Out of") || key.contains("Correction")
+    }
+    
+    func population(_ key: String) -> Int? {
+        var population = populationByCounty[key]
+        
+        if population == nil && isOtherCategoryKey(key) {
+            // give these unknowns a somewhat rural value
+            population = 20000
+        }
+        
+        return population
+    }
+        
+    func metroName(_ key: String) -> String? {
+        var metro = countyToMetro[key]
+        
+        if metro == nil && isOtherCategoryKey(key) {
+            // give these unknowns a rural value
+            metro = "Rural"
+        }
+        
+        return metro
     }
     
     private static func validateHeader(_ index: Int, _ expected: String, _ headers: [Substring]) -> Int {
@@ -56,7 +78,7 @@ class CountyCensusData {
                 let key = "\(state), \(country)"
                 let populationValue = Int(String(cells[populationIndex])) ?? 0
 
-                population[key] = populationValue
+                populationByCounty[key] = populationValue
                 countyToMetro[key] = metroName
                 
                 statesMap[state] = true
