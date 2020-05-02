@@ -158,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="08T-Fp-n1Q" userLabel="Controls Stack">
-                                <rect key="frame" x="10" y="66" width="300" height="345.66666666666669"/>
+                                <rect key="frame" x="10" y="66" width="300" height="417"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Io3-OL-7fP" userLabel="Last Updated Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="20.333333333333332"/>
@@ -185,7 +185,7 @@
                                             <segment title="Top 25"/>
                                         </segments>
                                     </segmentedControl>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="11s-pn-p8g">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="11s-pn-p8g" userLabel="Date Range Stack">
                                         <rect key="frame" x="0.0" y="91.333333333333343" width="300" height="51.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date/Last X Days Range:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0q5-zi-v2g">
@@ -212,8 +212,34 @@
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" id="N8w-qq-YK8" userLabel="Smoothing Stack">
+                                        <rect key="frame" x="0.0" y="162.66666666666666" width="300" height="51.333333333333343"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smoothing Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrL-n3-VtG">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.329999999999998" id="L97-OM-kD0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tPQ-Rr-Gi3">
+                                                <rect key="frame" x="0.0" y="19.333333333333343" width="300" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="nEb-hS-Bk5"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="None"/>
+                                                    <segment title="3"/>
+                                                    <segment title="5"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" id="YSi-m2-WTi" userLabel="New Cases Stack">
-                                        <rect key="frame" x="0.0" y="162.66666666666666" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="234" width="300" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-RZ-hav">
@@ -228,7 +254,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgJ-fu-S8T" userLabel="Per Capita Stack">
-                                        <rect key="frame" x="0.0" y="213.66666666666669" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="285" width="300" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show per captia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqs-Or-0Tu">
                                                 <rect key="frame" x="0.0" y="0.0" width="251" height="31"/>
@@ -242,7 +268,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" id="XYp-ig-7Pg" userLabel="Metro Area Stack">
-                                        <rect key="frame" x="0.0" y="264.66666666666669" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="336" width="300" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Metro Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAy-w1-wox">
@@ -257,7 +283,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2s-9h-alj">
-                                        <rect key="frame" x="0.0" y="315.66666666666669" width="300" height="30"/>
+                                        <rect key="frame" x="0.0" y="387" width="300" height="30"/>
                                         <subviews>
                                             <label verifyAmbiguity="off" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US State Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lz-If-0jB">
                                                 <rect key="frame" x="0.0" y="5" width="110" height="20.333333333333332"/>
@@ -314,6 +340,7 @@
                         <outlet property="perCapita" destination="1zb-sn-Ym6" id="8st-Cf-mc0"/>
                         <outlet property="saveButton" destination="oQk-S8-RkL" id="RfJ-pD-DBL"/>
                         <outlet property="selectStateButton" destination="YqC-if-woS" id="Zr9-rx-GdN"/>
+                        <outlet property="smoothingSelector" destination="tPQ-Rr-Gi3" id="5Q1-yd-aKo"/>
                         <outlet property="topXSelector" destination="2RP-Qs-l7A" id="GBy-Y4-auF"/>
                     </connections>
                 </viewController>

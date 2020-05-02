@@ -74,8 +74,8 @@ class NewCasesViewController: UIViewController {
         let prefix = chartSettings.selectedState.isEmpty ? "US" : chartSettings.selectedState
         let chartTypeLabel = chartSettings.isNewCases ? "New Cases" : "Cases"
         let suffix = chartSettings.isPerCapita ? " Per Capita" : ""
-        
-        chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top \(chartSettings.top)"
+        let smoothing = chartSettings.smoothing > 0 ? " [Smoothed]" : ""
+        chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top \(chartSettings.top) \(smoothing)"
     }
     
     private func requestData() {
