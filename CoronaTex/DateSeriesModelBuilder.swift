@@ -43,9 +43,8 @@ class ValueContext<Y: Numeric & Comparable> {
         var finalData = [String: NumericDateSeries<Y>]()
 
         for series in data.values {
-            let seriesName = CountryData.current.metroName(series.key)
-            if seriesName != "Rural" {
-                let prevSeries = data[seriesName]
+            if let seriesName = CountryData.current.metroName(series.key), seriesName != "Rural" {
+                let prevSeries = finalData[seriesName]
                 let values = add(series.dataPoints, second: prevSeries?.dataPoints)
                 finalData[seriesName] = NumericDateSeries<Y>(seriesName, seriesName, values.yMax, values.datapoints)
             }
@@ -100,12 +99,12 @@ class DateSeriesModelBuilder {
         self.settings = settings
     }
     
-    static func convert(_ data: ConfirmedCasesData, _ settings: CasesChartSettings, populationByCounty: [String: Int] ) -> DateSeriesModel {
+    static func convert(_ data: ConfirmedCasesData, _ settings: CasesChartSettings) -> DateSeriesModel {
         func noop() {}
         
         if settings.isPerCapita {
             func perCapita(_ key: String, _ value: Int) -> Double? {
-                if let population = populationByCounty[key] {
+                if let population = CountryData.current.population(key) {
                     return Double(value) / Double(population)
                 } else {
                     return Optional.none
@@ -132,9 +131,18 @@ class DateSeriesModelBuilder {
         
         for countyData in data.series {
             let county = countyData.county ?? ""
-            let state = countyData.provinceState ?? "?"
+            let state = countyData.provinceState ?? ""
             let key = "\(state), \(county)"
             let dates = data.dates
+            
+            if state.isEmpty || county.isEmpty {
+                continue
+            }
+            
+            if !settings.isValid(key) {
+                print("\(key) is unknown, cases: \(countyData.lastValue ?? 0)")
+                continue
+            }
             
             if settings.isFiltered(key: key, state: state, county: county) {
                 continue
