@@ -12,7 +12,7 @@ import SwiftCharts
 @IBDesignable
 class XYChartView: UIView {
     fileprivate var chart: Chart?
-    var dataModel: DateSeriesDataModel?
+    var dataModel: DateSeriesChartModel?
     
     private var didLayout: Bool = false
     

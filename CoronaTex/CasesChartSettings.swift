@@ -16,6 +16,7 @@ class CasesChartSettings: NSObject, NSCoding {
     var selectedState: String = ""
     var isPerCapita: Bool = false
     var isNewCases: Bool = true
+    var isMetroGrouped: Bool = true
     var top: Int = 5
     var lastDays: Int = 0
     var limitDays: Int = 0
@@ -28,18 +29,27 @@ class CasesChartSettings: NSObject, NSCoding {
         coder.encode(lastUpdated, forKey: PropertyKey.lastUpdated)
         coder.encode(selectedState, forKey: PropertyKey.selectedState)
         coder.encode(isPerCapita, forKey: PropertyKey.isPerCapita)
-        coder.encode(isNewCases, forKey: PropertyKey.newCases)
+        coder.encode(isMetroGrouped, forKey: PropertyKey.isMetroGrouped)
         coder.encode(top, forKey: PropertyKey.top)
         coder.encode(lastDays, forKey: PropertyKey.lastDays)
     }
     override init() { super.init() }
     
-    convenience init(lastUpdated: String, selectedState: String, isPerCapita: Bool, isNewCases: Bool, top: Int, lastDays: Int) {
+    convenience init(
+        lastUpdated: String,
+        selectedState: String,
+        isPerCapita: Bool,
+        isNewCases: Bool,
+        isMetroGrouped: Bool,
+        top: Int,
+        lastDays: Int
+    ) {
         self.init()
         self.lastUpdated = lastUpdated
         self.selectedState = selectedState
         self.isPerCapita = isPerCapita
         self.isNewCases = isNewCases
+        self.isMetroGrouped = isMetroGrouped
         self.top = top
         self.lastDays = lastDays
     }
@@ -52,7 +62,8 @@ class CasesChartSettings: NSObject, NSCoding {
         let selectedState = coder.decodeObject(forKey: PropertyKey.selectedState) as? String ?? ""
         
         let isPerCapita = coder.decodeBool(forKey: PropertyKey.isPerCapita)
-        let isNewCases = coder.decodeBool(forKey: PropertyKey.newCases)
+        let isNewCases = coder.decodeBool(forKey: PropertyKey.isNewCases)
+        let isMetroGrouped = coder.decodeBool(forKey: PropertyKey.isMetroGrouped)
         let top = coder.decodeObject(forKey: PropertyKey.top) as? Int ?? 5
         let lastDays = coder.decodeObject(forKey: PropertyKey.lastDays) as? Int ?? 0
         
@@ -61,23 +72,83 @@ class CasesChartSettings: NSObject, NSCoding {
             selectedState: selectedState,
             isPerCapita: isPerCapita,
             isNewCases: isNewCases,
+            isMetroGrouped: isMetroGrouped,
             top: top,
             lastDays: lastDays
         )
     }
     
-    static func getDocumentsDirectory() -> URL {
+    func dateRange(_ dateCount: Int) -> (min: Int, max: Int) {
+        var minPoint = 0
+        var maxPoint = dateCount - 1
+        if self.limitDays != 0 {
+            minPoint = self.lastDays
+            maxPoint = self.lastDays + self.limitDays
+        } else if self.lastDays > 0 {
+            minPoint = max(dateCount - self.lastDays, 0)
+        }
+        
+        return (min: minPoint, max: maxPoint)
+    }
+    
+    func getDoubleFormatter() -> NumberFormatter {
+        return isNewCases ? CasesChartSettings.percentFormat(3) : CasesChartSettings.percentFormat(1)
+    }
+    
+    func isFiltered(key: String, state: String, county: String) -> Bool {
+        return county.isEmpty || (!selectedState.isEmpty && state != selectedState)
+    }
+       
+    func save() {
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: false)
+            try data.write(to: CasesChartSettings.ArchiveUrl)
+            print("Setting saved.")
+        } catch {
+            print("Failed to save settings...")
+        }
+    }
+    
+    static func load() -> CasesChartSettings {
+        var chartSettings = CasesChartSettings()
+        
+        if let nsData = NSData(contentsOf: CasesChartSettings.ArchiveUrl) {
+            do {
+                let data = Data(referencing: nsData)
+
+                if let loadedData = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? CasesChartSettings {
+                    chartSettings = loadedData
+                }
+            } catch {
+                print("Couldn't read settings.")
+            }
+        }
+        
+        return chartSettings
+    }
+    
+    static func percentFormat(_ digits: Int) -> NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        formatter.minimumFractionDigits = digits
+        formatter.maximumFractionDigits = digits
+        
+        return formatter
+    }
+    
+    private static func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
     
-    static let ArchiveUrl = getDocumentsDirectory().appendingPathComponent("CasesChartSettings")
+    private static let ArchiveUrl = getDocumentsDirectory().appendingPathComponent("CasesChartSettings")
     
     fileprivate enum PropertyKey {
         static let lastUpdated = "lastUpdated"
         static let selectedState = "selectedState"
         static let isPerCapita = "isPerCapita"
-        static let newCases = "newCases"
+        static let isNewCases = "isNewCases"
+        static let isMetroGrouped = "isMetroGrouped"
         static let top = "top"
         static let lastDays = "lastDays"
     }

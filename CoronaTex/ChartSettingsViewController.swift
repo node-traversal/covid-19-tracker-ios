@@ -14,6 +14,7 @@ class ChartSettingsViewController: UIViewController {
     @IBOutlet private weak var perCapita: UISwitch!
     @IBOutlet private weak var lastUpdated: UILabel!
     @IBOutlet private weak var newCases: UISwitch!
+    @IBOutlet private weak var metroArea: UISwitch!
     @IBOutlet private weak var selectStateButton: UIButton!
     @IBOutlet private weak var topXSelector: UISegmentedControl!
     @IBOutlet private weak var daySelector: UISegmentedControl!
@@ -30,6 +31,7 @@ class ChartSettingsViewController: UIViewController {
         setState(settings.selectedState)
         newCases.isOn = settings.isNewCases
         perCapita.isOn = settings.isPerCapita
+        metroArea.isOn = settings.isMetroGrouped
         lastUpdated.text = settings.lastUpdated
         topXSelector.selectedSegmentIndex = CasesChartSettings.topSelections.firstIndex(of: settings.top) ?? 0
         daySelector.selectedSegmentIndex = CasesChartSettings.findDayIndex(settings.lastDays)
@@ -49,6 +51,7 @@ class ChartSettingsViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
         settings.isPerCapita = perCapita.isOn
         settings.isNewCases = newCases.isOn
+        settings.isMetroGrouped = metroArea.isOn
         settings.top = CasesChartSettings.topSelections[topXSelector.selectedSegmentIndex]
         let dayRange = CasesChartSettings.daySelections[daySelector.selectedSegmentIndex]
         settings.lastDays = dayRange[0]

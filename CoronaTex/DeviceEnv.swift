@@ -1,21 +1,14 @@
 //
-//  Env.swift
+//  DeviceEnv.swift
 //  CoronaTex
 //
-//  Modified by Allen Parslow on 4/12/20.
-//
-//  Derived from:
-//  Env.swift
-//  SwiftCharts
-//
-//  Created by ischuetz on 07/05/15.
-//  Copyright (c) 2015 ivanschuetz. All rights reserved.
+//  Created by Allen Parslow on 4/12/20.
 //
 
 import UIKit
 import os.log
 
-enum Env {
+enum DeviceEnv {
     static var iPad: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }

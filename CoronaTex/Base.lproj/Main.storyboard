@@ -158,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="08T-Fp-n1Q" userLabel="Controls Stack">
-                                <rect key="frame" x="10" y="66" width="300" height="1183.3333333333333"/>
+                                <rect key="frame" x="10" y="66" width="300" height="345.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Io3-OL-7fP" userLabel="Last Updated Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="20.333333333333332"/>
@@ -185,30 +185,35 @@
                                             <segment title="Top 25"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Range:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0q5-zi-v2g">
-                                        <rect key="frame" x="0.0" y="91.333333333333343" width="300" height="20.333333333333329"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20.329999999999998" id="7Ml-6p-geG"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gQ6-Z8-AmB">
-                                        <rect key="frame" x="0.0" y="131.66666666666666" width="300" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="tRs-GW-Qdw"/>
-                                        </constraints>
-                                        <segments>
-                                            <segment title="All"/>
-                                            <segment title="14"/>
-                                            <segment title="30"/>
-                                            <segment title="60"/>
-                                            <segment title="March"/>
-                                        </segments>
-                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="11s-pn-p8g">
+                                        <rect key="frame" x="0.0" y="91.333333333333343" width="300" height="51.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date/Last X Days Range:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0q5-zi-v2g">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.329999999999998" id="7Ml-6p-geG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gQ6-Z8-AmB">
+                                                <rect key="frame" x="0.0" y="20.333333333333314" width="300" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="tRs-GW-Qdw"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="All"/>
+                                                    <segment title="14"/>
+                                                    <segment title="30"/>
+                                                    <segment title="60"/>
+                                                    <segment title="March"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" id="YSi-m2-WTi" userLabel="New Cases Stack">
-                                        <rect key="frame" x="0.0" y="182.66666666666666" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="162.66666666666666" width="300" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-RZ-hav">
@@ -223,7 +228,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgJ-fu-S8T" userLabel="Per Capita Stack">
-                                        <rect key="frame" x="0.0" y="233.66666666666669" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="213.66666666666669" width="300" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show per captia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqs-Or-0Tu">
                                                 <rect key="frame" x="0.0" y="0.0" width="251" height="31"/>
@@ -236,12 +241,23 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" id="idC-dZ-Oq9" userLabel="Top X Stack">
-                                        <rect key="frame" x="0.0" y="284.66666666666669" width="300" height="848.66666666666652"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" id="XYp-ig-7Pg" userLabel="Metro Area Stack">
+                                        <rect key="frame" x="0.0" y="264.66666666666669" width="300" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Metro Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAy-w1-wox">
+                                                <rect key="frame" x="0.0" y="0.0" width="251" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pyt-2y-HfC" userLabel="Per Capita">
+                                                <rect key="frame" x="251" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2s-9h-alj">
-                                        <rect key="frame" x="0.0" y="1153.3333333333333" width="300" height="30"/>
+                                        <rect key="frame" x="0.0" y="315.66666666666669" width="300" height="30"/>
                                         <subviews>
                                             <label verifyAmbiguity="off" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US State Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lz-If-0jB">
                                                 <rect key="frame" x="0.0" y="5" width="110" height="20.333333333333332"/>
@@ -293,6 +309,7 @@
                     <connections>
                         <outlet property="daySelector" destination="gQ6-Z8-AmB" id="Lqz-RL-hgw"/>
                         <outlet property="lastUpdated" destination="2uW-JY-OsR" id="hE4-rn-IYh"/>
+                        <outlet property="metroArea" destination="pyt-2y-HfC" id="juS-aD-2bD"/>
                         <outlet property="newCases" destination="yP9-xe-ClO" id="TPy-1s-wnT"/>
                         <outlet property="perCapita" destination="1zb-sn-Ym6" id="8st-Cf-mc0"/>
                         <outlet property="saveButton" destination="oQk-S8-RkL" id="RfJ-pD-DBL"/>
