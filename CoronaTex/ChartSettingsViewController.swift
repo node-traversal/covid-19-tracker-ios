@@ -18,6 +18,7 @@ class ChartSettingsViewController: UIViewController {
     @IBOutlet private weak var selectStateButton: UIButton!
     @IBOutlet private weak var topXSelector: UISegmentedControl!
     @IBOutlet private weak var daySelector: UISegmentedControl!
+    @IBOutlet private weak var smoothingSelector: UISegmentedControl!
     
     let allStates: String = "All States"
     var settings: CasesChartSettings = CasesChartSettings()
@@ -34,6 +35,7 @@ class ChartSettingsViewController: UIViewController {
         metroArea.isOn = settings.isMetroGrouped
         lastUpdated.text = settings.lastUpdated
         topXSelector.selectedSegmentIndex = CasesChartSettings.topSelections.firstIndex(of: settings.top) ?? 0
+        smoothingSelector.selectedSegmentIndex = CasesChartSettings.smoothingSelections.firstIndex(of: settings.smoothing) ?? 0
         daySelector.selectedSegmentIndex = CasesChartSettings.findDayIndex(settings.lastDays)
     }
     
@@ -53,6 +55,7 @@ class ChartSettingsViewController: UIViewController {
         settings.isNewCases = newCases.isOn
         settings.isMetroGrouped = metroArea.isOn
         settings.top = CasesChartSettings.topSelections[topXSelector.selectedSegmentIndex]
+        settings.smoothing = CasesChartSettings.smoothingSelections[smoothingSelector.selectedSegmentIndex]
         let dayRange = CasesChartSettings.daySelections[daySelector.selectedSegmentIndex]
         settings.lastDays = dayRange[0]
         settings.limitDays = dayRange[1]
@@ -66,8 +69,8 @@ class ChartSettingsViewController: UIViewController {
             selection = states.firstIndex(of: self.settings.selectedState ) ?? 0
         }
         
-        ActionSheetStringPicker.show(
-            withTitle: "Multiple String Picker",
+        let picker = ActionSheetStringPicker(
+            title: "Select State",
             rows: self.states,
             initialSelection: selection,
             doneBlock: { _, _, value in
@@ -77,8 +80,19 @@ class ChartSettingsViewController: UIViewController {
                 }
                 return
             },
-            cancel: { _ in return },
+            cancel: { _ in
+                self.settings.selectedState = ""
+                self.setState("")
+            },
             origin: sender
         )
+        
+        let cancelButton = UIButton()
+        cancelButton.setTitle("Clear", for: .normal)
+        cancelButton.setTitleColor(self.view.tintColor, for: .normal)
+        cancelButton.setTitleColor(UIColor.systemRed, for: .highlighted)
+        
+        picker?.setCancelButton(UIBarButtonItem.init(customView: cancelButton))
+        picker?.show()
     }
 }

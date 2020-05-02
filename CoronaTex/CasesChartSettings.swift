@@ -10,6 +10,7 @@ import UIKit
 
 class CasesChartSettings: NSObject, NSCoding {
     static let topSelections = [5, 10, 25]
+    static let smoothingSelections = [0, 2, 4]
     static let daySelections = [[0, 0], [14, 0], [30, 0], [60, 0], [40, 30]]
     
     var lastUpdated: String = ""
@@ -18,6 +19,7 @@ class CasesChartSettings: NSObject, NSCoding {
     var isNewCases: Bool = true
     var isMetroGrouped: Bool = true
     var top: Int = 5
+    var smoothing: Int = 0
     var lastDays: Int = 0
     var limitDays: Int = 0
     
@@ -29,8 +31,10 @@ class CasesChartSettings: NSObject, NSCoding {
         coder.encode(lastUpdated, forKey: PropertyKey.lastUpdated)
         coder.encode(selectedState, forKey: PropertyKey.selectedState)
         coder.encode(isPerCapita, forKey: PropertyKey.isPerCapita)
+        coder.encode(isNewCases, forKey: PropertyKey.isNewCases)
         coder.encode(isMetroGrouped, forKey: PropertyKey.isMetroGrouped)
         coder.encode(top, forKey: PropertyKey.top)
+        coder.encode(smoothing, forKey: PropertyKey.smoothing)
         coder.encode(lastDays, forKey: PropertyKey.lastDays)
     }
     override init() { super.init() }
@@ -42,6 +46,7 @@ class CasesChartSettings: NSObject, NSCoding {
         isNewCases: Bool,
         isMetroGrouped: Bool,
         top: Int,
+        smoothing: Int,
         lastDays: Int
     ) {
         self.init()
@@ -51,6 +56,7 @@ class CasesChartSettings: NSObject, NSCoding {
         self.isNewCases = isNewCases
         self.isMetroGrouped = isMetroGrouped
         self.top = top
+        self.smoothing = smoothing
         self.lastDays = lastDays
     }
     
@@ -65,6 +71,7 @@ class CasesChartSettings: NSObject, NSCoding {
         let isNewCases = coder.decodeBool(forKey: PropertyKey.isNewCases)
         let isMetroGrouped = coder.decodeBool(forKey: PropertyKey.isMetroGrouped)
         let top = coder.decodeInteger(forKey: PropertyKey.top)
+        let smoothing = coder.decodeInteger(forKey: PropertyKey.smoothing)
         let lastDays = coder.decodeInteger(forKey: PropertyKey.lastDays)
         
         self.init(
@@ -74,6 +81,7 @@ class CasesChartSettings: NSObject, NSCoding {
             isNewCases: isNewCases,
             isMetroGrouped: isMetroGrouped,
             top: top,
+            smoothing: smoothing,
             lastDays: lastDays
         )
     }
@@ -100,7 +108,12 @@ class CasesChartSettings: NSObject, NSCoding {
     }
     
     func isFiltered(key: String, state: String, county: String) -> Bool {
-        return !selectedState.isEmpty && state != selectedState
+        if !selectedState.isEmpty {
+            return state != selectedState
+        } else {
+            let metro = CountryData.current.metroName(key) ?? "Rural"
+            return metro == "Rural"
+        }
     }
        
     func save() {
@@ -154,6 +167,7 @@ class CasesChartSettings: NSObject, NSCoding {
         static let isNewCases = "isNewCases"
         static let isMetroGrouped = "isMetroGrouped"
         static let top = "top"
+        static let smoothing = "smoothing"
         static let lastDays = "lastDays"
     }
 }

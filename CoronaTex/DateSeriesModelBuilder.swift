@@ -18,9 +18,36 @@ private class DataSeriesInfo<Y> {
     }
 }
 
+class DoubleValueContext: ValueContext<Double> {
+    init(_ transform: @escaping (String, Int) -> Double?) {
+        func identity(_ value: Double) -> Double { return value }
+        
+        super.init(transform, toDouble: identity, toValue: identity)
+    }
+}
+
+class IntValueContext: ValueContext<Int> {
+    init() {
+        func identity(_ key: String, _ value: Int) -> Int? { return value }
+        func toDouble(_ value: Int) -> Double { return Double(value) }
+        func toValue(_ value: Double) -> Int { return Int(round(value)) }
+        
+        super.init(identity, toDouble: toDouble, toValue: toValue)
+    }
+}
+
 class ValueContext<Y: Numeric & Comparable> {
     var data = [String: NumericDateSeries<Y>]()
-        
+    var transform: (String, Int) -> Y?
+    var toDouble: (Y) -> Double
+    var toValue: (Double) -> Y
+    
+    init(_ transform: @escaping (String, Int) -> Y?, toDouble: @escaping (Y) -> Double, toValue: @escaping (Double) -> Y) {
+        self.transform = transform
+        self.toDouble = toDouble
+        self.toValue = toValue
+    }
+    
     private func add(_ first: [(date: String, value: Y)], second secondOptional: [(date: String, value: Y)]?) -> DataSeriesInfo<Y> {
         var out = [(date: String, value: Y)]()
         var yMax: Y = 0
@@ -43,7 +70,7 @@ class ValueContext<Y: Numeric & Comparable> {
         var finalData = [String: NumericDateSeries<Y>]()
 
         for series in data.values {
-            if let seriesName = CountryData.current.metroName(series.key), seriesName != "Rural" {
+            if let seriesName = CountryData.current.metroName(series.key) {
                 let prevSeries = finalData[seriesName]
                 let values = add(series.dataPoints, second: prevSeries?.dataPoints)
                 finalData[seriesName] = NumericDateSeries<Y>(seriesName, seriesName, values.yMax, values.datapoints)
@@ -92,6 +119,50 @@ class SeriesStop<Y: Numeric & Comparable> {
     }
 }
 
+class LimitQueue<Y: Numeric & Comparable>: CustomStringConvertible {
+    private let maxSize: Int
+    private let context: ValueContext<Y>
+    private var items = [Y]()
+    
+    var last: Y? {
+        return items.last
+    }
+    
+    var isComplete: Bool {
+        return items.count == maxSize
+    }
+    
+    var isEmpty: Bool {
+        return items.isEmpty
+    }
+    
+    var description: String { return "\(items)" }
+    
+    init(maxSize: Int, context: ValueContext<Y>) {
+        self.maxSize = maxSize
+        self.context = context
+    }
+
+    func average(_ value: Y) -> Y {
+        var sum: Y = 0
+        
+        for item in items {
+            sum += item
+        }
+        
+        sum += value
+        
+        return context.toValue(context.toDouble(sum) / Double((items.count + 1)))
+    }
+    
+    func append(_ value: Y) {
+        items.append(value)
+        if items.count > maxSize {
+            items.remove(at: 0)
+        }
+    }
+}
+
 class DateSeriesModelBuilder {
     private let settings: CasesChartSettings
     
@@ -110,23 +181,23 @@ class DateSeriesModelBuilder {
                     return Optional.none
                 }
             }
+            let context = DoubleValueContext(perCapita)
             
-            let context = ValueContext<Double>()
             return DateSeriesModelBuilder(settings)
-                .from(data, context, perCapita)
+                .from(data, context)
                 .postProcess(transform: settings.isMetroGrouped ? context.toMetroArea : noop)
                 .build()
         } else {
-            let context = ValueContext<Int>()
-            func identity(_ key: String, _ value: Int) -> Int? { return value }
+            let context = IntValueContext()
+
             return DateSeriesModelBuilder(settings)
-                .from(data, context, identity)
+                .from(data, context)
                 .postProcess(transform: settings.isMetroGrouped ? context.toMetroArea : noop)
                 .build()
         }
     }
     
-    func from<Y: Numeric>(_ data: ConfirmedCasesData, _ context: ValueContext<Y>, _ transform: (String, Int) -> Y?) -> SeriesStop<Y> {
+    func from<Y: Numeric>(_ data: ConfirmedCasesData, _ context: ValueContext<Y>) -> SeriesStop<Y> {
         let stop = SeriesStop<Y>(context: context, settings: settings)
         
         for countyData in data.series {
@@ -156,7 +227,7 @@ class DateSeriesModelBuilder {
                 key,
                 Array(countyData.values[dateRange.min...dateRange.max]),
                 Array(dates[dateRange.min...dateRange.max]),
-                transform
+                context
             )
 
             let series = NumericDateSeries<Y>(
@@ -176,26 +247,43 @@ class DateSeriesModelBuilder {
         return stop
     }
     
-    private func read<Y: Numeric & Comparable>(_ key: String, _ values: [Int], _ dates: [String], _ transform: (String, Int) -> Y?) -> DataSeriesInfo<Y> {
+    private func read<Y: Numeric & Comparable>(_ key: String, _ values: [Int], _ dates: [String], _ context: ValueContext<Y>) -> DataSeriesInfo<Y> {
         var dataPoints: [(date: String, value: Y)] = []
-        var lastValue: Y?
+        let lastValues = LimitQueue<Y>(maxSize: settings.smoothing, context: context)
         
         var yMax: Y = 0
+        var lastValueOptional: Y?
         for (index, rawValue) in values.enumerated() {
-            if let convertedValue: Y = transform(key, rawValue) {
+            if let convertedValue: Y = context.transform(key, rawValue) {
+                var isShouldAppend = true
                 var value = convertedValue
                 let date = dates[index]
                 
                 if settings.isNewCases {
-                    value = convertedValue - (lastValue ?? convertedValue)
+                    if let lastValue = lastValueOptional {
+                        value = convertedValue - lastValue
+                    } else {
+                        isShouldAppend = false
+                    }
                 }
-                            
-                if !settings.isNewCases || lastValue != nil {
+                
+                if settings.smoothing > 0 {
+                    if lastValues.isComplete {
+                        value = lastValues.average(value)
+                    } else {
+                        isShouldAppend = false
+                    }
+                }
+                    
+                if isShouldAppend {
                     dataPoints.append((date: date, value: value))
                     yMax = max(yMax, value)
                 }
                 
-                lastValue = convertedValue
+                if settings.smoothing > 0 {
+                    lastValues.append(value)
+                }
+                lastValueOptional = convertedValue
             }
         }
         
