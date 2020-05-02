@@ -11,93 +11,20 @@ import SwiftCharts
 import ChartLegends
 import Alamofire
 
-protocol NumbericReader {
-    func read(_ key: String, _ values: [Int], _ dates: [String], _ newCases: Bool) -> [(date: String, value: Any)]
-    
-    func getYMax() -> Any
-}
-
-class IntReader: NumbericReader {
-    private var yMax: Int = 0
-    
-    func read(_ key: String, _ values: [Int], _ dates: [String], _ newCases: Bool) -> [(date: String, value: Any)] {
-        var dataPoints: [(date: String, value: Int)] = []
-        var lastValue = 0
-               
-        for (index, rawValue) in values.enumerated() {
-            var value: Int = rawValue
-            if newCases {
-                value = rawValue - lastValue
-            }
-
-            let date = dates[index]
-            self.yMax = max(self.yMax, value)
-            dataPoints.append((date: date, value: value))
-            lastValue = rawValue
-        }
-        
-        return dataPoints
-    }
-    
-    func getYMax() -> Any {
-        return yMax
-    }
-}
-
-class DoubleReader: NumbericReader {
-    private let population = CountryData.current.population
-    private var yMax: Double = 0
-        
-    func read(_ key: String, _ values: [Int], _ dates: [String], _ newCases: Bool) -> [(date: String, value: Any)] {
-        var dataPoints: [(date: String, value: Double)] = []
-        
-        let populationFactor = Double(population[key] ?? 0)
-
-        if populationFactor == 0 {
-            print("skipping \(key) - no population!")
-            return []
-        }
-        print("  K:\(key) \(populationFactor)")
-
-        var lastValue: Double = 0
-        
-        for (index, rawValue) in values.enumerated() {
-            let rawDoubleValue = Double(rawValue) / populationFactor
-            
-            var value: Double = rawDoubleValue
-            if newCases {
-                value = rawDoubleValue - lastValue
-            }
-
-            let date = dates[index]
-            self.yMax = max(self.yMax, value)
-            dataPoints.append((date: date, value: value))
-            lastValue = rawDoubleValue
-        }
-        
-        return dataPoints
-    }
-    
-    func getYMax() -> Any {
-        return yMax
-    }
-}
-
 class NewCasesViewController: UIViewController {
     @IBOutlet private weak var chartView: XYChartView?
     @IBOutlet private weak var legendsView: ChartLegendsView!
     @IBOutlet private weak var chartTitle: UILabel!
     @IBOutlet private weak var settingsButton: UIButton!
     
-    fileprivate var lastOrientation: UIInterfaceOrientation?
-    
+    private var lastOrientation: UIInterfaceOrientation?
     private var rawData: ConfirmedCasesData?
-    private var model: NewCases?
+    private var chartModel: DateSeriesModel?
     private var chartSettings: CasesChartSettings = CasesChartSettings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSettings()
+        chartSettings = CasesChartSettings.load()
         
         guard let chartView = chartView else { return }
         
@@ -111,84 +38,45 @@ class NewCasesViewController: UIViewController {
         print("initializing chart data")
         requestData()
     }
-    
-    // swiftlint:disable:next function_body_length
+        
     private func processData(_ data: ConfirmedCasesData) {
         guard let chartView = chartView else { return }
         guard !data.dates.isEmpty else {
             print("Chart data received was empty!")
             return
         }
-        
-        var counties = Array(data.series)
-        counties.sort {
-            $0.lastValue! > $1.lastValue!
-        }
-        let dates = data.dates
-        let model = NewCases()
-        let stateFilter = chartSettings.selectedState
-        
-        model.series = []
-        model.xCompact = self.traitCollection.horizontalSizeClass == .compact
-        
+             
         print("Processing chart data:")
-        
-        chartSettings.lastUpdated = dates.last ?? ""
-        
-        var legends = [(text: String, color: UIColor)]()
-
-        let reader: NumbericReader = chartSettings.isPerCapita ? DoubleReader() : IntReader()
-        
-        var size = 0
-        for countyData in counties {
-            let county = countyData.county ?? ""
-            let state = countyData.provinceState ?? "?"
-            let key = "\(state), \(county)"
+        let model = DateSeriesModelBuilder.convert(
+            data,
+            chartSettings,
+            populationByCounty: CountryData.current.population
+        )
             
-            if county.isEmpty || (!stateFilter.isEmpty && state != stateFilter) {
-                //print("skipping \(key) - excluded key")
-                continue
-            }
-                 
-            let dataPoints = reader.read(key, countyData.values, dates, chartSettings.isNewCases)
-            if dataPoints.isEmpty {
-                continue
-            }
-            
-            print("  K:\(key) COLOR: \(size)")
-            model.series.append(DateSeries(county, dataPoints))
-            //  model.series.append(DateSeries(county, [dataPoints]))
-            legends.append((text: county, ChartTheme.color(size)))
-            size += 1
-            if size >= 4 {
-                break
-            }
-        }
-        
-        model.yMax = reader.getYMax()
-        model.doubleFormatter = chartSettings.isNewCases ? NewCases.percentFormat(3) : NewCases.percentFormat(1)
+        model.xCompact = self.traitCollection.horizontalSizeClass == .compact
         
         if model.series.isEmpty {
             print("No data!")
             return
         }
         
-        self.model = model
+        rawData = data
+        self.chartModel = model
         createModel(chartView)
         
-        legendsView.setLegends(.circle(radius: 7.0), legends)
+        legendsView.setLegends(.circle(radius: 7.0), model.legends)
         
+        chartSettings.lastUpdated = data.dates.last ?? ""
         setChartTitle()
         settingsButton.isEnabled = true
-        
-        rawData = data
     }
     
     private func setChartTitle() {
         let prefix = chartSettings.selectedState.isEmpty ? "US" : chartSettings.selectedState
         let chartTypeLabel = chartSettings.isNewCases ? "New Cases" : "Cases"
         let suffix = chartSettings.isPerCapita ? " Per Capita" : ""
-        chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top Ten"
+        
+        chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top \(chartSettings.top)"
     }
     
     private func requestData() {
@@ -208,26 +96,19 @@ class NewCasesViewController: UIViewController {
     }
 
     func createModel(_ chartView: XYChartView) {
-        guard let model = self.model else { return }
+        guard let model = self.chartModel else { return }
         
         print("Creating chart model: ")
         model.xCompact = self.traitCollection.horizontalSizeClass == .compact
         
-        chartView.dataModel = DateSeriesDataModel(
-            model.series,
-            yAxisTitle: "",
-            yMax: model.yMax,
-            xCompact: model.xCompact,
-            dateFormat: model.dateFormat,
-            doubleFormatter: model.doubleFormatter
-        )
+        chartView.dataModel = DateSeriesChartModel(model)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         guard let chartView = chartView else { return }
-        guard let model = self.model else { return }
+        guard let model = self.chartModel else { return }
         
         print("Layout New Cases")
         let newXCompact = self.traitCollection.horizontalSizeClass == .compact
@@ -240,16 +121,15 @@ class NewCasesViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         coordinator.animate(alongsideTransition: { (_ : UIViewControllerTransitionCoordinatorContext) -> Void in
-            let orientation = Env.orientation
+            let orientation = DeviceEnv.orientation
             guard (self.lastOrientation.map { $0.rawValue != orientation.rawValue } ?? true) else { return }
             self.lastOrientation = orientation
             guard let chartView = self.chartView else { return }
-            guard let model = self.model else { return }
+            guard let model = self.chartModel else { return }
             
-            print("rotated")
             let newXCompact = self.traitCollection.horizontalSizeClass == .compact
             if newXCompact != model.xCompact {
-                print("rotated")
+                print("Screen rotated")
                 self.createModel(chartView)
             }
             chartView.updateChart()
@@ -262,7 +142,7 @@ class NewCasesViewController: UIViewController {
         super.traitCollectionDidChange(previousTraitCollection)
 
         guard let chartView = chartView else { return }
-        guard let model = self.model else { return }
+        guard let model = self.chartModel else { return }
         
         let newXCompact = self.traitCollection.horizontalSizeClass == .compact
         if newXCompact != model.xCompact {
@@ -290,8 +170,10 @@ class NewCasesViewController: UIViewController {
     @IBAction private func unwindForSettings(sender: UIStoryboardSegue) {
         if let sourceController = sender.source as? ChartSettingsViewController {
             chartSettings = sourceController.settings
-            saveSettings()
-            print("received settings \(chartSettings.isPerCapita)")
+            chartSettings.save()
+            print("Received settings")
+            
+            // reprocess the raw data using the new settings
             if let rawData = self.rawData {
                 guard let chartView = self.chartView else { return }
                 
@@ -301,18 +183,5 @@ class NewCasesViewController: UIViewController {
                 chartView.updateChart()
             }
         }
-    }
-    
-    private func saveSettings() {
-        let success = NSKeyedArchiver.archiveRootObject(chartSettings, toFile: CasesChartSettings.ArchiveUrl.path)
-        if success {
-            print("Saved settings")
-        } else {
-            print("FAILED to save settings!!")
-        }
-    }
-    
-    private func loadSettings() {
-        chartSettings = NSKeyedUnarchiver.unarchiveObject(withFile: CasesChartSettings.ArchiveUrl.path) as? CasesChartSettings ?? CasesChartSettings()
     }
 }

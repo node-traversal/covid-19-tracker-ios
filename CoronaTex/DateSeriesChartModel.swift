@@ -9,16 +9,7 @@
 import Foundation
 import SwiftCharts
 
-class DateSeries {
-    var name: String
-    var dataPoints: [(date: String, value: Any)]
-    
-    init(_ name: String, _ dataPoints: [(date: String, value: Any)]) {
-        self.name = name
-        self.dataPoints = dataPoints
-    }
-}
-
+/// Converts a date series model into a swift/chart model
 private class DateSeriesChartFactory {
     let readFormatter: DateFormatter = DateFormatter()
     let displayFormatter: DateFormatter = DateFormatter()
@@ -51,7 +42,7 @@ private class DateSeriesChartFactory {
         ChartAxisValueDate(date: readFormatter.date(from: dateStr)!, formatter: displayFormatter, labelSettings: ChartTheme.labelSettings)
     }
     
-    func toLines(_ data: [DateSeries]) -> [ChartLineModel<ChartPoqint>] {
+    func toLines(_ data: [FinalDateSeries]) -> [ChartLineModel<ChartPoint>] {
         var lines = [ChartLineModel]()
         
         for (index, series) in data.enumerated() {
@@ -62,6 +53,24 @@ private class DateSeriesChartFactory {
         }
         
         return lines
+    }
+    
+    func createDateAxis(_ data: FinalDateSeries, _ xCompact: Bool) -> [ChartAxisValue] {
+        var xDensity: Double = 10
+        if xCompact {
+            print("  using small density")
+            xDensity = 5
+        } else {
+            print("  using large density")
+        }
+        
+        let xMin = self.toDate(data.dataPoints.first!.date)
+        let xMax = self.toDate(data.dataPoints.last!.date)
+        
+        let xSpan: TimeInterval = max(floor(xMin.days(to: xMax) / xDensity), 1)
+        
+        // reversing the order ensures that the last date is should with its actual value, rather than the possibly being hidden in the stride span
+        return stride(from: xMax, to: xMin, by: -Date.daysDurationInSeconds * xSpan).map { self.createDateAxisDateLabel($0) }.reversed()
     }
     
     func createNumericAxis(_ value: Any) -> [ChartAxisValue] {
@@ -83,7 +92,7 @@ private class DateSeriesChartFactory {
             fatalError("Axis was empty")
         }
         
-        if axis.count > maxPoints + 1 {
+        if axis.count > maxPoints * 3 {
             fatalError("Axis has too many datapoints, expected: \(maxPoints), found: \(axis.count)")
         }
         
@@ -112,35 +121,25 @@ private class DateSeriesChartFactory {
     }
 }
 
-class DateSeriesDataModel {
+/// Holds the swift/charts chart models
+class DateSeriesChartModel {
     var xAxisModel: ChartAxisModel
     var yAxisModel: ChartAxisModel
     var lines: [ChartLineModel<ChartPoint>]
            
-    init(_ data: [DateSeries], yAxisTitle: String, yMax: Any, xCompact: Bool, dateFormat: String, doubleFormatter: NumberFormatter) {
-        let factory: DateSeriesChartFactory = DateSeriesChartFactory(dateFormat, doubleFormatter)
-        let begin = data.first!
-        let xMin = factory.toDate(begin.dataPoints.first!.date)
-        let xMax = factory.toDate(begin.dataPoints.last!.date)
-        var xDensity: Double = 10
-        if xCompact {
-            print("  using small density")
-            xDensity = 5
-        } else {
-            print("  using large density")
-        }
-        let xSpan: TimeInterval = max(floor(xMin.days(to: xMax) / xDensity), 1)
-        let yValues = factory.createNumericAxis(yMax)
-        // reversing the order ensures that the last date is should with its actual value, rather than the possibly being hidden in the stride span
-        let xValues = stride(from: xMax, to: xMin, by: -Date.daysDurationInSeconds * xSpan).map { factory.createDateAxisDateLabel($0) }.reversed()
-        self.lines = factory.toLines(data)
-        self.xAxisModel = ChartAxisModel(axisValues: Array(xValues), trailingPadding: .labelPlus(-10))
-        var yAxisLabels = [ChartAxisLabel]()
+    init(_ dataModel: DateSeriesModel) {
+        let data = dataModel.series
+        let factory: DateSeriesChartFactory = DateSeriesChartFactory(dataModel.dateFormat, dataModel.doubleFormatter)
         
-        if !yAxisTitle.isEmpty {
-            yAxisLabels.append(ChartAxisLabel(text: yAxisTitle, settings: ChartTheme.labelSettings.defaultVertical()))
+        self.lines = factory.toLines(dataModel.series)
+        
+        self.xAxisModel = ChartAxisModel(axisValues: factory.createDateAxis(data.first!, dataModel.xCompact), trailingPadding: .labelPlus(-10))
+        
+        var yAxisLabels = [ChartAxisLabel]()
+        if !dataModel.yAxisTitle.isEmpty {
+            yAxisLabels.append(ChartAxisLabel(text: dataModel.yAxisTitle, settings: ChartTheme.labelSettings.defaultVertical()))
         }
  
-        self.yAxisModel = ChartAxisModel(axisValues: yValues, axisTitleLabels: yAxisLabels, trailingPadding: .label)
+        self.yAxisModel = ChartAxisModel(axisValues: factory.createNumericAxis(dataModel.yMax), axisTitleLabels: yAxisLabels, trailingPadding: .label)
     }
 }
