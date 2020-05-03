@@ -29,7 +29,6 @@ opt_in_rules:
  - override_in_extension
  - overridden_super_call
  - operator_usage_whitespace
- - object_literal
  - nslocalizedstring_require_bundle
  - nslocalizedstring_key
  - no_grouping_extension

@@ -6,6 +6,7 @@ inhibit_all_warnings!
 
 target 'CoronaTex' do
   pod 'ActionSheetPicker-3.0'
+  pod 'Mapbox-iOS-SDK', '~> 5.8'
   pod 'SwiftLint'
   pod 'ChartLegends'
   pod 'SwiftCharts', '~> 0.6.5'

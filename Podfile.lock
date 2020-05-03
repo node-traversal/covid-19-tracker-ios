@@ -2,6 +2,9 @@ PODS:
   - ActionSheetPicker-3.0 (2.4.2)
   - Alamofire (5.1.0)
   - ChartLegends (0.0.6)
+  - Mapbox-iOS-SDK (5.8.0):
+    - MapboxMobileEvents (= 0.10.2)
+  - MapboxMobileEvents (0.10.2)
   - SwiftCharts (0.6.5)
   - SwiftLint (0.39.2)
 
@@ -9,6 +12,7 @@ DEPENDENCIES:
   - ActionSheetPicker-3.0
   - Alamofire
   - ChartLegends
+  - Mapbox-iOS-SDK (~> 5.8)
   - SwiftCharts (~> 0.6.5)
   - SwiftLint
 
@@ -17,6 +21,8 @@ SPEC REPOS:
     - ActionSheetPicker-3.0
     - Alamofire
     - ChartLegends
+    - Mapbox-iOS-SDK
+    - MapboxMobileEvents
     - SwiftCharts
     - SwiftLint
 
@@ -24,9 +30,11 @@ SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 5b62e07b00bd970509cf5ece99cb7447eae5dd0d
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   ChartLegends: bd0b58d74772f35dc14fc6a3ff245cccf3204a59
+  Mapbox-iOS-SDK: 02590a60fe300810c55432219a0caaa1338fbafb
+  MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 2f63808947cf94f8b1ad1a9aef7a9821b6b3f60e
+PODFILE CHECKSUM: d930018fb25ca267c382d2ea3c40eb16b82a6665
 
 COCOAPODS: 1.9.1
