@@ -14,6 +14,7 @@
 		49289F2B2443582C007E6ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49289F2A2443582C007E6ED0 /* Assets.xcassets */; };
 		49289F2E2443582C007E6ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49289F2C2443582C007E6ED0 /* LaunchScreen.storyboard */; };
 		49289F392443582D007E6ED0 /* CoronaTexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F382443582D007E6ED0 /* CoronaTexTests.swift */; };
+		493D713F245E203E00188C89 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493D713E245E203E00188C89 /* MapViewController.swift */; };
 		49518C872455B285002759F8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49518C862455B285002759F8 /* LaunchScreenViewController.swift */; };
 		49518C892455C807002759F8 /* DateSeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49518C882455C807002759F8 /* DateSeriesModel.swift */; };
 		49641712245487880099C258 /* ChartSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49641711245487880099C258 /* ChartSettingsViewController.swift */; };
@@ -59,6 +60,7 @@
 		49289F342443582D007E6ED0 /* CoronaTexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoronaTexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49289F382443582D007E6ED0 /* CoronaTexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaTexTests.swift; sourceTree = "<group>"; };
 		49289F3A2443582D007E6ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493D713E245E203E00188C89 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		49518C862455B285002759F8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		49518C882455C807002759F8 /* DateSeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeriesModel.swift; sourceTree = "<group>"; };
 		49641711245487880099C258 /* ChartSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSettingsViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */,
 				49641711245487880099C258 /* ChartSettingsViewController.swift */,
 				49289F2524435829007E6ED0 /* NewCasesViewController.swift */,
+				493D713E245E203E00188C89 /* MapViewController.swift */,
 				49B3F4962444A48C00D90BF2 /* XYChartView.swift */,
 				499408BD2444998500EE80A1 /* DeviceEnv.swift */,
 				49F94B6A244F27A1007C5AE9 /* ConfirmedCasesData.swift */,
@@ -201,6 +204,7 @@
 				49289F1A24435829007E6ED0 /* Resources */,
 				49B3496224454AE900E94FF4 /* ShellScript */,
 				946412BD8AFED318FDE8812D /* [CP] Embed Pods Frameworks */,
+				49804B82245E2B03005CF2AB /* Insert Mapbox Access Token */,
 			);
 			buildRules = (
 			);
@@ -292,6 +296,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		49804B82245E2B03005CF2AB /* Insert Mapbox Access Token */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Insert Mapbox Access Token";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/insert_access_token.sh\n";
+		};
 		49B3496224454AE900E94FF4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +385,7 @@
 				49B665AE2453217600EBA472 /* Environments.swift in Sources */,
 				49518C872455B285002759F8 /* LaunchScreenViewController.swift in Sources */,
 				49C3328A245C80B0008D95FF /* DateSeriesModelBuilder.swift in Sources */,
+				493D713F245E203E00188C89 /* MapViewController.swift in Sources */,
 				49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */,
 				4964171424548D8E0099C258 /* CasesChartSettings.swift in Sources */,
 				49B3F49E2444FCF500D90BF2 /* DateSeriesChartModel.swift in Sources */,
@@ -541,6 +565,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.nodetraversal.CoronaTrackerDEV21;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -561,6 +586,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.nodetraversal.CoronaTrackerDEV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -96,6 +96,7 @@ enum CountryData {
         guard let asset = NSDataAsset(name: "USCensusData") else {
             fatalError("could not load county data")
         }
+        
         let text = String(data: asset.data, encoding: .iso2022JP) ?? ""
         guard let data = CountyCensusData(text: text.replacingOccurrences(of: "\r", with: "")) else {
             fatalError("could not process county data")
