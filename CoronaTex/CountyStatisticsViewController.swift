@@ -26,7 +26,7 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
         super.viewDidLoad()
         
         settings = StatisticsSettings.load()
-          
+                  
         requestData()
     }
     
@@ -44,7 +44,6 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
     }
     
     private func processData(series: [CountyCaseData]) {
-
         let sectionMap = toSections(series)
         
         sections = Array(sectionMap.values.sorted())
@@ -131,7 +130,7 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
             workingData[row.metroName] = finalItem
         }
         
-        let section = TableSection<Double>(title: "Metro Areas")
+        let section = TableSection<Double>(title: "\(settings.prefix)Metro Areas")
         for (tableKey, row) in workingData {
             let newCasesPerCapitaText = CasesChartSettings.percentFormat(2).string(for: row.newCasesPerCapita) ?? ""
             
@@ -142,7 +141,7 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
             ))
         }
         
-        sectionMap["Metro Areas"] = section
+        sectionMap["\(settings.prefix)Metro Areas"] = section
         
         return sectionMap
     }

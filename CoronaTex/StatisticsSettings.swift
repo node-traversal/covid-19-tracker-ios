@@ -30,13 +30,18 @@ class StatisticsSettings {
     var groupBy: CountyGroupBy = .none
     var sortBy: CountySortBy = .percent
     var selectedState: String = ""
+    var prefix: String {
+        "\(selectedState) "
+    }
     
     func tableKey(county: String, state: String, metro: String) -> String {
         var tableKey = ""
         
         switch groupBy {
         case .none:
-            if sortBy == .label {
+            if !selectedState.isEmpty {
+                tableKey = county
+            } else if sortBy == .label {
                 tableKey = "\(state), \(county)"
             } else {
                 tableKey = "\(county), \(state)"
@@ -46,7 +51,9 @@ class StatisticsSettings {
         case .metro:
             tableKey = county
         case .metroFlat:
-            if sortBy == .label {
+            if !selectedState.isEmpty {
+                tableKey = metro
+            } else if sortBy == .label {
                 tableKey = "\(state), \(metro)"
             } else {
                 tableKey = "\(metro), \(state)"
@@ -61,13 +68,13 @@ class StatisticsSettings {
         
         switch groupBy {
         case .none:
-            group = "Counties"
+            group = "\(prefix)Counties"
         case .state:
             group = state
         case .metro:
             group = "\(state), \(metro)"
         case .metroFlat:
-            group = "Metro Areas"
+            group = "\(prefix)Metro Areas"
         }
         
         return group
