@@ -11,6 +11,8 @@ import UIKit
 struct CountyCaseData: Codable {
     var county: String?
     var provinceState: String?
+    var latitude: Double?
+    var longitude: Double?
     var values: [Int]
     var lastValue: Int?
 }

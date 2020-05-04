@@ -17,14 +17,14 @@ class CountyCensusData {
     var states: [String]
     private var countyToMetro: [String: String] = [:]
     
-    private func isOtherCategoryKey(_ key: String) -> Bool {
+    static func isOtherCategoryKey(_ key: String) -> Bool {
         return key.contains("Unassigned") || key.contains("Out of") || key.contains("Correction")
     }
     
     func population(_ key: String) -> Int? {
         var population = populationByCounty[key]
         
-        if population == nil && isOtherCategoryKey(key) {
+        if population == nil && CountyCensusData.isOtherCategoryKey(key) {
             // give these unknowns a somewhat rural value
             population = 20000
         }
@@ -35,7 +35,7 @@ class CountyCensusData {
     func metroName(_ key: String) -> String? {
         var metro = countyToMetro[key]
         
-        if metro == nil && isOtherCategoryKey(key) {
+        if metro == nil && CountyCensusData.isOtherCategoryKey(key) {
             // give these unknowns a rural value
             metro = "Rural"
         }

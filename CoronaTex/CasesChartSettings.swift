@@ -103,7 +103,7 @@ class CasesChartSettings: NSObject, NSCoding {
         return isNewCases ? CasesChartSettings.percentFormat(3) : CasesChartSettings.percentFormat(1)
     }
     
-    func isValid(_ key: String) -> Bool {
+    static func isValid(_ key: String) -> Bool {
         return CountryData.current.population(key) != nil
     }
     

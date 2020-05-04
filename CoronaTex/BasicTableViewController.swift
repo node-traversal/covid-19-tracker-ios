@@ -8,19 +8,33 @@
 
 import UIKit
 
-class BasicTableViewController: UITableViewController {
-    var rows: [[String]] = []
-    let cellType = "basicCell"
+struct TableRow<KEY: Comparable & LosslessStringConvertible>: Comparable {
+    static func < (lhs: TableRow<KEY>, rhs: TableRow<KEY>) -> Bool {
+        lhs.sortKey < rhs.sortKey
+    }
     
+    static func == (lhs: TableRow<KEY>, rhs: TableRow<KEY>) -> Bool {
+        lhs.sortKey == rhs.sortKey
+    }
+    
+    let label: String
+    let detail: String
+    let sortKey: KEY
+}
+
+class BasicTableViewController<KEY: Comparable & LosslessStringConvertible>: UITableViewController {
+    var rows = [TableRow<KEY>]()
+    let cellType = "basicCell"
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    func toArray(_ dictionary: [String: Int]) -> [[String]] {
-        var table = [[String]]()
+    func toTable(_ dictionary: [String: KEY]) -> [TableRow<KEY>] {
+        var table = [TableRow<KEY>]()
         
         for (key, value) in dictionary {
-            table.append([key, String(value)])
+            table.append(TableRow<KEY>(label: key, detail: String(value), sortKey: value))
         }
         
         return table
@@ -43,8 +57,8 @@ class BasicTableViewController: UITableViewController {
             cell = UITableViewCell(style: .value1, reuseIdentifier: cellType)
         }
         let row = rows[indexPath.row]
-        cell!.textLabel?.text = row[0]
-        cell!.detailTextLabel?.text = row[1]
+        cell!.textLabel?.text = row.label
+        cell!.detailTextLabel?.text = row.detail
 
         return cell!
     }

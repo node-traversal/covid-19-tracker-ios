@@ -210,7 +210,7 @@ class DateSeriesModelBuilder {
                 continue
             }
             
-            if !settings.isValid(key) {
+            if !CasesChartSettings.isValid(key) {
                 print("\(key) is unknown, cases: \(countyData.lastValue ?? 0)")
                 continue
             }

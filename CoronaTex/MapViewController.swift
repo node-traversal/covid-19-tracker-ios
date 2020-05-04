@@ -7,96 +7,147 @@
 //
 
 import UIKit
-import Mapbox
 import MapKit
+import Alamofire
 
-class MapViewController: UIViewController, MGLMapViewDelegate {
-    @IBOutlet weak var mapView: MGLMapView!
+class CaseCircle: MKCircle {
+    var color: UIColor = .red
+}
+
+class MapViewController: UIViewController, MKMapViewDelegate {
+    @IBOutlet private weak var mapView: MKMapView!
+    
+    let initialLocation = CLLocation(latitude: 39.8283, longitude: -98.5795)
+    let mapMin = 600000.0
+    let mapMax = 7000000.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.delegate = self
+        mapView.isRotateEnabled = false
+
+        //mapView.mapType = .mutedStandard
+        mapView.cameraZoomRange = MKMapView.CameraZoomRange(minCenterCoordinateDistance: mapMin, maxCenterCoordinateDistance: mapMax)
+        mapView.cameraBoundary = MKMapView.CameraBoundary(coordinateRegion: MKCoordinateRegion(
+            center: initialLocation.coordinate, latitudinalMeters: 3000000.0, longitudinalMeters: 5000000.0))
         
-        // Create and add a map view.
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 31.31, longitude: -99.06), zoomLevel: 3, animated: false)
-        
-        mapView.delegate = self
-        mapView.tintColor = .lightGray
+        requestData()
     }
     
-    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
-        // Parse GeoJSON data. This example uses all M1.0+ earthquakes from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
-        guard let url = URL(string: "https://raw.githubusercontent.com/node-traversal/covid-19-tracker-ios/master/geo.json") else { return }
-        let source = MGLShapeSource(identifier: "earthquakes", url: url, options: nil)
+    func reset() {
+        mapView.removeOverlays(mapView.overlays)
         
-        //          let feature = MGLPointFeature()
-        //            feature.title = "F"
-        //            feature.coordinate = CLLocationCoordinate2D(latitude: 37.77, longitude: -122.42)
-        //                feature.attributes = [
-        //                    "mag": 5.0
-        //                ]
-        //            let source = MGLShapeSource(identifier: "earthquakes", features: [feature])
-        //        let fsss = source.features(matching: nil)
-        //            print(fsss.count)
-        //            for feat in fsss {
-        //                print(feat)
-        //            }
-        style.addSource(source)
+        mapView.centerToLocation(initialLocation, regionRadius: mapMax)
         
-        // Create a heatmap layer.
-        let heatmapLayer = MGLHeatmapStyleLayer(identifier: "earthquakes", source: source)
+        requestData()
+    }
+    
+    @IBAction private func clear(_ sender: Any) {
+        guard let mapView = self.mapView else { return }
         
-        // Adjust the color of the heatmap based on the point density.
-        let colorDictionary: [NSNumber: UIColor] = [
-            0.0: .clear,
-            0.01: .white,
-            0.15: UIColor(red: 0.19, green: 0.30, blue: 0.80, alpha: 1.0),
-            0.5: UIColor(red: 0.73, green: 0.23, blue: 0.25, alpha: 1.0),
-            1: .yellow
-        ]
-        heatmapLayer.heatmapColor = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($heatmapDensity, 'linear', nil, %@)", colorDictionary)
+        reset()
+    }
+    
+    private func requestData() {
+        if let url = Environments.current.confirmedUSCasesUrl {
+            AF.request(url).validate().responseString { response in
+                if let json = response.value, let jsonData = json.data(using: .utf8) {
+                    let decoder = JSONDecoder()
+                    let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
+
+                    self.processData(cases.series)
+                }
+            }
+        }
+    }
+    
+    func processData(_ series: [CountyCaseData]) {
+        guard self.mapView != nil else { fatalError("expected mapView to be loaded") }
         
-        // Heatmap weight measures how much a single data point impacts the layer's appearance.
-        heatmapLayer.heatmapWeight = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:(mag, 'linear', nil, %@)",
-            [
-                0: 0,
-                6: 1
-            ]
-        )
+        let minRadius = 50.0
+        let maxRadius = 1000.0
         
-        // Heatmap intensity multiplies the heatmap weight based on zoom level.
-        heatmapLayer.heatmapIntensity = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
-            [
-                0: 1,
-                9: 3
-            ]
-        )
-        heatmapLayer.heatmapRadius = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
-            [
-                0: 4,
-                9: 30
-            ]
-        )
+        var sumCases = 0
+        var casesCount = 0
+        let minColor = UIColor.blue
+        let maxColor = UIColor.red
+        var rMax = 0.0
+        for county in series {
+            if
+                let countyName = county.county,
+                let state = county.provinceState,
+                let latitude = county.latitude,
+                let longitude = county.longitude,
+                let lastValue = county.lastValue,
+                lastValue > 50 && county.values.count > 2 {
+                let size = county.values.count
+                let prevValue = county.values[size - 2]
+                let newCases = lastValue - prevValue
+                sumCases += newCases
+                casesCount += 1
+                let ratio = min(max(Double(newCases), minRadius) / maxRadius, 1.0)
+                rMax = max(ratio, rMax)
+                let color = minColor.interpolateRGBColorTo(maxColor, fraction: CGFloat(ratio))
+                
+                if ratio >= 0.75 {
+                    print("\(countyName) \(ratio)")
+                }
+                
+                self.showCircle(
+                    CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
+                    radius: 90000.0 * ratio,
+                    color: color ?? .blue,
+                    alpha: ratio >= 0.75 ? 1.0 : 0.3
+                )
+            }
+        }
+        print("Avg new: \(sumCases / casesCount), \(rMax)")
+        print("done")
+    }
+    
+    func showCircle(_ coordinate: CLLocationCoordinate2D, radius: Double, color: UIColor, alpha: Double) {
+        guard let mapView = self.mapView else { return }
         
-        // The heatmap layer should be visible up to zoom level 9.
-        heatmapLayer.heatmapOpacity = NSExpression(format: "mgl_step:from:stops:($zoomLevel, 0.75, %@)", [0: 0.75, 9: 0])
-        style.addLayer(heatmapLayer)
+        let circle = CaseCircle(center: coordinate, radius: CLLocationDistance(radius))
+        circle.color = color
         
-        // Add a circle layer to represent the earthquakes at higher zoom levels.
-        let circleLayer = MGLCircleStyleLayer(identifier: "circle-layer", source: source)
+        mapView.addOverlay(circle)
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let circleOverlay = overlay as? CaseCircle else {
+            fatalError("not a circle \(overlay)")
+        }
         
-        let magnitudeDictionary: [NSNumber: UIColor] = [
-            0: .white,
-            0.5: .yellow,
-            2.5: UIColor(red: 0.73, green: 0.23, blue: 0.25, alpha: 1.0),
-            5: UIColor(red: 0.19, green: 0.30, blue: 0.80, alpha: 1.0)
-        ]
-        circleLayer.circleColor = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:(mag, 'linear', nil, %@)", magnitudeDictionary)
-        
-        // The heatmap layer will have an opacity of 0.75 up to zoom level 9, when the opacity becomes 0.
-        circleLayer.circleOpacity = NSExpression(format: "mgl_step:from:stops:($zoomLevel, 0, %@)", [0: 0, 9: 0.75])
-        circleLayer.circleRadius = NSExpression(forConstantValue: 20)
-        style.addLayer(circleLayer)
+        let circleRenderer = MKCircleRenderer(overlay: circleOverlay)
+        circleRenderer.fillColor = circleOverlay.color
+        circleRenderer.alpha = 0.3
+
+        return circleRenderer
+    }
+}
+
+extension MKMapView {
+    func centerToLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 4500000) {
+        let coordinateRegion = MKCoordinateRegion(
+            center: location.coordinate,
+            latitudinalMeters: regionRadius,
+            longitudinalMeters: regionRadius)
+        setRegion(coordinateRegion, animated: true)
+    }
+}
+
+extension UIColor {
+    func interpolateRGBColorTo(_ end: UIColor, fraction: CGFloat) -> UIColor? {
+        let fractional = min(max(0, fraction), 1)
+
+        guard let comp1 = self.cgColor.components, let comp2 = end.cgColor.components else { return nil }
+
+        let red: CGFloat = CGFloat(comp1[0] + (comp2[0] - comp1[0]) * fractional)
+        let green: CGFloat = CGFloat(comp1[1] + (comp2[1] - comp1[1]) * fractional)
+        let blue: CGFloat = CGFloat(comp1[2] + (comp2[2] - comp1[2]) * fractional)
+
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 }
