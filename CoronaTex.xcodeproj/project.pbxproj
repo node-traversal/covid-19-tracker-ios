@@ -18,6 +18,8 @@
 		49518C872455B285002759F8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49518C862455B285002759F8 /* LaunchScreenViewController.swift */; };
 		49518C892455C807002759F8 /* DateSeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49518C882455C807002759F8 /* DateSeriesModel.swift */; };
 		4957E8D2246039D70095FF48 /* SectionalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957E8D1246039D70095FF48 /* SectionalTableViewController.swift */; };
+		4957E8D624605BC80095FF48 /* StatisticsSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957E8D524605BC80095FF48 /* StatisticsSettingsViewController.swift */; };
+		4957E8D824605C760095FF48 /* StatisticsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957E8D724605C760095FF48 /* StatisticsSettings.swift */; };
 		49641712245487880099C258 /* ChartSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49641711245487880099C258 /* ChartSettingsViewController.swift */; };
 		4964171424548D8E0099C258 /* CasesChartSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964171324548D8E0099C258 /* CasesChartSettings.swift */; };
 		4967F1942457280C00EBF369 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4967F1932457280C00EBF369 /* .swiftlint.yml */; };
@@ -66,6 +68,8 @@
 		49518C862455B285002759F8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		49518C882455C807002759F8 /* DateSeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeriesModel.swift; sourceTree = "<group>"; };
 		4957E8D1246039D70095FF48 /* SectionalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionalTableViewController.swift; sourceTree = "<group>"; };
+		4957E8D524605BC80095FF48 /* StatisticsSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSettingsViewController.swift; sourceTree = "<group>"; };
+		4957E8D724605C760095FF48 /* StatisticsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSettings.swift; sourceTree = "<group>"; };
 		49641711245487880099C258 /* ChartSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSettingsViewController.swift; sourceTree = "<group>"; };
 		4964171324548D8E0099C258 /* CasesChartSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesChartSettings.swift; sourceTree = "<group>"; };
 		4967F1932457280C00EBF369 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -145,12 +149,14 @@
 				49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */,
 				4957E8D1246039D70095FF48 /* SectionalTableViewController.swift */,
 				49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */,
-				49641711245487880099C258 /* ChartSettingsViewController.swift */,
 				49289F2524435829007E6ED0 /* NewCasesViewController.swift */,
+				49641711245487880099C258 /* ChartSettingsViewController.swift */,
+				4957E8D524605BC80095FF48 /* StatisticsSettingsViewController.swift */,
 				493D713E245E203E00188C89 /* MapViewController.swift */,
 				49B3F4962444A48C00D90BF2 /* XYChartView.swift */,
 				499408BD2444998500EE80A1 /* DeviceEnv.swift */,
 				4964171324548D8E0099C258 /* CasesChartSettings.swift */,
+				4957E8D724605C760095FF48 /* StatisticsSettings.swift */,
 				49518C882455C807002759F8 /* DateSeriesModel.swift */,
 				49C33289245C80B0008D95FF /* DateSeriesModelBuilder.swift */,
 				49B3F49D2444FCF500D90BF2 /* DateSeriesChartModel.swift */,
@@ -396,10 +402,12 @@
 				49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */,
 				4964171424548D8E0099C258 /* CasesChartSettings.swift in Sources */,
 				49B3F49E2444FCF500D90BF2 /* DateSeriesChartModel.swift in Sources */,
+				4957E8D824605C760095FF48 /* StatisticsSettings.swift in Sources */,
 				49289F2024435829007E6ED0 /* AppDelegate.swift in Sources */,
 				49B3F4972444A48C00D90BF2 /* XYChartView.swift in Sources */,
 				49641712245487880099C258 /* ChartSettingsViewController.swift in Sources */,
 				4957E8D2246039D70095FF48 /* SectionalTableViewController.swift in Sources */,
+				4957E8D624605BC80095FF48 /* StatisticsSettingsViewController.swift in Sources */,
 				49EF0C972443DDBD009BE1B2 /* BasicTableViewController.swift in Sources */,
 				49289F2224435829007E6ED0 /* SceneDelegate.swift in Sources */,
 				49B3F4A02445152200D90BF2 /* CountryData.swift in Sources */,

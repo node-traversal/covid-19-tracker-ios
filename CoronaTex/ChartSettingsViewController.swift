@@ -30,6 +30,7 @@ class ChartSettingsViewController: UIViewController {
         states = [allStates]
         states.append(contentsOf: CountryData.current.states)
         setState(settings.selectedState)
+        
         newCases.isOn = settings.isNewCases
         perCapita.isOn = settings.isPerCapita
         metroArea.isOn = settings.isMetroGrouped
@@ -45,6 +46,7 @@ class ChartSettingsViewController: UIViewController {
     }
     
     // MARK: - Navigation
+    
     @IBAction private func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
