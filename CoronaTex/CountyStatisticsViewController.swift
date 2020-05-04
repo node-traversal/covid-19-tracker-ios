@@ -15,15 +15,15 @@ enum CountyGroupBy {
     case metro
 }
 
-class CountyStatisticsViewController: SectionalTableViewController<Double> {
+class CountyStatisticsViewController: SectionalTableViewController<Double> {  
     var groupBy: CountyGroupBy = .none
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+          
         requestData()
     }
-
+    
     private func requestData() {
         if let url = Environments.current.confirmedUSCasesUrl {
             AF.request(url).validate().responseString { response in
@@ -73,7 +73,7 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
                     
                     let section = sectionMap[grouping] ?? TableSection<Double>(title: grouping)
                     
-                    section.rows.append(TableRow(
+                    section.allRows.append(TableRow(
                         label: tableKey,
                         detail: "\(newCasesPerCapitaText) | New: \(String(newCases)) | Total: \(lastValue) | Pop: \(population)",
                         sortKey: Double(newCasesPerCapita)

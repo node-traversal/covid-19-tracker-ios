@@ -18,21 +18,72 @@ class TableSection<KEY: Comparable & LosslessStringConvertible>: Comparable {
     }
     
     var title: String
-    var rows: [TableRow<KEY>] = []
+    var allRows: [TableRow<KEY>] = []
+    private var filteredRows: [TableRow<KEY>]?
+    var rows: [TableRow<KEY>] {
+        filteredRows ?? allRows
+    }
     
     init(title: String) {
         self.title = title
     }
+    
+    func clearFilter() {
+        filteredRows = nil
+    }
+    
+    func filter(for searchText: String) {
+        filteredRows = allRows.filter {
+            let match = $0.label.range(of: searchText, options: .caseInsensitive)
+            // Return the tuple if the range contains a match.
+            return match != nil
+        }
+    }
 }
 
-class SectionalTableViewController<KEY: Comparable & LosslessStringConvertible>: UITableViewController {
+class SectionalTableViewController<KEY: Comparable & LosslessStringConvertible>: UITableViewController, UISearchResultsUpdating {
     var sections: [TableSection<KEY>] = []
-    let cellType = "basicCell"
+    private let cellType = "basicCell"
+    private let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
         
+        searchController.searchResultsUpdater = self
+        self.definesPresentationContext = true
+
+        // Place the search bar in the table view's header.
+        self.tableView.tableHeaderView = searchController.searchBar
+
+        // Set the content offset to the height of the search bar's height
+        // to hide it when the view is first presented.
+        self.tableView.contentOffset = CGPoint(x: 0, y: searchController.searchBar.frame.height)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            if searchText.isEmpty {
+                clearfilter()
+            } else {
+                filterContent(for: searchText)
+            }
+            
+            tableView.reloadData()
+        }
+    }
+    
+    func clearfilter() {
+        for section in sections {
+            section.clearFilter()
+        }
+    }
+    
+    func filterContent(for searchText: String) {
+        for section in sections {
+            section.filter(for: searchText)
+        }
+    }
+    
     func sort() {
         sections.sort(by: >)
         sortSectionRows()
@@ -40,24 +91,23 @@ class SectionalTableViewController<KEY: Comparable & LosslessStringConvertible>:
     
     func reverseSortSectionRows() {
         for section in sections {
-            section.rows.sort(by: >)
+            section.allRows.sort(by: >)
         }
     }
     
     func sortSectionRows() {
         for section in sections {
-            section.rows.sort()
+            section.allRows.sort()
         }
     }
     
     func sortSectionRowsByLabels() {
         for section in sections {
-            section.rows.sort {
+            section.allRows.sort {
                 $0.label < $1.label
             }
         }
     }
-
     
     // MARK: - Table view data source
 
