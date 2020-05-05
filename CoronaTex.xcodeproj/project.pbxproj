@@ -119,7 +119,6 @@
 				49804B83245EE9CA005CF2AB /* Podfile.lock */,
 				49B3496324456ADB00E94FF4 /* .github */,
 				49289F1E24435829007E6ED0 /* CoronaTex */,
-				49B3F49A2444FC2400D90BF2 /* Extensions */,
 				49289F372443582D007E6ED0 /* CoronaTexTests */,
 				49289F1D24435829007E6ED0 /* Products */,
 				FACCE1EB09E2F07F29044418 /* Pods */,
@@ -139,32 +138,17 @@
 		49289F1E24435829007E6ED0 /* CoronaTex */ = {
 			isa = PBXGroup;
 			children = (
-				49289F1F24435829007E6ED0 /* AppDelegate.swift */,
-				49289F2124435829007E6ED0 /* SceneDelegate.swift */,
+				49B3F49A2444FC2400D90BF2 /* Extensions */,
+				494E7DFD24618C0300331970 /* Lib */,
+				494E7E0124618CE900331970 /* Model */,
+				494E7DF924618B8A00331970 /* Features */,
 				49289F2724435829007E6ED0 /* Main.storyboard */,
 				49289F2C2443582C007E6ED0 /* LaunchScreen.storyboard */,
+				49289F1F24435829007E6ED0 /* AppDelegate.swift */,
+				49289F2124435829007E6ED0 /* SceneDelegate.swift */,
+				49518C862455B285002759F8 /* LaunchScreenViewController.swift */,
 				49289F2A2443582C007E6ED0 /* Assets.xcassets */,
 				49289F2F2443582C007E6ED0 /* Info.plist */,
-				49518C862455B285002759F8 /* LaunchScreenViewController.swift */,
-				49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */,
-				4957E8D1246039D70095FF48 /* SectionalTableViewController.swift */,
-				49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */,
-				49289F2524435829007E6ED0 /* NewCasesViewController.swift */,
-				49641711245487880099C258 /* ChartSettingsViewController.swift */,
-				4957E8D524605BC80095FF48 /* StatisticsSettingsViewController.swift */,
-				493D713E245E203E00188C89 /* MapViewController.swift */,
-				49B3F4962444A48C00D90BF2 /* XYChartView.swift */,
-				499408BD2444998500EE80A1 /* DeviceEnv.swift */,
-				4964171324548D8E0099C258 /* CasesChartSettings.swift */,
-				4957E8D724605C760095FF48 /* StatisticsSettings.swift */,
-				49518C882455C807002759F8 /* DateSeriesModel.swift */,
-				49C33289245C80B0008D95FF /* DateSeriesModelBuilder.swift */,
-				49B3F49D2444FCF500D90BF2 /* DateSeriesChartModel.swift */,
-				49F94B6A244F27A1007C5AE9 /* ConfirmedCasesData.swift */,
-				49B3F49F2445152200D90BF2 /* CountryData.swift */,
-				49B3F49424449D0F00D90BF2 /* ChartTheme.swift */,
-				49B665AB2453210D00EBA472 /* Urls.plist */,
-				49B665AD2453217600EBA472 /* Environments.swift */,
 			);
 			path = CoronaTex;
 			sourceTree = "<group>";
@@ -176,6 +160,94 @@
 				49289F3A2443582D007E6ED0 /* Info.plist */,
 			);
 			path = CoronaTexTests;
+			sourceTree = "<group>";
+		};
+		494E7DF924618B8A00331970 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				494E7DFC24618BD800331970 /* Stats */,
+				494E7DFB24618BBD00331970 /* CasesChart */,
+				494E7DFA24618BA100331970 /* Map */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		494E7DFA24618BA100331970 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				493D713E245E203E00188C89 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		494E7DFB24618BBD00331970 /* CasesChart */ = {
+			isa = PBXGroup;
+			children = (
+				49289F2524435829007E6ED0 /* NewCasesViewController.swift */,
+				49641711245487880099C258 /* ChartSettingsViewController.swift */,
+				4964171324548D8E0099C258 /* CasesChartSettings.swift */,
+				49B3F49424449D0F00D90BF2 /* ChartTheme.swift */,
+			);
+			path = CasesChart;
+			sourceTree = "<group>";
+		};
+		494E7DFC24618BD800331970 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */,
+				4957E8D524605BC80095FF48 /* StatisticsSettingsViewController.swift */,
+				4957E8D724605C760095FF48 /* StatisticsSettings.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		494E7DFD24618C0300331970 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				494E7E0024618C6300331970 /* Environment */,
+				494E7DFF24618C3A00331970 /* Charts */,
+				494E7DFE24618C0A00331970 /* Tables */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		494E7DFE24618C0A00331970 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */,
+				4957E8D1246039D70095FF48 /* SectionalTableViewController.swift */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		494E7DFF24618C3A00331970 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				49518C882455C807002759F8 /* DateSeriesModel.swift */,
+				49C33289245C80B0008D95FF /* DateSeriesModelBuilder.swift */,
+				49B3F49D2444FCF500D90BF2 /* DateSeriesChartModel.swift */,
+				49B3F4962444A48C00D90BF2 /* XYChartView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		494E7E0024618C6300331970 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				49B665AB2453210D00EBA472 /* Urls.plist */,
+				49B665AD2453217600EBA472 /* Environments.swift */,
+				499408BD2444998500EE80A1 /* DeviceEnv.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		494E7E0124618CE900331970 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49B3F49F2445152200D90BF2 /* CountryData.swift */,
+				49F94B6A244F27A1007C5AE9 /* ConfirmedCasesData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		49B3F49A2444FC2400D90BF2 /* Extensions */ = {

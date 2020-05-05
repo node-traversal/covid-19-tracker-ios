@@ -16,26 +16,78 @@ class CaseCircle: MKCircle {
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet private weak var dateScrubber: UISlider!
+    @IBOutlet private weak var dateSliderLabel: UILabel!
+    @IBOutlet private weak var playbackButton: UIButton!
+    
+    static var defaultDateIndex = 44
     
     let initialLocation = CLLocation(latitude: 39.8283, longitude: -98.5795)
     let mapMin = 600000.0
     let mapMax = 7000000.0
+    var rawData: ConfirmedCasesData?
+    var dateIndex: Int = 0
+    var timer: Timer?
+    var playImage = UIImage(systemName: "play.fill")!
+    var stopImage = UIImage(systemName: "stop.fill")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.delegate = self
         mapView.isRotateEnabled = false
-
+        playbackButton.isEnabled = false
+        playbackButton.setBackgroundImage(playImage, for: .normal)
+        
         //mapView.mapType = .mutedStandard
         mapView.cameraZoomRange = MKMapView.CameraZoomRange(minCenterCoordinateDistance: mapMin, maxCenterCoordinateDistance: mapMax)
         mapView.cameraBoundary = MKMapView.CameraBoundary(coordinateRegion: MKCoordinateRegion(
             center: initialLocation.coordinate, latitudinalMeters: 3000000.0, longitudinalMeters: 5000000.0))
         
-        requestData()
+        reset()
+    }
+    
+    func stopPlayback() {
+        print("playback completed/stopped @ index: \(dateIndex)")
+        timer?.invalidate()
+        timer = nil
+        playbackButton.setBackgroundImage(playImage, for: .normal)
+    }
+    
+    @objc
+    func updateTimer() {
+        guard let data = rawData, dateIndex < data.dates.count - 1 else {
+            stopPlayback()
+            return            
+        }
+        dateIndex += 1
+        
+        dateScrubber.value = Float(dateIndex)
+        setDateSliderLabel(index: dateIndex)
+        processSerries(data.series, index: dateIndex)
+    }
+    
+    func createTimer() {
+        guard timer == nil, let data = rawData else { return }
+
+        if dateIndex > data.dates.count - 7 {
+            dateIndex = MapViewController.defaultDateIndex
+        }
+            
+        timer = Timer.scheduledTimer(
+            timeInterval: 1.0,
+            target: self,
+            selector: #selector(updateTimer),
+            userInfo: nil,
+            repeats: true
+        )
     }
     
     func reset() {
+        guard let mapView = self.mapView else { return }
+        dateScrubber.isEnabled = false
+        dateSliderLabel.text = "--/--/--"
+        
         mapView.removeOverlays(mapView.overlays)
         
         mapView.centerToLocation(initialLocation, regionRadius: mapMax)
@@ -44,9 +96,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction private func clear(_ sender: Any) {
-        guard let mapView = self.mapView else { return }
-        
         reset()
+    }
+    
+    @IBAction private func startPlayback(_ sender: Any) {
+        if timer == nil {
+            createTimer()
+            playbackButton.setBackgroundImage(stopImage, for: .normal)
+        } else {
+            stopPlayback()
+        }
     }
     
     private func requestData() {
@@ -56,15 +115,61 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     let decoder = JSONDecoder()
                     let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
 
-                    self.processData(cases.series)
+                    self.processData(cases)
                 }
             }
         }
     }
     
-    func processData(_ series: [CountyCaseData]) {
-        guard self.mapView != nil else { fatalError("expected mapView to be loaded") }
+    func setDateSliderLabel(index: Int) {
+        guard let data = rawData else { return }
         
+        if index < data.dates.count {
+            dateSliderLabel.text = data.dates[index]
+        } else {
+            dateSliderLabel.text = data.dates.last ?? "August 4th, 1997"
+        }
+        dateIndex = index
+    }
+
+    @IBAction private func dateScrubberChanged(_ sender: UISlider) {
+        guard let data = rawData else { return }
+        let currentDateindex = Int(sender.value)
+        
+        guard dateIndex != currentDateindex else {
+            print("Same date index: \(dateIndex)")
+            return
+        }
+        
+        mapView.removeOverlays(mapView.overlays)
+
+        processSerries(data.series, index: currentDateindex - 1)
+        setDateSliderLabel(index: currentDateindex)
+    }
+    
+    func processData(_ data: ConfirmedCasesData) {
+        guard self.mapView != nil else { fatalError("expected mapView to be loaded") }
+        guard !data.dates.isEmpty else { return }
+        
+        let series = data.series
+        self.rawData = data
+        
+        playbackButton.isEnabled = true
+        dateScrubber.isEnabled = true
+        dateIndex = data.dates.count - 1
+        
+        processSerries(series, index: dateIndex)
+             
+        dateScrubber.minimumValue = 40
+        dateScrubber.maximumValue = Float(data.dates.count)
+        dateScrubber.value = Float(dateIndex)
+        
+        setDateSliderLabel(index: dateIndex)
+        
+        print("done")
+    }
+    
+    func processSerries(_ series: [CountyCaseData], index: Int) {
         let minRadius = 50.0
         let maxRadius = 1000.0
         
@@ -73,22 +178,25 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let minColor = UIColor.blue
         let maxColor = UIColor.red
         var rMax = 0.0
+        var totalCasesMax = 0
         for county in series {
+            let lastValue = county.values[index]
+            let prevValue = county.values[index - 1]
+            let newCases = lastValue - prevValue
+            sumCases += newCases
+            casesCount += 1
+            totalCasesMax = max(totalCasesMax, lastValue)
+            
             if
                 let countyName = county.county,
                 let state = county.provinceState,
                 let latitude = county.latitude,
                 let longitude = county.longitude,
-                let lastValue = county.lastValue,
-                lastValue > 50 && county.values.count > 2 {
-                let size = county.values.count
-                let prevValue = county.values[size - 2]
-                let newCases = lastValue - prevValue
-                sumCases += newCases
-                casesCount += 1
+                lastValue > 150 {
                 let ratio = min(max(Double(newCases), minRadius) / maxRadius, 1.0)
-                rMax = max(ratio, rMax)
                 let color = minColor.interpolateRGBColorTo(maxColor, fraction: CGFloat(ratio))
+                
+                rMax = max(ratio, rMax)
                 
                 if ratio >= 0.75 {
                     print("\(countyName) \(ratio)")
@@ -102,8 +210,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 )
             }
         }
-        print("Avg new: \(sumCases / casesCount), \(rMax)")
-        print("done")
+        
+        print("Avg new: \(sumCases / casesCount), \(rMax) \(totalCasesMax) \(index)")
     }
     
     func showCircle(_ coordinate: CLLocationCoordinate2D, radius: Double, color: UIColor, alpha: Double) {
