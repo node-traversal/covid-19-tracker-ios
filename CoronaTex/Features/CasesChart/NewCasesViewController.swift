@@ -20,11 +20,11 @@ class NewCasesViewController: UIViewController {
     private var lastOrientation: UIInterfaceOrientation?
     private var rawData: ConfirmedCasesData?
     private var chartModel: DateSeriesModel?
-    private var chartSettings: CasesChartSettings = CasesChartSettings()
+    private var settings: CasesChartSettings = CasesChartSettings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        chartSettings = CasesChartSettings.load()
+        settings = settings.load()
         
         guard let chartView = chartView else { return }
         
@@ -38,69 +38,15 @@ class NewCasesViewController: UIViewController {
         print("initializing chart data")
         requestData()
     }
-        
-    private func processData(_ data: ConfirmedCasesData) {
-        guard let chartView = chartView else { return }
-        guard !data.dates.isEmpty else {
-            print("Chart data received was empty!")
-            return
-        }
-             
-        print("Processing chart data:")
-        let model = DateSeriesModelBuilder.convert(
-            data,
-            chartSettings
-        )
-            
-        model.xCompact = self.traitCollection.horizontalSizeClass == .compact
-        
-        if model.series.isEmpty {
-            print("No data!")
-            return
-        }
-        
-        rawData = data
-        self.chartModel = model
-        createModel(chartView)
-        
-        legendsView.setLegends(.circle(radius: 7.0), model.legends)
-        
-        chartSettings.lastUpdated = data.dates.last ?? ""
-        setChartTitle()
-        settingsButton.isEnabled = true
-    }
     
+    // MARK: - Utilities
+        
     private func setChartTitle() {
-        let prefix = chartSettings.selectedState.isEmpty ? "US" : chartSettings.selectedState
-        let chartTypeLabel = chartSettings.isNewCases ? "New Cases" : "Cases"
-        let suffix = chartSettings.isPerCapita ? " Per Capita" : ""
-        let smoothing = chartSettings.smoothing > 0 ? " [Smoothed]" : ""
-        chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top \(chartSettings.top) \(smoothing)"
-    }
-    
-    private func requestData() {
-        if let url = Environments.current.confirmedUSCasesUrl {
-            AF.request(url).validate().responseString { response in
-                if let json = response.value, let jsonData = json.data(using: .utf8) {
-                    guard let chartView = self.chartView else { return }
-                    
-                    let decoder = JSONDecoder()
-                    let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
-                    self.processData(cases)
-                    
-                    chartView.layoutChart()
-                }
-            }
-        }
-    }
-
-    func createModel(_ chartView: XYChartView) {
-        guard let model = self.chartModel else { return }
-        
-        print("Creating chart model: ")
-        model.xCompact = self.traitCollection.horizontalSizeClass == .compact
-        
-        chartView.dataModel = DateSeriesChartModel(model)
+        let prefix = settings.selectedState.isEmpty ? "US" : settings.selectedState
+        let chartTypeLabel = settings.isNewCases ? "New Cases" : "Cases"
+        let suffix = settings.isPerCapita ? " Per Capita" : ""
+        let smoothing = settings.smoothing > 0 ? " [Smoothed]" : ""
+        chartTitle.text = "\(prefix) \(chartTypeLabel) \(suffix) - Top \(settings.top) \(smoothing)"
     }
     
     override func viewDidLayoutSubviews() {
@@ -118,6 +64,8 @@ class NewCasesViewController: UIViewController {
         chartView.updateChart()
     }
     
+    // MARK: - Screen Actions
+        
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         coordinator.animate(alongsideTransition: { (_ : UIViewControllerTransitionCoordinatorContext) -> Void in
             let orientation = DeviceEnv.orientation
@@ -136,10 +84,10 @@ class NewCasesViewController: UIViewController {
         })
         super.viewWillTransition(to: size, with: coordinator)
     }
-    
+      
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-
+        
         guard let chartView = chartView else { return }
         guard let model = self.chartModel else { return }
         
@@ -151,6 +99,8 @@ class NewCasesViewController: UIViewController {
         }
     }
     
+    // MARK: - Navigation
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let identifier = segue.identifier ?? ""
         
@@ -160,7 +110,7 @@ class NewCasesViewController: UIViewController {
                 let destination = navController.topViewController as? ChartSettingsViewController else {
                 fatalError("Unexpected destination \(segue.destination)")
             }
-            destination.settings = self.chartSettings
+            destination.settings = self.settings
         default:
             print("Unexpected navigation: \(identifier)")
         }
@@ -168,8 +118,8 @@ class NewCasesViewController: UIViewController {
     
     @IBAction private func unwindForSettings(sender: UIStoryboardSegue) {
         if let sourceController = sender.source as? ChartSettingsViewController {
-            chartSettings = sourceController.settings
-            chartSettings.save()
+            settings = sourceController.settings ?? CasesChartSettings()
+            settings.save()
             print("Received settings")
             
             // reprocess the raw data using the new settings
@@ -182,5 +132,65 @@ class NewCasesViewController: UIViewController {
                 chartView.updateChart()
             }
         }
+    }
+    
+    // MARK: - Web Service Request
+        
+    private func requestData() {
+        if let url = Environments.current.confirmedUSCasesUrl {
+            AF.request(url).validate().responseString { response in
+                if let json = response.value, let jsonData = json.data(using: .utf8) {
+                    guard let chartView = self.chartView else { return }
+                    
+                    let decoder = JSONDecoder()
+                    let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
+                    self.processData(cases)
+                    
+                    chartView.layoutChart()
+                }
+            }
+        }
+    }
+    
+    // MARK: - Data Model Processing
+        
+    private func processData(_ data: ConfirmedCasesData) {
+        guard let chartView = chartView else { return }
+        guard !data.dates.isEmpty else {
+            print("Chart data received was empty!")
+            return
+        }
+             
+        print("Processing chart data:")
+        let model = DateSeriesModelBuilder.convert(
+            data,
+            settings
+        )
+            
+        model.xCompact = self.traitCollection.horizontalSizeClass == .compact
+        
+        if model.series.isEmpty {
+            print("No data!")
+            return
+        }
+        
+        rawData = data
+        self.chartModel = model
+        createModel(chartView)
+        
+        legendsView.setLegends(.circle(radius: 7.0), model.legends)
+        
+        settings.lastUpdated = data.dates.last ?? ""
+        setChartTitle()
+        settingsButton.isEnabled = true
+    }
+    
+    func createModel(_ chartView: XYChartView) {
+        guard let model = self.chartModel else { return }
+        
+        print("Creating chart model: ")
+        model.xCompact = self.traitCollection.horizontalSizeClass == .compact
+        
+        chartView.dataModel = DateSeriesChartModel(model)
     }
 }

@@ -23,15 +23,18 @@ enum CountySortBy {
     case label
 }
 
-class StatisticsSettings {
+class StatisticsSettings: LocationSettings {
     static let groupBySelections: [CountyGroupBy] = [.none, .state, .metro, .metroFlat]
     static let sortSelections: [CountySortBy] = [.percent, .newCases, .totalCases, .population, .label]
     
     var groupBy: CountyGroupBy = .none
     var sortBy: CountySortBy = .percent
-    var selectedState: String = ""
     var prefix: String {
         "\(selectedState) "
+    }
+        
+    override func getPersistentFolderName() -> String {
+        return "StatisticsSettings"
     }
     
     func tableKey(county: String, state: String, metro: String) -> String {
@@ -109,12 +112,5 @@ class StatisticsSettings {
     
     func detail(percent: String, newCases: Int, totalCases: Int, population: Int) -> String {
         return "\(percent) | New: \(String(newCases)) | Total: \(totalCases) | Pop: \(population)"
-    }
-    
-    func save() {
-    }
-    
-    static func load() -> StatisticsSettings {
-        return StatisticsSettings()
     }
 }

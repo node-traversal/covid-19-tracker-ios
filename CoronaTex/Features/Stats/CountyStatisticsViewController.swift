@@ -25,10 +25,42 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        settings = StatisticsSettings.load()
+        settings = settings.load()
                   
         requestData()
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let identifier = segue.identifier ?? ""
+        
+        switch identifier {
+        case "Stats Settings":
+            guard let navController = segue.destination as? UINavigationController,
+                let destination = navController.topViewController as? StatisticsSettingsViewController else {
+                fatalError("Unexpected destination \(segue.destination)")
+            }
+            destination.settings = self.settings
+        default:
+            fatalError("Unexpected navigation: \(identifier)")
+        }
+    }
+    
+    @IBAction private func unwindForSettings(sender: UIStoryboardSegue) {
+        if let sourceController = sender.source as? StatisticsSettingsViewController {
+            settings = sourceController.settings ?? StatisticsSettings()
+            settings.save()
+            print("Received settings")
+            
+            // reprocess the raw data using the new settings
+            if let data = rawData {
+                processData(series: data)
+            }
+        }
+    }
+    
+    // MARK: - Web Service Request
     
     private func requestData() {
         if let url = Environments.current.confirmedUSCasesUrl {
@@ -42,6 +74,8 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
             }
         }
     }
+   
+    // MARK: - Data Model Processing
     
     private func processData(series: [CountyCaseData]) {
         let sectionMap = toSections(series)
@@ -144,33 +178,5 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
         sectionMap["\(settings.prefix)Metro Areas"] = section
         
         return sectionMap
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let identifier = segue.identifier ?? ""
-        
-        switch identifier {
-        case "Stats Settings":
-            guard let navController = segue.destination as? UINavigationController,
-                let destination = navController.topViewController as? StatisticsSettingsViewController else {
-                fatalError("Unexpected destination \(segue.destination)")
-            }
-            destination.settings = self.settings
-        default:
-            fatalError("Unexpected navigation: \(identifier)")
-        }
-    }
-    
-    @IBAction private func unwindForSettings(sender: UIStoryboardSegue) {
-        if let sourceController = sender.source as? StatisticsSettingsViewController {
-            settings = sourceController.settings
-            settings.save()
-            print("Received settings")
-            
-            // reprocess the raw data using the new settings
-            if let data = rawData {
-                processData(series: data)
-            }
-        }
     }
 }

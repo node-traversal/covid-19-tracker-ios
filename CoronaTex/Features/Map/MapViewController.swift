@@ -15,19 +15,20 @@ class CaseCircle: MKCircle {
 }
 
 class MapViewController: UIViewController, MKMapViewDelegate {
+    let defaultDateIndex = 44
+    let initialLocation = CLLocation(latitude: 39.8283, longitude: -98.5795)
+    let mapMin = 600000.0
+    let mapMax = 7000000.0
+    
     @IBOutlet private weak var mapView: MKMapView!
     @IBOutlet private weak var dateScrubber: UISlider!
     @IBOutlet private weak var dateSliderLabel: UILabel!
     @IBOutlet private weak var playbackButton: UIButton!
     
-    static var defaultDateIndex = 44
-    
-    let initialLocation = CLLocation(latitude: 39.8283, longitude: -98.5795)
-    let mapMin = 600000.0
-    let mapMax = 7000000.0
+    var timer: Timer?
     var rawData: ConfirmedCasesData?
     var dateIndex: Int = 0
-    var timer: Timer?
+    
     var playImage = UIImage(systemName: "play.fill")!
     var stopImage = UIImage(systemName: "stop.fill")!
     
@@ -47,53 +48,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         reset()
     }
     
-    func stopPlayback() {
-        print("playback completed/stopped @ index: \(dateIndex)")
-        timer?.invalidate()
-        timer = nil
-        playbackButton.setBackgroundImage(playImage, for: .normal)
-    }
-    
-    @objc
-    func updateTimer() {
-        guard let data = rawData, dateIndex < data.dates.count - 1 else {
-            stopPlayback()
-            return            
-        }
-        dateIndex += 1
-        
-        dateScrubber.value = Float(dateIndex)
-        setDateSliderLabel(index: dateIndex)
-        processSerries(data.series, index: dateIndex)
-    }
-    
-    func createTimer() {
-        guard timer == nil, let data = rawData else { return }
-
-        if dateIndex > data.dates.count - 7 {
-            dateIndex = MapViewController.defaultDateIndex
-        }
-            
-        timer = Timer.scheduledTimer(
-            timeInterval: 1.0,
-            target: self,
-            selector: #selector(updateTimer),
-            userInfo: nil,
-            repeats: true
-        )
-    }
-    
-    func reset() {
-        guard let mapView = self.mapView else { return }
-        dateScrubber.isEnabled = false
-        dateSliderLabel.text = "--/--/--"
-        
-        mapView.removeOverlays(mapView.overlays)
-        
-        mapView.centerToLocation(initialLocation, regionRadius: mapMax)
-        
-        requestData()
-    }
+    // MARK: - Actions
     
     @IBAction private func clear(_ sender: Any) {
         reset()
@@ -108,30 +63,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    private func requestData() {
-        if let url = Environments.current.confirmedUSCasesUrl {
-            AF.request(url).validate().responseString { response in
-                if let json = response.value, let jsonData = json.data(using: .utf8) {
-                    let decoder = JSONDecoder()
-                    let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
-
-                    self.processData(cases)
-                }
-            }
-        }
-    }
-    
-    func setDateSliderLabel(index: Int) {
-        guard let data = rawData else { return }
-        
-        if index < data.dates.count {
-            dateSliderLabel.text = data.dates[index]
-        } else {
-            dateSliderLabel.text = data.dates.last ?? "August 4th, 1997"
-        }
-        dateIndex = index
-    }
-
     @IBAction private func dateScrubberChanged(_ sender: UISlider) {
         guard let data = rawData else { return }
         let currentDateindex = Int(sender.value)
@@ -146,6 +77,109 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         processSerries(data.series, index: currentDateindex - 1)
         setDateSliderLabel(index: currentDateindex)
     }
+    
+    // MARK: - Utilities
+     
+    func setDateSliderLabel(index: Int) {
+        guard let data = rawData else { return }
+        
+        if index < data.dates.count {
+            dateSliderLabel.text = data.dates[index]
+        } else {
+            dateSliderLabel.text = data.dates.last ?? "August 4th, 1997"
+        }
+        dateIndex = index
+    }
+        
+    func reset() {
+        guard let mapView = self.mapView else { return }
+        dateScrubber.isEnabled = false
+        dateSliderLabel.text = "--/--/--"
+        
+        mapView.removeOverlays(mapView.overlays)
+        
+        mapView.centerToLocation(initialLocation, regionRadius: mapMax)
+        
+        requestData()
+    }
+    
+    // MARK: - Map Marker Rendering
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let circleOverlay = overlay as? CaseCircle else {
+            fatalError("not a circle \(overlay)")
+        }
+        
+        let circleRenderer = MKCircleRenderer(overlay: circleOverlay)
+        circleRenderer.fillColor = circleOverlay.color
+        circleRenderer.alpha = 0.3
+
+        return circleRenderer
+    }
+    
+    func showCircle(_ coordinate: CLLocationCoordinate2D, radius: Double, color: UIColor, alpha: Double) {
+        guard let mapView = self.mapView else { return }
+        
+        let circle = CaseCircle(center: coordinate, radius: CLLocationDistance(radius))
+        circle.color = color
+        
+        mapView.addOverlay(circle)
+    }
+    
+    // MARK: - Playback: Timeline
+    
+    func createTimer() {
+        guard timer == nil, let data = rawData else { return }
+
+        if dateIndex > data.dates.count - 7 {
+            dateIndex = defaultDateIndex
+        }
+            
+        timer = Timer.scheduledTimer(
+            timeInterval: 1.0,
+            target: self,
+            selector: #selector(updateTimer),
+            userInfo: nil,
+            repeats: true
+        )
+    }
+        
+    @objc
+    func updateTimer() {
+        guard let data = rawData, dateIndex < data.dates.count - 1 else {
+            stopPlayback()
+            return
+        }
+        dateIndex += 1
+        
+        dateScrubber.value = Float(dateIndex)
+        setDateSliderLabel(index: dateIndex)
+        processSerries(data.series, index: dateIndex)
+    }
+    
+    func stopPlayback() {
+        print("playback completed/stopped @ index: \(dateIndex)")
+        timer?.invalidate()
+        timer = nil
+        playbackButton.setBackgroundImage(playImage, for: .normal)
+    }
+    
+    // MARK: - Web Service Request
+    
+    private func requestData() {
+        if let url = Environments.current.confirmedUSCasesUrl {
+            AF.request(url).validate().responseString { response in
+                if let json = response.value, let jsonData = json.data(using: .utf8) {
+                    let decoder = JSONDecoder()
+                    let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
+
+                    self.processData(cases)
+                }
+            }
+        }
+    }
+    
+    // MARK: - Data Processing
     
     func processData(_ data: ConfirmedCasesData) {
         guard self.mapView != nil else { fatalError("expected mapView to be loaded") }
@@ -212,50 +246,5 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         
         print("Avg new: \(sumCases / casesCount), \(rMax) \(totalCasesMax) \(index)")
-    }
-    
-    func showCircle(_ coordinate: CLLocationCoordinate2D, radius: Double, color: UIColor, alpha: Double) {
-        guard let mapView = self.mapView else { return }
-        
-        let circle = CaseCircle(center: coordinate, radius: CLLocationDistance(radius))
-        circle.color = color
-        
-        mapView.addOverlay(circle)
-    }
-    
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        guard let circleOverlay = overlay as? CaseCircle else {
-            fatalError("not a circle \(overlay)")
-        }
-        
-        let circleRenderer = MKCircleRenderer(overlay: circleOverlay)
-        circleRenderer.fillColor = circleOverlay.color
-        circleRenderer.alpha = 0.3
-
-        return circleRenderer
-    }
-}
-
-extension MKMapView {
-    func centerToLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 4500000) {
-        let coordinateRegion = MKCoordinateRegion(
-            center: location.coordinate,
-            latitudinalMeters: regionRadius,
-            longitudinalMeters: regionRadius)
-        setRegion(coordinateRegion, animated: true)
-    }
-}
-
-extension UIColor {
-    func interpolateRGBColorTo(_ end: UIColor, fraction: CGFloat) -> UIColor? {
-        let fractional = min(max(0, fraction), 1)
-
-        guard let comp1 = self.cgColor.components, let comp2 = end.cgColor.components else { return nil }
-
-        let red: CGFloat = CGFloat(comp1[0] + (comp2[0] - comp1[0]) * fractional)
-        let green: CGFloat = CGFloat(comp1[1] + (comp2[1] - comp1[1]) * fractional)
-        let blue: CGFloat = CGFloat(comp1[2] + (comp2[2] - comp1[2]) * fractional)
-
-        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 }

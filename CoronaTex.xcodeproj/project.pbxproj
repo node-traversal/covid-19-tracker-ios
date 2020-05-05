@@ -15,6 +15,12 @@
 		49289F2E2443582C007E6ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49289F2C2443582C007E6ED0 /* LaunchScreen.storyboard */; };
 		49289F392443582D007E6ED0 /* CoronaTexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49289F382443582D007E6ED0 /* CoronaTexTests.swift */; };
 		493D713F245E203E00188C89 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493D713E245E203E00188C89 /* MapViewController.swift */; };
+		494E7E042461958C00331970 /* LocationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E7E032461958C00331970 /* LocationSettings.swift */; };
+		494E7E0624619BE700331970 /* LocationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E7E0524619BE700331970 /* LocationSettingsViewController.swift */; };
+		494E7E082461ADF100331970 /* MapSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E7E072461ADF100331970 /* MapSettingsViewController.swift */; };
+		494E7E0A2461AE0F00331970 /* MapSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E7E092461AE0F00331970 /* MapSettings.swift */; };
+		494E7E0C2461B6AC00331970 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E7E0B2461B6AC00331970 /* UIColor.swift */; };
+		494E7E0E2461B6E100331970 /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E7E0D2461B6E100331970 /* MKMapView.swift */; };
 		49518C872455B285002759F8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49518C862455B285002759F8 /* LaunchScreenViewController.swift */; };
 		49518C892455C807002759F8 /* DateSeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49518C882455C807002759F8 /* DateSeriesModel.swift */; };
 		4957E8D2246039D70095FF48 /* SectionalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957E8D1246039D70095FF48 /* SectionalTableViewController.swift */; };
@@ -65,6 +71,12 @@
 		49289F382443582D007E6ED0 /* CoronaTexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaTexTests.swift; sourceTree = "<group>"; };
 		49289F3A2443582D007E6ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		493D713E245E203E00188C89 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		494E7E032461958C00331970 /* LocationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettings.swift; sourceTree = "<group>"; };
+		494E7E0524619BE700331970 /* LocationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettingsViewController.swift; sourceTree = "<group>"; };
+		494E7E072461ADF100331970 /* MapSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSettingsViewController.swift; sourceTree = "<group>"; };
+		494E7E092461AE0F00331970 /* MapSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSettings.swift; sourceTree = "<group>"; };
+		494E7E0B2461B6AC00331970 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		494E7E0D2461B6E100331970 /* MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapView.swift; sourceTree = "<group>"; };
 		49518C862455B285002759F8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		49518C882455C807002759F8 /* DateSeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeriesModel.swift; sourceTree = "<group>"; };
 		4957E8D1246039D70095FF48 /* SectionalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionalTableViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				493D713E245E203E00188C89 /* MapViewController.swift */,
+				494E7E072461ADF100331970 /* MapSettingsViewController.swift */,
+				494E7E092461AE0F00331970 /* MapSettings.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -204,6 +218,7 @@
 		494E7DFD24618C0300331970 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				494E7E022461953B00331970 /* Settings */,
 				494E7E0024618C6300331970 /* Environment */,
 				494E7DFF24618C3A00331970 /* Charts */,
 				494E7DFE24618C0A00331970 /* Tables */,
@@ -250,10 +265,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		494E7E022461953B00331970 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				494E7E032461958C00331970 /* LocationSettings.swift */,
+				494E7E0524619BE700331970 /* LocationSettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		49B3F49A2444FC2400D90BF2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				49B3F49B2444FC4300D90BF2 /* Date.swift */,
+				494E7E0B2461B6AC00331970 /* UIColor.swift */,
+				494E7E0D2461B6E100331970 /* MKMapView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -466,10 +492,14 @@
 				49B3F49524449D0F00D90BF2 /* ChartTheme.swift in Sources */,
 				49B3F49C2444FC4300D90BF2 /* Date.swift in Sources */,
 				49518C892455C807002759F8 /* DateSeriesModel.swift in Sources */,
+				494E7E082461ADF100331970 /* MapSettingsViewController.swift in Sources */,
 				49289F2624435829007E6ED0 /* NewCasesViewController.swift in Sources */,
 				49B665AE2453217600EBA472 /* Environments.swift in Sources */,
 				49518C872455B285002759F8 /* LaunchScreenViewController.swift in Sources */,
+				494E7E0A2461AE0F00331970 /* MapSettings.swift in Sources */,
+				494E7E042461958C00331970 /* LocationSettings.swift in Sources */,
 				49C3328A245C80B0008D95FF /* DateSeriesModelBuilder.swift in Sources */,
+				494E7E0624619BE700331970 /* LocationSettingsViewController.swift in Sources */,
 				493D713F245E203E00188C89 /* MapViewController.swift in Sources */,
 				49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */,
 				4964171424548D8E0099C258 /* CasesChartSettings.swift in Sources */,
@@ -481,10 +511,12 @@
 				4957E8D2246039D70095FF48 /* SectionalTableViewController.swift in Sources */,
 				4957E8D624605BC80095FF48 /* StatisticsSettingsViewController.swift in Sources */,
 				49EF0C972443DDBD009BE1B2 /* BasicTableViewController.swift in Sources */,
+				494E7E0C2461B6AC00331970 /* UIColor.swift in Sources */,
 				49289F2224435829007E6ED0 /* SceneDelegate.swift in Sources */,
 				49B3F4A02445152200D90BF2 /* CountryData.swift in Sources */,
 				499408BE2444998500EE80A1 /* DeviceEnv.swift in Sources */,
 				49F94B6B244F27A1007C5AE9 /* ConfirmedCasesData.swift in Sources */,
+				494E7E0E2461B6E100331970 /* MKMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

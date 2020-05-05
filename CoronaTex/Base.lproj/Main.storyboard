@@ -122,22 +122,69 @@
             </objects>
             <point key="canvasLocation" x="35" y="-999"/>
         </scene>
-        <!--Settings-->
+        <!--Map Settings-->
         <scene sceneID="dW5-tE-MiV">
             <objects>
-                <viewController id="5jM-Dz-dct" sceneMemberID="viewController">
+                <viewController id="5jM-Dz-dct" userLabel="Map Settings" customClass="MapSettingsViewController" customModule="CoronaTex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eFF-is-Hb5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFD-P1-dH8" userLabel="State View">
+                                <rect key="frame" x="10" y="66" width="404" height="30"/>
+                                <subviews>
+                                    <label verifyAmbiguity="off" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US State Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSc-47-2ku">
+                                        <rect key="frame" x="0.0" y="5" width="110" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x2-E3-eAu">
+                                        <rect key="frame" x="110" y="0.0" width="284" height="30"/>
+                                        <state key="normal" title="Select"/>
+                                        <connections>
+                                            <action selector="selectState:" destination="5jM-Dz-dct" eventType="touchUpInside" id="jd0-x1-hca"/>
+                                            <action selector="selectState:" destination="Sou-lu-bO3" eventType="touchUpInside" id="oai-aR-0c1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="xSc-47-2ku" firstAttribute="centerY" secondItem="jFD-P1-dH8" secondAttribute="centerY" id="8sb-oS-CeN"/>
+                                    <constraint firstItem="xSc-47-2ku" firstAttribute="leading" secondItem="jFD-P1-dH8" secondAttribute="leading" id="Exv-i6-d5U"/>
+                                    <constraint firstItem="4x2-E3-eAu" firstAttribute="centerY" secondItem="jFD-P1-dH8" secondAttribute="centerY" id="GeK-9F-RL8"/>
+                                    <constraint firstAttribute="trailing" secondItem="4x2-E3-eAu" secondAttribute="trailing" constant="10" id="VVO-AO-xOY"/>
+                                    <constraint firstAttribute="height" constant="30" id="ciy-y7-eTZ"/>
+                                    <constraint firstItem="4x2-E3-eAu" firstAttribute="leading" secondItem="xSc-47-2ku" secondAttribute="trailing" id="dOo-by-2j8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rHg-wk-D3g" firstAttribute="trailing" secondItem="jFD-P1-dH8" secondAttribute="trailing" id="MUl-vB-jUz"/>
+                            <constraint firstItem="jFD-P1-dH8" firstAttribute="top" secondItem="rHg-wk-D3g" secondAttribute="top" constant="10" id="Sq8-ud-1PT"/>
+                            <constraint firstItem="jFD-P1-dH8" firstAttribute="leading" secondItem="rHg-wk-D3g" secondAttribute="leading" constant="10" id="v6t-as-dUv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rHg-wk-D3g"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="K0G-7y-D4N">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ABC-xP-BvN"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BXQ-W1-qXM"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ABC-xP-BvN">
+                            <connections>
+                                <action selector="cancel:" destination="5jM-Dz-dct" id="NDg-bu-6hE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BXQ-W1-qXM">
+                            <connections>
+                                <segue destination="mWf-Kh-EkC" kind="unwind" unwindAction="unwindForSettingsWithSender:" id="hMG-X3-L9z"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="selectStateButton" destination="4x2-E3-eAu" id="qw9-U2-VQe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQv-AT-GVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mWf-Kh-EkC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1661" y="-999"/>
         </scene>
@@ -289,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="35" y="510"/>
         </scene>
-        <!--Settings-->
+        <!--Chart Settings-->
         <scene sceneID="Kh3-56-mKh">
             <objects>
-                <viewController id="Sou-lu-bO3" customClass="ChartSettingsViewController" customModule="CoronaTex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Sou-lu-bO3" userLabel="Chart Settings" customClass="ChartSettingsViewController" customModule="CoronaTex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="BaS-yw-VNk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -508,10 +555,10 @@
             </objects>
             <point key="canvasLocation" x="-1178" y="-31"/>
         </scene>
-        <!--Settings-->
+        <!--Stats Settings-->
         <scene sceneID="JID-y7-omO">
             <objects>
-                <viewController id="dPu-yZ-boz" customClass="StatisticsSettingsViewController" customModule="CoronaTex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dPu-yZ-boz" userLabel="Stats Settings" customClass="StatisticsSettingsViewController" customModule="CoronaTex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0B0-sy-xsv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

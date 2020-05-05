@@ -9,7 +9,7 @@
 import UIKit
 import ActionSheetPicker_3_0
 
-class ChartSettingsViewController: UIViewController {
+class ChartSettingsViewController: LocationSettingsViewController<CasesChartSettings> {
     @IBOutlet private weak var saveButton: UIBarButtonItem!
     @IBOutlet private weak var perCapita: UISwitch!
     @IBOutlet private weak var lastUpdated: UILabel!
@@ -19,17 +19,11 @@ class ChartSettingsViewController: UIViewController {
     @IBOutlet private weak var topXSelector: UISegmentedControl!
     @IBOutlet private weak var daySelector: UISegmentedControl!
     @IBOutlet private weak var smoothingSelector: UISegmentedControl!
-    
-    let allStates: String = "All States"
-    var settings: CasesChartSettings = CasesChartSettings()
-    var states = [String]()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        states = [allStates]
-        states.append(contentsOf: CountryData.current.states)
-        setState(settings.selectedState)
+            
+        guard let settings = self.settings else { return }
         
         newCases.isOn = settings.isNewCases
         perCapita.isOn = settings.isPerCapita
@@ -40,19 +34,21 @@ class ChartSettingsViewController: UIViewController {
         daySelector.selectedSegmentIndex = CasesChartSettings.findDayIndex(settings.lastDays)
     }
     
-    private func setState(_ state: String) {
-        self.selectStateButton.setTitle(state.isEmpty || state == allStates ? "Select" : state, for: .normal)
-        self.selectStateButton.sizeToFit()
+    // MARK: - Overrides
+    
+    override func newSettings() -> CasesChartSettings? {
+        return CasesChartSettings()
     }
     
-    // MARK: - Navigation
-    
-    @IBAction private func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    override func selectStateUIButton() -> UIButton? {
+        return selectStateButton
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+        
+        guard let settings = self.settings else { return }
+        
         settings.isPerCapita = perCapita.isOn
         settings.isNewCases = newCases.isOn
         settings.isMetroGrouped = metroArea.isOn
@@ -65,36 +61,13 @@ class ChartSettingsViewController: UIViewController {
         print("Save settings")
     }
     
+    // MARK: - Actions
+    
+    @IBAction private func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction private func selectState(_ sender: Any) {
-        var selection = 0
-        if !self.settings.selectedState.isEmpty {
-            selection = states.firstIndex(of: self.settings.selectedState ) ?? 0
-        }
-        
-        let picker = ActionSheetStringPicker(
-            title: "Select State",
-            rows: self.states,
-            initialSelection: selection,
-            doneBlock: { _, _, value in
-                if let state = value as? String {
-                    self.settings.selectedState = state == self.allStates ? "" : state
-                    self.setState(state)
-                }
-                return
-            },
-            cancel: { _ in
-                self.settings.selectedState = ""
-                self.setState("")
-            },
-            origin: sender
-        )
-        
-        let cancelButton = UIButton()
-        cancelButton.setTitle("Clear", for: .normal)
-        cancelButton.setTitleColor(self.view.tintColor, for: .normal)
-        cancelButton.setTitleColor(UIColor.systemRed, for: .highlighted)
-        
-        picker?.setCancelButton(UIBarButtonItem.init(customView: cancelButton))
-        picker?.show()
+        super.pickState(sender)
     }
 }
