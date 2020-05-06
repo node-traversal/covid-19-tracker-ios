@@ -8,10 +8,31 @@
 
 import UIKit
 import MapKit
-import Alamofire
 
-class CaseCircle: MKCircle {
+class CaseCircle: MKCircle, Comparable {
+    static func < (lhs: CaseCircle, rhs: CaseCircle) -> Bool {
+        lhs.value < rhs.value
+    }
+    
+    var key: String?
     var color: UIColor = .red
+    var value: Double = 0.0
+    
+    convenience init(_ coordinate: CLLocationCoordinate2D, key: String, value: Double, radius: Double, color: UIColor) {
+        self.init(center: coordinate, radius: CLLocationDistance(radius))
+        self.color = color
+        self.value = value
+        self.key = key
+    }
+}
+
+class DateInfo {
+    let date: String
+    var points = [CaseCircle]()
+    
+    init(_ date: String) {
+        self.date = date
+    }
 }
 
 class MapViewController: UIViewController, MKMapViewDelegate {
@@ -19,6 +40,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     let initialLocation = CLLocation(latitude: 39.8283, longitude: -98.5795)
     let mapMin = 600000.0
     let mapMax = 7000000.0
+    let maxUnfilteredSize = 200
     
     @IBOutlet private weak var mapView: MKMapView!
     @IBOutlet private weak var dateScrubber: UISlider!
@@ -29,6 +51,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     var timer: Timer?
     var rawData: ConfirmedCasesData?
+    var dateEntries: [DateInfo]?
     var dateIndex: Int = 0
     var settings = MapSettings()
     var playImage = UIImage(systemName: "play.fill")!
@@ -42,6 +65,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         mapView.isRotateEnabled = false
         playbackButton.isEnabled = false
+        playbackButton.isHidden = true
         refreshButton.isEnabled = false
         settingsButton.isEnabled = false
         playbackButton.setBackgroundImage(playImage, for: .normal)
@@ -62,6 +86,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBAction private func startPlayback(_ sender: Any) {
         if timer == nil {
+            mapView.removeOverlays(mapView.overlays)
             createTimer()
             playbackButton.setBackgroundImage(stopImage, for: .normal)
         } else {
@@ -70,7 +95,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction private func dateScrubberChanged(_ sender: UISlider) {
-        guard let data = rawData else { return }
         let currentDateindex = Int(sender.value)
         
         guard dateIndex != currentDateindex else {
@@ -80,7 +104,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         mapView.removeOverlays(mapView.overlays)
 
-        processSerries(data.series, index: currentDateindex - 1)
+        updatePoints()
         setDateSliderLabel(index: currentDateindex)
     }
     
@@ -110,7 +134,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         mapView.centerToLocation(location(), regionRadius: mapMax)
         
-        requestData()
+        ConfirmedCasesService.load(processData)
     }
     
     // MARK: - Navigation
@@ -160,15 +184,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return circleRenderer
     }
     
-    func showCircle(_ coordinate: CLLocationCoordinate2D, radius: Double, color: UIColor) {
-        guard let mapView = self.mapView else { return }
-        
-        let circle = CaseCircle(center: coordinate, radius: CLLocationDistance(radius))
-        circle.color = color
-        
-        mapView.addOverlay(circle)
-    }
-    
     // MARK: - Playback: Timeline
     
     func createTimer() {
@@ -197,7 +212,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         dateScrubber.value = Float(dateIndex)
         setDateSliderLabel(index: dateIndex)
-        processSerries(data.series, index: dateIndex)
+        updatePoints()
     }
     
     func stopPlayback() {
@@ -206,29 +221,31 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         timer = nil
         playbackButton.setBackgroundImage(playImage, for: .normal)
     }
+       
+    // MARK: - Data Processing
     
-    // MARK: - Web Service Request
-    
-    private func requestData() {
-        if let url = Environments.current.confirmedUSCasesUrl {
-            AF.request(url).validate().responseString { response in
-                if let json = response.value, let jsonData = json.data(using: .utf8) {
-                    let decoder = JSONDecoder()
-                    let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
+    func updatePoints() {
+        guard let mapView = self.mapView else { return }
+        guard let dates = self.dateEntries else { return }
 
-                    self.processData(cases)
-                }
-            }
+        let points = dates[dateIndex - 1].points
+        for point in points {
+            mapView.addOverlay(point)
         }
     }
     
-    // MARK: - Data Processing
+    func updatePoints(_ points: [CaseCircle]) {
+        guard let mapView = self.mapView else { return }
+        
+        for point in points {
+            mapView.addOverlay(point)
+        }
+    }
     
     func processData(_ data: ConfirmedCasesData) {
         guard self.mapView != nil else { fatalError("expected mapView to be loaded") }
         guard !data.dates.isEmpty else { return }
         
-        let series = data.series
         self.rawData = data
         
         playbackButton.isEnabled = true
@@ -237,7 +254,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         settingsButton.isEnabled = true
         dateIndex = data.dates.count - 1
         
-        processSerries(series, index: dateIndex)
+        self.dateEntries = processSeries(data: data)
+        updatePoints()
              
         dateScrubber.minimumValue = 40
         dateScrubber.maximumValue = Float(data.dates.count)
@@ -248,73 +266,63 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         print("done")
     }
     
-    func processSerries(_ series: [CountyCaseData], index: Int) {
+    func processSeries(data: ConfirmedCasesData) -> [DateInfo] {
         let minRadius = 50.0
         let maxRadius = 1000.0
-        let start: Double = CACurrentMediaTime()
-        var sumCases = 0
-        var casesCount = 0
         let minColor = UIColor.blue
         let maxColor = UIColor.red
-        var rMax = 0.0
-        var totalCasesMax = 0
-        for county in series {
-            let lastValue = county.values[index]
-            let prevValue = county.values[index - 1]
-            let newCases = lastValue - prevValue
-            sumCases += newCases
-            casesCount += 1
-            totalCasesMax = max(totalCasesMax, lastValue)
-            
+        
+        var entries = [DateInfo]()
+        for date in data.dates {
+            entries.append(DateInfo(date))
+        }
+                
+        for county in data.series {
             if
                 let countyName = county.county,
                 let state = county.provinceState,
+                let totalCases = county.lastValue,
                 let latitude = county.latitude,
                 let longitude = county.longitude,
-                lastValue > 0 {
-                if !settings.selectedState.isEmpty {
-                    if settings.selectedState != state {
-                        continue
-                    }
-                } else if let location = settings.userLocation {
-                    let distance = Measurement(value: location.distance(from: CLLocation(latitude: latitude, longitude: longitude)), unit: UnitLength.meters)
-                    let miles = Int(distance.converted(to: .miles).value)
+                totalCases > 0 {
+                let key = "\(state), \(countyName)"
+                if settings.isFiltered(county: county) {
+                    continue
+                }
+                print("C: \(key): \(totalCases)")
+                var prevValueOptional: Int?
+                for (index, lastValue ) in county.values.enumerated() {
+                    if let previousValue = prevValueOptional {
+                        let newCases = lastValue - previousValue
+                        let ratio = min(max(Double(newCases), minRadius) / maxRadius, 1.0)
+                        let color = minColor.interpolateRGBColorTo(maxColor, fraction: CGFloat(ratio)) ?? .blue
                                         
-                    if settings.milesToUser > 0 && miles > settings.milesToUser {
-                        continue
+                        if ratio >= 0.75 {
+                            print("\(countyName) \(ratio)")
+                        }
+                        if newCases > 0 {
+                            entries[index].points.append(CaseCircle(
+                                CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
+                                key: key,
+                                value: Double(newCases),
+                                radius: 90000.0 * ratio,
+                                color: color
+                            ))
+                        }
                     }
+                    prevValueOptional = lastValue
                 }
-                let ratio = min(max(Double(newCases), minRadius) / maxRadius, 1.0)
-                let color = minColor.interpolateRGBColorTo(maxColor, fraction: CGFloat(ratio))
-                
-                rMax = max(ratio, rMax)
-                
-                if ratio >= 0.75 {
-                    print("\(countyName) \(ratio)")
-                }
-                
-                self.showCircle(
-                    CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
-                    radius: 90000.0 * ratio,
-                    color: color ?? .blue
-                )
             }
         }
         
-        let end: Double = CACurrentMediaTime()
-        let elpased = end - start
-        print("Avg new: \(sumCases / casesCount), \(rMax) \(totalCasesMax) \(index) \(elpased)")
-        print("done")
+        for date in entries {
+            date.points.sort(by: >)
+            if !date.points.isEmpty {
+                let newPoints = Array(date.points[0...min(date.points.count - 1, maxUnfilteredSize)])
+                date.points = newPoints
+            }
+        }
+        
+        return entries
     }
 }
-
-//        if let location = self.settings.userLocation {
-//            self.showCircle(
-//                location.coordinate,
-//                radius: 90000.0 ,
-//                color: .green,
-//                alpha: 0.3
-//            )
-//            mapView.centerToLocation(location, regionRadius: mapMax)
-//        }
-//

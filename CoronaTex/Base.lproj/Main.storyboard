@@ -285,7 +285,7 @@
             </objects>
             <point key="canvasLocation" x="857" y="-261"/>
         </scene>
-        <!--New Cases-->
+        <!--Charts-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="NewCasesViewController" customModule="CoronaTex" customModuleProvider="target" sceneMemberID="viewController">
@@ -400,7 +400,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New Cases" image="person.3.fill" catalog="system" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Charts" image="chart.bar.fill" catalog="system" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="chartTitle" destination="zRW-DI-Hgj" id="Z5T-08-N36"/>
                         <outlet property="chartView" destination="5gl-Hp-RBF" id="Wy1-vw-11Y"/>
@@ -411,6 +411,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="35" y="510"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="9JX-8Y-dzC">
+            <objects>
+                <viewController id="BHg-E1-pSg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="huP-ow-Z9T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wcN-dP-iv4">
+                                <rect key="frame" x="10" y="54" width="394" height="323.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Use:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKO-tK-VRq">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data is provided to the public strictly for educational and academic research purposes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqi-KT-Qnk">
+                                        <rect key="frame" x="0.0" y="31.999999999999996" width="352" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should not rely on this App for medical advice or guidance" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aau-R5-JBV">
+                                        <rect key="frame" x="0.0" y="80.666666666666657" width="385.66666666666669" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These terms are subject to change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCp-DQ-SVv">
+                                        <rect key="frame" x="0.0" y="129.33333333333334" width="266" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zg-Os-OyX">
+                                        <rect key="frame" x="0.0" y="157.66666666666666" width="70.666666666666671" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Data source: COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnc-0g-PiK">
+                                        <rect key="frame" x="0.0" y="189.66666666666666" width="391" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    * see also: coronavirus.jhu.edu/map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnX-h2-E6m">
+                                        <rect key="frame" x="0.0" y="258.66666666666669" width="215.66666666666666" height="14.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    * see also: github.com/CSSEGISandData/COVID-19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wm-9X-hyQ">
+                                        <rect key="frame" x="0.0" y="281" width="302" height="14.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Created my free logo at LogoMakr.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQo-81-p8R">
+                                        <rect key="frame" x="0.0" y="303.33333333333331" width="309.33333333333331" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SCs-1U-0if" firstAttribute="trailing" secondItem="wcN-dP-iv4" secondAttribute="trailing" constant="10" id="1WE-hd-dYQ"/>
+                            <constraint firstItem="wcN-dP-iv4" firstAttribute="leading" secondItem="SCs-1U-0if" secondAttribute="leading" constant="10" id="MWp-VH-P7E"/>
+                            <constraint firstItem="wcN-dP-iv4" firstAttribute="top" secondItem="SCs-1U-0if" secondAttribute="top" constant="10" id="cYV-O2-fUF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SCs-1U-0if"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="questionmark.diamond.fill" catalog="system" id="xIm-4e-5LT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KyM-e8-OCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="1170"/>
         </scene>
         <!--Chart Settings-->
         <scene sceneID="Kh3-56-mKh">
@@ -623,8 +705,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="Hia-uI-F3M" kind="relationship" relationship="viewControllers" id="neW-qc-e0E"/>
-                        <segue destination="zea-kO-Ze9" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="zea-kO-Ze9" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="BHg-E1-pSg" kind="relationship" relationship="viewControllers" id="OyW-7U-9TC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -764,11 +847,11 @@
             </objects>
             <point key="canvasLocation" x="897" y="510"/>
         </scene>
-        <!--County Statistics-->
+        <!--Statistics-->
         <scene sceneID="B4h-ax-X82">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zea-kO-Ze9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="County Statistics" image="tray.2.fill" catalog="system" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="person.3.fill" catalog="system" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yNM-9g-1PT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -822,10 +905,11 @@
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="chart.bar.fill" catalog="system" width="128" height="89"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="map.fill" catalog="system" width="128" height="113"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="tray.2.fill" catalog="system" width="128" height="114"/>
+        <image name="questionmark.diamond.fill" catalog="system" width="128" height="122"/>
     </resources>
 </document>

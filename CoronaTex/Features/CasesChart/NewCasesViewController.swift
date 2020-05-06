@@ -36,7 +36,8 @@ class NewCasesViewController: UIViewController {
         settingsButton.isEnabled = false
         
         print("initializing chart data")
-        requestData()
+        
+        ConfirmedCasesService.load(dataLoaded)
     }
     
     // MARK: - Utilities
@@ -134,26 +135,16 @@ class NewCasesViewController: UIViewController {
         }
     }
     
-    // MARK: - Web Service Request
-        
-    private func requestData() {
-        if let url = Environments.current.confirmedUSCasesUrl {
-            AF.request(url).validate().responseString { response in
-                if let json = response.value, let jsonData = json.data(using: .utf8) {
-                    guard let chartView = self.chartView else { return }
-                    
-                    let decoder = JSONDecoder()
-                    let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
-                    self.processData(cases)
-                    
-                    chartView.layoutChart()
-                }
-            }
-        }
-    }
-    
     // MARK: - Data Model Processing
         
+    func dataLoaded(_ data: ConfirmedCasesData) {
+        guard let chartView = chartView else { return }
+        
+        self.processData(data)
+        
+        chartView.layoutChart()
+    }
+    
     private func processData(_ data: ConfirmedCasesData) {
         guard let chartView = chartView else { return }
         guard !data.dates.isEmpty else {

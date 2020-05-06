@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 struct CountyStatistics {
     let metroName: String
@@ -20,14 +19,14 @@ struct CountyStatistics {
 class CountyStatisticsViewController: SectionalTableViewController<Double> {
     private var settings = StatisticsSettings()
     
-    var rawData: [CountyCaseData]?
+    var rawData: ConfirmedCasesData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         settings = settings.load()
-                  
-        requestData()
+                
+        ConfirmedCasesService.load(processData)
     }
     
     // MARK: - Navigation
@@ -55,30 +54,15 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
             
             // reprocess the raw data using the new settings
             if let data = rawData {
-                processData(series: data)
+                processData(data: data)
             }
         }
     }
-    
-    // MARK: - Web Service Request
-    
-    private func requestData() {
-        if let url = Environments.current.confirmedUSCasesUrl {
-            AF.request(url).validate().responseString { response in
-                if let json = response.value, let jsonData = json.data(using: .utf8) {
-                    let decoder = JSONDecoder()
-                    let cases = try! decoder.decode(ConfirmedCasesData.self, from: jsonData)
-
-                    self.processData(series: cases.series)
-                }
-            }
-        }
-    }
-   
+       
     // MARK: - Data Model Processing
     
-    private func processData(series: [CountyCaseData]) {
-        let sectionMap = toSections(series)
+    private func processData(data: ConfirmedCasesData) {
+        let sectionMap = toSections(data.series)
         
         sections = Array(sectionMap.values.sorted())
         switch settings.sortBy {
@@ -88,7 +72,7 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
             reverseSortSectionRows()
         }
                 
-        rawData = series
+        rawData = data
         self.tableView.reloadData()
     }
     

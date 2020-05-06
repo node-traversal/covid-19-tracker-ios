@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class MapSettings: LocationSettings {
     var milesToUser: Int = 0
@@ -22,6 +23,29 @@ class MapSettings: LocationSettings {
         super.decodeSettings(coder: coder)
 
         self.milesToUser = coder.decodeInteger(forKey: PropertyKey.milesToUser)
+    }
+    
+    func isFiltered(county: CountyCaseData) -> Bool {
+        var filtered = false
+        
+        let state = county.provinceState ?? "?"
+       
+        if !selectedState.isEmpty {
+            if selectedState != state {
+                filtered = true
+            }
+        } else if let location = userLocation,
+            let latitude = county.latitude,
+            let longitude = county.longitude {
+            let distance = Measurement(value: location.distance(from: CLLocation(latitude: latitude, longitude: longitude)), unit: UnitLength.meters)
+            let miles = Int(distance.converted(to: .miles).value)
+                                
+            if milesToUser > 0 && miles > milesToUser {
+                filtered = true
+            }
+        }
+        
+        return filtered
     }
     
     override func getPersistentFolderName() -> String {
