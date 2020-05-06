@@ -33,6 +33,7 @@ class CasesChartSettings: LocationSettings {
         coder.encode(smoothing, forKey: PropertyKey.smoothing)
         coder.encode(lastDays, forKey: PropertyKey.lastDays)
     }
+    
     required init() { super.init() }
     
     convenience init(

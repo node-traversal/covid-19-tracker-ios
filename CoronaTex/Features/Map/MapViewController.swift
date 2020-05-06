@@ -24,20 +24,26 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet private weak var dateScrubber: UISlider!
     @IBOutlet private weak var dateSliderLabel: UILabel!
     @IBOutlet private weak var playbackButton: UIButton!
+    @IBOutlet private weak var refreshButton: UIButton!
+    @IBOutlet private weak var settingsButton: UIButton!
     
     var timer: Timer?
     var rawData: ConfirmedCasesData?
     var dateIndex: Int = 0
-    
+    var settings = MapSettings()
     var playImage = UIImage(systemName: "play.fill")!
     var stopImage = UIImage(systemName: "stop.fill")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.settings = settings.load()
+        
         mapView.delegate = self
         mapView.isRotateEnabled = false
         playbackButton.isEnabled = false
+        refreshButton.isEnabled = false
+        settingsButton.isEnabled = false
         playbackButton.setBackgroundImage(playImage, for: .normal)
         
         //mapView.mapType = .mutedStandard
@@ -90,6 +96,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         dateIndex = index
     }
+    
+    func location() -> CLLocation {
+        return settings.userLocation ?? initialLocation
+    }
         
     func reset() {
         guard let mapView = self.mapView else { return }
@@ -98,9 +108,42 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         mapView.removeOverlays(mapView.overlays)
         
-        mapView.centerToLocation(initialLocation, regionRadius: mapMax)
+        mapView.centerToLocation(location(), regionRadius: mapMax)
         
         requestData()
+    }
+    
+    // MARK: - Navigation
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let identifier = segue.identifier ?? ""
+        
+        switch identifier {
+        case "Map Settings":
+            guard let navController = segue.destination as? UINavigationController,
+                let destination = navController.topViewController as? MapSettingsViewController else {
+                fatalError("Unexpected destination \(segue.destination)")
+            }
+            destination.settings = self.settings
+        default:
+            fatalError("Unexpected navigation: '\(identifier)'")
+        }
+    }
+    
+    @IBAction private func unwindForSettings(sender: UIStoryboardSegue) {
+        if let sourceController = sender.source as? MapSettingsViewController {
+            guard let settings = sourceController.settings else {
+                fatalError("Controller did not have settings")
+            }
+            self.settings = settings
+            settings.save()
+            print("Received settings")
+            
+            // reprocess the raw data using the new settings
+            if let rawData = self.rawData {
+                processData(rawData)
+            }
+        }
     }
     
     // MARK: - Map Marker Rendering
@@ -117,7 +160,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return circleRenderer
     }
     
-    func showCircle(_ coordinate: CLLocationCoordinate2D, radius: Double, color: UIColor, alpha: Double) {
+    func showCircle(_ coordinate: CLLocationCoordinate2D, radius: Double, color: UIColor) {
         guard let mapView = self.mapView else { return }
         
         let circle = CaseCircle(center: coordinate, radius: CLLocationDistance(radius))
@@ -190,6 +233,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         playbackButton.isEnabled = true
         dateScrubber.isEnabled = true
+        refreshButton.isEnabled = true
+        settingsButton.isEnabled = true
         dateIndex = data.dates.count - 1
         
         processSerries(series, index: dateIndex)
@@ -206,7 +251,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     func processSerries(_ series: [CountyCaseData], index: Int) {
         let minRadius = 50.0
         let maxRadius = 1000.0
-        
+        let start: Double = CACurrentMediaTime()
         var sumCases = 0
         var casesCount = 0
         let minColor = UIColor.blue
@@ -226,7 +271,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 let state = county.provinceState,
                 let latitude = county.latitude,
                 let longitude = county.longitude,
-                lastValue > 150 {
+                lastValue > 0 {
+                if !settings.selectedState.isEmpty {
+                    if settings.selectedState != state {
+                        continue
+                    }
+                } else if let location = settings.userLocation {
+                    let distance = Measurement(value: location.distance(from: CLLocation(latitude: latitude, longitude: longitude)), unit: UnitLength.meters)
+                    let miles = Int(distance.converted(to: .miles).value)
+                                        
+                    if settings.milesToUser > 0 && miles > settings.milesToUser {
+                        continue
+                    }
+                }
                 let ratio = min(max(Double(newCases), minRadius) / maxRadius, 1.0)
                 let color = minColor.interpolateRGBColorTo(maxColor, fraction: CGFloat(ratio))
                 
@@ -239,12 +296,25 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 self.showCircle(
                     CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
                     radius: 90000.0 * ratio,
-                    color: color ?? .blue,
-                    alpha: ratio >= 0.75 ? 1.0 : 0.3
+                    color: color ?? .blue
                 )
             }
         }
         
-        print("Avg new: \(sumCases / casesCount), \(rMax) \(totalCasesMax) \(index)")
+        let end: Double = CACurrentMediaTime()
+        let elpased = end - start
+        print("Avg new: \(sumCases / casesCount), \(rMax) \(totalCasesMax) \(index) \(elpased)")
+        print("done")
     }
 }
+
+//        if let location = self.settings.userLocation {
+//            self.showCircle(
+//                location.coordinate,
+//                radius: 90000.0 ,
+//                color: .green,
+//                alpha: 0.3
+//            )
+//            mapView.centerToLocation(location, regionRadius: mapMax)
+//        }
+//

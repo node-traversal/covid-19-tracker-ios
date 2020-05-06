@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import CoreLocation
 
 class LocationSettings: NSObject, NSCoding {
     var selectedState: String = ""
+    var userLocation: CLLocation?
     
     override required init() { super.init() }
     
@@ -19,9 +21,11 @@ class LocationSettings: NSObject, NSCoding {
     }
     
     convenience init(
-        selectedState: String) {
+        selectedState: String,
+        userLocation: CLLocation?) {
         self.init()
         self.selectedState = selectedState
+        self.userLocation = userLocation
     }
            
     func getPersistentFolderName() -> String? {
@@ -30,10 +34,12 @@ class LocationSettings: NSObject, NSCoding {
     
     func encode(with coder: NSCoder) {
         coder.encode(selectedState, forKey: PropertyKey.selectedState)
+        coder.encode(userLocation, forKey: PropertyKey.userLocation)
     }
         
     func decodeSettings(coder: NSCoder) {
         self.selectedState = coder.decodeObject(forKey: PropertyKey.selectedState) as? String ?? ""
+        self.userLocation = coder.decodeObject(forKey: PropertyKey.userLocation) as? CLLocation
     }
     
     private func getArchiveUrl(folder: String) -> URL {
@@ -70,7 +76,7 @@ class LocationSettings: NSObject, NSCoding {
                     settings = loadedData
                 }
             } catch {
-                print("Couldn't read settings in \(folder).")
+                print("Couldn't read settings in \(folder): \(error).")
             }
         }
         
@@ -79,6 +85,7 @@ class LocationSettings: NSObject, NSCoding {
     
     fileprivate enum PropertyKey {
         static let selectedState = "selectedState"
+        static let userLocation = "userLocation"
     }
     
     private func getFolder() -> String {
