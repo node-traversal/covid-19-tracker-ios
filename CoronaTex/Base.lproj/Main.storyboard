@@ -81,7 +81,7 @@
                                     <constraint firstItem="9gT-XG-3Aw" firstAttribute="centerY" secondItem="zQ5-9a-CgD" secondAttribute="centerY" id="upP-DJ-eDb"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-6v-cy9" userLabel="Map">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-6v-cy9" userLabel="Map">
                                 <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                             </mapView>
                         </subviews>

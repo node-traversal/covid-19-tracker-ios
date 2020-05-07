@@ -41,7 +41,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     let initialLocation = CLLocation(latitude: 39.8283, longitude: -98.5795)
     let mapMin =     600000.0
     let mapZoomed = 1000000.0
-    let mapMax =    7000000.0
+    let mapMax =    9500000.0
     let maxUnfilteredSize = 200
     
     @IBOutlet private weak var mapView: MKMapView!
