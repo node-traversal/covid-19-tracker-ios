@@ -42,6 +42,7 @@
 		49B665AC2453210D00EBA472 /* Urls.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49B665AB2453210D00EBA472 /* Urls.plist */; };
 		49B665AE2453217600EBA472 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B665AD2453217600EBA472 /* Environments.swift */; };
 		49C3328A245C80B0008D95FF /* DateSeriesModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C33289245C80B0008D95FF /* DateSeriesModelBuilder.swift */; };
+		49DB98232464909F003753A6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 49DB98222464909F003753A6 /* .gitignore */; };
 		49EF0C972443DDBD009BE1B2 /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */; };
 		49F94B6B244F27A1007C5AE9 /* ConfirmedCasesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F94B6A244F27A1007C5AE9 /* ConfirmedCasesData.swift */; };
 		ABA75ACFFAEA4B7B82BBCBAE /* Pods_CoronaTex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1376DB74B80A67FCB5C06C /* Pods_CoronaTex.framework */; };
@@ -98,6 +99,7 @@
 		49B665AB2453210D00EBA472 /* Urls.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Urls.plist; sourceTree = "<group>"; };
 		49B665AD2453217600EBA472 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		49C33289245C80B0008D95FF /* DateSeriesModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeriesModelBuilder.swift; sourceTree = "<group>"; };
+		49DB98222464909F003753A6 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		49EF0C962443DDBD009BE1B2 /* BasicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
 		49F94B6A244F27A1007C5AE9 /* ConfirmedCasesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmedCasesData.swift; sourceTree = "<group>"; };
 		9D1376DB74B80A67FCB5C06C /* Pods_CoronaTex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 		49289F1324435828007E6ED0 = {
 			isa = PBXGroup;
 			children = (
+				49DB98222464909F003753A6 /* .gitignore */,
 				4967F1932457280C00EBF369 /* .swiftlint.yml */,
 				49B349652445FE6300E94FF4 /* Podfile */,
 				49804B83245EE9CA005CF2AB /* Podfile.lock */,
@@ -393,6 +396,7 @@
 				49289F2E2443582C007E6ED0 /* LaunchScreen.storyboard in Resources */,
 				49289F2B2443582C007E6ED0 /* Assets.xcassets in Resources */,
 				49804B84245EE9CA005CF2AB /* Podfile.lock in Resources */,
+				49DB98232464909F003753A6 /* .gitignore in Resources */,
 				49289F2924435829007E6ED0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

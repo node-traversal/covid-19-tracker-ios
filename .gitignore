@@ -1,4 +1,53 @@
+# OSX Temporary Files
+.DS_Store
+.Trashes
+*.swp
+profile
+ 
+# XCode Temporary Files
+*~.nib
+ 
+# XCode Build Files
+DerivedData/
+build/*
+!.gitkeep
+target/
+automation_results/
+ 
+# Cocoapods
 Pods/
-xcuserdata/
-Products/
-build/
+ 
+# XCode Private Settings
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+xcuserdata
+!xcshareddata
+*.xccheckout
+ 
+#Third party
+ThirdParty/
+ 
+.irb-history
+.idea
+ 
+#Archives
+*.zip
+*.ipa
+ 
+.commit-prompt
+ 
+# Mock
+mb*.log
+ 
+# Fastlane
+fastlane/report.xml
+fastlane/export_options.plist
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
