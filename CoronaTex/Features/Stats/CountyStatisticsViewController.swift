@@ -87,8 +87,8 @@ class CountyStatisticsViewController: SectionalTableViewController<Double> {
                 county.values.count > 2 {
                 let key = "\(state), \(countyName)"
                 
-                if let population = CountryData.current.population(key),
-                    let metroName = CountryData.current.metroName(key),
+                if let population = CountyData.current.population(key),
+                    let metroName = CountyData.current.metroName(key),
                     !CountyCensusData.isOtherCategoryKey(key)
                     && !settings.isFiltered(key: key, state: state, county: countyName) {
                     let size = county.values.count

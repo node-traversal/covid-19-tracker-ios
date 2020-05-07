@@ -58,7 +58,7 @@ class ConfirmedCasesData: Codable {
             if expectedDateText == lastUpdated {
                 return true
             }
-            print("ConfirmedCasesData: lasted updated: \(lastUpdated), Today: \(expectedDateText)")
+            print("ConfirmedCasesData: lasted updated: \(lastUpdated) \(expectedDateText)")
         }
         return false
     }

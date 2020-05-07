@@ -13,7 +13,9 @@ import CoreLocation
 class LocationSettingsViewController<T: LocationSettings>: UIViewController, CLLocationManagerDelegate {
     var settings: T?
     private let allStates: String = "All States"
+    private let noSelection: String = "No Selection"
     private var states = [String]()
+    private var metros = [String]()
     private let locationManager = CLLocationManager()
     var locationFormatter = NumberFormatter()
     
@@ -21,7 +23,10 @@ class LocationSettingsViewController<T: LocationSettings>: UIViewController, CLL
         super.viewDidLoad()
         
         states = [allStates]
-        states.append(contentsOf: CountryData.current.states)
+        states.append(contentsOf: CountyData.current.states)
+        
+        metros = [noSelection]
+        metros.append(contentsOf: Array(CountyData.current.majorMetros.keys.sorted()))
         
         locationFormatter.minimumFractionDigits = 1
         locationFormatter.maximumFractionDigits = 1
@@ -35,7 +40,7 @@ class LocationSettingsViewController<T: LocationSettings>: UIViewController, CLL
         }
                
         locationManager.delegate = self
-        if settings.userLocation == nil {
+        if settings.location == nil {
             locationManager.requestWhenInUseAuthorization()
             retriveCurrentLocation()
         }
@@ -54,7 +59,7 @@ class LocationSettingsViewController<T: LocationSettings>: UIViewController, CLL
     }
     
     // MARK: - OPTIONAL Overrides
-    func userLocationUpdated(location: CLLocation?) {}
+    func userLocationUpdated(location: NamedLocation?) {}
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         print("location manager authorization status changed")
@@ -95,8 +100,10 @@ class LocationSettingsViewController<T: LocationSettings>: UIViewController, CLL
         // hence we can access it by taking the first element of the array
         if let location = locations.first {
             print("User Location: \(format(location))")
-            self.settings?.userLocation = location
-            userLocationUpdated(location: location)
+            guard let settings = self.settings else { return }
+            
+            settings.location = NamedLocation(name: "Current", location: location)
+            userLocationUpdated(location: settings.location)
         } else {
             print("Invalid locations: \(locations)")
         }
@@ -141,6 +148,41 @@ class LocationSettingsViewController<T: LocationSettings>: UIViewController, CLL
             },
             cancel: { _ in
                 self.setState("")
+            },
+            origin: sender
+        )
+        
+        let cancelButton = UIButton()
+        cancelButton.setTitle("Clear", for: .normal)
+        cancelButton.setTitleColor(self.view.tintColor, for: .normal)
+        cancelButton.setTitleColor(UIColor.systemRed, for: .highlighted)
+        
+        picker?.setCancelButton(UIBarButtonItem.init(customView: cancelButton))
+        picker?.show()
+    }
+    
+    func pickMetroArea(_ sender: Any) {
+        guard let settings = self.settings else { return }
+        var selection = 0
+        if !settings.selectedState.isEmpty {
+            selection = states.firstIndex(of: settings.selectedState ) ?? 0
+        }
+        
+        let picker = ActionSheetStringPicker(
+            title: "Select City",
+            rows: self.metros,
+            initialSelection: selection,
+            doneBlock: { _, _, value in
+                guard let settings = self.settings else { return }
+                if let selectedMetro = value as? String,
+                    let metro = CountyData.current.majorMetros[selectedMetro] {
+                    settings.location = metro.location
+                    self.userLocationUpdated(location: settings.location)
+                }
+            },
+            cancel: { _ in
+                settings.location = nil
+                self.userLocationUpdated(location: settings.location)
             },
             origin: sender
         )

@@ -9,9 +9,37 @@
 import Foundation
 import CoreLocation
 
+class NamedLocation: NSObject, NSCoding {
+    var name: String = ""
+    var location: CLLocation
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(name, forKey: NamedLocationKey.name)
+        coder.encode(location, forKey: NamedLocationKey.location)
+    }
+    
+    init(name: String, location: CLLocation) {
+        self.name = name
+        self.location = location
+    }
+    
+    required convenience init?(coder: NSCoder) {
+        guard let location = coder.decodeObject(forKey: NamedLocationKey.location) as? CLLocation else {
+            return nil
+        }
+        let name = coder.decodeObject(forKey: NamedLocationKey.name) as? String ?? ""
+        self.init(name: name, location: location)
+    }
+    
+    fileprivate enum NamedLocationKey {
+        static let name = "locationName"
+        static let location = "NamedLocation"
+    }
+}
+
 class LocationSettings: NSObject, NSCoding {
     var selectedState: String = ""
-    var userLocation: CLLocation?
+    var location: NamedLocation?
     
     override required init() { super.init() }
     
@@ -22,10 +50,10 @@ class LocationSettings: NSObject, NSCoding {
     
     convenience init(
         selectedState: String,
-        userLocation: CLLocation?) {
+        userLocation: NamedLocation?) {
         self.init()
         self.selectedState = selectedState
-        self.userLocation = userLocation
+        self.location = userLocation
     }
            
     func getPersistentFolderName() -> String? {
@@ -34,12 +62,12 @@ class LocationSettings: NSObject, NSCoding {
     
     func encode(with coder: NSCoder) {
         coder.encode(selectedState, forKey: PropertyKey.selectedState)
-        coder.encode(userLocation, forKey: PropertyKey.userLocation)
+        coder.encode(location, forKey: PropertyKey.userLocation)
     }
         
     func decodeSettings(coder: NSCoder) {
         self.selectedState = coder.decodeObject(forKey: PropertyKey.selectedState) as? String ?? ""
-        self.userLocation = coder.decodeObject(forKey: PropertyKey.userLocation) as? CLLocation
+        self.location = coder.decodeObject(forKey: PropertyKey.userLocation) as? NamedLocation
     }
     
     private func getArchiveUrl(folder: String) -> URL {
@@ -59,7 +87,7 @@ class LocationSettings: NSObject, NSCoding {
             try data.write(to: url)
             print("Setting saved to: \(folder)")
         } catch {
-            print("Failed to save settings to: \(folder)!")
+            fatalError("Failed to save settings to: \(folder) \(error)")
         }
     }
     

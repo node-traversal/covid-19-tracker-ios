@@ -38,7 +38,7 @@
 		49B3F4972444A48C00D90BF2 /* XYChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F4962444A48C00D90BF2 /* XYChartView.swift */; };
 		49B3F49C2444FC4300D90BF2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49B2444FC4300D90BF2 /* Date.swift */; };
 		49B3F49E2444FCF500D90BF2 /* DateSeriesChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49D2444FCF500D90BF2 /* DateSeriesChartModel.swift */; };
-		49B3F4A02445152200D90BF2 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49F2445152200D90BF2 /* CountryData.swift */; };
+		49B3F4A02445152200D90BF2 /* CountyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3F49F2445152200D90BF2 /* CountyData.swift */; };
 		49B665AC2453210D00EBA472 /* Urls.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49B665AB2453210D00EBA472 /* Urls.plist */; };
 		49B665AE2453217600EBA472 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B665AD2453217600EBA472 /* Environments.swift */; };
 		49C3328A245C80B0008D95FF /* DateSeriesModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C33289245C80B0008D95FF /* DateSeriesModelBuilder.swift */; };
@@ -94,7 +94,7 @@
 		49B3F4962444A48C00D90BF2 /* XYChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYChartView.swift; sourceTree = "<group>"; };
 		49B3F49B2444FC4300D90BF2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		49B3F49D2444FCF500D90BF2 /* DateSeriesChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeriesChartModel.swift; sourceTree = "<group>"; };
-		49B3F49F2445152200D90BF2 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		49B3F49F2445152200D90BF2 /* CountyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyData.swift; sourceTree = "<group>"; };
 		49B665AB2453210D00EBA472 /* Urls.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Urls.plist; sourceTree = "<group>"; };
 		49B665AD2453217600EBA472 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		49C33289245C80B0008D95FF /* DateSeriesModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeriesModelBuilder.swift; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 		494E7E0124618CE900331970 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				49B3F49F2445152200D90BF2 /* CountryData.swift */,
+				49B3F49F2445152200D90BF2 /* CountyData.swift */,
 				49F94B6A244F27A1007C5AE9 /* ConfirmedCasesData.swift */,
 			);
 			path = Model;
@@ -513,7 +513,7 @@
 				49EF0C972443DDBD009BE1B2 /* BasicTableViewController.swift in Sources */,
 				494E7E0C2461B6AC00331970 /* UIColor.swift in Sources */,
 				49289F2224435829007E6ED0 /* SceneDelegate.swift in Sources */,
-				49B3F4A02445152200D90BF2 /* CountryData.swift in Sources */,
+				49B3F4A02445152200D90BF2 /* CountyData.swift in Sources */,
 				499408BE2444998500EE80A1 /* DeviceEnv.swift in Sources */,
 				49F94B6B244F27A1007C5AE9 /* ConfirmedCasesData.swift in Sources */,
 				494E7E0E2461B6E100331970 /* MKMapView.swift in Sources */,

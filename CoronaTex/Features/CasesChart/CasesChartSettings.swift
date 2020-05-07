@@ -96,14 +96,14 @@ class CasesChartSettings: LocationSettings {
     }
     
     static func isValid(_ key: String) -> Bool {
-        return CountryData.current.population(key) != nil
+        return CountyData.current.population(key) != nil
     }
     
     func isFiltered(key: String, state: String, county: String) -> Bool {
         if !selectedState.isEmpty {
             return state != selectedState
         } else {
-            let metro = CountryData.current.metroName(key) ?? "Rural"
+            let metro = CountyData.current.metroName(key) ?? "Rural"
             return metro == "Rural"
         }
     }

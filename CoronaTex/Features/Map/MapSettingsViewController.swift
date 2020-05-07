@@ -10,11 +10,10 @@ import UIKit
 import CoreLocation
 
 class MapSettingsViewController: LocationSettingsViewController<MapSettings> {
-    @IBOutlet private weak var selectStateButton: UIButton!
     @IBOutlet private weak var currentLocation: UILabel!
     @IBOutlet private weak var miles: UILabel!
-    @IBOutlet private weak var locationRadius: UISlider!
     @IBOutlet private weak var locationRestriction: UISwitch!
+    private var defaultMiles = 500
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,26 +21,16 @@ class MapSettingsViewController: LocationSettingsViewController<MapSettings> {
         guard let settings = self.settings else { return }
                
         if settings.milesToUser != 0 {
-            locationRadius.value = Float(settings.milesToUser)
             locationRestriction.isOn = true
         } else {
-            locationRadius.value = 250
             locationRestriction.isOn = false
         }
         
-        userLocationUpdated(location: settings.userLocation)
+        userLocationUpdated(location: settings.location)
     }
     
     // MARK: - Utilities
-    func updateRadiusLabel() {
-        if locationRestriction.isOn {
-            let radiusText = String(Int(locationRadius.value))
-            miles.text = "Radius: \(radiusText) miles"
-        } else {
-            miles.text = "Radius: All"
-        }
-    }
-    
+        
     // MARK: - Overrides
     
     override func newSettings() -> MapSettings? {
@@ -49,13 +38,14 @@ class MapSettingsViewController: LocationSettingsViewController<MapSettings> {
     }
     
     override func selectStateUIButton() -> UIButton? {
-        return selectStateButton
+        return UIButton()
     }
     
-    override func userLocationUpdated(location: CLLocation?) {
+    override func userLocationUpdated(location: NamedLocation?) {
         if let loc = location {
-            currentLocation.text = "Current Location: \(format(loc))"
+            currentLocation.text = "Location: \(loc.name) \(format(loc.location))"
             locationRestriction.isEnabled = true
+            locationRestriction.isOn = true
             locationRestrictionChanged(locationRestriction)
         } else {
             currentLocation.text = "Location Unavailable"
@@ -71,7 +61,7 @@ class MapSettingsViewController: LocationSettingsViewController<MapSettings> {
         guard let settings = self.settings else { return }
                 
         if locationRestriction.isOn {
-            settings.milesToUser = Int(locationRadius.value)
+            settings.milesToUser = Int(defaultMiles)
         } else {
             settings.milesToUser = 0
         }
@@ -86,17 +76,11 @@ class MapSettingsViewController: LocationSettingsViewController<MapSettings> {
     @IBAction private func updateLocation(_ sender: Any) {
         super.retriveCurrentLocation()
     }
-    
-    @IBAction private func selectState(_ sender: Any) {
-        super.pickState(sender)
-    }
-    
-    @IBAction private func locationRadiusUpdated(_ sender: Any) {
-        updateRadiusLabel()
-    }
-    
+       
     @IBAction private func locationRestrictionChanged(_ sender: UISwitch) {
-        locationRadius.isEnabled = sender.isOn
-        updateRadiusLabel()
+    }
+    
+    @IBAction private func selectLocation(_ sender: UIButton) {
+        self.pickMetroArea(sender)
     }
 }

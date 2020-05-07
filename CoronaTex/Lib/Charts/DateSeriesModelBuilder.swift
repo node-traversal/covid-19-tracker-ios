@@ -70,7 +70,7 @@ class ValueContext<Y: Numeric & Comparable> {
         var finalData = [String: NumericDateSeries<Y>]()
 
         for series in data.values {
-            if let seriesName = CountryData.current.metroName(series.key) {
+            if let seriesName = CountyData.current.metroName(series.key) {
                 let prevSeries = finalData[seriesName]
                 let values = add(series.dataPoints, second: prevSeries?.dataPoints)
                 finalData[seriesName] = NumericDateSeries<Y>(seriesName, seriesName, values.yMax, values.datapoints)
@@ -175,7 +175,7 @@ class DateSeriesModelBuilder {
         
         if settings.isPerCapita {
             func perCapita(_ key: String, _ value: Int) -> Double? {
-                if let population = CountryData.current.population(key) {
+                if let population = CountyData.current.population(key) {
                     return Double(value) / Double(population)
                 } else {
                     return Optional.none

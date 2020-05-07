@@ -27,17 +27,11 @@ class MapSettings: LocationSettings {
     
     func isFiltered(county: CountyCaseData) -> Bool {
         var filtered = false
-        
-        let state = county.provinceState ?? "?"
        
-        if !selectedState.isEmpty {
-            if selectedState != state {
-                filtered = true
-            }
-        } else if let location = userLocation,
+        if let location = location,
             let latitude = county.latitude,
             let longitude = county.longitude {
-            let distance = Measurement(value: location.distance(from: CLLocation(latitude: latitude, longitude: longitude)), unit: UnitLength.meters)
+            let distance = Measurement(value: location.location.distance(from: CLLocation(latitude: latitude, longitude: longitude)), unit: UnitLength.meters)
             let miles = Int(distance.converted(to: .miles).value)
                                 
             if milesToUser > 0 && miles > milesToUser {

@@ -5,6 +5,7 @@
 //  Created by Allen Parslow on 5/2/20.
 //  Copyright © 2020 node-traversal. All rights reserved.
 //
+// swiftlint:disable operator_usage_whitespace
 
 import UIKit
 import MapKit
@@ -38,14 +39,15 @@ class DateInfo {
 class MapViewController: UIViewController, MKMapViewDelegate {
     let defaultDateIndex = 44
     let initialLocation = CLLocation(latitude: 39.8283, longitude: -98.5795)
-    let mapMin = 600000.0
-    let mapMax = 7000000.0
+    let mapMin =     600000.0
+    let mapZoomed = 1000000.0
+    let mapMax =    7000000.0
     let maxUnfilteredSize = 200
     
     @IBOutlet private weak var mapView: MKMapView!
     @IBOutlet private weak var dateScrubber: UISlider!
     @IBOutlet private weak var dateSliderLabel: UILabel!
-    @IBOutlet private weak var playbackButton: UIButton!
+    private var playbackButton = UIButton()
     @IBOutlet private weak var refreshButton: UIButton!
     @IBOutlet private weak var settingsButton: UIButton!
     
@@ -120,11 +122,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         dateIndex = index
     }
-    
-    func location() -> CLLocation {
-        return settings.userLocation ?? initialLocation
-    }
         
+    func zoomToLocation() {
+        if let location = self.settings.location, settings.milesToUser > 0 {
+            mapView.centerToLocation(location.location, regionRadius: mapZoomed)
+        } else {
+            mapView.centerToLocation(initialLocation, regionRadius: mapMax)
+        }
+    }
+    
     func reset() {
         guard let mapView = self.mapView else { return }
         dateScrubber.isEnabled = false
@@ -132,7 +138,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         mapView.removeOverlays(mapView.overlays)
         
-        mapView.centerToLocation(location(), regionRadius: mapMax)
+        zoomToLocation()
         
         ConfirmedCasesService.load(processData)
     }
@@ -163,10 +169,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             settings.save()
             print("Received settings")
             
-            // reprocess the raw data using the new settings
-            if let rawData = self.rawData {
-                processData(rawData)
-            }
+            reset()
         }
     }
     
@@ -262,6 +265,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         dateScrubber.value = Float(dateIndex)
         
         setDateSliderLabel(index: dateIndex)
+        
+        zoomToLocation()
         
         print("done")
     }
