@@ -1,10 +1,10 @@
 platform :ios, '13.0'
 use_frameworks!
-workspace 'CoronaTex.xcworkspace'
+workspace 'EpiCenter.xcworkspace'
 #ignore warnings from pods
 inhibit_all_warnings!
 
-target 'CoronaTex' do
+target 'EpiCenter' do
   pod 'ActionSheetPicker-3.0'
   pod 'SwiftLint'
   pod 'ChartLegends'

@@ -27,8 +27,8 @@ jobs:
     - name: Build
       if: github.ref == 'ref/head/master'
       run: |
-        xcodebuild -workspace CoronaTex.xcworkspace -scheme CoronaTex -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest' build
+        xcodebuild -workspace EpiCenter.xcworkspace -scheme EpiCenter -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest' build
     - name: Test
       run: |
         echo ${{ github.ref }}
-        xcodebuild -workspace CoronaTex.xcworkspace -scheme CoronaTex -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest' test
+        xcodebuild -workspace EpiCenter.xcworkspace -scheme EpiCenter -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest' test
