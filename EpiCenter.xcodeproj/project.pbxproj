@@ -32,6 +32,7 @@
 		4967F1942457280C00EBF369 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4967F1932457280C00EBF369 /* .swiftlint.yml */; };
 		49804B84245EE9CA005CF2AB /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 49804B83245EE9CA005CF2AB /* Podfile.lock */; };
 		499408BE2444998500EE80A1 /* DeviceEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499408BD2444998500EE80A1 /* DeviceEnv.swift */; };
+		49A3EFA22464A8AE0013145F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49A3EFA12464A8AE0013145F /* README.md */; };
 		49B349612445371500E94FF4 /* CountyStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */; };
 		49B3496424456ADB00E94FF4 /* .github in Resources */ = {isa = PBXBuildFile; fileRef = 49B3496324456ADB00E94FF4 /* .github */; };
 		49B349662445FE6300E94FF4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49B349652445FE6300E94FF4 /* Podfile */; };
@@ -88,6 +89,7 @@
 		4967F1932457280C00EBF369 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		49804B83245EE9CA005CF2AB /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		499408BD2444998500EE80A1 /* DeviceEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceEnv.swift; sourceTree = "<group>"; };
+		49A3EFA12464A8AE0013145F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		49B349602445371400E94FF4 /* CountyStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountyStatisticsViewController.swift; sourceTree = "<group>"; };
 		49B3496324456ADB00E94FF4 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
 		49B349652445FE6300E94FF4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -128,6 +130,7 @@
 		49289F1324435828007E6ED0 = {
 			isa = PBXGroup;
 			children = (
+				49A3EFA12464A8AE0013145F /* README.md */,
 				49DB98222464909F003753A6 /* .gitignore */,
 				4967F1932457280C00EBF369 /* .swiftlint.yml */,
 				49B349652445FE6300E94FF4 /* Podfile */,
@@ -391,6 +394,7 @@
 			files = (
 				49B349662445FE6300E94FF4 /* Podfile in Resources */,
 				49B3496424456ADB00E94FF4 /* .github in Resources */,
+				49A3EFA22464A8AE0013145F /* README.md in Resources */,
 				49B665AC2453210D00EBA472 /* Urls.plist in Resources */,
 				4967F1942457280C00EBF369 /* .swiftlint.yml in Resources */,
 				49289F2E2443582C007E6ED0 /* LaunchScreen.storyboard in Resources */,
